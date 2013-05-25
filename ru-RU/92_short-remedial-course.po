@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-05-09T20:00:22\n"
+"POT-Creation-Date: 2012-10-31T14:54:18\n"
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
 "Last-Translator: sledopit i@irush.su\n"
 "Language-Team: None\n"
@@ -214,8 +214,8 @@ msgid "System Information: Memory, Disk Space, Identity"
 msgstr "Системная информация: память, дисковой пространство, идентификация"
 
 #. Tag: para
-#, no-c-format
-msgid "The <command>free</command> command displays information on memory; <command>df</command> (<emphasis>disk free</emphasis>) reports on the available disk space on each of the disks mounted in the filesystem. Its <literal>-h</literal> option (for <emphasis>human readable</emphasis>) converts the sizes into a more legible unit (usually megabytes or gigabytes). In a similar fashion, the <command>free</command> command understands the <literal>-m</literal> and <literal>-g</literal> options, and displays its data either in megabytes or in gigabytes, respectively."
+#, fuzzy, no-c-format
+msgid "The <command>free</command> command displays information on memory; <command>df</command> (<emphasis>disk free</emphasis>) reports on the available disk space on each of the disks mounted in the filesystem. Its <literal>-h</literal> option (for <emphasis>human readable</emphasis>) converts the sizes into a more legible unit (usually mebibytes or gibibytes). In a similar fashion, the <command>free</command> command understands the <literal>-m</literal> and <literal>-g</literal> options, and displays its data either in mebibytes or in gibibytes, respectively."
 msgstr "Команда <command>free</command> показывает информацию о памяти. Команда <command>df</command> (<emphasis>disk free</emphasis> = <emphasis>свободное пространство</emphasis>) показывает доступное место на каждом из примонтированных дисков. Опция <literal>-h</literal> (от <emphasis>human readable</emphasis> = <emphasis>удобочитаемый</emphasis>) переводит величины в более удобные единицы измерения (обычно мегабайты или гигабайты). Точно так же команда <command>free</command> понимает опции <literal>-m</literal> и <literal>-g</literal> и показывает величины в мегабайтах и гигабайтах соответственно."
 
 #. Tag: screen
@@ -622,7 +622,6 @@ msgstr ""
 "</computeroutput>\n"
 "      "
 
-
 #. Tag: para
 #, no-c-format
 msgid "These programs have a <literal>-v</literal> option, that lists much more detailed (but usually not necessary) information. Finally, the <command>lsdev</command> command (in the <emphasis role=\"pkg\">procinfo</emphasis> package) lists communication resources used by devices."
@@ -649,8 +648,8 @@ msgid "<primary>system, filesystem</primary>"
 msgstr "<primary>система, файловая система</primary>"
 
 #. Tag: para
-#, no-c-format
-msgid "Filesystems are one of the most prominent aspects of the kernel. Unix systems merge all the file storages into a single hierarchy, which allows users (and applications) to access data simply by knowing its location within that hierarchy."
+#, fuzzy, no-c-format
+msgid "Filesystems are one of the most prominent aspects of the kernel. Unix systems merge all the file stores into a single hierarchy, which allows users (and applications) to access data simply by knowing its location within that hierarchy."
 msgstr "Файловая система - это один из наиболее примечательных разделов ядра. Unix системы объединяют все файловые хранилища в единую иерархию, что позволяет пользователям (и приложениям) получить доступ к данным лишь по их расположению в иерархии."
 
 #. Tag: para
@@ -765,12 +764,12 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Sometimes, the child process continues to lead its own life independently from its parent, with its own data copied from the the parent process. In many cases, though, this child process executes another program. With a few exceptions, its memory is simply replaced by that of the new program, and execution of this new program begins. One of the very first actions of process number 1 thus is to duplicate itself (which means there are, for a tiny amount of time, two running copies of the same <command>init</command> process), but the child process is then replaced by the first system initialization script, usually <filename>/etc/init.d/rcS</filename>. This script, in turn, clones itself and runs several other programs. At some point, one process among <command>init</command>'s offspring starts a graphical interface for users to log in to (the actual sequence of events is described in more details in <xref linkend=\"sect.system-boot\" />)."
+msgid "Sometimes, the child process continues to lead its own life independently from its parent, with its own data copied from the parent process. In many cases, though, this child process executes another program. With a few exceptions, its memory is simply replaced by that of the new program, and execution of this new program begins. One of the very first actions of process number 1 thus is to duplicate itself (which means there are, for a tiny amount of time, two running copies of the same <command>init</command> process), but the child process is then replaced by the first system initialization script, usually <filename>/etc/init.d/rcS</filename>. This script, in turn, clones itself and runs several other programs. At some point, one process among <command>init</command>'s offspring starts a graphical interface for users to log in to (the actual sequence of events is described in more details in <xref linkend=\"sect.system-boot\" />)."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "When a process finishes the task for which it was started, it terminates. The kernel then recovers the memory assigned to this process, and stops giving it slices of running time. The parent process is told about its child process being terminated, which allows a process to wait for the completion of a task it delegated to a child process. This behaviour is plainly visible in command-line interpreters (known as <emphasis>shells</emphasis>). When a command is typed into a shell, the prompt only comes back when the execution of the command is over. Most shells allow for running the command in the background, it is a simple matter of adding an <userinput>&amp;</userinput> to the end of the command. The prompt is displayed again right away, which can lead to problems if the command needs to display data of its own."
+msgid "When a process finishes the task for which it was started, it terminates. The kernel then recovers the memory assigned to this process, and stops giving it slices of running time. The parent process is told about its child process being terminated, which allows a process to wait for the completion of a task it delegated to a child process. This behavior is plainly visible in command-line interpreters (known as <emphasis>shells</emphasis>). When a command is typed into a shell, the prompt only comes back when the execution of the command is over. Most shells allow for running the command in the background, it is a simple matter of adding an <userinput>&amp;</userinput> to the end of the command. The prompt is displayed again right away, which can lead to problems if the command needs to display data of its own."
 msgstr ""
 
 #. Tag: title
@@ -900,7 +899,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Function libraries play a crucial role in a Unix-like operating system. They are not proper programs, since they cannot be executed on their own, but collections of code fragments that can be used by standard programs. Among the common libraries, the most noteworthy include:"
+msgid "Function libraries play a crucial role in a Unix-like operating system. They are not proper programs, since they cannot be executed on their own, but collections of code fragments that can be used by standard programs. Among the common libraries, you can find:"
 msgstr ""
 
 #. Tag: para
@@ -910,7 +909,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "graphical toolkits, Gtk+ and Qt, allowing many programs to reuse the graphical objects they provide;"
+msgid "graphical toolkits, such as Gtk+ and Qt, allowing many programs to reuse the graphical objects they provide;"
 msgstr ""
 
 #. Tag: para
@@ -930,7 +929,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "One of the fundamental concepts that underlies the Unix family of operating systems is that each tool should only do one thing, and do it well; applications can then reuse these tools to build more advanced logic on top. This Way can be seen in many incarnations. Shell scripts may be the best example: they assemple complex sequences of very simple tools (such as <command>grep</command>, <command>wc</command>, <command>sort</command>, <command>uniq</command> and so on). Another implementation of this philosophy can be seen in code libraries: the <emphasis>libpng</emphasis> library allows reading and writing PNG images, with different options and in different ways, but it does only that; no question of including functions that display or edit images."
+msgid "One of the fundamental concepts that underlies the Unix family of operating systems is that each tool should only do one thing, and do it well; applications can then reuse these tools to build more advanced logic on top. This Way can be seen in many incarnations. Shell scripts may be the best example: they assemble complex sequences of very simple tools (such as <command>grep</command>, <command>wc</command>, <command>sort</command>, <command>uniq</command> and so on). Another implementation of this philosophy can be seen in code libraries: the <emphasis>libpng</emphasis> library allows reading and writing PNG images, with different options and in different ways, but it does only that; no question of including functions that display or edit images."
 msgstr ""
 
 #. Tag: para

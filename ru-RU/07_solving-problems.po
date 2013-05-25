@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-05-09T20:00:17\n"
+"POT-Creation-Date: 2012-10-31T14:54:17\n"
 "PO-Revision-Date: 2012-05-09T20:00:17\n"
 "Last-Translator: Mikhail Karpenko <veegboo@gmail.com>\n"
 "Language-Team: None\n"
@@ -64,8 +64,8 @@ msgid "<primary>documentation</primary>"
 msgstr "<primary>документация</primary>"
 
 #. Tag: para
-#, no-c-format
-msgid "Before you can understand what is really going on when there is a problem, you need to know the theoretical role played by each program involved in the problem. To do this, the best reflex to have is consult their documentation; but since these documentations are many and widely dispersed, you should know all the places where they can be found."
+#, fuzzy, no-c-format
+msgid "Before you can understand what is really going on when there is a problem, you need to know the theoretical role played by each program involved in the problem. To do this, the best reflex to have is consult their documentation; but since these documentats are many and widely dispersed, you should know all the places where they can be found."
 msgstr "Прежде чем вы сможете разобраться в сути проблемы, вам необходимо разобраться с теоретической ролью каждой программы, вовлечённой в данную проблему. Лучший способ сделать это - обратиться к документации программы; но поскольку документации может быть достаточно много и она может быть распределена по различным источникам, то вам следует знать о тех местах, где её можно найти."
 
 #. Tag: title
@@ -338,7 +338,6 @@ msgstr "Каждый пакет содержит свою собственную
 msgid "<primary><filename>README.Debian</filename></primary>"
 msgstr "<primary><filename>README.Debian</filename></primary>"
 
-
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><filename>changelog.Debian.gz</filename></primary>"
@@ -365,8 +364,8 @@ msgid "In most cases, free software programs have websites that are used to dist
 msgstr "Свободное программное обеспечение в большинстве случаев распространяется через сайты, которые также служат ещё и для объединения сообщества его разработчиков и пользователей. Подобные сайты зачастую содержат исчерпывающую информацию в различном виде: официальную документацию, FAQ (часто задаваемые вопросы), архивы списков рассылки, и т. д. Часто бывает так, что проблемы, с которыми вы столкнулись, уже были предметом множества вопросов; FAQ или списки рассылок могут содержать готовые решения. Хорошие навыки работы с поисковыми системами окажутся очень ценными для быстрого поиска необходимых страниц (путём ограничения запросов одним доменом или поддоменом, посвящённым программе). В том случае, когда поиск возвращает слишком много страниц или результат не удовлетворяет вашему запросу, вы можете добавить ключевое слово <userinput>debian</userinput> для ограничения результатов и более целенаправленного поиска."
 
 #. Tag: title
-#, no-c-format
-msgid "<emphasis>TIP</emphasis> From error to solution"
+#, fuzzy, no-c-format
+msgid "<emphasis>TIPS</emphasis> From error to solution"
 msgstr "<emphasis>СОВЕТ</emphasis> От ошибки к решению"
 
 #. Tag: para
@@ -380,8 +379,8 @@ msgid "In other cases, you will get very general errors, such as “Permission d
 msgstr "В остальных случаях вам встретятся ошибки общего вида, как, например, “Permission denied”. В таком случае следует проверить права доступа задействованных элементов (файлов, ID пользователей, групп, и т. д.)."
 
 #. Tag: para
-#, no-c-format
-msgid "If you do not know the address for the software's website, there are various means of getting it. First, check if there is a <literal>Homepage</literal> field in the package's meta-information (<command>apt-cache show <replaceable>package</replaceable></command>). Alternately, the package description may contain a link to the program's official website. If no URL is indicated, look at <filename>/usr/share/doc/<replaceable>package</replaceable>/copyright</filename>. The Debian maintainer generally indicates in this file where they got the program's source code, and this is likely to be the website that you need to find. If at this stage your search is still unfruitful, consult a free software directory, such as Freshmeat.net or Framasoft, or search directly with a search engine, such as Google or Yahoo. <ulink type=\"block\" url=\"http://freshmeat.net/\" /> <ulink type=\"block\" url=\"http://framasoft.org/\" />"
+#, fuzzy, no-c-format
+msgid "If you do not know the address for the software's website, there are various means of getting it. First, check if there is a <literal>Homepage</literal> field in the package's meta-information (<command>apt-cache show <replaceable>package</replaceable></command>). Alternately, the package description may contain a link to the program's official website. If no URL is indicated, look at <filename>/usr/share/doc/<replaceable>package</replaceable>/copyright</filename>. The Debian maintainer generally indicates in this file where they got the program's source code, and this is likely to be the website that you need to find. If at this stage your search is still unfruitful, consult a free software directory, such as Freecode.com (formerly Freshmeat.net) or Framasoft, or search directly with a search engine, such as Google or Yahoo. <ulink type=\"block\" url=\"http://freecode.com/\" /> <ulink type=\"block\" url=\"http://framasoft.org/\" />"
 msgstr "Если вам не известен адрес интернет-страницы программы, то существуют несколько способов узнать его. Во-первых, проверьте поле <literal>Homepage</literal> в метаинформации пакета (<command>apt-cache show <replaceable>package</replaceable></command>). Ссылка на официальный сайт программы может содержаться также и в описании пакета. В том случае, когда URL не указан, загляните в <filename>/usr/share/doc/<replaceable>package</replaceable>/copyright</filename>. Сопровождающий пакета Debian обычно указывает в этом файле адрес источника, из которого он взял исходный код программы, и скорее всего он будет именно тем ресурсом, что вы ищете. Даже если на этом этапе ваш поиск не увенчался успехом, то вы можете проверить такие каталоги свободного программного обеспечения, как Freshmeat.net или Framasoft, либо воспользоваться такими поисковыми системами, как Google или Yahoo. <ulink type=\"block\" url=\"http://freshmeat.net/\" /> <ulink type=\"block\" url=\"http://framasoft.org/\" />"
 
 #. Tag: indexterm
@@ -390,8 +389,8 @@ msgid "<primary><filename>copyright</filename></primary>"
 msgstr "<primary><filename>copyright</filename></primary>"
 
 #. Tag: indexterm
-#, no-c-format
-msgid "<primary><foreignphrase>Freshmeat</foreignphrase></primary>"
+#, fuzzy, no-c-format
+msgid "<primary><foreignphrase>Freecode</foreignphrase></primary>"
 msgstr "<primary><foreignphrase>Freshmeat</foreignphrase></primary>"
 
 #. Tag: indexterm
@@ -415,8 +414,8 @@ msgid "<primary><emphasis>HOWTO</emphasis></primary>"
 msgstr "<primary><emphasis>HOWTO</emphasis></primary>"
 
 #. Tag: para
-#, no-c-format
-msgid "A howto is a documentation that describes, in concrete terms and step by step, how to reach a predefined goal. The covered goals are relatively varied, but often technical in nature: for example, setting up IP Masquerading, configuring software RAID, installing a Samba server, etc. These documents often attempt to cover all of the potential problems likely to occur during the implementation of a given technology."
+#, fuzzy, no-c-format
+msgid "A howto is a document that describes, in concrete terms and step by step, how to reach a predefined goal. The covered goals are relatively varied, but often technical in nature: for example, setting up IP Masquerading, configuring software RAID, installing a Samba server, etc. These documents often attempt to cover all of the potential problems likely to occur during the implementation of a given technology."
 msgstr "Практическое руководство (HOWTO) - это разновидность документации, в которой четко и последовательно описаны действия для достижения определённой цели. Цели могут быть самыми разными, но они всегда являются техническими по своей сути: например, установка преобразования IP адресов, настройка программного RAID, установка сервера Samba и т. д. Эти документы зачастую охватывают все возможные проблемы, которые могут возникнуть при использовании той или иной технологии."
 
 #. Tag: para
@@ -433,11 +432,6 @@ msgstr "Вам достаточно установить пакет <emphasis ro
 #, no-c-format
 msgid "<primary><emphasis>doc-linux-html</emphasis></primary>"
 msgstr "<primary><emphasis>doc-linux-html</emphasis></primary>"
-
-#. Tag: indexterm
-#, no-c-format
-msgid "<primary><emphasis>doc-linux-fr-html</emphasis></primary>"
-msgstr "<primary><emphasis>doc-linux-fr-html</emphasis></primary>"
 
 #. Tag: indexterm
 #, no-c-format
@@ -525,8 +519,8 @@ msgid "<primary>examples, location</primary>"
 msgstr "<primary>examples, location</primary>"
 
 #. Tag: para
-#, no-c-format
-msgid "All examples must be installed in the <filename>/usr/share/doc/<replaceable>package</replaceable>/examples/</filename> directory. This may be a configuration file, program source code (an example of the use of a library), or a data conversion script that the administrator can use in certain cases (such as to initialize a database). If the example is specific to a particular architecture, it should be installed in <filename>/usr/lib/<replaceable>package</replaceable>/examples/</filename> and you should create a link pointing to that file in the <filename>/usr/share/doc/<replaceable>package</replaceable>/examples/</filename> directory."
+#, fuzzy, no-c-format
+msgid "All examples must be installed in the <filename>/usr/share/doc/<replaceable>package</replaceable>/examples/</filename> directory. This may be a configuration file, program source code (an example of the use of a library), or a data conversion script that the administrator can use in certain cases (such as to initialize a database). If the example is specific to a particular architecture, it should be installed in <filename>/usr/lib/<replaceable>package</replaceable>/examples/</filename> and there should be a link pointing to that file in the <filename>/usr/share/doc/<replaceable>package</replaceable>/examples/</filename> directory."
 msgstr "Все примеры необходимо устанавливать в каталог <filename>/usr/share/doc/<replaceable>package</replaceable>/examples/</filename>. Это могут быть конфигурационные файлы, исходные коды программы (примеры использования библиотеки) или скрипт преобразования данных, который администратор может использовать в определённых случаях (как например, для инициализации базы данных). В случае, когда пример специфичен для определённой архитектуры, его следует устанавливать в каталог <filename>/usr/lib/<replaceable>package</replaceable>/examples/</filename> и создавать ссылку на него в <filename>/usr/share/doc/<replaceable>package</replaceable>/examples/</filename>."
 
 #. Tag: title
@@ -698,3 +692,6 @@ msgstr "Если все ваши усилия по устранению проб
 #, no-c-format
 msgid "The elements of this chapter are a means of effectively resolving issues that the following chapters may bring about. Use them as often as necessary!"
 msgstr "В этой главе приведены методы эффективного решения тех вопросов, что могут возникнуть при чтении следующих глав. Используйте их при первой необходимости!"
+
+#~ msgid "<primary><emphasis>doc-linux-fr-html</emphasis></primary>"
+#~ msgstr "<primary><emphasis>doc-linux-fr-html</emphasis></primary>"

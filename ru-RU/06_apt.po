@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-06-01T20:23:56\n"
+"POT-Creation-Date: 2012-10-31T14:54:17\n"
 "PO-Revision-Date: 2012-05-09T20:00:16\n"
 "Last-Translator: Mikhail Karpenko <veegboo@gmail.com>\n"
 "Language-Team: None\n"
@@ -204,13 +204,13 @@ msgid "<primary><foreignphrase>non-free</foreignphrase>, section</primary>"
 msgstr "<primary><foreignphrase>non-free</foreignphrase>, секция</primary>"
 
 #. Tag: para
-#, no-c-format
-msgid "Debian uses three sections to differentiate packages according to the licenses chosen by the authors of each program. <foreignphrase>Main</foreignphrase> (the main archive) gathers all packages which fully comply with the Debian Free Software Guidelines."
+#, fuzzy, no-c-format
+msgid "Debian uses three sections to differentiate packages according to the licenses chosen by the authors of each work. <foreignphrase>Main</foreignphrase> (the main archive) gathers all packages which fully comply with the Debian Free Software Guidelines."
 msgstr "В Debian используется три секции для разграничения пакетов по типу лицензии, выбранной автором каждой программы. В <foreignphrase>main</foreignphrase> (основной архив) собраны все пакеты, которые полностью соответствуют Руководству Debian по Свободному Программному Обеспечению."
 
 #. Tag: para
-#, no-c-format
-msgid "The <foreignphrase>non-free</foreignphrase> archive is different because it contains software which does not (entirely) conform to these principles but which can nevertheless be distributed freely. This archive, which is not officially part of Debian, is a service for users who could need those software — however Debian always recommends giving priority to free software. The existence of this section represents a considerable problem for Richard M. Stallman and keeps the Free Software Foundation from recommending Debian to users."
+#, fuzzy, no-c-format
+msgid "The <foreignphrase>non-free</foreignphrase> archive is different because it contains software which does not (entirely) conform to these principles but which can nevertheless be distributed without restrictions. This archive, which is not officially part of Debian, is a service for users who could need some of those programs — however Debian always recommends giving priority to free software. The existence of this section represents a considerable problem for Richard M. Stallman and keeps the Free Software Foundation from recommending Debian to users."
 msgstr "Архив <foreignphrase>non-free</foreignphrase> отличается тем, что содержит программное обеспечение, которое не (полностью) соответствует этим принципам, но которое тем не менее может распространяться свободно. Данный архив, который официально не является частью Debian, служит нуждам тех пользователей, которым может понадобиться это программное обеспечение - однако, Debian всегда рекомендует отдавать предпочтение свободному программному обеспечению. Существование этой секции представляет значительную проблему для Ричарда М. Столлмана и не позволяет Фонду Свободного Программного Обеспечения рекомендовать Debian пользователям."
 
 #. Tag: para
@@ -266,8 +266,8 @@ msgid "<primary><command>apt-spy</command></primary>"
 msgstr "<primary><command>apt-spy</command></primary>"
 
 #. Tag: para
-#, no-c-format
-msgid "This software tests the download speed from several Debian mirrors and generates a <filename>sources.list</filename> file which points to the the fastest mirror."
+#, fuzzy, no-c-format
+msgid "This software tests the download speed from several Debian mirrors and generates a <filename>sources.list</filename> file which points to the fastest mirror."
 msgstr "Эта программа тестирует скорость загрузки с нескольких зеркал Debian и генерирует файл <filename>sources.list</filename>, в котором указаны зеркала с наибольшей скоростью."
 
 #. Tag: para
@@ -346,8 +346,8 @@ msgid "<primary>backport</primary>"
 msgstr "<primary>backport</primary>"
 
 #. Tag: para
-#, no-c-format
-msgid "Unsurprisingly, the <literal>backports.debian.org</literal> server hosts “package backports”. The term refers to a package of a recent software which has been recompiled for an older distribution, generally for <emphasis role=\"distribution\">Stable</emphasis>. When the distribution becomes a little dated, numerous software projects have released new versions that are not integrated into the current <emphasis role=\"distribution\">Stable</emphasis> (which is only modified to address the most critical problems, such as security problems). Since the <emphasis role=\"distribution\">Testing</emphasis> and <emphasis role=\"distribution\">Unstable</emphasis> distributions can be more risky, some volunteers sometimes offer recompilations of recent software applications for <emphasis role=\"distribution\">Stable</emphasis>, which has the advantage to limit potential instability to a small number of chosen packages. <ulink type=\"block\" url=\"http://backports.debian.org/\" />"
+#, fuzzy, no-c-format
+msgid "Unsurprisingly, the <literal>backports.debian.org</literal> server hosts “package backports”. The term refers to a package of some recent software which has been recompiled for an older distribution, generally for <emphasis role=\"distribution\">Stable</emphasis>. When the distribution becomes a little dated, numerous software projects have released new versions that are not integrated into the current <emphasis role=\"distribution\">Stable</emphasis> (which is only modified to address the most critical problems, such as security problems). Since the <emphasis role=\"distribution\">Testing</emphasis> and <emphasis role=\"distribution\">Unstable</emphasis> distributions can be more risky, some volunteers sometimes offer recompilations of recent software applications for <emphasis role=\"distribution\">Stable</emphasis>, which has the advantage to limit potential instability to a small number of chosen packages. <ulink type=\"block\" url=\"http://backports.debian.org/\" />"
 msgstr "Неудивительно, что сервер <literal>backports.debian.org</literal> содержит “бэкпорты пакетов”. Этот термин относится к пакету нового программного обеспечения, которое было перекомпилировано под более старый дистрибутив, обычно это <emphasis role=\"distribution\">Stable</emphasis>. Когда этот дистрибутив слегка устаревает, многочисленные проекты программного обеспечения выпускают новые версии, которые не включаются в текущую ветку <emphasis role=\"distribution\">Stable</emphasis> (которая изменяется только в случае устранения критических уязвимостей, таких как проблемы с безопасностью). Поскольку дистрибутивы <emphasis role=\"distribution\">Testing</emphasis> и <emphasis role=\"distribution\">Unstable</emphasis> могут быть нестабильными, некоторые добровольцы иногда предлагают перекомпилированные приложения для <emphasis role=\"distribution\">Stable</emphasis>, преимуществом которого является возможность ограничивать потенциальную нестабильность ограниченным числом избранных пакетов. <ulink type=\"block\" url=\"http://backports.debian.org/\" />"
 
 #. Tag: para
@@ -401,8 +401,8 @@ msgid "<primary><literal>mentors.debian.net</literal></primary>"
 msgstr "<primary><literal>mentors.debian.net</literal></primary>"
 
 #. Tag: para
-#, no-c-format
-msgid "There are numerous non-official sources of Debian packages set up by advanced users who have recompiled some softwares, by programmers who make their creation available to all, and even by Debian developers who offer pre-versions of their package online. A web site was set up to find these alternative sources more easily. It contains an impressive amount of Debian package sources which can immediately be integrated into <filename>sources.list</filename> files. However, be careful not to add random packages. Each source is designed for a particular version of Debian (the one used to compile the packages in question); each user should maintain a certain coherence in what they choose to install. <ulink type=\"block\" url=\"http://www.apt-get.org/\" />"
+#, fuzzy, no-c-format
+msgid "There are numerous non-official sources of Debian packages set up by advanced users who have recompiled some software, by programmers who make their creation available to all, and even by Debian developers who offer pre-versions of their package online. A web site was set up to find these alternative sources more easily. It contains an impressive amount of Debian package sources which can immediately be integrated into <filename>sources.list</filename> files. However, be careful not to add random packages. Each source is designed for a particular version of Debian (the one used to compile the packages in question); each user should maintain a certain coherence in what they choose to install. <ulink type=\"block\" url=\"http://www.apt-get.org/\" />"
 msgstr "Существуют многочисленные неофициальные источники пакетов Debian, подготовленные опытными пользователями, которые перекомпилировали часть программного обеспечения; программистами, которые сделали свои проекты доступными для всех; и даже разработчиками Debian, которые предлагают предварительные версии своих пакетов в сети. Для простого поиска этих альтернативных источников был создан сайт. Он содержится впечатляющее количество источников пакетов Debian, которые можно непосредственно добавить в файлы <filename>sources.list</filename>. Однако следует быть осторожным и не добавлять случайные пакеты. Каждый источник предназначен для определённой версии Debian (той, для которой пакет был собран); каждому пользователю нужно быть последовательным в том, что он выбирает для установки. <ulink type=\"block\" url=\"http://www.apt-get.org/\" />"
 
 #. Tag: para
@@ -647,8 +647,8 @@ msgid "The problem does not arise with <command>dpkg</command>, but the administ
 msgstr "Данная проблема не возникает с <command>dpkg</command>, но администраторы редко используют её напрямую."
 
 #. Tag: para
-#, no-c-format
-msgid "Be careful, using <command>apt-get --reinstall</command> to restore packages modified during an attack certainly cannot recover the system as it was. <xref linkend=\"sect.dealing-with-compromised-machine\" /> details the necessary steps to take with a hacked system."
+#, fuzzy, no-c-format
+msgid "Be careful, using <command>apt-get --reinstall</command> to restore packages modified during an attack certainly cannot recover the system as it was. <xref linkend=\"sect.dealing-with-compromised-machine\" /> details the necessary steps to take with a compromised system."
 msgstr "Будьте внимательны, использование <command>apt-get --reinstall</command> для восстановления пакетов, модифицированных во время атаки, определённо не может восстановить систему до её первоначального состояния. Раздел <xref linkend=\"sect.dealing-with-compromised-machine\" /> подробно описывает действия, необходимые для восстановления скомпрометированной системы."
 
 #. Tag: para
@@ -1267,8 +1267,8 @@ msgid "Better Solver Algorithms"
 msgstr "Улучшенные решающие алгоритмы"
 
 #. Tag: para
-#, no-c-format
-msgid "To conclude this section, let's note that <command>aptitude</command> has more elaborate algorithms compared to <command>apt-get</command> when it comes to resolving difficult situations. When a set of actions is requested and when these combined actions would lead to an incoherent system, <command>aptitude</command> evaluates several possible scenarios and presents them in order of decreasing relevance. However, these algorithms are not failproof. Fortunately there is always the possibility to manually select the actions to perform. When the currently selected actions lead to contradictions, the upper part of the screen indicates a number of “broken” packages (and you can directly navigate to those packages by pressing <keycombo><keycap>b</keycap></keycombo>). It is then possible to manually build a solution for the problems found. In particular, you can get access to the different available versions by simply selecting the package with <keycombo><keycap>Enter</keycap></keycombo>. If the selection of one of these versions solves the problem, you should not hesitate to use the function. When the number of broken packages gets down to zero, you can safely go the summary screen of pending actions for a last check before you apply them."
+#, fuzzy, no-c-format
+msgid "To conclude this section, let's note that <command>aptitude</command> has more elaborate algorithms compared to <command>apt-get</command> when it comes to resolving difficult situations. When a set of actions is requested and when these combined actions would lead to an incoherent system, <command>aptitude</command> evaluates several possible scenarios and presents them in order of decreasing relevance. However, these algorithms are not failproof. Fortunately there is always the possibility to manually select the actions to perform. When the currently selected actions lead to contradictions, the upper part of the screen indicates a number of “broken” packages (and you can directly navigate to those packages by pressing <keycombo><keycap>b</keycap></keycombo>). It is then possible to manually build a solution for the problems found. In particular, you can get access to the different available versions by simply selecting the package with <keycombo><keycap>Enter</keycap></keycombo>. If the selection of one of these versions solves the problem, you should not hesitate to use the function. When the number of broken packages gets down to zero, you can safely go to the summary screen of pending actions for a last check before you apply them."
 msgstr "В завершение этого раздела следует отметить, что <command>aptitude</command> использует более продуманные алгоритмы по сравнению с <command>apt-get</command> в части разрешения сложных ситуаций. В случае запроса целого набора действий и когда эти действия совместно могут привести к бессвязной системе, <command>aptitude</command> оценивает несколько возможных сценариев и выводит их в порядке уменьшения значимости. Данные алгоритмы, однако, не безошибочны. К счастью, всегда существует возможность ручного выбора требуемого действия. В том случае, когда выбранные действия противоречивы, в верхней части экрана выводится список “поломанных” пакетов (и вы можете перейти непосредственно к этим пакетам, нажав <keycombo><keycap>b</keycap></keycombo>). Далее уже в ручном режиме возможно принять решение по найденным проблемам. В частности, вы можете получить доступ к разным версиям пакета просто выделив его и нажав <keycombo><keycap>Enter</keycap></keycombo>. В том случае, когда выбор одной из версий позволяет решить проблему, вам стоит без колебаний воспользоваться данной функцией. Вы можете с уверенностью перейти к общему экрану ожидающих выполнения действий для последней проверки перед их применением в том случае, когда количество сломанных пакетов снизится до нуля."
 
 #. Tag: title
@@ -1491,8 +1491,8 @@ msgid "the management system for device files: <emphasis role=\"pkg\">udev</emph
 msgstr "система управления файлами устройств: <emphasis role=\"pkg\">udev</emphasis>;"
 
 #. Tag: para
-#, no-c-format
-msgid "last but not least, the kernel: depending on the hardware, the metapackages to use are <emphasis role=\"pkg\">linux-image-486</emphasis>, <emphasis role=\"pkg\">linux-image-686</emphasis> or <emphasis role=\"pkg\">linux-image-686-bigmem</emphasis>. These packages will only work for the i386 architecture; owners of computers based on different hardware will use other packages, most likely <emphasis role=\"pkg\">linux-image-2.6-amd64</emphasis> for AMD64 or <emphasis role=\"pkg\">linux-image-powerpc*</emphasis> for PowerPC)."
+#, fuzzy, no-c-format
+msgid "last but not least, the kernel: depending on the hardware, the metapackages to use are <emphasis role=\"pkg\">linux-image-486</emphasis>, <emphasis role=\"pkg\">linux-image-686</emphasis> or <emphasis role=\"pkg\">linux-image-686-bigmem</emphasis>. These packages will only work for the i386 architecture; owners of computers based on different hardware will use other packages, most likely <emphasis role=\"pkg\">linux-image-2.6-amd64</emphasis> for AMD64 or <emphasis role=\"pkg\">linux-image-powerpc*</emphasis> for PowerPC."
 msgstr "и последний по порядку, но не по значимости - ядро: в зависимости от аппаратного обеспечения используются метапакеты <emphasis role=\"pkg\">linux-image-486</emphasis>, <emphasis role=\"pkg\">linux-image-686</emphasis> или <emphasis role=\"pkg\">linux-image-686-bigmem</emphasis>. Эти пакеты будут работать только на архитектуре i386; владельцы компьютеров с другим типом аппаратного обеспечения будут использовать другие пакеты, вероятнее всего <emphasis role=\"pkg\">linux-image-2.6-amd64</emphasis> для AMD64 или <emphasis role=\"pkg\">linux-image-powerpc*</emphasis> для PowerPC."
 
 #. Tag: para
