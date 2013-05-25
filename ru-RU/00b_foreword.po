@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-05-09T20:00:15\n"
+"POT-Creation-Date: 2012-10-31T14:54:16\n"
 "PO-Revision-Date: 2012-05-09T20:00:15\n"
 "Last-Translator: sledopit i@irush.su\n"
 "Language-Team: None\n"
@@ -109,8 +109,8 @@ msgid "We tried to make this book useful for many categories of readers. First, 
 msgstr "Мы пытались сделать эту книгу полезной для всех категорий читателей. Системные администраторы (как начинающие, так и профессионалы) найдут инструкцию по установке и внедрении Debian на множество компьютеров, получат представление о большинстве сервисов, доступных в Debian, инструкции по их настройке и описание специфики дистрибутива. А понимание механизмов разработки Debian поможет решать непредвиденные проблемы. Так же помощь можно найти у сообщества."
 
 #. Tag: para
-#, no-c-format
-msgid "Users of another Linux distribution, or of another Unix variant, will discover the specifics of Debian, and should become operational very quickly while benefitting fully from the unique advantages of this distribution."
+#, fuzzy, no-c-format
+msgid "Users of another Linux distribution, or of another Unix variant, will discover the specifics of Debian, and should become operational very quickly while benefiting fully from the unique advantages of this distribution."
 msgstr "Пользователи других дистрибутивов Linux или Unix систем узнают специфику Debian и сразу же смогут воспользоваться всеми преимуществами, присущими этому дистрибутиву."
 
 #. Tag: para
@@ -367,6 +367,11 @@ msgstr "Эта книга не была бы именно такой без уч
 #, no-c-format
 msgid "We benefited from the generous help of proofreaders: Daniel Phillips, Gerold Rupprecht, Gordon Dey, Jacob Owens, and Tom Syroid. They each reviewed many chapters. Thank you very much!"
 msgstr "Мы так же благодарны нашим корректорам: Дэниел Филлипс, Гаролдь Рупрехт, Гордон Дэй, Якоб Оуенс и Том Сиройд. Каждый из них рецензировал множество глав."
+
+#. Tag: para
+#, no-c-format
+msgid "We would also like to thank the readers of the French book who provided us some nice quotes to confirm that the book was really worth being translated: thank you Christian Perrier, David Bercot, Étienne Liétart, and Gilles Roussi. Stefano Zacchiroli — who was Debian Project Leader during the crowdfunding campaign — also deserves a big thank you, he kindly endorsed the project with a quote explaining that free (as in freedom) books were more than needed."
+msgstr "Мы также хотели бы поблагодарить читателей французского издания, представивших положительные отзывы в подтверждение того, что книга действительно достойна быть переведённой: спасибо вам, Кристиан Перье, Девид Беркот, Этьен Литар и Жиль Русси. Стефано Зачироли, бывший лидером проекта Debian во время кампании по сбору средств, также заслужил большой благодарности. Он любезно предоставил отзыв, в котором разъяснил, что свободные книги более чем необходимы."
 
 #. Tag: para
 #, no-c-format
