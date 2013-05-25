@@ -51,17 +51,17 @@ msgstr "Как системному администратору Debian, Вам 
 #. Tag: para
 #, fuzzy, no-c-format
 msgid "This chapter describes the structure and contents of “binary” and “source” packages. The former are <filename>.deb</filename> files, directly usable by <command>dpkg</command>, while the latter contain the source code, as well as instructions for building binary packages."
-msgstr "В этой главе описывается структура и содержание “binary“ и “source” пакетов. Первые стоит использовать непосредственно с помощью <command>dpkg</command>, в то время как ко второй группе относятся пакеты, содержщие исходный код программ, а также инструкции (скрипты) для создания бинарных пакетов."
+msgstr "В этой главе описывается структура и содержание “binary“ и “source” пакетов. Первые стоит использовать непосредственно с помощью <command>dpkg</command>, в то время как ко второй группе относятся пакеты, содержщие исходный код программ, а также инструкции (скрипты) для создания двоичных пакетов."
 
 #. Tag: title
 #, no-c-format
 msgid "Structure of a Binary Package"
-msgstr "Структура бинарных пакетов"
+msgstr "Структура двоичных пакетов"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>binary package</secondary>"
-msgstr "<primary>пакет</primary><secondary>бинарный пакет</secondary>"
+msgstr "<primary>пакет</primary><secondary>двоичный пакет</secondary>"
 
 #. Tag: indexterm
 #, no-c-format
@@ -228,7 +228,7 @@ msgstr "<filename>debian-binary</filename>. Это текстовый файл, 
 #. Tag: para
 #, fuzzy, no-c-format
 msgid "<filename>control.tar.gz</filename>. This archive file contains all of the available meta-information. In it, package management tools find, among other things, the name and version of the package. Some of this meta-information allows them to determine if it is possible to install or uninstall it, for example according to the list of packages already on the machine."
-msgstr "<filename>control.tar.gz</filename>. Этот файл содержит всю доступную мета-информацию. Используя ее инструменты управления пакетами узнают о названии и версия пакета. Она так же позволяет определить, возможно ли установить или удалить пакет, например, в соответствии со списком уже установленных в системе пакетов."
+msgstr "<filename>control.tar.gz</filename>. Этот файл содержит всю доступную метаинформацию. Используя ее инструменты управления пакетами узнают о названии и версия пакета. Она так же позволяет определить, возможно ли установить или удалить пакет, например, в соответствии со списком уже установленных в системе пакетов."
 
 #. Tag: para
 #, no-c-format
@@ -238,22 +238,22 @@ msgstr "<filename>data.tar.gz</filename>. Этот архив содержит �
 #. Tag: title
 #, no-c-format
 msgid "Package Meta-Information"
-msgstr "Мета-информация"
+msgstr "Метаинформация"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package meta-information</primary>"
-msgstr "<primary>мета-информация о пакете</primary>"
+msgstr "<primary>метаинформация о пакете</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>meta-information</secondary>"
-msgstr "<secondary>мета-информация</secondary><primary>о пакете</primary>"
+msgstr "<primary>пакет</primary><secondary>метаинформация</secondary>"
 
 #. Tag: para
 #, no-c-format
 msgid "The Debian package is not only an archive of files intended for installation. It is part of a larger whole, and it describes its relationship with other Debian packages (dependencies, conflicts, suggestions). It also provides scripts that enable the execution of commands at different stages in the package's lifecycle (installation, removal, upgrades). These data used by the package management tools are not part of the packaged software, but are, within the package, what is called its “meta-information” (information about other information)."
-msgstr "Debian-пакет является не только архивом файлов, предназначенным для установки. Он является частью большего целого, и она описывает свои отношения с другими Debian пакеты (зависимости, конфликты, предложения). Он также предоставляет скрипты, которые позволяют выполнение команд на разных этапах жизненного цикла в пакета (установка, удаление, обновление). Эти данные используются инструменты управления пакетами, которые не являются частью пакетов программного обеспечения, но, в пакете, то, что называют ее “мета-информации“ (информация о другой информации)."
+msgstr "Debian-пакет является не только архивом файлов, предназначенным для установки. Он является частью большего целого, и она описывает свои отношения с другими Debian пакеты (зависимости, конфликты, предложения). Он также предоставляет скрипты, которые позволяют выполнение команд на разных этапах жизненного цикла в пакета (установка, удаление, обновление). Эти данные используются инструменты управления пакетами, которые не являются частью пакетов программного обеспечения, но, в пакете, то, что называют ее “метаинформации“ (информация о другой информации)."
 
 #. Tag: title
 #, no-c-format
@@ -372,7 +372,7 @@ msgstr "<primary>Поле <literal>Depends</literal></primary>"
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>dependency</secondary>"
-msgstr "<secondary>зависимости</secondary><primary>пакета</primary>"
+msgstr "<primary>пакет</primary><secondary>зависимости</secondary>"
 
 #. Tag: para
 #, fuzzy, no-c-format
@@ -412,7 +412,7 @@ msgstr ""
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>meta-package</primary>"
-msgstr "<primary>мета-пакет</primary>"
+msgstr "<primary>метапакет</primary>"
 
 #. Tag: para
 #, no-c-format
@@ -1445,17 +1445,17 @@ msgstr "Другие возможности <command>dpkg</command>"
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>status</secondary>"
-msgstr "<secondary>статус</secondary><primary>пакета</primary>"
+msgstr "<primary>пакет</primary><secondary>статус</secondary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>file list</secondary>"
-msgstr "<secondary>список файлов</secondary><primary>пакета</primary>"
+msgstr "<primary>пакет</primary><secondary>список файлов</secondary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>content inspection</secondary>"
-msgstr "<secondary>проверка содержимого</secondary><primary>пакета</primary>"
+msgstr "<primary>пакет</primary><secondary>проверка содержимого</secondary>"
 
 #. Tag: title
 #, no-c-format
@@ -1465,7 +1465,7 @@ msgstr "<emphasis>ВЕРНЕМСЯ К ОСНОВАМ</emphasis> синтакси
 #. Tag: para
 #, no-c-format
 msgid "Most options are available in the “long” version (one or more relevant words, preceded by a double dash) or a “short” version (a single letter, often the initial of one word from the long version, and preceded by a single dash). This convention is so common that it is a POSIX standard. <indexterm><primary>POSIX</primary></indexterm> <indexterm><primary>option</primary><secondary>POSIX</secondary></indexterm>"
-msgstr "Для большинста опций существуют “длинные” (один или несколько слов, перед двойным тире) и “короткие” версии (часто первая буква “длинно” версии после одного тире). Это соглашение так распространено, что уже является стандартом POSIX."
+msgstr "Для большинста опций существуют “длинные” (один или несколько слов, перед двойным тире) и “короткие” версии (часто первая буква “длинно” версии после одного тире). Это соглашение так распространено, что уже является стандартом POSIX. <indexterm><primary>POSIX</primary></indexterm> <indexterm><primary>option</primary><secondary>POSIX</secondary></indexterm>"
 
 #. Tag: para
 #, no-c-format
