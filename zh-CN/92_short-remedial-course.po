@@ -1,10 +1,10 @@
 #
-# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Helight Xu <helight.xu@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-06-01T20:23:58\n"
+"POT-Creation-Date: 2012-10-31T14:54:18\n"
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
@@ -16,52 +16,52 @@ msgstr ""
 #. Tag: keyword
 #, no-c-format
 msgid "BIOS"
-msgstr ""
+msgstr "BIOS"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Kernel"
-msgstr ""
+msgstr "内核"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Unix"
-msgstr ""
+msgstr "Unix"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Process"
-msgstr ""
+msgstr "进程"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Hierarchy"
-msgstr ""
+msgstr "层级结构"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Basic Commands"
-msgstr ""
+msgstr "基本命令"
 
 #. Tag: title
 #, no-c-format
 msgid "Short Remedial Course"
-msgstr ""
+msgstr "简短辅导课程"
 
 #. Tag: para
 #, no-c-format
 msgid "Even though this book primarily targets administrators and “power-users”, we wouldn't like to exclude motivated beginners. This appendix will therefore be a crash-course describing the fundamental concepts involved in handling a Unix computer."
-msgstr ""
+msgstr "尽管这本书的主要目标用户是管理员和高级用户，但是我们也不想忽视初学者。这篇附录是一篇讲述操作Unix 计算机基础内容。"
 
 #. Tag: title
 #, no-c-format
 msgid "Shell and Basic Commands"
-msgstr ""
+msgstr "Shell 和基本命令"
 
 #. Tag: para
 #, no-c-format
 msgid "In the Unix world, every administrator has to use the command line sooner or later; for example, when the system fails to start properly and only provides a command-line rescue mode. Being able to handle such an interface, therefore, is a basic survival skill for these circumstances."
-msgstr ""
+msgstr "在Uinx 世界中，每一个管理员迟早都要使用命令行；例如，当系统可能启动失败后只给了一个命令行恢复模式。所以在这样的环境种能够使用命令行是一种基本的生存技能。"
 
 #. Tag: title
 #, no-c-format
@@ -185,7 +185,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The <command>free</command> command displays information on memory; <command>df</command> (<emphasis>disk free</emphasis>) reports on the available disk space on each of the disks mounted in the filesystem. Its <literal>-h</literal> option (for <emphasis>human readable</emphasis>) converts the sizes into a more legible unit (usually megabytes or gigabytes). In a similar fashion, the <command>free</command> command understands the <literal>-m</literal> and <literal>-g</literal> options, and displays its data either in megabytes or in gigabytes, respectively."
+msgid "The <command>free</command> command displays information on memory; <command>df</command> (<emphasis>disk free</emphasis>) reports on the available disk space on each of the disks mounted in the filesystem. Its <literal>-h</literal> option (for <emphasis>human readable</emphasis>) converts the sizes into a more legible unit (usually mebibytes or gibibytes). In a similar fashion, the <command>free</command> command understands the <literal>-m</literal> and <literal>-g</literal> options, and displays its data either in mebibytes or in gibibytes, respectively."
 msgstr ""
 
 #. Tag: screen
@@ -697,7 +697,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Sometimes, the child process continues to lead its own life independently from its parent, with its own data copied from the the parent process. In many cases, though, this child process executes another program. With a few exceptions, its memory is simply replaced by that of the new program, and execution of this new program begins. One of the very first actions of process number 1 thus is to duplicate itself (which means there are, for a tiny amount of time, two running copies of the same <command>init</command> process), but the child process is then replaced by the first system initialization script, usually <filename>/etc/init.d/rcS</filename>. This script, in turn, clones itself and runs several other programs. At some point, one process among <command>init</command>'s offspring starts a graphical interface for users to log in to (the actual sequence of events is described in more details in <xref linkend=\"sect.system-boot\" />)."
+msgid "Sometimes, the child process continues to lead its own life independently from its parent, with its own data copied from the parent process. In many cases, though, this child process executes another program. With a few exceptions, its memory is simply replaced by that of the new program, and execution of this new program begins. One of the very first actions of process number 1 thus is to duplicate itself (which means there are, for a tiny amount of time, two running copies of the same <command>init</command> process), but the child process is then replaced by the first system initialization script, usually <filename>/etc/init.d/rcS</filename>. This script, in turn, clones itself and runs several other programs. At some point, one process among <command>init</command>'s offspring starts a graphical interface for users to log in to (the actual sequence of events is described in more details in <xref linkend=\"sect.system-boot\" />)."
 msgstr ""
 
 #. Tag: para
@@ -832,7 +832,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Function libraries play a crucial role in a Unix-like operating system. They are not proper programs, since they cannot be executed on their own, but collections of code fragments that can be used by standard programs. Among the common libraries, the most noteworthy include:"
+msgid "Function libraries play a crucial role in a Unix-like operating system. They are not proper programs, since they cannot be executed on their own, but collections of code fragments that can be used by standard programs. Among the common libraries, you can find:"
 msgstr ""
 
 #. Tag: para
@@ -842,7 +842,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "graphical toolkits, Gtk+ and Qt, allowing many programs to reuse the graphical objects they provide;"
+msgid "graphical toolkits, such as Gtk+ and Qt, allowing many programs to reuse the graphical objects they provide;"
 msgstr ""
 
 #. Tag: para

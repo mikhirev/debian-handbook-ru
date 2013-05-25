@@ -4,169 +4,241 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-06-01T20:23:56\n"
-"PO-Revision-Date: 2012-05-09T20:00:16\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: None\n"
-"Language: \n"
+"POT-Creation-Date: 2012-07-29T20:56:35\n"
+"PO-Revision-Date: 2012-11-29 16:12+0200\n"
+"Last-Translator: Alessio Dessi <alessio.dessi@gmail.com>\n"
+"Language-Team: Italian <http://debian.weblate.org/projects/debian-"
+"handbook/06_apt/it-IT/>\n"
+"Language: it-IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 1.4-dev\n"
 
 #. Tag: keyword
 #, no-c-format
 msgid "apt-get"
-msgstr ""
+msgstr "apt-get"
 
 #. Tag: keyword
 #, no-c-format
 msgid "apt-cache"
-msgstr ""
+msgstr "apt-cache"
 
 #. Tag: keyword
 #, no-c-format
 msgid "aptitude"
-msgstr ""
+msgstr "aptitude"
 
 #. Tag: keyword
 #, no-c-format
 msgid "synaptic"
-msgstr ""
+msgstr "synaptic"
 
 #. Tag: keyword
 #, no-c-format
 msgid "sources.list"
-msgstr ""
+msgstr "sources.list"
 
 #. Tag: keyword
 #, no-c-format
 msgid "apt-cdrom"
-msgstr ""
+msgstr "apt-cdrom"
 
 #. Tag: title
 #, no-c-format
 msgid "Maintenance and Updates: The APT Tools"
-msgstr ""
+msgstr "Manutenzione ed Aggiornamento: gli strumenti APT"
 
 #. Tag: para
 #, no-c-format
 msgid "What makes Debian so popular with administrators is how easily software can be installed and how easily the whole system can be updated. This unique advantage is largely due to the <emphasis>APT</emphasis> program, the features of which Falcot Corp administrators studied with enthusiasm."
 msgstr ""
+"Ciò che rende così popolare Debian tra gli amministratori è la facilità con "
+"cui il software può essere installato e la facilità con cui l'intero sistema "
+"può essere aggiornato. Questo vantaggio è dovuto in gran parte al programma "
+"<emphasis> APT </emphasis>, le cui caratteristiche sono state studiate con "
+"entusiasmo dagli amministratori di Falcot Corp."
 
 #. Tag: para
 #, no-c-format
 msgid "<indexterm><primary>APT</primary></indexterm> <indexterm><primary>Advanced Package Tool</primary></indexterm> APT is the abbreviation for Advanced Package Tool. What makes this program “advanced” is its approach to packages. It doesn't simply evaluate them individually, but it considers them as a whole and produces the best possible combination of packages depending on what is available and compatible (according to dependencies)."
 msgstr ""
+"<indexterm><primary> APT </primary></indexterm><indexterm><primary> "
+"Strumento Avanzato Package </primary></indexterm> APT è l'abbreviazione di "
+"Advanced Package Tool. Ciò che rende questo programma \"avanzato\" è il suo "
+"approccio ai pacchetti. Non li valuta semplicemente singolarmente, ma li "
+"considera nel suo insieme e produce la migliore combinazione possibile di "
+"pacchetti a seconda di ciò che è disponibile e compatibile (secondo "
+"dipendenze)."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>VOCABULARY</emphasis> Package source and source package"
 msgstr ""
+"<emphasis> VOCABOLARIO </emphasis> Pacchetto sorgente e pacchetto di "
+"sorgenti"
 
 #. Tag: para
 #, no-c-format
 msgid "The word <emphasis>source</emphasis> can be ambiguous. A source package — a package containing the source code of a program — should not be confused with a package source — a repository (website, FTP server, CD-ROM, local directory, etc.) which contains packages."
 msgstr ""
+"La parola <emphasis>sorgente</emphasis> può essere ambigua. Un pacchetto "
+"sorgente — un pacchetto contentente il codice sorgente di un programma — non "
+"dev'essere confuso con la sorgente di un pacchetto — un archivio (sito web, "
+"server FTP, CD-ROM, cartella locale, etc.) nel quale sono contenuti i "
+"pacchetti."
 
 #. Tag: para
 #, no-c-format
 msgid "APT needs to be given a “list of package sources”: the file <filename>/etc/apt/sources.list</filename> will list the different repositories (or “sources”) that publish Debian packages. APT will then import the list of packages published by each of these sources. This operation is achieved by downloading <filename>Packages.gz</filename> or <filename>Packages.bz2</filename> files (in case of a source of binary packages) and <filename>Sources.gz</filename> or <filename>Sources.bz2</filename> files (in case of a source of source packages) and by analyzing their contents. When an old copy of these files is already present, APT can update it by only downloading the differences (see sidebar <xref linkend=\"encadre.apt-pdiff\" />)."
 msgstr ""
+"APT necessità di una “lista di sorgenti”: il file "
+"<filename>/etc/apt/sources.list</filename> elencherà i var i archivi ( o "
+"“sorgenti”) che pubblicano i pacchetti Debian. APT importerà la lista dei  "
+"pacchetti pubblicati da ciascuna di queste sorgenti. Questa operazione "
+"avviene scaricando  i file  <filename>Packages.gz</filename> o "
+"<filename>Packages.bz2</filename> (nel caso di un archivio di pacchetti "
+"binari) e i file <filename>Sources.gz</filename> o "
+"<filename>Sources.bz2</filename> (nel caso di una archivio di pacchetti di "
+"sorgenti) e analizzandone il loro contenuto. Quando una vecchia copia di "
+"questi file è già presente, APT è in grado di aggiornarla scaricando "
+"soltanto le differenze(vedere la barra laterale <xref linkend=\"encadre.apt-"
+"pdiff\" />)."
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><filename>Packages.gz</filename></primary>"
-msgstr ""
+msgstr "<primary><filename>Packages.gz</filename></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><filename>Sources.gz</filename></primary>"
-msgstr ""
+msgstr "<primary><filename>Sources.gz</filename></primary>"
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>BACK TO BASICS</emphasis> <command>gzip</command>, <command>bzip2</command>, <command>LZMA</command> and <command>XZ</command> Compression"
 msgstr ""
+"<emphasis>ELEMENTI DI BASE</emphasis> <command>gzip</command>, "
+"<command>bzip2</command>, Compressione <command>LZMA</command> e "
+"<command>XZ</command>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>gzip</command></primary>"
-msgstr ""
+msgstr "<primary><command>gzip</command></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>bzip2</command></primary>"
-msgstr ""
+msgstr "<primary><command>bzip2</command></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>lzma</command></primary>"
-msgstr ""
+msgstr "<primary><command>lzma</command></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>xz</command></primary>"
-msgstr ""
+msgstr "<primary><command>xz</command></primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "A <filename>.gz</filename> extension refers to a file compressed with the <command>gzip</command> utility. <command>gzip</command> is the fast and efficient traditional Unix utility to compress files. Newer tools achieve better rates of compression but require more calculation time to compress a file. Among them, and by order of appearance, there are <command>bzip2</command> (generating files with a <filename>.bz2</filename> extension), <command>lzma</command> (generating <filename>.lzma</filename> files) and <command>xz</command> (generating <filename>.xz</filename> files)."
 msgstr ""
+"L'estensione <filename>.gz</filename> si riferisce a file compressi con il "
+"programma <command>gzip</command>. Il programma <command>gzip</command> "
+"strumento di sistema degli Unix tradizionali è il sistema più veloce e "
+"efficiente per comprimere file. Nuovi strumenti raggiungo tassi di "
+"compressione migliori ma richiedono piu tempo di calcolo per comprimere un "
+"file. Tra questi, in ordine di rilascio, ci sono <command>bzip2</command> "
+"(genera file con estensione <filename>.bz2</filename>), "
+"<command>lzma</command> (genera fiel con estensione "
+"<filename>.lzma</filename>) e <command>xz</command> (genera file con "
+"estensione <filename>.xz</filename>)."
 
 #. Tag: title
 #, no-c-format
 msgid "Filling in the <filename>sources.list</filename> File"
-msgstr ""
+msgstr "Preparazione del file <filename>sources.list</filename> in corso"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><filename>sources.list</filename></primary>"
-msgstr ""
+msgstr "<primary><filename>sources.list</filename></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>source of packages</primary>"
-msgstr ""
+msgstr "<primary>sorgente di pacchetti</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>source of</secondary>"
-msgstr ""
+msgstr "<primary> pacchetto </primary><secondary> sorgente di </secondary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><filename>/etc/apt/sources.list</filename></primary>"
-msgstr ""
+msgstr "<primary><filename>/etc/apt/sources.list</filename></primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Each active line of the <filename>/etc/apt/sources.list</filename> file contains the description of a source, made of 3 parts separated by spaces."
 msgstr ""
+"Ogni linea attiva del file <filename>/etc/apt/sources.list</filename> "
+"contiene la descrizione di una sorgente, suddivisa in tre parti separate da "
+"spazi."
 
 #. Tag: para
 #, no-c-format
 msgid "The first field indicates the source type:"
-msgstr ""
+msgstr "Il primo campo indica il tipo di sorgente:"
 
 #. Tag: para
 #, no-c-format
 msgid "“<literal>deb</literal>” for binary packages,"
-msgstr ""
+msgstr "“<literal>deb</literal>” per i pacchetti binari,"
 
 #. Tag: para
 #, no-c-format
 msgid "“<literal>deb-src</literal>” for source packages."
-msgstr ""
+msgstr "“<literal>deb-src</literal>” per i pacchetti sorgente."
 
 #. Tag: para
 #, no-c-format
 msgid "The second field gives the base URL of the source (combined with the filenames present in the <filename>Packages.gz</filename> files, it must give a full and valid URL): this can consist in a Debian mirror or in any other package archive set up by a third party. The URL can start with <literal>file://</literal> to indicate a local source installed in the system's file hierarchy, with <literal>http://</literal> to indicate a source accessible from a web server, or with <literal>ftp://</literal> for a source available on an FTP server. The URL can also start with <literal>cdrom://</literal> for CD-ROM based installations, although this is less frequent, since network-based installation methods are more and more common."
 msgstr ""
+"Il secondo campo fornisce l'URL della sorgente (combinato con il nome dei "
+"file presente in <filename>Packages.gz</filename>, deve fornire un URL "
+"valido e completo): questo potrebbe essere un morrir Debian o qualunque "
+"altro archivio di pacchetti predisposto da una terza parte. L'URL potrebbe "
+"iniziare con <literal>file://</literal> per indicare una sorgente locale "
+"all'interno del file system, con <literal>http://</literal> per indicare una "
+"sorgente accessibile da un server web, o con <literal>ftp://</literal> per "
+"una sorgente disponibile su un server FTP. L'URL può anche iniziare con "
+"<literal>cdrom://</literal> per le installazioni basate su CD-ROM, sebbene "
+"questo sia meno frequente, dato che i metodi di installazione basati sulla "
+"rete sono sempre piu comuni."
 
 #. Tag: para
 #, no-c-format
 msgid "The syntax of the last field depends on whether the source corresponds to a Debian mirror or not. In the case of a Debian mirror, name the chosen distribution (<literal>stable</literal>, <literal>testing</literal>, <literal>unstable</literal> or their current code names — see the list in sidebar <xref linkend=\"cadre.bruce-perens\" />), then the sections to enable (chosen between <literal>main</literal>, <literal>contrib</literal>, and <literal>non-free</literal>). In all other cases, simply indicate the subdirectory of the desired source (this is often a simple “<filename>./</filename>” which refers to the absence of a subdirectory — the packages are then directly at the specified URL)."
 msgstr ""
+"La sintassi dell'ultimo campo dipende dal fatto che la sorgente corrisponda "
+"o meno ad un mirror Debian, il nome della distribuzione scelta "
+"(<literal>stable</literal>, <literal>testing</literal>, "
+"<literal>unstable</literal> o i nomi in codice — guardare la lista nella "
+"barra laterale <xref linkend=\"cadre.bruce-perens\" />), successivamente la "
+"sezione da abilitare (scelta tra <literal>main</literal>, "
+"<literal>contrib</literal> e <literal>non-free</literal>). In tutti gli "
+"altri casi, indica semplicemente la sotto cartella  della sorgente "
+"desiderata (spesso semplicemente \"<filename>./</filename>” che indica "
+"l'assenza di una sotto cartella — i pacchetti si travono  direttamente nel "
+"URL specificato)."
 
 #. Tag: title
 #, no-c-format
@@ -205,12 +277,12 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Debian uses three sections to differentiate packages according to the licenses chosen by the authors of each program. <foreignphrase>Main</foreignphrase> (the main archive) gathers all packages which fully comply with the Debian Free Software Guidelines."
+msgid "Debian uses three sections to differentiate packages according to the licenses chosen by the authors of each work. <foreignphrase>Main</foreignphrase> (the main archive) gathers all packages which fully comply with the Debian Free Software Guidelines."
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The <foreignphrase>non-free</foreignphrase> archive is different because it contains software which does not (entirely) conform to these principles but which can nevertheless be distributed freely. This archive, which is not officially part of Debian, is a service for users who could need those software — however Debian always recommends giving priority to free software. The existence of this section represents a considerable problem for Richard M. Stallman and keeps the Free Software Foundation from recommending Debian to users."
+msgid "The <foreignphrase>non-free</foreignphrase> archive is different because it contains software which does not (entirely) conform to these principles but which can nevertheless be distributed without restrictions. This archive, which is not officially part of Debian, is a service for users who could need some of those programs — however Debian always recommends giving priority to free software. The existence of this section represents a considerable problem for Richard M. Stallman and keeps the Free Software Foundation from recommending Debian to users."
 msgstr ""
 
 #. Tag: para
@@ -267,7 +339,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "This software tests the download speed from several Debian mirrors and generates a <filename>sources.list</filename> file which points to the the fastest mirror."
+msgid "This software tests the download speed from several Debian mirrors and generates a <filename>sources.list</filename> file which points to the fastest mirror."
 msgstr ""
 
 #. Tag: para
@@ -347,7 +419,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Unsurprisingly, the <literal>backports.debian.org</literal> server hosts “package backports”. The term refers to a package of a recent software which has been recompiled for an older distribution, generally for <emphasis role=\"distribution\">Stable</emphasis>. When the distribution becomes a little dated, numerous software projects have released new versions that are not integrated into the current <emphasis role=\"distribution\">Stable</emphasis> (which is only modified to address the most critical problems, such as security problems). Since the <emphasis role=\"distribution\">Testing</emphasis> and <emphasis role=\"distribution\">Unstable</emphasis> distributions can be more risky, some volunteers sometimes offer recompilations of recent software applications for <emphasis role=\"distribution\">Stable</emphasis>, which has the advantage to limit potential instability to a small number of chosen packages. <ulink type=\"block\" url=\"http://backports.debian.org/\" />"
+msgid "Unsurprisingly, the <literal>backports.debian.org</literal> server hosts “package backports”. The term refers to a package of some recent software which has been recompiled for an older distribution, generally for <emphasis role=\"distribution\">Stable</emphasis>. When the distribution becomes a little dated, numerous software projects have released new versions that are not integrated into the current <emphasis role=\"distribution\">Stable</emphasis> (which is only modified to address the most critical problems, such as security problems). Since the <emphasis role=\"distribution\">Testing</emphasis> and <emphasis role=\"distribution\">Unstable</emphasis> distributions can be more risky, some volunteers sometimes offer recompilations of recent software applications for <emphasis role=\"distribution\">Stable</emphasis>, which has the advantage to limit potential instability to a small number of chosen packages. <ulink type=\"block\" url=\"http://backports.debian.org/\" />"
 msgstr ""
 
 #. Tag: para
@@ -402,7 +474,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "There are numerous non-official sources of Debian packages set up by advanced users who have recompiled some softwares, by programmers who make their creation available to all, and even by Debian developers who offer pre-versions of their package online. A web site was set up to find these alternative sources more easily. It contains an impressive amount of Debian package sources which can immediately be integrated into <filename>sources.list</filename> files. However, be careful not to add random packages. Each source is designed for a particular version of Debian (the one used to compile the packages in question); each user should maintain a certain coherence in what they choose to install. <ulink type=\"block\" url=\"http://www.apt-get.org/\" />"
+msgid "There are numerous non-official sources of Debian packages set up by advanced users who have recompiled some software, by programmers who make their creation available to all, and even by Debian developers who offer pre-versions of their package online. A web site was set up to find these alternative sources more easily. It contains an impressive amount of Debian package sources which can immediately be integrated into <filename>sources.list</filename> files. However, be careful not to add random packages. Each source is designed for a particular version of Debian (the one used to compile the packages in question); each user should maintain a certain coherence in what they choose to install. <ulink type=\"block\" url=\"http://www.apt-get.org/\" />"
 msgstr ""
 
 #. Tag: para
@@ -648,7 +720,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Be careful, using <command>apt-get --reinstall</command> to restore packages modified during an attack certainly cannot recover the system as it was. <xref linkend=\"sect.dealing-with-compromised-machine\" /> details the necessary steps to take with a hacked system."
+msgid "Be careful, using <command>apt-get --reinstall</command> to restore packages modified during an attack certainly cannot recover the system as it was. <xref linkend=\"sect.dealing-with-compromised-machine\" /> details the necessary steps to take with a compromised system."
 msgstr ""
 
 #. Tag: para
@@ -1268,7 +1340,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "To conclude this section, let's note that <command>aptitude</command> has more elaborate algorithms compared to <command>apt-get</command> when it comes to resolving difficult situations. When a set of actions is requested and when these combined actions would lead to an incoherent system, <command>aptitude</command> evaluates several possible scenarios and presents them in order of decreasing relevance. However, these algorithms are not failproof. Fortunately there is always the possibility to manually select the actions to perform. When the currently selected actions lead to contradictions, the upper part of the screen indicates a number of “broken” packages (and you can directly navigate to those packages by pressing <keycombo><keycap>b</keycap></keycombo>). It is then possible to manually build a solution for the problems found. In particular, you can get access to the different available versions by simply selecting the package with <keycombo><keycap>Enter</keycap></keycombo>. If the selection of one of these versions solves the problem, you should not hesitate to use the function. When the number of broken packages gets down to zero, you can safely go the summary screen of pending actions for a last check before you apply them."
+msgid "To conclude this section, let's note that <command>aptitude</command> has more elaborate algorithms compared to <command>apt-get</command> when it comes to resolving difficult situations. When a set of actions is requested and when these combined actions would lead to an incoherent system, <command>aptitude</command> evaluates several possible scenarios and presents them in order of decreasing relevance. However, these algorithms are not failproof. Fortunately there is always the possibility to manually select the actions to perform. When the currently selected actions lead to contradictions, the upper part of the screen indicates a number of “broken” packages (and you can directly navigate to those packages by pressing <keycombo><keycap>b</keycap></keycombo>). It is then possible to manually build a solution for the problems found. In particular, you can get access to the different available versions by simply selecting the package with <keycombo><keycap>Enter</keycap></keycombo>. If the selection of one of these versions solves the problem, you should not hesitate to use the function. When the number of broken packages gets down to zero, you can safely go to the summary screen of pending actions for a last check before you apply them."
 msgstr ""
 
 #. Tag: title
@@ -1492,7 +1564,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "last but not least, the kernel: depending on the hardware, the metapackages to use are <emphasis role=\"pkg\">linux-image-486</emphasis>, <emphasis role=\"pkg\">linux-image-686</emphasis> or <emphasis role=\"pkg\">linux-image-686-bigmem</emphasis>. These packages will only work for the i386 architecture; owners of computers based on different hardware will use other packages, most likely <emphasis role=\"pkg\">linux-image-2.6-amd64</emphasis> for AMD64 or <emphasis role=\"pkg\">linux-image-powerpc*</emphasis> for PowerPC)."
+msgid "last but not least, the kernel: depending on the hardware, the metapackages to use are <emphasis role=\"pkg\">linux-image-486</emphasis>, <emphasis role=\"pkg\">linux-image-686</emphasis> or <emphasis role=\"pkg\">linux-image-686-bigmem</emphasis>. These packages will only work for the i386 architecture; owners of computers based on different hardware will use other packages, most likely <emphasis role=\"pkg\">linux-image-2.6-amd64</emphasis> for AMD64 or <emphasis role=\"pkg\">linux-image-powerpc*</emphasis> for PowerPC."
 msgstr ""
 
 #. Tag: para
