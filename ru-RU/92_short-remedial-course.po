@@ -211,12 +211,12 @@ msgstr "Командный интерпретатор умеет запуска�
 #. Tag: title
 #, no-c-format
 msgid "System Information: Memory, Disk Space, Identity"
-msgstr "Системная информация: память, дисковой пространство, идентификация"
+msgstr "Системная информация: память, дисковое пространство, идентификация"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "The <command>free</command> command displays information on memory; <command>df</command> (<emphasis>disk free</emphasis>) reports on the available disk space on each of the disks mounted in the filesystem. Its <literal>-h</literal> option (for <emphasis>human readable</emphasis>) converts the sizes into a more legible unit (usually mebibytes or gibibytes). In a similar fashion, the <command>free</command> command understands the <literal>-m</literal> and <literal>-g</literal> options, and displays its data either in mebibytes or in gibibytes, respectively."
-msgstr "Команда <command>free</command> показывает информацию о памяти. Команда <command>df</command> (<emphasis>disk free</emphasis> = <emphasis>свободное пространство</emphasis>) показывает доступное место на каждом из примонтированных дисков. Опция <literal>-h</literal> (от <emphasis>human readable</emphasis> = <emphasis>удобочитаемый</emphasis>) переводит величины в более удобные единицы измерения (обычно мегабайты или гигабайты). Точно так же команда <command>free</command> понимает опции <literal>-m</literal> и <literal>-g</literal> и показывает величины в мегабайтах и гигабайтах соответственно."
+msgstr "Команда <command>free</command> показывает информацию о памяти. Команда <command>df</command> (<emphasis>disk free</emphasis> = <emphasis>свободное пространство</emphasis>) показывает доступное место на каждом из примонтированных дисков. Его опция <literal>-h</literal> (от <emphasis>human readable</emphasis> = <emphasis>удобочитаемый</emphasis>) переводит величины в более удобные единицы измерения (обычно мебибайты или гибибайты). Точно так же команда <command>free</command> понимает опции <literal>-m</literal> и <literal>-g</literal> и показывает величины в мебибайтах и гибибайтах соответственно."
 
 #. Tag: screen
 #, no-c-format
@@ -648,9 +648,9 @@ msgid "<primary>system, filesystem</primary>"
 msgstr "<primary>система, файловая система</primary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Filesystems are one of the most prominent aspects of the kernel. Unix systems merge all the file stores into a single hierarchy, which allows users (and applications) to access data simply by knowing its location within that hierarchy."
-msgstr "Файловая система - это один из наиболее примечательных разделов ядра. Unix системы объединяют все файловые хранилища в единую иерархию, что позволяет пользователям (и приложениям) получить доступ к данным лишь по их расположению в иерархии."
+msgstr "Файловые системы — это один из наиболее примечательных разделов ядра. Unix-системы объединяют все файловые хранилища в единую иерархию, что позволяет пользователям (и приложениям) получить доступ к данным лишь по их расположению в иерархии."
 
 #. Tag: para
 #, no-c-format

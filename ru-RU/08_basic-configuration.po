@@ -184,7 +184,7 @@ msgid "<primary>Latin 0</primary>"
 msgstr "<primary>Latin 0</primary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Historically, each locale has an associated “character set” (group of known characters) and a preferred “encoding” (internal representation for characters within the computer)."
 msgstr "Исторически сложилось, что каждая языковая настройка имеет связанный с ней “набор символов” (группа известных символов) и предпочитаемую “кодировку” (внутреннее представление символов в компьютере)."
 
@@ -1463,14 +1463,14 @@ msgid "The <command>addgroup</command> and <command>delgroup</command> commands 
 msgstr ""
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary><command>addgroup</command></primary>"
-msgstr "<primary><command>locale-gen</command></primary>"
+msgstr "<primary><command>addgroup</command></primary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary><command>delgroup</command></primary>"
-msgstr "<primary><command>locale-gen</command></primary>"
+msgstr "<primary><command>delgroup</command></primary>"
 
 #. Tag: indexterm
 #, no-c-format
@@ -2825,9 +2825,9 @@ msgid "<primary><emphasis>autofs</emphasis></primary>"
 msgstr ""
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary>automounter</primary>"
-msgstr "<primary>Latin 1</primary>"
+msgstr ""
 
 #. Tag: para
 #, no-c-format

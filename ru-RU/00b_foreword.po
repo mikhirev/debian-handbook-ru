@@ -109,7 +109,7 @@ msgid "We tried to make this book useful for many categories of readers. First, 
 msgstr "Мы пытались сделать эту книгу полезной для разных категорий читателей. Во-первых, системные администраторы (как начинающие, так и опытные) найдут инструкцию по установке и внедрению Debian на множество компьютеров. Они также получат представление о большинстве сервисов, доступных в Debian, инструкции по их настройке и описание специфических составляющих дистрибутива. Понимание механизмов разработки Debian поможет им справиться с непредвиденными проблемами, зная, что всегда можно найти помощь у сообщества."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Users of another Linux distribution, or of another Unix variant, will discover the specifics of Debian, and should become operational very quickly while benefiting fully from the unique advantages of this distribution."
 msgstr "Пользователи других дистрибутивов Linux, или других Unix-систем, соринтируются в специфике Debian и уже вскоре будут готовы к работе, в полной мере пользуясь всеми преимуществами, присущими этому дистрибутиву."
 

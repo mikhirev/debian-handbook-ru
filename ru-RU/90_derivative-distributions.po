@@ -129,9 +129,9 @@ msgid "The distribution aims at simplifying access to advanced technologies, and
 msgstr "Цели дистрибутива - упростить доступ к продвинутым технологиям и предоставить специальный графический интерфейс к популярному программному обеспечению. Например, даже не смотря на то, что Linux Mint использует GNOME, система меню в нём совершенно иная. Или пакетный менеджер, основанный на APT предоставляет особый интерфейс с оценкой риска от обновления каждого пакета."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Linux Mint includes a large amount of proprietary software to improve the experience of users who might need those. For example: Adobe Flash and multimedia codecs. <ulink type=\"block\" url=\"http://www.linuxmint.com/\" />"
-msgstr "Linux Mint включает в себя большое количество проприетарного программного обеспечения для упрощения работы пользователям. Например, Adobe Flash или мультимедийные кодеки. <ulink type=\"block\" url=\"http://www.linuxmint.com/\" />"
+msgstr "Linux Mint включает в себя большое количество собственнического программного обеспечения для упрощения работы пользователям, которым оно может понадобиться. Например, Adobe Flash или мультимедийные кодеки. <ulink type=\"block\" url=\"http://www.linuxmint.com/\" />"
 
 #. Tag: title
 #, no-c-format
@@ -144,9 +144,9 @@ msgid "<indexterm><primary>SimplyMEPIS</primary></indexterm> SimplyMEPIS is a co
 msgstr "<indexterm><primary>SimplyMEPIS</primary></indexterm> SimplyMEPIS - коммерческий дистрибутив, очень схожий с Knoppix. Он предоставляет систему Linux на LiveCD под ключ и включает ряд пакетов с несвободным программным обеспечением: драйвера для видеокарт nVidia, Flash для анимации, встроенной на множестве сайтов, RealPlayer, Sun's Java и так далее. Основное предназначение дистрибутива - предоставить 100% работающую систему из коробки. Mepis является международным и поддерживает множество языков. <ulink type=\"block\" url=\"http://www.mepis.org/\" />"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "This distribution was originally based on Debian; it went to Ubuntu for a while, then came back to Debian Stable, which allows its developers to focus on adding features without having to stabilize packages coming from Debian's <emphasis role=\"distribution\">Unstable</emphasis> distribution."
-msgstr "Этот дистрибутив изначально базировался на Debian, затем ненадолго перешёл на Ubuntu, но потом снова вернулся на Debian, что позволило сосредоточиться на добавлении функционала без проблем со стабилизацией пакетов, приходящих из <emphasis role=\"distribution\">Unstable</emphasis> ветки дистрибутива."
+msgstr "Этот дистрибутив изначально базировался на Debian, затем ненадолго перешёл на Ubuntu, но потом снова вернулся к Debian Stable, что позволило его разработчикам сосредоточиться на добавлении функционала без проблем со стабилизацией пакетов, приходящих из <emphasis role=\"distribution\">Unstable</emphasis> ветки Debian."
 
 #. Tag: title
 #, no-c-format
@@ -164,9 +164,9 @@ msgid "Damn Small Linux"
 msgstr "Damn Small Linux"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "This distribution provides a tiny LiveCD, weighing only 50 MB, so that it can fit on a CD-ROM with the shape and size of a business card. To achieve this, Damn Small Linux only includes lightweight software tools. This can be interesting to use a Debian-like system on an aging computer. <ulink type=\"block\" url=\"http://www.damnsmalllinux.org/\" />"
-msgstr "Этот дистрибутив предоставляет LiveCD размеров всего лишь 50Мб и может уместиться на CD-ROM размером с визитную карточку. Это может пригодиться для использования на старых компьютерах. <ulink type=\"block\" url=\"http://www.damnsmalllinux.org/\" />"
+msgstr "Этот дистрибутив предоставляет крошечный LiveCD размером всего 50 МБ, который может уместиться на CD-ROM с размером и формой визитной карточки. Чтобы этого добиться, в Damn Small Linux включены только легковесные программы. Это может пригодиться для использования Debian-подобной системы на старом компьютере. <ulink type=\"block\" url=\"http://www.damnsmalllinux.org/\" />"
 
 #. Tag: title
 #, no-c-format

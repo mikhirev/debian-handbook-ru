@@ -49,9 +49,9 @@ msgid "As a Debian system administrator, you will routinely handle <filename>.de
 msgstr "Как системному администратору Debian, Вам постоянно придется работать с <filename>.deb</filename> пакетами, которые содержат, к примеру, программы или документацию, и установку которых они облегчают. Поэтому хорошей идеей будет знать что они из себя представляют и как с ними работать."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "This chapter describes the structure and contents of “binary” and “source” packages. The former are <filename>.deb</filename> files, directly usable by <command>dpkg</command>, while the latter contain the source code, as well as instructions for building binary packages."
-msgstr "В этой главе описывается структура и содержание “binary“ и “source” пакетов. Первые стоит использовать непосредственно с помощью <command>dpkg</command>, в то время как ко второй группе относятся пакеты, содержщие исходный код программ, а также инструкции (скрипты) для создания двоичных пакетов."
+msgstr "В этой главе описывается структура и содержание “двоичных” и “исходных” пакетов. Первые являются файлами <filename>.deb</filename>, которые можно использовать непосредственно с помощью <command>dpkg</command>, в то время как последние содержщат исходный код программ, а также инструкции для создания двоичных пакетов."
 
 #. Tag: title
 #, no-c-format
@@ -226,9 +226,9 @@ msgid "<filename>debian-binary</filename>. This is a text file which simply indi
 msgstr "<filename>debian-binary</filename>. Это текстовый файл, который просто указывает версию <filename>.deb</filename> пакета (в 2011 году: версия 2.0)."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<filename>control.tar.gz</filename>. This archive file contains all of the available meta-information. In it, package management tools find, among other things, the name and version of the package. Some of this meta-information allows them to determine if it is possible to install or uninstall it, for example according to the list of packages already on the machine."
-msgstr "<filename>control.tar.gz</filename>. Этот файл содержит всю доступную метаинформацию. Используя ее инструменты управления пакетами узнают о названии и версия пакета. Она так же позволяет определить, возможно ли установить или удалить пакет, например, в соответствии со списком уже установленных в системе пакетов."
+msgstr "<filename>control.tar.gz</filename>. Этот файл содержит всю доступную метаинформацию. В нём, среди прочего, инструменты управления пакетами находят название и версию пакета. Эта метаинформация также позволяет определить, возможно ли установить или удалить пакет, например в соответствии со списком уже установленных в системе пакетов."
 
 #. Tag: para
 #, no-c-format
@@ -375,9 +375,9 @@ msgid "<primary>package</primary><secondary>dependency</secondary>"
 msgstr "<primary>пакет</primary><secondary>зависимости</secondary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "The dependencies are defined in the <literal>Depends</literal> field in the package header. This is a list of conditions to be met for the package to work correctly — this information is used by tools such as <command>apt</command> in order to install the required libraries, in their appropriate versions, that the package to be installed depends on. For each dependency, it is possible to restrict the range of versions that meet that condition. In other words, it is possible to express the fact that we need the package <emphasis role=\"pkg\">libc6</emphasis> in a version equal to or greater than “2.3.4” (written “<command>libc6 (&gt;= 2.3.4)</command>”). Version comparison operators are as follows:"
-msgstr "Зависимости определяются в поле <literal>Depends</literal> в заголовке пакета. Это список условий, выполнение которых необходимо для коректной работы пакета. Эта информация будет использована установщиком (например <command>apt</command>) для того, чтобы доустановить нужные версии необходимых библиотек, обеспечивающие корректную работу программы."
+msgstr "Зависимости определяются в поле <literal>Depends</literal> в заголовке пакета. Это список условий, выполнение которых необходимо для коректной работы пакета. Эта информация используется такими инструментами как <command>apt</command> для того, чтобы доустановить нужные версии необходимых библиотек, от которых зависит устанавливаемый пакет. Для каждой зависимости можно ограничить диапазон версий, соответствующих этому условию. Другими словами, можно сказать, что нам требуется пакет  <emphasis role=\"pkg\">libc6</emphasis> версии не ниже чем “2.3.4” (пишется “<command>libc6 (&gt;= 2.3.4)</command>”). Операторы сравнения версий следующие:"
 
 #. Tag: para
 #, no-c-format
@@ -470,9 +470,9 @@ msgid "You should always install the “recommended” packages, unless you know
 msgstr ""
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary><literal>Enhances</literal>, header field</primary>"
-msgstr "<primary>Поле <literal>Depends</literal></primary>"
+msgstr "<primary><literal>Enhances</literal>, поле заголовка</primary>"
 
 #. Tag: para
 #, no-c-format
@@ -505,9 +505,9 @@ msgid "The <literal>Conflicts</literal> field indicates when a package cannot be
 msgstr "Поле <literal>Conflicts</literal> указывает на то, что пакет не может быть установлен, если уже установлен другой пакет. Наиболее распространенными причинами для этого является включение обоими пакетами файлов с одинаковыми именами или занимающие одинаковый порт TCP, или просто мешающие работе друг друга."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<command>dpkg</command> will refuse to install a package if it triggers a conflict with an already installed package, except if the new package specifies that it will “replace” the installed package, in which case <command>dpkg</command> will choose to replace the old package with the new one. <command>apt-get</command> always follows your instructions: if you choose to install a new package, it will automatically offer to uninstall the package that poses a problem."
-msgstr "<command>dpkg</command> откажется установить пакет, если он вызовет конфликт с уже установленным пакетом, за исключением тех случаев, когда новый пакет указывает, что он будет “заменять” установленный пакет. <command>apt-get</command> всегда следует вашим указаниям: если вы хотите установить новый пакет, который конфликтует с уже установленным, вам будет автоматически предложенно удалить старый пакет."
+msgstr "<command>dpkg</command> откажется установить пакет, если он вызовет конфликт с уже установленным пакетом, за исключением тех случаев, когда новый пакет указывает, что он будет “заменять” установленный пакет, в случае чего <command>dpkg</command> заменит старый пакет на новый. <command>apt-get</command> всегда следует вашим указаниям: если вы выберете установку нового пакета, он автоматически предложит удалить проблемный пакет."
 
 #. Tag: title
 #, no-c-format
@@ -1858,14 +1858,14 @@ msgstr ""
 "<computeroutput>  64 phpmyadmin_2.0.5-2_all.deb</computeroutput>\n"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "You will find that this process is extremely simple. You must know, however, that the package generated does not have any information on dependencies, since the dependencies in the two packaging formats don't have systematic correspondence. The administrator, thus, must manually ensure that the converted package will function correctly, and this is why Debian packages thus generated should be avoided as much as possible. Fortunately, Debian has the largest collection of software packages of all distributions, and it is likely that whatever you seek is already in there."
-msgstr "Как вы можете сами убедиться, тут нет ничего сложного. Вы не должны забывать лишь о том, что после конвертации новый пакет потеряет информацию о зависимостях. В этом случае вам, как администратору, придется проверить работоспособность переконвертированного пакета и доустановить зависимости в ручную, если потребуется. Это является главной причиной почему подобной переконвертации стоит избегать. К счастью, в репозиторях Debian находится самый большой набор пакетов, и скорее всего то, что вы ишете, там уже есть."
+msgstr "Как вы можете сами убедиться, тут нет ничего сложного. Вы не должны забывать лишь о том, что после конвертации новый пакет потеряет информацию о зависимостях, поскольку зависимости в двух форматах пакетов не соответствуют друг другу. В этом случае администратору придется проверить работоспособность переконвертированного пакета и доустановить зависимости вручную, если потребуется. Это является главной причиной почему подобной переконвертации стоит избегать. К счастью, в репозиторях Debian находится самый большой набор пакетов, и скорее всего то, что вы ишете, там уже есть."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Looking at the man page for the <command>alien</command> command, you will also note that this program also handles other packaging formats, especially the one used by the Slackware distribution (it is made of a simple <filename>tar.gz</filename> archive)."
-msgstr "Не забудьте заглянуть в man-страницу о <command>alien</command>. Просматриваяя ее вы наверняка заметите, что в процессе своей работы эта утилита обращается к другим пакетынм инструментам, особенно от Slackware дистрибутива (там используются самые обычные <filename>tar.gz</filename>-архивы)."
+msgstr "Заглянув в страницу руководства команды <command>alien</command>, вы также заметите, что эта программы также работает с другими форматами пакетов, в частности с используемым в дистрибутиве Slackware (там используются самые обычные архивы <filename>tar.gz</filename>)."
 
 #. Tag: para
 #, no-c-format
