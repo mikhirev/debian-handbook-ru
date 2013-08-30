@@ -377,7 +377,7 @@ msgstr "<primary>пакет</primary><secondary>зависимости</secondar
 #. Tag: para
 #, no-c-format
 msgid "The dependencies are defined in the <literal>Depends</literal> field in the package header. This is a list of conditions to be met for the package to work correctly — this information is used by tools such as <command>apt</command> in order to install the required libraries, in their appropriate versions, that the package to be installed depends on. For each dependency, it is possible to restrict the range of versions that meet that condition. In other words, it is possible to express the fact that we need the package <emphasis role=\"pkg\">libc6</emphasis> in a version equal to or greater than “2.3.4” (written “<command>libc6 (&gt;= 2.3.4)</command>”). Version comparison operators are as follows:"
-msgstr "Зависимости определяются в поле <literal>Depends</literal> в заголовке пакета. Это список условий, выполнение которых необходимо для коректной работы пакета. Эта информация используется такими инструментами как <command>apt</command> для того, чтобы доустановить нужные версии необходимых библиотек, от которых зависит устанавливаемый пакет. Для каждой зависимости можно ограничить диапазон версий, соответствующих этому условию. Другими словами, можно сказать, что нам требуется пакет  <emphasis role=\"pkg\">libc6</emphasis> версии не ниже чем “2.3.4” (пишется “<command>libc6 (&gt;= 2.3.4)</command>”). Операторы сравнения версий следующие:"
+msgstr "Зависимости определяются в поле <literal>Depends</literal> в заголовке пакета. Это список условий, выполнение которых необходимо для корректной работы пакета. Эта информация используется такими инструментами как <command>apt</command> для того, чтобы доустановить нужные версии необходимых библиотек, от которых зависит устанавливаемый пакет. Для каждой зависимости можно ограничить диапазон версий, соответствующих этому условию. Другими словами, можно сказать, что нам требуется пакет  <emphasis role=\"pkg\">libc6</emphasis> версии не ниже чем “2.3.4” (пишется “<command>libc6 (&gt;= 2.3.4)</command>”). Операторы сравнения версий следующие:"
 
 #. Tag: para
 #, no-c-format
@@ -502,12 +502,12 @@ msgstr "<primary>package</primary><secondary>conflict</secondary>"
 #. Tag: para
 #, no-c-format
 msgid "The <literal>Conflicts</literal> field indicates when a package cannot be installed simultaneously with another. The most common reasons for this are that both packages include a file containing the same name, or provide the same service on the same TCP port, or would hinder each other's operation."
-msgstr "Поле <literal>Conflicts</literal> указывает на то, что пакет не может быть установлен, если уже установлен другой пакет. Наиболее распространенными причинами для этого является включение обоими пакетами файлов с одинаковыми именами или занимающие одинаковый порт TCP, или просто мешающие работе друг друга."
+msgstr "Поле <literal>Conflicts</literal> указывает на то, что пакет не может быть установлен, если уже установлен другой пакет. Наиболее распространенными причинами для этого является включение обоими пакетами файлов с одинаковыми именами или занимающие одинаковый порт TCP, или просто мешающие работе друг друга." 
 
 #. Tag: para
 #, no-c-format
 msgid "<command>dpkg</command> will refuse to install a package if it triggers a conflict with an already installed package, except if the new package specifies that it will “replace” the installed package, in which case <command>dpkg</command> will choose to replace the old package with the new one. <command>apt-get</command> always follows your instructions: if you choose to install a new package, it will automatically offer to uninstall the package that poses a problem."
-msgstr "<command>dpkg</command> откажется установить пакет, если он вызовет конфликт с уже установленным пакетом, за исключением тех случаев, когда новый пакет указывает, что он будет “заменять” установленный пакет, в случае чего <command>dpkg</command> заменит старый пакет на новый. <command>apt-get</command> всегда следует вашим указаниям: если вы выберете установку нового пакета, он автоматически предложит удалить проблемный пакет."
+msgstr "<command>dpkg</command> откажется установить пакет, если он вызовет конфликт с уже установленным пакетом, за исключением тех случаев, когда новый пакет указывает, что он будет “заменять” установленный пакет, в случае чего <command>dpkg</command> заменит старый пакет на новый. <command>apt-get</command> всегда следует вашим указаниям: если вы хотите установить новый пакет, который конфликтует с уже установленным, вам будет автоматически предложенно удалить старый пакет."
 
 #. Tag: title
 #, no-c-format
@@ -667,7 +667,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> Virtual package versions"
-msgstr ""
+msgstr "<emphasis>ШАГ ВПЕРЁД</emphasis>"
 
 #. Tag: para
 #, no-c-format
@@ -712,7 +712,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> The <literal>Tag</literal> field"
-msgstr ""
+msgstr "<emphasis>ШАГ ВПЕРЁД</emphasis>"
 
 #. Tag: para
 #, no-c-format
@@ -757,7 +757,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> <command>dpkg</command> data directory"
-msgstr ""
+msgstr "<emphasis>ШАГ ВПЕРЁД</emphasis>"
 
 #. Tag: indexterm
 #, no-c-format
@@ -977,7 +977,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> Avoiding the configuration file questions"
-msgstr ""
+msgstr "<emphasis>ШАГ ВПЕРЁД</emphasis>"
 
 #. Tag: para
 #, no-c-format
@@ -1016,7 +1016,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> Force dpkg to ask configuration file questions"
-msgstr ""
+msgstr "<emphasis>ШАГ ВПЕРЁД</emphasis>"
 
 #. Tag: para
 #, no-c-format
@@ -1465,7 +1465,7 @@ msgstr "<emphasis>ВЕРНЕМСЯ К ОСНОВАМ</emphasis> синтакси
 #. Tag: para
 #, no-c-format
 msgid "Most options are available in the “long” version (one or more relevant words, preceded by a double dash) or a “short” version (a single letter, often the initial of one word from the long version, and preceded by a single dash). This convention is so common that it is a POSIX standard. <indexterm><primary>POSIX</primary></indexterm> <indexterm><primary>option</primary><secondary>POSIX</secondary></indexterm>"
-msgstr "Для большинста опций существуют “длинные” (один или несколько слов, перед двойным тире) и “короткие” версии (часто первая буква “длинно” версии после одного тире). Это соглашение так распространено, что уже является стандартом POSIX. <indexterm><primary>POSIX</primary></indexterm> <indexterm><primary>option</primary><secondary>POSIX</secondary></indexterm>"
+msgstr "Для большинста опций существуют “длинные” (один или несколько слов, перед двойным тире) и “короткие” версии (часто первая буква “длинной” версии после одного тире). Это соглашение так распространено, что уже является стандартом POSIX. <indexterm><primary>POSIX</primary></indexterm> <indexterm><primary>option</primary><secondary>POSIX</secondary></indexterm>"
 
 #. Tag: para
 #, no-c-format
@@ -1727,22 +1727,22 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> Comparison of versions"
-msgstr ""
+msgstr "<emphasis>ШАГ ВПЕРЁД</emphasis> Сравнение версий"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>version, comparison</primary>"
-msgstr ""
+msgstr "<primary>версия, сравнение</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>comparison of versions</primary>"
-msgstr ""
+msgstr "<primary>сравнение версий</primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Since <command>dpkg</command> is the program for handling Debian packages, it also provides the reference implementation of the logic of comparing version numbers. This is why it has a <literal>--compare-versions</literal> option, usable by external programs (especially configuration scripts executed by <command>dpkg</command> itself). This option requires three parameters: a version number, a comparison operator, and a second version number. The different possible operators are <literal>lt</literal> (strictly less than), <literal>le</literal> (less than or equal to), <literal>eq</literal> (equal), <literal>ne</literal> (not equal), <literal>ge</literal> (greater than or equal to), and <literal>gt</literal> (strictly greater than). If the comparison is correct, <command>dpkg</command> gives the return code, 0 (success); if not, it gives a non-zero return value (indicating failure)."
-msgstr ""
+msgstr "Так как <command>dpkg</command> представляет из себя программу для работы с Debian пакетами, она, помимо всего прочего, умеет логически сравнивать номера их версий. Для этого требуется три параметра: номера версии пакетов и оператор сравнения. Различные возможные операторы - <literal>lt</literal> (строго меньше, чем), <literal>le</literal> (меньше чем или равный), <literal>eq</literal> (равный), <literal>ne</literal> (не равный), <literal>ge</literal> (больше чем или равный), и <literal>gt</literal> (строго больше, чем). Если операция сравнения прошла без ошибок, <command>dpkg</command> вернет код возврата равный нулю (success); если нет, мы получаем ненулевое значение (indicating failure)."
 
 #. Tag: screen
 #, no-c-format
@@ -1772,7 +1772,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "Note the unexpected failure of the last comparison: for <command>dpkg</command>, <literal>pre</literal>, usually denoting a pre-release, has no particular meaning, and this program compares the alphabetic characters in the same way as the numbers (a &lt;b &lt;c ...), in alphabetical order. This is why it considers “<literal>0pre3</literal>” to be greater than “<literal>0</literal>”. When we want a package's version number to indicate that it is a pre-release, we use the tilde character, “<literal>~</literal>”:"
-msgstr ""
+msgstr "Обратите внимание на неожиданный сбой последнего сравнения: для <command>dpkg</command>, <literal>pre</literal>, обозначающий, как правило, pre-release, не имеет никакого особого значения, поэтому сравниваются буквенные символы таким же образом как и числа (a &lt;b &lt;c ...), в алфавитном порядке. Именно поэтому <command>dpkg</command> считает, что “<literal>0pre3</literal>” больше, чем “<literal>0</literal>”. Для того, чтобы явно указать, что мы работаем с pre-release, используйте символ тильды “<literal>~</literal>”:"
 
 #. Tag: screen
 #, no-c-format
@@ -1795,7 +1795,7 @@ msgstr "Log-файл <command>dpkg</command>"
 #. Tag: para
 #, no-c-format
 msgid "A recently introduced feature in <command>dpkg</command> is that it keeps a log of all of its actions in <filename>/var/log/dpkg.log</filename>. This log is extremely verbose, since it details every one of the stages through which packages handled by <command>dpkg</command> go. In addition to offering a way to track dpkg's behavior, it helps, above all, to keep a history of the development of the system: one can find the exact moment when each package has been installed or updated, and this information can be extremely useful in understanding a recent change in behavior. Additionally, all versions being recorded, it is easy to cross-check the information with the <filename>changelog.Debian.gz</filename> for packages in question, or even with online bug reports."
-msgstr "Одной из функций <command>dpkg</command> является вести журнал, т.е. записывать все его действия в <filename>/var/log/dpkg.log</filename>. Журнал достаточно подробный. В нем задокументированн каждый этап работы с пакетом. Этот журнал поможет отследить историю изменений в системе: вы можете найти точный момент, когда какой пакет был установлен или обновлен, и эта информация может быть чрезвычайно полезной при выяснении причин изменения в поведении системы в целом. Кроме того, информацию обо всех установеленных версиях можно получить из <filename>changelog.Debian.gz</filename>, включая отчеты об ошибках."
+msgstr "Одной из функций <command>dpkg</command> является вести журнал, т.е. записывать все его действия в <filename>/var/log/dpkg.log</filename>. Журнал достаточно подробный. В нем задокументирован каждый этап работы с пакетом. Этот журнал поможет отследить историю изменений в системе: вы можете найти точный момент, когда какой пакет был установлен или обновлен, и эта информация может быть чрезвычайно полезной при выяснении причин изменения в поведении системы в целом. Кроме того, информацию обо всех установеленных версиях можно получить из <filename>changelog.Debian.gz</filename>, включая отчеты об ошибках."
 
 #. Tag: title
 #, no-c-format
@@ -1860,12 +1860,12 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "You will find that this process is extremely simple. You must know, however, that the package generated does not have any information on dependencies, since the dependencies in the two packaging formats don't have systematic correspondence. The administrator, thus, must manually ensure that the converted package will function correctly, and this is why Debian packages thus generated should be avoided as much as possible. Fortunately, Debian has the largest collection of software packages of all distributions, and it is likely that whatever you seek is already in there."
-msgstr "Как вы можете сами убедиться, тут нет ничего сложного. Вы не должны забывать лишь о том, что после конвертации новый пакет потеряет информацию о зависимостях, поскольку зависимости в двух форматах пакетов не соответствуют друг другу. В этом случае администратору придется проверить работоспособность переконвертированного пакета и доустановить зависимости вручную, если потребуется. Это является главной причиной почему подобной переконвертации стоит избегать. К счастью, в репозиторях Debian находится самый большой набор пакетов, и скорее всего то, что вы ишете, там уже есть."
+msgstr "Как вы можете сами убедиться, тут нет ничего сложного. Вы не должны забывать лишь о том, что после конвертирования новый пакет потеряет информацию о зависимостях, поскольку зависимости в двух форматах пакетов не соответствуют друг другу. В этом случае администратору придется проверить работоспособность переконвертированного пакета и доустановить зависимости вручную, если потребуется. Это является главной причиной почему подобной переконвертации стоит избегать. К счастью, в репозиторях Debian находится самый большой набор пакетов, и скорее всего то, что вы ишете, там уже есть."
 
 #. Tag: para
 #, no-c-format
 msgid "Looking at the man page for the <command>alien</command> command, you will also note that this program also handles other packaging formats, especially the one used by the Slackware distribution (it is made of a simple <filename>tar.gz</filename> archive)."
-msgstr "Заглянув в страницу руководства команды <command>alien</command>, вы также заметите, что эта программы также работает с другими форматами пакетов, в частности с используемым в дистрибутиве Slackware (там используются самые обычные архивы <filename>tar.gz</filename>)."
+msgstr "Заглянув в страницу руководства команды <command>alien</command>, вы узнаете, что эта программы также работает с другими форматами пакетов, в частности с используемым в дистрибутиве Slackware (там используются самые обычные архивы <filename>tar.gz</filename>)."
 
 #. Tag: para
 #, no-c-format
