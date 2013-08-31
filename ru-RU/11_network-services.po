@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-10-31T14:54:18\n"
+"POT-Creation-Date: 2013-08-31T08:15:03\n"
 "PO-Revision-Date: 2012-05-09T20:00:20\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
@@ -3218,7 +3218,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The NSS system (Name Service Switch, see sidebar <xref linkend=\"cadre.intro-nss\" />) is a modular system designed to define or fetch information for system directories. Using LDAP as a source of data for NSS requires installing the <emphasis role=\"pkg\">libnss-ldap</emphasis> package. Its installation asks a few questions; the answers are summarized in <xref linkend=\"tab-libnss-ldap\" xrefstyle=\"select: label nopage\" />."
+msgid "The NSS system (Name Service Switch, see sidebar <xref linkend=\"sidebar.intro-nss\" />) is a modular system designed to define or fetch information for system directories. Using LDAP as a source of data for NSS requires installing the <emphasis role=\"pkg\">libnss-ldap</emphasis> package. Its installation asks a few questions; the answers are summarized in <xref linkend=\"tab-libnss-ldap\" xrefstyle=\"select: label nopage\" />."
 msgstr ""
 
 #. Tag: indexterm
@@ -3338,7 +3338,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "This section describes a PAM configuration (see sidebar <xref linkend=\"cadre.intro-pam\" />) that will allow applications to perform the required authentications against the LDAP database."
+msgid "This section describes a PAM configuration (see sidebar <xref linkend=\"sidebar.intro-pam\" />) that will allow applications to perform the required authentications against the LDAP database."
 msgstr ""
 
 #. Tag: title

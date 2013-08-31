@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-10-31T14:54:17\n"
+"POT-Creation-Date: 2013-08-31T08:15:02\n"
 "PO-Revision-Date: 2012-05-09T20:00:18\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
@@ -220,7 +220,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The <emphasis role=\"pkg\">locales</emphasis> package includes all the elements required for proper functioning of “localization” for various applications. During installation, this package will ask a few questions in order to choose supported languages. This set of supported languages can be changed by running <command>dpkg-reconfigure locales</command>."
+msgid "The <emphasis role=\"pkg\">locales</emphasis> package includes all the elements required for proper functioning of “localization” for various applications. During installation, this package will ask a few questions in order to choose supported languages. This set of supported languages can be changed by running <command>dpkg-reconfigure locales</command> as root."
 msgstr ""
 
 #. Tag: para
@@ -260,7 +260,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "These applications do not create these variables directly, but rather via a PAM (<filename>pam_env.so</filename>) module. PAM (Pluggable Authentication Module) is a modular library centralizing the mechanisms for authentication, session initialization, and password management. See <xref linkend=\"section.config-pam\" /> for an example of PAM configuration."
+msgid "These applications do not create these variables directly, but rather via a PAM (<filename>pam_env.so</filename>) module. PAM (Pluggable Authentication Module) is a modular library centralizing the mechanisms for authentication, session initialization, and password management. See <xref linkend=\"sect.config-pam\" /> for an example of PAM configuration."
 msgstr ""
 
 #. Tag: para
@@ -543,7 +543,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "If the computer has an Ethernet card, the network that is associated with it must be configured by choosing from one of two methods. The simplest method is dynamic configuration with DHCP, and it requires a DHCP server on the local network. It may indicate a desired hostname, corresponding to the <literal>hostname</literal> setting in the example below. The DHCP server then sends configuration settings for the appropriate network. <indexterm><primary>Ethernet</primary></indexterm> <indexterm><primary>DHCP</primary></indexterm>"
+msgid "If the computer has an Ethernet card, the IP network that is associated with it must be configured by choosing from one of two methods. The simplest method is dynamic configuration with DHCP, and it requires a DHCP server on the local network. It may indicate a desired hostname, corresponding to the <literal>hostname</literal> setting in the example below. The DHCP server then sends configuration settings for the appropriate network. <indexterm><primary>Ethernet</primary></indexterm> <indexterm><primary>DHCP</primary></indexterm>"
 msgstr ""
 
 #. Tag: title
@@ -1000,7 +1000,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The mechanism for name resolution in Linux is modular and can use various sources of information declared in the <filename>/etc/nsswitch.conf</filename> file. The entry that involves host name resolution is <literal>hosts</literal>. By default, it contains <literal>dns files</literal>, which means that the system consults the <filename>/etc/hosts</filename> file first, then DNS servers. NIS/NIS+ or LDAP servers are other possible sources."
+msgid "The mechanism for name resolution in Linux is modular and can use various sources of information declared in the <filename>/etc/nsswitch.conf</filename> file. The entry that involves host name resolution is <literal>hosts</literal>. By default, it contains <literal>files dns</literal>, which means that the system consults the <filename>/etc/hosts</filename> file first, then DNS servers. NIS/NIS+ or LDAP servers are other possible sources."
 msgstr ""
 
 #. Tag: title
@@ -1374,7 +1374,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Instead of using the usual files to manage lists of users and groups, you could use other types of databases, such as LDAP or <command>db</command>, by using an appropriate NSS (Name Service Switch) module. The modules used are listed in the <filename>/etc/nsswitch.conf</filename> file, under the <literal>passwd</literal>, <literal>shadow</literal> and <literal>group</literal> entries. See <xref linkend=\"section.config-nss\" /> for a specific example of the use of an NSS module by LDAP."
+msgid "Instead of using the usual files to manage lists of users and groups, you could use other types of databases, such as LDAP or <command>db</command>, by using an appropriate NSS (Name Service Switch) module. The modules used are listed in the <filename>/etc/nsswitch.conf</filename> file, under the <literal>passwd</literal>, <literal>shadow</literal> and <literal>group</literal> entries. See <xref linkend=\"sect.config-nss\" /> for a specific example of the use of an NSS module by LDAP."
 msgstr ""
 
 #. Tag: title
@@ -1439,7 +1439,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Alternatively, the user can set the <literal>setgid</literal> bit on the directory, which causes files created in that directory to automatically belong to the correct group. For more details, see sidebar <xref linkend=\"cadre.setgid-dir\" />."
+msgid "Alternatively, the user can set the <literal>setgid</literal> bit on the directory, which causes files created in that directory to automatically belong to the correct group. For more details, see sidebar <xref linkend=\"sidebar.setgid-dir\" />."
 msgstr ""
 
 #. Tag: para
@@ -1894,7 +1894,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "<emphasis>cups</emphasis> no longer uses the <filename>/etc/printcap</filename> file, which is now obsolete. Programs that rely upon this file to get a list of available printers will, thus, fail. To avoid this problem, delete this file and make it a symbolic link (see sidebar <xref linkend=\"cadre.lien-symbolique\" />) to <filename>/var/run/cups/printcap</filename>, which is maintained by <emphasis>cups</emphasis> to ensure compatibility."
+msgid "<emphasis>cups</emphasis> no longer uses the <filename>/etc/printcap</filename> file, which is now obsolete. Programs that rely upon this file to get a list of available printers will, thus, fail. To avoid this problem, delete this file and make it a symbolic link (see sidebar <xref linkend=\"sidebar.symbolic-link\" />) to <filename>/var/run/cups/printcap</filename>, which is maintained by <emphasis>cups</emphasis> to ensure compatibility."
 msgstr ""
 
 #. Tag: indexterm
@@ -1954,7 +1954,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The <filename>/dev/</filename> directory traditionally houses so-called “special” files, intended to represent system peripherals (see sidebar <xref linkend=\"cadre.fichiers-speciaux\" />). <filename>/dev/hda1</filename> thus always corresponds to the first partition of the first IDE hard drive. This static structure does not allow dynamic setting of “major” and “minor” numbers for these files, which forces kernel developers to limit their number, since a priori assignment of the identifiers prohibits adding more once these conventions are established."
+msgid "The <filename>/dev/</filename> directory traditionally houses so-called “special” files, intended to represent system peripherals (see sidebar <xref linkend=\"sidebar.special-files\" />). <filename>/dev/hda1</filename> thus always corresponds to the first partition of the first IDE hard drive. This static structure does not allow dynamic setting of “major” and “minor” numbers for these files, which forces kernel developers to limit their number, since a priori assignment of the identifiers prohibits adding more once these conventions are established."
 msgstr ""
 
 #. Tag: para
@@ -1974,7 +1974,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "This mechanism allows the machine to dynamically choose the file name. You can thus keep the same name for a given device, regardless of the connector used or the connection order, which is especially useful when you use various USB peripherals. The partition system on the first IDE hard drive can then be called <filename>/dev/hda1</filename> for backwards compatibility, or <filename>/dev/root-partition</filename> if you prefer, or even both at the same time since <command>udevd</command> can be configured to automatically create a symbolic link. Furthermore, <filename>/dev/</filename> no longer contains useful files at this time. Previously, some kernel modules did not automatically load when you tried to access the corresponding peripheral; henceforth, the peripheral's special file no longer exists prior to loading the module, which is no big deal, since most modules are loaded on boot thanks to automatic hardware detection. But for undetectable peripherals (such as older disk drives or PS/2 mice), this doesn't work. Consider adding the modules, <literal>floppy</literal>, <literal>psmouse</literal> and <literal>mousedev</literal> to <filename>/etc/modules</filename> in order to force loading them on boot."
+msgid "This mechanism allows the machine to dynamically choose the file name. You can thus keep the same name for a given device, regardless of the connector used or the connection order, which is especially useful when you use various USB peripherals. The partition system on the first IDE hard drive can then be called <filename>/dev/hda1</filename> for backwards compatibility, or <filename>/dev/root-partition</filename> if you prefer, or even both at the same time since <command>udevd</command> can be configured to automatically create a symbolic link. Furthermore, <filename>/dev/</filename> now only contains files which are relevant to the current situation. Previously, some kernel modules did automatically load when you tried to access the corresponding device; henceforth, the peripheral's special file no longer exists prior to loading the module, which is no big deal, since most modules are loaded on boot thanks to automatic hardware detection. But for undetectable peripherals (such as older disk drives or PS/2 mice), this doesn't work. Consider adding the modules, <literal>floppy</literal>, <literal>psmouse</literal> and <literal>mousedev</literal> to <filename>/etc/modules</filename> in order to force loading them on boot."
 msgstr ""
 
 #. Tag: indexterm
@@ -2946,7 +2946,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Like anything that can be useful on a Debian system, the Linux kernel sources are available in a package. To retrieve them, just install the <emphasis role=\"pkg\">linux-source-<replaceable>version</replaceable></emphasis> package. The <command>apt-cache search ^linux-source</command> command lists the various kernel versions packaged by Debian. The latest version is available in the <emphasis role=\"distribution\">Unstable</emphasis> distribution: you can retrieve them without much risk (especially if your APT is configured according to the instructions of <xref linkend=\"section.apt-mix-distros\" />). Note that the source code contained in these packages does not correspond precisely with that published by Linus Torvalds and the kernel developers; like all distributions, Debian applies a number of patches. These modifications include patches (some relevant to security problems) that are waiting to be included in the next version of the kernel, as well as some features that are specific to Debian (like cramfs, a filesystem specifically for the <filename>initrd</filename> image)."
+msgid "Like anything that can be useful on a Debian system, the Linux kernel sources are available in a package. To retrieve them, just install the <emphasis role=\"pkg\">linux-source-<replaceable>version</replaceable></emphasis> package. The <command>apt-cache search ^linux-source</command> command lists the various kernel versions packaged by Debian. The latest version is available in the <emphasis role=\"distribution\">Unstable</emphasis> distribution: you can retrieve them without much risk (especially if your APT is configured according to the instructions of <xref linkend=\"sect.apt-mix-distros\" />). Note that the source code contained in these packages does not correspond precisely with that published by Linus Torvalds and the kernel developers; like all distributions, Debian applies a number of patches. These modifications include patches (some relevant to security problems) that are waiting to be included in the next version of the kernel, as well as some features that are specific to Debian (like cramfs, a filesystem specifically for the <filename>initrd</filename> image)."
 msgstr ""
 
 #. Tag: title
@@ -3116,7 +3116,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The <command>make-kpkg</command> program performs actions normally restricted to the root user when creating the Debian package; however, it can be tricked into working under a normal user's identity, with <command>fakeroot</command> (see sidebar <xref linkend=\"cadre.fakeroot\" />)."
+msgid "The <command>make-kpkg</command> program performs actions normally restricted to the root user when creating the Debian package; however, it can be tricked into working under a normal user's identity, with <command>fakeroot</command> (see sidebar <xref linkend=\"sidebar.fakeroot\" />)."
 msgstr ""
 
 #. Tag: screen

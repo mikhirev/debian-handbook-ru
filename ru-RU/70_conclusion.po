@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-10-31T14:54:18\n"
+"POT-Creation-Date: 2013-08-31T08:15:04\n"
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
@@ -80,7 +80,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The Debian project is stronger than ever, and well on its way towards its goal of an universal distribution; the inside joke within the Debian community is about <foreignphrase>World Domination</foreignphrase>."
+msgid "The Debian project is stronger than ever, and well on its way towards its goal of a universal distribution; the inside joke within the Debian community is about <foreignphrase>World Domination</foreignphrase>."
 msgstr ""
 
 #. Tag: para

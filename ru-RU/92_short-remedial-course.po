@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-10-31T14:54:18\n"
+"POT-Creation-Date: 2013-08-31T08:15:04\n"
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
 "Last-Translator: sledopit i@irush.su\n"
 "Language-Team: None\n"
@@ -189,8 +189,8 @@ msgid "The <command>find <replaceable>directory</replaceable> <replaceable>crite
 msgstr "Команда <command>find <replaceable>directory</replaceable> <replaceable>criteria</replaceable></command> ищет файлы по всей структуре директорий под <replaceable>directory</replaceable> согласно параметрам <replaceable>criteria</replaceable>. Наиболее часто используемый параметр <literal>-name <replaceable>name</replaceable></literal>: он позволяет найти файл по имени."
 
 #. Tag: para
-#, no-c-format
-msgid "The <command>grep <replaceable>expression</replaceable> <replaceable>files</replaceable></command> command searches the contents of the files and extracts the lines matching the regular expression (see sidebar <xref linkend=\"encadre.expression-rationnelle\" />). Adding the <literal>-r</literal> option enables a recursive search on all files contained in the directory passed as a parameter. This allows looking for a file when only a part of the contents are known."
+#, fuzzy, no-c-format
+msgid "The <command>grep <replaceable>expression</replaceable> <replaceable>files</replaceable></command> command searches the contents of the files and extracts the lines matching the regular expression (see sidebar <xref linkend=\"sidebar.regexp\" />). Adding the <literal>-r</literal> option enables a recursive search on all files contained in the directory passed as a parameter. This allows looking for a file when only a part of the contents are known."
 msgstr "Команда <command>grep <replaceable>expression</replaceable> <replaceable>files</replaceable></command> производит поиск по содержимому файла и выводит строки, соответствующие регулярному выражению (см <xref linkend=\"encadre.expression-rationnelle\" />). Опция <literal>-r</literal> позволяет производить поиск по файлам рекурсивно, что позволяет найти файл, если известна часть его содержимого."
 
 #. Tag: title
@@ -628,8 +628,8 @@ msgid "These programs have a <literal>-v</literal> option, that lists much more 
 msgstr "Опция <literal>-v</literal> у данной программы позволяет вывести более подробную, но как правило неиспользуемую, информацию. И наконец, команда  <command>lsdev</command> (из пакета <emphasis role=\"pkg\">procinfo</emphasis> выводит список используемых устройств ввода/вывода."
 
 #. Tag: para
-#, no-c-format
-msgid "Applications often access devices by way of special files created within <filename>/dev/</filename> (see sidebar <xref linkend=\"cadre.fichiers-speciaux\" />). These are special files that represent disk drives (for instance, <filename>/dev/hda</filename> and <filename>/dev/sdc</filename>), partitions (<filename>/dev/hda1</filename> or <filename>/dev/sdc3</filename>), mice (<filename>/dev/input/mouse0</filename>), keyboards (<filename>/dev/input/event0</filename>), soundcards (<filename>/dev/snd/*</filename>), serial ports (<filename>/dev/ttyS*</filename>), and so on."
+#, fuzzy, no-c-format
+msgid "Applications often access devices by way of special files created within <filename>/dev/</filename> (see sidebar <xref linkend=\"sidebar.special-files\" />). These are special files that represent disk drives (for instance, <filename>/dev/hda</filename> and <filename>/dev/sdc</filename>), partitions (<filename>/dev/hda1</filename> or <filename>/dev/sdc3</filename>), mice (<filename>/dev/input/mouse0</filename>), keyboards (<filename>/dev/input/event0</filename>), soundcards (<filename>/dev/snd/*</filename>), serial ports (<filename>/dev/ttyS*</filename>), and so on."
 msgstr "Часто приложение взаимодействует с устройством с помощью специального файла, созданного в <filename>/dev/</filename> (см. <xref linkend=\"cadre.fichiers-speciaux\" />). Это файлы, которые представляют дисковые устройства (например, <filename>/dev/hda</filename> и <filename>/dev/sdc</filename>), разделы (<filename>/dev/hda1</filename> или <filename>/dev/sdc3</filename>), мыши (<filename>/dev/input/mouse0</filename>), клавиатуры (<filename>/dev/input/event0</filename>), звуковые карты (<filename>/dev/snd/*</filename>), серийные порты (<filename>/dev/ttyS*</filename>) и многое другое."
 
 #. Tag: title

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-06-20T14:24:36\n"
+"POT-Creation-Date: 2013-08-31T08:15:04\n"
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
@@ -19,7 +19,7 @@ msgid "The Debian Administrator's Handbook"
 msgstr "Настольная книга администратора Debian"
 
 #. Tag: subtitle
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "Debian Wheezy from Discovery to Mastery"
 msgstr "Debian Wheezy: от первого знакомства к мастерству"
 
