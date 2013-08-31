@@ -3,7 +3,7 @@
   <chapterinfo>
     <mediaobject condition="pdf">
       <imageobject>
-        <imagedata fileref="images/chap-admin-avancee.png" scalefit="1"/>
+        <imagedata fileref="images/chap-advanced-administration.png" scalefit="1"/>
       </imageobject>
     </mediaobject>
     <keywordset>
@@ -36,31 +36,33 @@
     their deployment easy from the start. After the initial installation,
     an administrator must be able to handle evolving storage space needs
     without having to resort to an expensive reinstallation. They must
-    therefore master the required tools for manipulating RAID and LVM
+    therefore understand the required tools for manipulating RAID and LVM
     volumes.</para>
 
-    <para>RAID and LVM are both techniques to abstract the mounted volumes
-    from their physical counterparts (actual hard-disk drives or partitions
-    thereof); the former secures the data by introducing redundancy, the
-    latter makes data management more flexible and independent of the
-    actual size of the underlying disks. In both cases, the system ends up
-    with new block devices, which can be used to create filesystems or swap
-    space, without necessarily having them mapped to one physical disk.
-    RAID and LVM come from quite different backgrounds, but their
-    functionality can overlap somewhat, which is why they are often
-    mentioned together.</para>
+    <para>RAID and LVM are both techniques to abstract the mounted
+    volumes from their physical counterparts (actual hard-disk drives
+    or partitions thereof); the former secures the data against
+    hardware failure by introducing redundancy, the latter makes
+    volume management more flexible and independent of the actual size
+    of the underlying disks. In both cases, the system ends up with
+    new block devices, which can be used to create filesystems or swap
+    space, without necessarily having them mapped to one physical
+    disk.  RAID and LVM come from quite different backgrounds, but
+    their functionality can overlap somewhat, which is why they are
+    often mentioned together.</para>
 
     <sidebar>
       <title><emphasis>PERSPECTIVE</emphasis> Btrfs combines LVM and RAID</title>
 
-      <para>While LVM and RAID are two distinct kernel subsystems that come
-      between the disk block devices and their filesystems,
-      <emphasis>btrfs</emphasis> is a new filesystem, initially developed
-      at Oracle, that purports to combine the featuresets of LVM and RAID
-      and much more. It is mostly functional, although still tagged
-      “experimental” because its development is incomplete (some
-      features aren't implemented yet). <ulink type="block"
-      url="http://btrfs.wiki.kernel.org/"/></para>
+      <para>While LVM and RAID are two distinct kernel subsystems that
+      come between the disk block devices and their filesystems,
+      <emphasis>btrfs</emphasis> is a new filesystem, initially
+      developed at Oracle, that purports to combine the featuresets of
+      LVM and RAID and much more. It is mostly functional, and
+      although it's still tagged “experimental” because its
+      development is incomplete (some features aren't implemented
+      yet), it has already seen some use in production environments.
+      <ulink type="block" url="http://btrfs.wiki.kernel.org/"/></para>
 
       <para>Among the noteworthy features are the ability to take a
       snapshot of a filesystem tree at any point in time. This snapshot
@@ -78,7 +80,7 @@
     configuration, this block can be stored on one or several physical
     disks, and its physical location may not be directly correlated to the
     location of the block in the logical device.</para>
-    <section id="section.raid-soft">
+    <section id="sect.raid-soft">
       <title>Software RAID</title>
 
       <para>RAID <indexterm><primary>RAID</primary></indexterm> means
@@ -116,15 +118,32 @@
       so as to return to a safe mode. The applications won't notice
       anything, apart from potentially reduced access speed, while the
       array is in degraded mode or during the reconstruction phase.</para>
-      <section id="niveaux-de-raid">
+
+      <para>When RAID is implemented by hardware, its configuration
+      generally happens within the BIOS setup tool, and the kernel
+      will consider a RAID array as a single disk, which will work as
+      a standard physical disk, although the device name may be
+      different.  For instance, the kernel in <emphasis
+      role="distribution">Squeeze</emphasis> made some hardware RAID
+      arrays available as <filename>/dev/cciss/c0d0</filename>; the
+      kernel in <emphasis role="distribution">Wheezy</emphasis>
+      changed this name to the more natural
+      <filename>/dev/sda</filename>, but other RAID controllers may
+      still behave differently.</para>
+
+      <para>We only focus on software RAID in this book.</para>
+
+      <section id="sect.raid-levels">
         <title>Different RAID Levels</title>
 
-	<para>RAID has actually several levels, differentiated by their
-	layout and the amount of redundancy they provide. The more
-	redundant, the more failure-proof, since the system will be able to
-	keep working with more failed disks. The counterpart is that the
-	usable space shrinks; seen the other way, more disks will be needed
-	to store the same amount of data.</para>
+	<para>RAID is actually not a single system, but a range of
+	systems identified by their levels; the levels by their layout
+	and the amount of redundancy they provide. The more redundant,
+	the more failure-proof, since the system will be able to keep
+	working with more failed disks. The counterpart is that the
+	usable space shrinks for a given set of disks; seen the other
+	way, more disks will be needed to store a given amount of
+	data.</para>
         <variablelist>
           <varlistentry>
             <term>Linear RAID</term>
@@ -293,7 +312,7 @@
 	      the 2×N array described above, provided that at least one
 	      disk keeps working in each of the RAID-1 pairs.</para>
 
-              <sidebar id="cadre.raid-10">
+              <sidebar id="sidebar.raid-10">
                 <title><emphasis>GOING FURTHER</emphasis> RAID-10</title>
 
 		<para>RAID-10 is generally considered a synonym of
@@ -316,7 +335,7 @@
 	single computer can have several distinct RAID arrays with
 	different configurations.</para>
       </section>
-      <section id="mise-en-place-du-raid">
+      <section id="sect.raid-setup">
         <title>Setting up RAID</title>
 
 	<para>Setting up RAID volumes requires the <emphasis
@@ -332,19 +351,19 @@
 	initially have the following disks and partitions:</para>
         <itemizedlist>
           <listitem>
-	    <para>the <filename>sda</filename> disk, 4 GB, is entirely
+	    <para>the <filename>sdb</filename> disk, 4 GB, is entirely
 	    available;</para>
           </listitem>
           <listitem>
-	    <para>the <filename>sde</filename> disk, 4 GB, is also
+	    <para>the <filename>sdc</filename> disk, 4 GB, is also
 	    entirely available;</para>
           </listitem>
           <listitem>
-	    <para>on the <filename>sdg</filename> disk, only partition
-	    <filename>sdg2</filename> (about 4 GB) is available;</para>
+	    <para>on the <filename>sdd</filename> disk, only partition
+	    <filename>sdd2</filename> (about 4 GB) is available;</para>
           </listitem>
           <listitem>
-	    <para>finally, a <filename>sdh</filename> disk, still 4 GB,
+	    <para>finally, a <filename>sde</filename> disk, still 4 GB,
 	    entirely available.</para>
           </listitem>
         </itemizedlist>
@@ -362,23 +381,23 @@
 	  volume.</para>
         </sidebar>
 
-        <screen><computeroutput># </computeroutput><userinput>mdadm --create /dev/md0 --level=0 --raid-devices=2 /dev/sda /dev/sde</userinput>
+        <screen><computeroutput># </computeroutput><userinput>mdadm --create /dev/md0 --level=0 --raid-devices=2 /dev/sdb /dev/sdc</userinput>
 <computeroutput>mdadm: Defaulting to version 1.2 metadata
 mdadm: array /dev/md0 started.
 # </computeroutput><userinput>mdadm --query /dev/md0</userinput>
-<computeroutput>/dev/md0: 8.00GiB raid0 2 devices, 0 spares. Use mdadm --detail for more detail.
+<computeroutput>/dev/md0: 7.100GiB raid0 2 devices, 0 spares. Use mdadm --detail for more detail.
 # </computeroutput><userinput>mdadm --detail /dev/md0</userinput>
 <computeroutput>/dev/md0:
         Version : 1.2
-  Creation Time : Thu Sep 30 15:21:15 2010
+  Creation Time : Thu Jan 17 15:56:55 2013
      Raid Level : raid0
-     Array Size : 8388480 (8.00 GiB 8.59 GB)
+     Array Size : 8387584 (8.00 GiB 8.59 GB)
    Raid Devices : 2
   Total Devices : 2
     Persistence : Superblock is persistent
 
-    Update Time : Thu Sep 30 15:21:15 2010
-          State : active
+    Update Time : Thu Jan 17 15:56:55 2013
+          State : clean 
  Active Devices : 2
 Working Devices : 2
  Failed Devices : 0
@@ -386,97 +405,103 @@ Working Devices : 2
 
      Chunk Size : 512K
 
-           Name : squeeze:0  (local to host squeeze)
-           UUID : 0012a273:cbdb8b83:0ee15f7f:aec5e3c3
+           Name : mirwiz:0  (local to host mirwiz)
+           UUID : bb085b35:28e821bd:20d697c9:650152bb
          Events : 0
 
     Number   Major   Minor   RaidDevice State
-       0       8        0        0      active sync   /dev/sda
-       1       8       64        1      active sync   /dev/sde
+       0       8       16        0      active sync   /dev/sdb
+       1       8       32        1      active sync   /dev/sdc
 # </computeroutput><userinput>mkfs.ext4 /dev/md0</userinput>
-<computeroutput>
-mke2fs 1.41.12 (17-May-2010)
+<computeroutput>mke2fs 1.42.5 (29-Jul-2012)
 Filesystem label=
 OS type: Linux
 Block size=4096 (log=2)
 Fragment size=4096 (log=2)
-Stride=0 blocks, Stripe width=0 blocks
-524288 inodes, 2097152 blocks
-104857 blocks (5.00%) reserved for the super user
+Stride=128 blocks, Stripe width=256 blocks
+524288 inodes, 2096896 blocks
+104844 blocks (5.00%) reserved for the super user
 First data block=0
 Maximum filesystem blocks=2147483648
-55 block groups
+64 block groups
 32768 blocks per group, 32768 fragments per group
-8160 inodes per group
+8192 inodes per group
 Superblock backups stored on blocks: 
-        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
 
-Writing inode tables: done
+Allocating group tables: done                            
+Writing inode tables: done                            
 Creating journal (32768 blocks): done
-Writing superblocks and filesystem accounting information: done
-
-This filesystem will be automatically checked every 26 mounts or
-180 days, whichever comes first.  Use tune2fs -c or -i to override.
+Writing superblocks and filesystem accounting information: done 
 # </computeroutput><userinput>mkdir /srv/raid-0</userinput>
 <computeroutput># </computeroutput><userinput>mount /dev/md0 /srv/raid-0</userinput>
 <computeroutput># </computeroutput><userinput>df -h /srv/raid-0</userinput>
-<computeroutput>Filesystem            Size  Used Avail Use% Mounted on
-/dev/md0              8.0G  249M  7.4G   4% /srv/raid-0</computeroutput>
+<computeroutput>Filesystem      Size  Used Avail Use% Mounted on
+/dev/md0        7.9G  146M  7.4G   2% /srv/raid-0
+</computeroutput>
 </screen>
 
 	<para>The <command>mdadm --create</command> command requires
 	several parameters: the name of the volume to create
 	(<filename>/dev/md*</filename>, with MD standing for
-	<foreignphrase>Multiple Device</foreignphrase>), the RAID level,
-	the number of disks (which is compulsory despite being mostly
-	meaningful only with RAID-1 and above), and the physical drives to
-	use. Once the device is created, we can use it like we'd use a
-	normal partition, create a filesystem on it, mount that filesystem,
-	and so on. Note that our creation of a RAID-0 volume on
-	<filename>md0</filename> is nothing but coincidence, and the
-	numbering of the array doesn't need to be correlated to the chosen
-	amount of redundancy.</para>
+	<foreignphrase>Multiple Device</foreignphrase>), the RAID
+	level, the number of disks (which is compulsory despite being
+	mostly meaningful only with RAID-1 and above), and the
+	physical drives to use. Once the device is created, we can use
+	it like we'd use a normal partition, create a filesystem on
+	it, mount that filesystem, and so on. Note that our creation
+	of a RAID-0 volume on <filename>md0</filename> is nothing but
+	coincidence, and the numbering of the array doesn't need to be
+	correlated to the chosen amount of redundancy.  It's also
+	possible to create named RAID arrays, by giving
+	<command>mdadm</command> parameters such as
+	<filename>/dev/md/linear</filename> instead of
+	<filename>/dev/md0</filename>.</para>
 
 	<para>Creation of a RAID-1 follows a similar fashion, the
 	differences only being noticeable after the creation:</para>
 
-        <screen><computeroutput># </computeroutput><userinput>mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sdg2 /dev/sdh</userinput>
-<computeroutput>mdadm: largest drive (/dev/sdg2) exceed size (4194240K) by more than 1%
+        <screen><computeroutput># </computeroutput><userinput>mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sdd2 /dev/sde</userinput>
+<computeroutput>mdadm: Note: this array has metadata at the start and
+    may not be suitable as a boot device.  If you plan to
+    store '/boot' on this device please ensure that
+    your boot-loader understands md/v1.x metadata, or use
+    --metadata=0.90
+mdadm: largest drive (/dev/sdd2) exceeds size (4192192K) by more than 1%
 Continue creating array? </computeroutput><userinput>y</userinput>
-<computeroutput>mdadm: array /dev/md1 started.
+<computeroutput>mdadm: Defaulting to version 1.2 metadata
+mdadm: array /dev/md1 started.
 # </computeroutput><userinput>mdadm --query /dev/md1</userinput>
-<computeroutput>/dev/md1: 4.00GiB raid1 2 devices, 0 spares. Use mdadm --detail for more detail.
+<computeroutput>/dev/md1: 3.100GiB raid1 2 devices, 0 spares. Use mdadm --detail for more detail.
 # </computeroutput><userinput>mdadm --detail /dev/md1</userinput>
 <computeroutput>/dev/md1:
         Version : 1.2
-  Creation Time : Thu Sep 30 15:39:13 2010
+  Creation Time : Thu Jan 17 16:13:04 2013
      Raid Level : raid1
-     Array Size : 4194240 (4.00 GiB 4.29 GB)
-  Used Dev Size : 4194240 (4.00 GiB 4.29 GB)
+     Array Size : 4192192 (4.00 GiB 4.29 GB)
+  Used Dev Size : 4192192 (4.00 GiB 4.29 GB)
    Raid Devices : 2
   Total Devices : 2
     Persistence : Superblock is persistent
 
-    Update Time : Thu Sep 30 15:39:26 2010
-          State : active, resyncing
+    Update Time : Thu Jan 17 16:13:04 2013
+          State : clean, resyncing (PENDING) 
  Active Devices : 2
 Working Devices : 2
  Failed Devices : 0
   Spare Devices : 0
 
- Rebuild Status : 10% complete
-
-           Name : squeeze:1  (local to host squeeze)
-           UUID : 20a8419b:41612750:b9171cfe:00d9a432
-         Events : 27
+           Name : mirwiz:1  (local to host mirwiz)
+           UUID : 6ec558ca:0c2c04a0:19bca283:95f67464
+         Events : 0
 
     Number   Major   Minor   RaidDevice State
-       0       8       98        0      active sync   /dev/sdg2
-       1       8      112        1      active sync   /dev/sdh
+       0       8       50        0      active sync   /dev/sdd2
+       1       8       64        1      active sync   /dev/sde
 # </computeroutput><userinput>mdadm --detail /dev/md1</userinput>
 <computeroutput>/dev/md1:
 [...]
-          State : active
+          State : clean
 [...]
 </computeroutput>
 </screen>
@@ -552,38 +577,38 @@ Working Devices : 2
 	<literal>--fail</literal> option, allows simulating such a disk
 	failure:</para>
 
-        <screen><computeroutput># </computeroutput><userinput>mdadm /dev/md1 --fail /dev/sdh</userinput>
-<computeroutput>mdadm: set /dev/sdh faulty in /dev/md1
+        <screen><computeroutput># </computeroutput><userinput>mdadm /dev/md1 --fail /dev/sde</userinput>
+<computeroutput>mdadm: set /dev/sde faulty in /dev/md1
 # </computeroutput><userinput>mdadm --detail /dev/md1</userinput>
 <computeroutput>/dev/md1:
 [...]
-    Update Time : Thu Sep 30 15:45:50 2010
-          State : active, degraded
+    Update Time : Thu Jan 17 16:14:09 2013
+          State : active, degraded 
  Active Devices : 1
 Working Devices : 1
  Failed Devices : 1
   Spare Devices : 0
 
-           Name : squeeze:1  (local to host squeeze)
-           UUID : 20a8419b:41612750:b9171cfe:00d9a432
-         Events : 35
+           Name : mirwiz:1  (local to host mirwiz)
+           UUID : 6ec558ca:0c2c04a0:19bca283:95f67464
+         Events : 19
 
     Number   Major   Minor   RaidDevice State
-       0       8       98        0      active sync   /dev/sdg2
+       0       8       50        0      active sync   /dev/sdd2
        1       0        0        1      removed
 
-       2       8      112        -      faulty spare  /dev/sdh</computeroutput>
+       1       8       64        -      faulty spare   /dev/sde</computeroutput>
 </screen>
 
 	<para>The contents of the volume are still accessible (and, if it's
 	mounted, the applications don't notice a thing), but the data
-	safety isn't assured anymore: should the <filename>sdg</filename>
+	safety isn't assured anymore: should the <filename>sdd</filename>
 	disk fail in turn, the data would be lost. We want to avoid that
 	risk, so we'll replace the failed disk with a new one,
-	<filename>sdi</filename>:</para>
+	<filename>sdf</filename>:</para>
 
-        <screen><computeroutput># </computeroutput><userinput>mdadm /dev/md1 --add /dev/sdi</userinput>
-<computeroutput>mdadm: added /dev/sdi
+        <screen><computeroutput># </computeroutput><userinput>mdadm /dev/md1 --add /dev/sdf</userinput>
+<computeroutput>mdadm: added /dev/sdf
 # </computeroutput><userinput>mdadm --detail /dev/md1</userinput>
 <computeroutput>/dev/md1:
 [...]
@@ -591,63 +616,63 @@ Working Devices : 1
   Total Devices : 3
     Persistence : Superblock is persistent
 
-    Update Time : Thu Sep 30 15:52:29 2010
-          State : active, degraded, recovering
+    Update Time : Thu Jan 17 16:15:32 2013
+          State : clean, degraded, recovering 
  Active Devices : 1
 Working Devices : 2
  Failed Devices : 1
   Spare Devices : 1
 
- Rebuild Status : 45% complete
+ Rebuild Status : 28% complete
 
-           Name : squeeze:1  (local to host squeeze)
-           UUID : 20a8419b:41612750:b9171cfe:00d9a432
-         Events : 53
+           Name : mirwiz:1  (local to host mirwiz)
+           UUID : 6ec558ca:0c2c04a0:19bca283:95f67464
+         Events : 26
 
     Number   Major   Minor   RaidDevice State
-       0       8       98        0      active sync   /dev/sdg2
-       3       8      128        1      spare rebuilding   /dev/sdi
+       0       8       50        0      active sync   /dev/sdd2
+       2       8       80        1      spare rebuilding   /dev/sdf
 
-       2       8      112        -      faulty spare   /dev/sdh
+       1       8       64        -      faulty spare   /dev/sde
 # </computeroutput><userinput>[...]</userinput>
 <computeroutput>[...]
 # </computeroutput><userinput>mdadm --detail /dev/md1</userinput>
 <computeroutput>/dev/md1:
 [...]
-    Update Time : Thu Sep 30 15:52:35 2010
-          State : active
+    Update Time : Thu Jan 17 16:16:36 2013
+          State : clean 
  Active Devices : 2
 Working Devices : 2
  Failed Devices : 1
   Spare Devices : 0
 
-           Name : squeeze:1  (local to host squeeze)
-           UUID : 20a8419b:41612750:b9171cfe:00d9a432
-         Events : 71
+           Name : mirwiz:1  (local to host mirwiz)
+           UUID : 6ec558ca:0c2c04a0:19bca283:95f67464
+         Events : 41
 
     Number   Major   Minor   RaidDevice State
-       0       8       98        0      active sync   /dev/sdg2
-       1       8      128        1      active sync   /dev/sdi
+       0       8       50        0      active sync   /dev/sdd2
+       2       8       80        1      active sync   /dev/sdf
 
-       2       8      112        -      faulty spare   /dev/sdh</computeroutput>
+       1       8       64        -      faulty spare   /dev/sde</computeroutput>
 </screen>
 
 	<para>Here again, the kernel automatically triggers a
 	reconstruction phase during which the volume, although still
 	accessible, is in a degraded mode. Once the reconstruction is over,
 	the RAID array is back to a normal state. One can then tell the
-	system that the <filename>sdh</filename> disk is about to be
+	system that the <filename>sde</filename> disk is about to be
 	removed from the array, so as to end up with a classical RAID
 	mirror on two disks:</para>
 
-        <screen><computeroutput># </computeroutput><userinput>mdadm /dev/md1 --remove /dev/sdh</userinput>
-<computeroutput>mdadm: hot removed /dev/sdh from /dev/md1
+        <screen><computeroutput># </computeroutput><userinput>mdadm /dev/md1 --remove /dev/sde</userinput>
+<computeroutput>mdadm: hot removed /dev/sde from /dev/md1
 # </computeroutput><userinput>mdadm --detail /dev/md1</userinput>
 <computeroutput>/dev/md1:
 [...]
     Number   Major   Minor   RaidDevice State
-       0       8       98        0      active sync   /dev/sdg2
-       1       8      128        1      active sync   /dev/sdi</computeroutput>
+       0       8       50        0      active sync   /dev/sdd2
+       2       8       80        1      active sync   /dev/sdf</computeroutput>
 </screen>
 
 	<para>From then on, the drive can be physically removed when the
@@ -656,7 +681,7 @@ Working Devices : 2
 	SCSI controllers, most SATA disks, and external drives operating on
 	USB or Firewire.</para>
       </section>
-      <section id="sauvegarde-config-raid">
+      <section id="sect.backup-raid-config">
         <title>Backing up the Configuration</title>
 
 	<para>Most of the meta-data concerning RAID volumes are saved
@@ -666,9 +691,9 @@ Working Devices : 2
 	configuration is encouraged, because this detection isn't
 	fail-proof, and it's only expected that it will fail precisely in
 	sensitive circumstances. In our example, if the
-	<filename>sdh</filename> disk failure had been real (instead of
+	<filename>sde</filename> disk failure had been real (instead of
 	simulated) and the system had been restarted without removing this
-	<filename>sdh</filename> disk, this disk could start working again
+	<filename>sde</filename> disk, this disk could start working again
 	due to having been probed during the reboot. The kernel would then
 	have three physical elements, each claiming to contain half of the
 	same RAID volume. Another source of confusion can come when RAID
@@ -693,8 +718,9 @@ Working Devices : 2
 # Please refer to mdadm.conf(5) for information about this file.
 #
 
-# by default, scan all partitions (/proc/partitions) for MD superblocks.
-# alternatively, specify devices to scan, using wildcards if desired.
+# by default (built-in), scan all partitions (/proc/partitions) and all
+# containers for MD superblocks. alternatively, specify devices to scan, using
+# wildcards if desired.
 DEVICE /dev/sd*
 
 # auto-create devices with Debian standard permissions
@@ -706,32 +732,36 @@ HOMEHOST &lt;system&gt;
 # instruct the monitoring daemon where to send mail alerts
 MAILADDR root
 
-ARRAY /dev/md0 metadata=1.2 name=squeeze:0 UUID=6194b63f:69a40eb5:a79b7ad3:c91f20ee
-ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a432
+# definitions of existing MD arrays
+ARRAY /dev/md0 metadata=1.2 name=mirwiz:0 UUID=bb085b35:28e821bd:20d697c9:650152bb
+ARRAY /dev/md1 metadata=1.2 name=mirwiz:1 UUID=6ec558ca:0c2c04a0:19bca283:95f67464
+
+# This configuration was auto-generated on Thu, 17 Jan 2013 16:21:01 +0100
+# by mkconf 3.2.5-3
 </programlisting>
         </example>
 
 	<para>One of the most useful details is the
-	<literal>DEVICE</literal> option, which lists the devices where the
-	system will automatically look for components of RAID volumes at
-	start-up time. In our example, we replaced the default value,
-	<literal>partitions</literal>, with an explicit list of device
-	files, since we chose to use entire disks and not only partitions,
-	for some volumes.</para>
+	<literal>DEVICE</literal> option, which lists the devices
+	where the system will automatically look for components of
+	RAID volumes at start-up time. In our example, we replaced the
+	default value, <literal>partitions containers</literal>, with
+	an explicit list of device files, since we chose to use entire
+	disks and not only partitions, for some volumes.</para>
 
 	<para>The last two lines in our example are those allowing the
-	kernel to safely pick which volume number to assign to which array.
-	The metadata stored on the disks themselves are enough to
-	re-assemble the volumes, but not to determine the volume number
-	(and the matching <filename>/dev/md*</filename> device
+	kernel to safely pick which volume number to assign to which
+	array.  The metadata stored on the disks themselves are enough
+	to re-assemble the volumes, but not to determine the volume
+	number (and the matching <filename>/dev/md*</filename> device
 	name).</para>
 
 	<para>Fortunately, these lines can be generated
 	automatically:</para>
 
         <screen><computeroutput># </computeroutput><userinput>mdadm --misc --detail --brief /dev/md?</userinput>
-<computeroutput>ARRAY /dev/md0 metadata=1.2 name=squeeze:0 UUID=6194b63f:69a40eb5:a79b7ad3:c91f20ee
-ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a432</computeroutput>
+<computeroutput>ARRAY /dev/md0 metadata=1.2 name=mirwiz:0 UUID=bb085b35:28e821bd:20d697c9:650152bb
+ARRAY /dev/md1 metadata=1.2 name=mirwiz:1 UUID=6ec558ca:0c2c04a0:19bca283:95f67464</computeroutput>
 </screen>
 
 	<para>The contents of these last two lines doesn't depend on the
@@ -741,7 +771,7 @@ ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a
 	creating or deleting a RAID array.</para>
       </section>
     </section>
-    <section id="section.lvm">
+    <section id="sect.lvm">
       <title>LVM</title>
 
       <para><indexterm><primary>LVM</primary></indexterm> LVM, the
@@ -752,17 +782,19 @@ ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a
       applications are concerned; for instance, it is possible to add new
       disks, migrate the data to them, and remove the old disks, without
       unmounting the volume.</para>
-      <section id="lvm-concepts">
+      <section id="sect.lvm-concepts">
         <title>LVM Concepts</title>
 
 	<para>This flexibility is attained by a level of abstraction
 	involving three concepts.</para>
 
-	<para>First, the PV (<emphasis>Physical Volume</emphasis>) is the
-	entity closest to the hardware: it can be partitions on a disk, or
-	a full disk, or even any other block device. Note that when a
-	physical element is set up to be a PV for LVM, it should only be
-	accessed via LVM, otherwise the system will get confused.</para>
+	<para>First, the PV (<emphasis>Physical Volume</emphasis>) is
+	the entity closest to the hardware: it can be partitions on a
+	disk, or a full disk, or even any other block device
+	(including, for instance, a RAID array). Note that when a
+	physical element is set up to be a PV for LVM, it should only
+	be accessed via LVM, otherwise the system will get
+	confused.</para>
 
 	<para>A number of PVs can be clustered in a VG (<emphasis>Volume
 	Group</emphasis>), which can be compared to disks both virtual and
@@ -772,19 +804,19 @@ ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a
 
 	<para>The third kind of object is the LV (<emphasis>Logical
 	Volume</emphasis>), which is a chunk of a VG; if we keep the
-	VG-as-disk analogy, the LV compares to a partition. The LV appear
-	as block device with an entry in <filename>/dev</filename>, and it
+	VG-as-disk analogy, the LV compares to a partition. The LV appears
+	as a block device with an entry in <filename>/dev</filename>, and it
 	can be used as any other physical partition can be (most commonly,
 	to host a filesystem or swap space).</para>
 
-	<para>The important thing is that the splitting of a VG into LVs is
-	entirely independent of its physical components (the PVs). A VG
-	with only a single physical component (a disk for instance) can be
-	split into a dozen logical volumes; similarly, a VG can use several
-	physical disks and appear as a single large logical volume. The
-	only constraint is that obviously the total size allocated to LVs
-	can't be bigger than the total capacity of the PVs in the volume
-	group.</para>
+	<para>The important thing is that the splitting of a VG into
+	LVs is entirely independent of its physical components (the
+	PVs). A VG with only a single physical component (a disk for
+	instance) can be split into a dozen logical volumes;
+	similarly, a VG can use several physical disks and appear as a
+	single large logical volume. The only constraint, obviously,
+	is that the total size allocated to LVs can't be bigger than
+	the total capacity of the PVs in the volume group.</para>
 
 	<para>It often makes sense, however, to have some kind of
 	homogeneity among the physical components of a VG, and to split the
@@ -804,7 +836,7 @@ ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a
 	(while staying within the PVs assigned to the VG, of
 	course).</para>
       </section>
-      <section id="lvm-mise-en-place">
+      <section id="sect.lvm-setup">
         <title>Setting up LVM</title>
 
 	<para>Let us now follow, step by step, the process of setting up
@@ -825,7 +857,7 @@ ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a
 	    <filename>sdc3</filename> partition, 3 GB;</para>
           </listitem>
           <listitem>
-	    <para>the <filename>sdd</filename> disk, 4 GB, in fully
+	    <para>the <filename>sdd</filename> disk, 4 GB, is fully
 	    available;</para>
           </listitem>
           <listitem>
@@ -857,33 +889,40 @@ ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a
 
         <screen id="screen.pvcreate"><computeroutput># </computeroutput><userinput>pvdisplay</userinput>
 <computeroutput># </computeroutput><userinput>pvcreate /dev/sdb2</userinput>
-<computeroutput>  Physical volume "/dev/sdb2" successfully created
+<computeroutput>  Writing physical volume data to disk "/dev/sdb2"
+  Physical volume "/dev/sdb2" successfully created
 # </computeroutput><userinput>pvdisplay</userinput>
-<computeroutput>
-  "/dev/sdb2" is a new physical volume of "4,00 GiB"
+<computeroutput>pvdisplay 
+  "/dev/sdb2" is a new physical volume of "4.00 GiB"
   --- NEW Physical volume ---
   PV Name               /dev/sdb2
-  VG Name
+  VG Name               
   PV Size               4.00 GiB
   Allocatable           NO
-  PE Size (KByte)       0
+  PE Size               0   
   Total PE              0
   Free PE               0
   Allocated PE          0
-  PV UUID               9JuaGR-W7jc-pNgj-NU4l-2IX1-kUJ7-m8cRim
+  PV UUID               0zuiQQ-j1Oe-P593-4tsN-9FGy-TY0d-Quz31I
 
 # </computeroutput><userinput>for i in sdc3 sdd sdf1 sdf2 ; do pvcreate /dev/$i ; done</userinput>
-<computeroutput>  Physical volume "/dev/sdc3" successfully created
+<computeroutput>  Writing physical volume data to disk "/dev/sdc3"
+  Physical volume "/dev/sdc3" successfully created
+  Writing physical volume data to disk "/dev/sdd"
   Physical volume "/dev/sdd" successfully created
+  Writing physical volume data to disk "/dev/sdf1"
   Physical volume "/dev/sdf1" successfully created
+  Writing physical volume data to disk "/dev/sdf2"
   Physical volume "/dev/sdf2" successfully created
 # </computeroutput><userinput>pvdisplay -C</userinput>
-<computeroutput>  PV         VG   Fmt  Attr PSize PFree
-  /dev/sdb2       lvm2 a-   4.00g 4.00g
-  /dev/sdc3       lvm2 a-   3.09g 3.09g
-  /dev/sdd        lvm2 a-   4.00g 4.00g
-  /dev/sdf1       lvm2 a-   4.10g 4.10g
-  /dev/sdf2       lvm2 a-   5.22g 5.22g</computeroutput>
+<computeroutput>root@mirwiz:~# pvdisplay -C
+  PV         VG   Fmt  Attr PSize PFree
+  /dev/sdb2       lvm2 a--  4.00g 4.00g
+  /dev/sdc3       lvm2 a--  3.09g 3.09g
+  /dev/sdd        lvm2 a--  4.00g 4.00g
+  /dev/sdf1       lvm2 a--  4.10g 4.10g
+  /dev/sdf2       lvm2 a--  5.22g 5.22g
+</computeroutput>
 </screen>
 
 	<para>So far, so good; note that a PV can be set up on a full disk
@@ -898,12 +937,13 @@ ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a
 	elements.</para>
 
         <screen id="screen.vgcreate"><computeroutput># </computeroutput><userinput>vgdisplay</userinput>
-<computeroutput># </computeroutput><userinput>vgcreate vg_critical /dev/sdb2 /dev/sdf1</userinput>
+<computeroutput>  No volume groups found
+# </computeroutput><userinput>vgcreate vg_critical /dev/sdb2 /dev/sdf1</userinput>
 <computeroutput>  Volume group "vg_critical" successfully created
 # </computeroutput><userinput>vgdisplay</userinput>
 <computeroutput>  --- Volume group ---
   VG Name               vg_critical
-  System ID
+  System ID             
   Format                lvm2
   Metadata Areas        2
   Metadata Sequence No  1
@@ -915,19 +955,20 @@ ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a
   Max PV                0
   Cur PV                2
   Act PV                2
-  VG Size               8.14 GB
-  PE Size               4.00 MB
-  Total PE              2084
-  Alloc PE / Size       0 / 0
-  Free  PE / Size       2084 / 8.14 GB
-  VG UUID               6eG6BW-MmJE-KB0J-dsB2-52iL-N6eD-1paeo8
+  VG Size               8.09 GiB
+  PE Size               4.00 MiB
+  Total PE              2071
+  Alloc PE / Size       0 / 0   
+  Free  PE / Size       2071 / 8.09 GiB
+  VG UUID               bpq7zO-PzPD-R7HW-V8eN-c10c-S32h-f6rKqp
 
 # </computeroutput><userinput>vgcreate vg_normal /dev/sdc3 /dev/sdd /dev/sdf2</userinput>
 <computeroutput>  Volume group "vg_normal" successfully created
 # </computeroutput><userinput>vgdisplay -C</userinput>
-<computeroutput>  VG          #PV #LV #SN Attr   VSize  VFree
-  vg_critical   2   0   0 wz--n-  8.14g  8.14g
-  vg_normal     3   0   0 wz--n- 12.30g 12.30g</computeroutput>
+<computeroutput>  VG          #PV #LV #SN Attr   VSize  VFree 
+  vg_critical   2   0   0 wz--n-  8.09g  8.09g
+  vg_normal     3   0   0 wz--n- 12.30g 12.30g
+</computeroutput>
 </screen>
 
 	<para>Here again, commands are rather straightforward (and
@@ -947,13 +988,15 @@ ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a
 <computeroutput>  Logical volume "lv_files" created
 # </computeroutput><userinput>lvdisplay</userinput>
 <computeroutput>  --- Logical volume ---
-  LV Name                /dev/vg_critical/lv_files
+  LV Path                /dev/vg_critical/lv_files
+  LV Name                lv_files
   VG Name                vg_critical
-  LV UUID                4QLhl3-2cON-jRgQ-X4eT-93J4-6Ox9-GyRx3M
+  LV UUID                J3V0oE-cBYO-KyDe-5e0m-3f70-nv0S-kCWbpT
   LV Write Access        read/write
+  LV Creation host, time mirwiz, 2013-01-17 17:05:13 +0100
   LV Status              available
   # open                 0
-  LV Size                5.00 GB
+  LV Size                5.00 GiB
   Current LE             1280
   Segments               2
   Allocation             inherit
@@ -966,10 +1009,10 @@ ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a
 # </computeroutput><userinput>lvcreate -n lv_backups -L 12G vg_normal</userinput>
 <computeroutput>  Logical volume "lv_backups" created
 # </computeroutput><userinput>lvdisplay -C</userinput>
-<computeroutput>  LV         VG          Attr   LSize  Origin Snap%  Move Log Copy%  Convert
-  lv_base    vg_critical -wi-a-  1.00G
-  lv_files   vg_critical -wi-a-  5.00G
-  lv_backups vg_normal   -wi-a- 12.00G</computeroutput>
+<computeroutput>  LV         VG          Attr     LSize  Pool Origin Data%  Move Log Copy%  Convert
+  lv_base    vg_critical -wi-a---  1.00g                                           
+  lv_files   vg_critical -wi-a---  5.00g                                           
+  lv_backups vg_normal   -wi-a--- 12.00g</computeroutput>
 </screen>
 
 	<para>Two parameters are required when creating logical volumes;
@@ -1017,14 +1060,15 @@ ARRAY /dev/md1 metadata=1.2 name=squeeze:1 UUID=20a8419b:41612750:b9171cfe:00d9a
 
         <screen><computeroutput># </computeroutput><userinput>ls -l /dev/mapper</userinput>
 <computeroutput>total 0
-crw-rw---- 1 root root  10, 59  5 oct.  17:40 control
-lrwxrwxrwx 1 root root       7  5 oct.  18:14 vg_critical-lv_base -&gt; ../dm-1
-lrwxrwxrwx 1 root root       7  5 oct.  18:14 vg_critical-lv_files -&gt; ../dm-0
-lrwxrwxrwx 1 root root       7  5 oct.  18:14 vg_normal-lv_backups -&gt; ../dm-2
+crw------T 1 root root 10, 236 Jan 17 16:52 control
+lrwxrwxrwx 1 root root       7 Jan 17 17:05 vg_critical-lv_base -&gt; ../dm-1
+lrwxrwxrwx 1 root root       7 Jan 17 17:05 vg_critical-lv_files -&gt; ../dm-0
+lrwxrwxrwx 1 root root       7 Jan 17 17:05 vg_normal-lv_backups -&gt; ../dm-2
 # </computeroutput><userinput>ls -l /dev/dm-*</userinput>
-<computeroutput>brw-rw---- 1 root disk 253,  0  5 oct.  18:14 /dev/dm-0
-brw-rw---- 1 root disk 253,  1  5 oct.  18:14 /dev/dm-1
-brw-rw---- 1 root disk 253,  2  5 oct.  18:14 /dev/dm-2</computeroutput>
+<computeroutput>brw-rw---T 1 root disk 253, 0 Jan 17 17:05 /dev/dm-0
+brw-rw---T 1 root disk 253, 1 Jan 17 17:05 /dev/dm-1
+brw-rw---T 1 root disk 253, 2 Jan 17 17:05 /dev/dm-2
+</computeroutput>
 </screen>
 
         <sidebar>
@@ -1050,30 +1094,29 @@ brw-rw---- 1 root disk 253,  2  5 oct.  18:14 /dev/dm-2</computeroutput>
 
         <screen><computeroutput># </computeroutput><userinput>ls -l /dev/vg_critical</userinput>
 <computeroutput>total 0
-lrwxrwxrwx 1 root root 7  5 oct.  18:14 lv_base -&gt; ../dm-1
-lrwxrwxrwx 1 root root 7  5 oct.  18:14 lv_files -&gt; ../dm-0
+lrwxrwxrwx 1 root root 7 Jan 17 17:05 lv_base -&gt; ../dm-1
+lrwxrwxrwx 1 root root 7 Jan 17 17:05 lv_files -&gt; ../dm-0
 # </computeroutput><userinput>ls -l /dev/vg_normal</userinput>
 <computeroutput>total 0
-lrwxrwxrwx 1 root root 7  5 oct.  18:14 lv_backups -&gt; ../dm-2</computeroutput>
+lrwxrwxrwx 1 root root 7 Jan 17 17:05 lv_backups -&gt; ../dm-2</computeroutput>
 </screen>
 
 	<para>The LVs can then be used exactly like standard
 	partitions:</para>
 
         <screen><computeroutput># </computeroutput><userinput>mkfs.ext4 /dev/vg_normal/lv_backups</userinput>
-<computeroutput>mke2fs 1.41.12 (17-May-2010)
+<computeroutput>mke2fs 1.42.5 (29-Jul-2012)
 Filesystem label=
 OS type: Linux
 Block size=4096 (log=2)
 [...]
-This filesystem will be automatically checked every 34 mounts or
-180 days, whichever comes first.  Use tune2fs -c or -i to override.
+Creating journal (32768 blocks): done
+Writing superblocks and filesystem accounting information: done 
 # </computeroutput><userinput>mkdir /srv/backups</userinput>
 <computeroutput># </computeroutput><userinput>mount /dev/vg_normal/lv_backups /srv/backups</userinput>
 <computeroutput># </computeroutput><userinput>df -h /srv/backups</userinput>
-<computeroutput>Filesystem            Size  Used Avail Use% Mounted on
-/dev/mapper/vg_normal-lv_backups
-                       12G  159M   12G   2% /srv/backups
+<computeroutput>Filesystem                        Size  Used Avail Use% Mounted on
+/dev/mapper/vg_normal-lv_backups   12G  158M   12G   2% /srv/backups
 # </computeroutput><userinput>[...]</userinput>
 <computeroutput>[...]
 # </computeroutput><userinput>cat /etc/fstab</userinput>
@@ -1087,7 +1130,7 @@ This filesystem will be automatically checked every 34 mounts or
 	partitions have now been abstracted into one large 12 GB volume,
 	with a friendlier name.</para>
       </section>
-      <section id="lvm-dans-le-temps">
+      <section id="sect.lvm-over-time">
         <title>LVM Over Time</title>
 
 	<para>Even though the ability to aggregate partitions or physical
@@ -1103,32 +1146,30 @@ This filesystem will be automatically checked every 34 mounts or
 	accordingly:</para>
 
         <screen><computeroutput># </computeroutput><userinput>df -h /srv/files/</userinput>
-<computeroutput>Filesystem            Size  Used Avail Use% Mounted on
-/dev/mapper/vg_critical-lv_files
-                      5.0G  4.6G  142M  98% /srv/files
+<computeroutput>Filesystem                        Size  Used Avail Use% Mounted on
+/dev/mapper/vg_critical-lv_files  5.0G  4.6G  146M  97% /srv/files
 # </computeroutput><userinput>lvdisplay -C vg_critical/lv_files</userinput>
-<computeroutput>  LV       VG          Attr   LSize Origin Snap%  Move Log Copy%  Convert
-  lv_files vg_critical -wi-ao 5.00g
+<computeroutput>  LV       VG          Attr     LSize Pool Origin Data%  Move Log Copy%  Convert
+  lv_files vg_critical -wi-ao-- 5.00g
 # </computeroutput><userinput>vgdisplay -C vg_critical</userinput>
 <computeroutput>  VG          #PV #LV #SN Attr   VSize VFree
-  vg_critical   2   2   0 wz--n- 8.14g 2.14g
+  vg_critical   2   2   0 wz--n- 8.09g 2.09g
 # </computeroutput><userinput>lvresize -L 7G vg_critical/lv_files</userinput>
 <computeroutput>  Extending logical volume lv_files to 7.00 GB
   Logical volume lv_files successfully resized
 # </computeroutput><userinput>lvdisplay -C vg_critical/lv_files</userinput>
-<computeroutput>  LV       VG          Attr   LSize Origin Snap%  Move Log Copy%  Convert
-  lv_files vg_critique -wi-ao 7.00g
+<computeroutput>  LV       VG          Attr     LSize Pool Origin Data%  Move Log Copy%  Convert
+  lv_files vg_critical -wi-ao-- 7.00g
 # </computeroutput><userinput>resize2fs /dev/vg_critical/lv_files</userinput>
-<computeroutput>resize2fs 1.41.12 (17-May-2010)
+<computeroutput>resize2fs 1.42.5 (29-Jul-2012)
 Filesystem at /dev/vg_critical/lv_files is mounted on /srv/files; on-line resizing required
-old desc_blocks = 1, new_desc_blocks = 1
+old_desc_blocks = 1, new_desc_blocks = 1
 Performing an on-line resize of /dev/vg_critical/lv_files to 1835008 (4k) blocks.
 The filesystem on /dev/vg_critical/lv_files is now 1835008 blocks long.
 
 # </computeroutput><userinput>df -h /srv/files/</userinput>
-<computeroutput>Filesystem            Size  Used Avail Use% Mounted on
-/dev/mapper/vg_critical-lv_files
-                      6.9G  4.6G  2.1G  70% /srv/files</computeroutput>
+<computeroutput>Filesystem                        Size  Used Avail Use% Mounted on
+/dev/mapper/vg_critical-lv_files  6.9G  4.6G  2.1G  70% /srv/files</computeroutput>
 </screen>
 
         <sidebar role="important">
@@ -1157,12 +1198,11 @@ The filesystem on /dev/vg_critical/lv_files is now 1835008 blocks long.
 	limit:</para>
 
         <screen><computeroutput># </computeroutput><userinput>df -h /srv/base/</userinput>
-<computeroutput>Filesystem            Size  Used Avail Use% Mounted on
-/dev/mapper/vg_critical-lv_base
-                     1008M  835M  123M  88% /srv/base
+<computeroutput>Filesystem                       Size  Used Avail Use% Mounted on
+/dev/mapper/vg_critical-lv_base 1008M  854M  104M  90% /srv/base
 # </computeroutput><userinput>vgdisplay -C vg_critical</userinput>
-<computeroutput>  VG          #PV #LV #SN Attr   VSize VFree
-  vg_critical   2   2   0 wz--n- 8.14g 144.00m</computeroutput>
+<computeroutput>  VG          #PV #LV #SN Attr   VSize VFree 
+  vg_critical   2   2   0 wz--n- 8.09g 92.00m</computeroutput>
 </screen>
 
 	<para>No matter, since LVM allows adding physical volumes to
@@ -1178,7 +1218,8 @@ The filesystem on /dev/vg_critical/lv_files is now 1835008 blocks long.
 	logical volume then the filesystem:</para>
 
         <screen><computeroutput># </computeroutput><userinput>pvcreate /dev/sdb1</userinput>
-<computeroutput>  Physical volume "/dev/sdb1" successfully created
+<computeroutput>  Writing physical volume data to disk "/dev/sdb1"
+  Physical volume "/dev/sdb1" successfully created
 # </computeroutput><userinput>vgextend vg_critical /dev/sdb1</userinput>
 <computeroutput>  Volume group "vg_critical" successfully extended
 # </computeroutput><userinput>vgdisplay -C vg_critical</userinput>
@@ -1187,12 +1228,11 @@ The filesystem on /dev/vg_critical/lv_files is now 1835008 blocks long.
 # </computeroutput><userinput>[...]</userinput>
 <computeroutput>[...]
 # </computeroutput><userinput>df -h /srv/base/</userinput>
-<computeroutput>Filesystem            Size  Used Avail Use% Mounted on
-/dev/mapper/vg_critical-lv_base
-                      2.0G  835M  1.1G  44% /srv/base</computeroutput>
+<computeroutput>Filesystem                       Size  Used Avail Use% Mounted on
+/dev/mapper/vg_critical-lv_base  2.0G  854M  1.1G  45% /srv/base</computeroutput>
 </screen>
 
-        <sidebar role="fil">
+        <sidebar>
           <title><emphasis>GOING FURTHER</emphasis> Advanced LVM</title>
 
 	  <para>LVM also caters for more advanced uses, where many details
@@ -1210,7 +1250,7 @@ The filesystem on /dev/vg_critical/lv_files is now 1835008 blocks long.
         </sidebar>
       </section>
     </section>
-    <section id="raid-ou-lvm">
+    <section id="sect.raid-or-lvm">
       <title>RAID or LVM?</title>
 
       <para>RAID and LVM both bring indisputable advantages as soon as one
@@ -1229,14 +1269,41 @@ The filesystem on /dev/vg_critical/lv_files is now 1835008 blocks long.
       volumes are made independent of the physical layout of the disks,
       RAID doesn't help much and LVM will be the natural choice.</para>
 
-      <para>The third notable use case is when one just wants to aggregate
-      two disks into one volume, either for performance reasons or to have
-      a single filesystem that is larger than any of the available disks.
-      This case can be addressed both by a RAID-0 (or even linear-RAID) and
-      by an LVM volume. When in this situation, and barring extra
-      constraints (keeping in line with the rest of the computers if they
-      only use RAID), the configuration of choice will often be LVM. The
-      initial set up is slightly more complex, but that slight increase in
+      <sidebar>
+        <title><emphasis>NOTE</emphasis> If performance matters…</title>
+
+	<para>If input/output speed is of the essence, especially in
+	terms of access times, using LVM and/or RAID in one of the
+	many combinations may have some impact on performances, and
+	this may influence decisions as to which to pick.  However,
+	these differences in performance are really minor, and will
+	only be measurable in a few use cases.  If performance
+	matters, the best gain to be obtained would be to use
+	non-rotating storage media
+	(<indexterm><primary>SSD</primary></indexterm><emphasis>solid-state
+	drives</emphasis> or SSDs); their cost per megabyte is higher
+	than that of standard hard disk drives, and their capacity is
+	usually smaller, but they provide excellent performance for
+	random accesses.  If the usage pattern includes many
+	input/output operations scattered all around the filesystem,
+	for instance for databases where complex queries are routinely
+	being run, then the advantage of running them on an SSD far
+	outweigh whatever could be gained by picking LVM over RAID or
+	the reverse.  In these situations, the choice should be
+	determined by other considerations than pure speed, since the
+	performance aspect is most easily handled by using
+	SSDs.</para>
+      </sidebar>
+
+      <para>The third notable use case is when one just wants to
+      aggregate two disks into one volume, either for performance
+      reasons or to have a single filesystem that is larger than any
+      of the available disks.  This case can be addressed both by a
+      RAID-0 (or even linear-RAID) and by an LVM volume. When in this
+      situation, and barring extra constraints (for instance, keeping
+      in line with the rest of the computers if they only use RAID),
+      the configuration of choice will often be LVM. The initial set
+      up is barely more complex, and that slight increase in
       complexity more than makes up for the extra flexibility that LVM
       brings if the requirements change or if new disks need to be
       added.</para>
@@ -1413,23 +1480,24 @@ Disk identifier: 0x00039a9f
     pros and cons. This book will focus on Xen, LXC, and KVM, but other
     noteworthy implementations include the following:</para>
     <indexterm><primary><emphasis>VMWare</emphasis></primary></indexterm>
-    <indexterm><primary><command>Bochs</command></primary></indexterm>
-    <indexterm><primary><command>QEMU</command></primary></indexterm>
-    <indexterm><primary><command>VirtualBox</command></primary></indexterm>
-    <indexterm><primary><command>KVM</command></primary></indexterm>
+    <indexterm><primary><emphasis>Bochs</emphasis></primary></indexterm>
+    <indexterm><primary><emphasis>QEMU</emphasis></primary></indexterm>
+    <indexterm><primary><emphasis>VirtualBox</emphasis></primary></indexterm>
+    <indexterm><primary><emphasis>KVM</emphasis></primary></indexterm>
+    <indexterm><primary><emphasis>LXC</emphasis></primary></indexterm>
     <itemizedlist>
       <listitem>
 	<para>QEMU is a software emulator for a full computer; performances
 	are far from the speed one could achieve running natively, but this
 	allows running unmodified or experimental operating systems on the
 	emulated hardware. It also allows emulating a different hardware
-	architecture: for instance, an <emphasis>i386</emphasis> system can
+	architecture: for instance, an <emphasis>amd64</emphasis> system can
 	emulate an <emphasis>arm</emphasis> computer. QEMU is free
 	software. <ulink type="block" url="http://www.qemu.org/"/></para>
       </listitem>
       <listitem>
-	<para>Bochs is another free virtual machine, but it only emulates
-	the i386 architecture.</para>
+	<para>Bochs is another free virtual machine, but it only
+	emulates the x86 architectures (i386 and amd64).</para>
       </listitem>
       <listitem>
 	<para>VMWare is a proprietary virtual machine; being one of the
@@ -1439,16 +1507,17 @@ Disk identifier: 0x00039a9f
 	url="http://www.vmware.com/"/></para>
       </listitem>
       <listitem>
-	<para>VirtualBox is a virtual machine that is mostly free software
-	(although some extra components are under a proprietary license).
-	Although younger than VMWare and restricted to the i386 and amd64
-	architectures, it shows promise; it already allows snapshotting,
-	for instance. VirtualBox has been part of Debian since <emphasis
+	<para>VirtualBox is a virtual machine that is mostly free
+	software (although some extra components are available under a
+	proprietary license).  It's younger than VMWare and restricted
+	to the i386 and amd64 architectures, but it still includes
+	some snapshotting and other interesting features. VirtualBox
+	has been part of Debian since <emphasis
 	role="distribution">Lenny</emphasis>. <ulink type="block"
 	url="http://www.virtualbox.org/"/></para>
       </listitem>
     </itemizedlist>
-    <section id="xen">
+    <section id="sect.xen">
       <title>Xen</title>
 
       <para>Xen <indexterm><primary>Xen</primary></indexterm> is a
@@ -1498,17 +1567,14 @@ Disk identifier: 0x00039a9f
 	<ulink type="block"
 	url="http://wiki.xensource.com/xenwiki/XenParavirtOps"/></para>
 
-	<para>Although <emphasis role="distribution">Squeeze</emphasis> is
-	based on version 2.6.32 of the Linux kernel, a version including
-	the Xen patches from Xensource is also available in the <emphasis
-	role="pkg">linux-image-2.6-xen-686</emphasis> and <emphasis
-	role="pkg">linux-image-2.6-xen-amd64</emphasis> packages. This
-	distribution-specific patching means that the available featureset
-	depends on the distribution; discrepancies in the versions of the
-	code, or even integration of code still under development into some
-	distributions also mean differences in the supported features. This
-	problem should be greatly reduced now that Xen has been officially
-	merged into Linux. <ulink type="block"
+	<para>Since <emphasis role="distribution">Wheezy</emphasis> is
+	based on version 3.2 of the Linux kernel, the standard
+	<emphasis role="pkg">linux-image-686-pae</emphasis> and
+	<emphasis role="pkg">linux-image-amd64</emphasis> packages
+	include the necessary code, and the distribution-specific
+	patching that was required for <emphasis
+	role="distribution">Squeeze</emphasis> and earlier versions of
+	Debian is no more. <ulink type="block"
 	url="http://wiki.xen.org/xenwiki/XenKernelFeatures"/></para>
       </sidebar>
 
@@ -1528,12 +1594,12 @@ Disk identifier: 0x00039a9f
       <sidebar>
         <title><emphasis>CULTURE</emphasis> Xen and non-Linux kernels</title>
 
-	<para>Xen requires modifications to all the operating systems one
-	wants to run on it; not all kernels have the same level of maturity
-	in this regard. Many are fully-functional, both as dom0 and domU:
-	Linux 2.6 (as patched by Debian) and 3.0, NetBSD 4.0 and later, and
-	OpenSolaris. Others, such as OpenBSD 4.0, FreeBSD 8 and Plan 9,
-	only work as a domU.</para>
+	<para>Xen requires modifications to all the operating systems
+	one wants to run on it; not all kernels have the same level of
+	maturity in this regard. Many are fully-functional, both as
+	dom0 and domU: Linux 3.0 and later, NetBSD 4.0 and later, and
+	OpenSolaris. Others, such as OpenBSD 4.0, FreeBSD 8 and
+	Plan 9, only work as a domU.</para>
 
 	<para>However, if Xen can rely on the hardware functions dedicated
 	to virtualization (which are only present in more recent
@@ -1544,16 +1610,13 @@ Disk identifier: 0x00039a9f
         <listitem>
 	  <para>The hypervisor itself. According to the available hardware,
 	  the appropriate package will be either <emphasis
-	  role="pkg">xen-hypervisor-4.0-i386</emphasis> or <emphasis
-	  role="pkg">xen-hypervisor-4.0-amd64</emphasis>.</para>
+	  role="pkg">xen-hypervisor-4.1-i386</emphasis> or <emphasis
+	  role="pkg">xen-hypervisor-4.1-amd64</emphasis>.</para>
         </listitem>
         <listitem>
-	  <para>A kernel with the appropriate patches allowing it to work
-	  on that hypervisor. In the 2.6.32 case relevant to <emphasis
-	  role="distribution">Squeeze</emphasis>, the available hardware
-	  will dictate the choice among the various available <emphasis
-	  role="pkg">xen-linux-system-2.6.32-5-xen-*</emphasis>
-	  packages.</para>
+	  <para>A kernel that runs on that hypervisor. Any kernel more
+	  recent than 3.0 will do, including the 3.2 version present
+	  in <emphasis role="distribution">Wheezy</emphasis>.</para>
         </listitem>
         <listitem>
 	  <para>The i386 architecture also requires a standard library with
@@ -1562,19 +1625,21 @@ Disk identifier: 0x00039a9f
         </listitem>
       </itemizedlist>
 
-      <para>In order to avoid the hassle of selecting these components by
-      hand, a few convenience packages (such as <emphasis
-      role="pkg">xen-linux-system-2.6.32-5-xen-686</emphasis> and variants)
-      have been made available; they all pull in a known-good combination
-      of the appropriate hypervisor and kernel packages. The hypervisor
-      also brings <emphasis role="pkg">xen-utils-4.0</emphasis>, which
-      contains tools to control the hypervisor from the dom0. This in turn
-      brings the appropriate standard library. During the installation of
-      all that, configuration scripts also create a new entry in the Grub
-      bootloader menu, so as to start the chosen kernel in a Xen dom0. Note
-      however that this entry is not usually set to be the first one in the
-      list, and will therefore not be selected by default. If that is not
-      the desired behavior, the following commands will change it:</para>
+      <para>In order to avoid the hassle of selecting these components
+      by hand, a few convenience packages (such as <emphasis
+      role="pkg">xen-linux-system-686-pae</emphasis> and <emphasis
+      role="pkg">xen-linux-system-amd64</emphasis>) have been made
+      available; they all pull in a known-good combination of the
+      appropriate hypervisor and kernel packages. The hypervisor also
+      brings <emphasis role="pkg">xen-utils-4.1</emphasis>, which
+      contains tools to control the hypervisor from the dom0. This in
+      turn brings the appropriate standard library. During the
+      installation of all that, configuration scripts also create a
+      new entry in the Grub bootloader menu, so as to start the chosen
+      kernel in a Xen dom0. Note however that this entry is not
+      usually set to be the first one in the list, and will therefore
+      not be selected by default. If that is not the desired behavior,
+      the following commands will change it:</para>
 
       <screen><computeroutput># </computeroutput><userinput>mv /etc/grub.d/20_linux_xen /etc/grub.d/09_linux_xen
 </userinput><computeroutput># </computeroutput><userinput>update-grub
@@ -1615,19 +1680,10 @@ Disk identifier: 0x00039a9f
 	  to be installed with <command>debootstrap</command>; in that
 	  case, the <literal>--dist</literal> option will also most often
 	  be used (with a distribution name such as <emphasis
-	  role="distribution">squeeze</emphasis>).</para>
+	  role="distribution">wheezy</emphasis>).</para>
 
           <sidebar>
             <title><emphasis>GOING FURTHER</emphasis> Installing a non-Debian system in a domU</title>
-
-	    <para>If the Xen image is not meant to run Debian but another
-	    system, another potentially interesting option is
-	    <literal>--rpmstrap</literal>, to invoke
-	    <command>rpmstrap</command> in order to initialize a new
-	    RPM-based system (such as Fedora, CentOS or Mandriva). Other
-	    methods include <literal>--copy</literal>, to copy an image
-	    from an existing system, and <literal>--tar</literal>, to
-	    extract the system image from an archive.</para>
 
 	    <para>In case of a non-Linux system, care should be taken to
 	    define the kernel the domU must use, using the
@@ -1668,30 +1724,31 @@ Disk identifier: 0x00039a9f
       <para>Once these choices are made, we can create the image for our
       future Xen domU:</para>
 
-      <screen><computeroutput># </computeroutput><userinput>xen-create-image --hostname=testxen</userinput>
+      <screen><computeroutput># </computeroutput><userinput>xen-create-image --hostname testxen --dhcp --dir /srv/testxen --size=2G --dist=wheezy --role=udev</userinput>
 <computeroutput>
+[...]
 General Information
 --------------------
 Hostname       :  testxen
-Distribution   :  squeeze
-Mirror         :  http://ftp.us.debian.org/debian/
+Distribution   :  wheezy
+Mirror         :  http://ftp.fr.debian.org/debian/
 Partitions     :  swap            128Mb (swap)
-                  /               4Gb   (ext3)
+                  /               2G    (ext3)
 Image type     :  sparse
 Memory size    :  128Mb
-Kernel path    :  /boot/vmlinuz-2.6.32-5-xen-686
-Initrd path    :  /boot/initrd.img-2.6.32-5-xen-686
+Kernel path    :  /boot/vmlinuz-3.2.0-4-686-pae
+Initrd path    :  /boot/initrd.img-3.2.0-4-686-pae
 [...]
 Logfile produced at:
-         /var/log/xen-tools/testxen.log
+	 /var/log/xen-tools/testxen.log
 
 Installation Summary
 ---------------------
 Hostname        :  testxen
-Distribution    :  squeeze
+Distribution    :  wheezy
 IP-Address(es)  :  dynamic
-RSA Fingerprint :  25:6b:6b:c7:84:03:9e:8b:82:da:84:c0:08:cd:29:94
-Root Password   :  52emxRmM
+RSA Fingerprint :  0a:6e:71:98:95:46:64:ec:80:37:63:18:73:04:dd:2b
+Root Password   :  48su67EW
 </computeroutput>
 </screen>
 
@@ -1747,7 +1804,7 @@ Root Password   :  52emxRmM
       exist). We must therefore set up a bridge in
       <filename>/etc/network/interfaces</filename> (which requires
       installing the <emphasis role="pkg">bridge-utils</emphasis> package,
-      which is why the <emphasis role="pkg">xen-utils-4.0</emphasis> package
+      which is why the <emphasis role="pkg">xen-utils-4.1</emphasis> package
       recommends it) to replace the existing eth0 entry:</para>
 
       <programlisting>auto xenbr0
@@ -1763,15 +1820,15 @@ iface xenbr0 inet dhcp
       starting/stopping them.</para>
 
       <screen><computeroutput># </computeroutput><userinput>xm list</userinput>
-<computeroutput>Name                            ID Mem VCPUs  State   Time(s)
-Domain-0                         0 940     1 r-----   3896.9
+<computeroutput>Name                                        ID   Mem VCPUs      State   Time(s)
+Domain-0                                     0   463     1     r-----      9.8
 # </computeroutput><userinput>xm create testxen.cfg</userinput>
 <computeroutput>Using config file "/etc/xen/testxen.cfg".
 Started domain testxen (id=1)
 # </computeroutput><userinput>xm list</userinput>
-<computeroutput>Name                            ID Mem VCPUs  State   Time(s)
-Domain-0                         0 873     1 r-----   3917.1
-testxen                          1 128     1 -b----      3.7</computeroutput>
+<computeroutput>Name                                        ID   Mem VCPUs      State   Time(s)
+Domain-0                                     0   366     1     r-----     11.4
+testxen                                      1   128     1     -b----      1.1</computeroutput>
 </screen>
 
       <sidebar>
@@ -1805,11 +1862,8 @@ testxen                          1 128     1 -b----      3.7</computeroutput>
 
       <screen><computeroutput># </computeroutput><userinput>xm console testxen</userinput>
 <computeroutput>[...]
-Starting enhanced syslogd: rsyslogd.
-Starting periodic command scheduler: cron.
-Starting OpenBSD Secure Shell server: sshd.
 
-Debian GNU/Linux 6.0 testxen hvc0
+Debian GNU/Linux 7.0 testxen hvc0
 
 testxen login: </computeroutput>
 </screen>
@@ -1835,8 +1889,14 @@ testxen login: </computeroutput>
 
 	<para>ConVirt (in the <emphasis role="pkg">convirt</emphasis>
 	package, previously XenMan) is a graphical interface allowing
-	controlling Xen domains installed on a machine. It provides most of
-	the features of the <command>xm</command> command.</para>
+	controlling Xen domains installed on a machine. It provides
+	most of the features of the <command>xm</command> command.
+	Note that due to bugs and a slackening of development,
+	<emphasis role="pkg">convirt</emphasis>, which was included in
+	<emphasis role="distribution">Squeeze</emphasis>, has been
+	removed and is no longer present in <emphasis
+	role="distribution">Wheezy</emphasis>.
+	</para>
       </sidebar>
 
       <para>Once the domU is up, it can be used just like any other server
@@ -1872,7 +1932,7 @@ testxen login: </computeroutput>
       with <command>xm shutdown</command> or <command>xm
       reboot</command>.</para>
 
-      <sidebar role="fil">
+      <sidebar>
         <title><emphasis>GOING FURTHER</emphasis> Advanced Xen</title>
 
 	<para>Xen has many more features than we can describe in these few
@@ -1887,7 +1947,7 @@ testxen login: </computeroutput>
 	url="http://www.xen.org/support/documentation.html"/></para>
       </sidebar>
     </section>
-    <section id="lxc">
+    <section id="sect.lxc">
       <title>LXC</title>
 
       <para>Even though it's used to build “virtual machines”, LXC
@@ -1907,21 +1967,21 @@ testxen login: </computeroutput>
       on the system.</para>
 
       <para>These features can be combined to isolate a whole process
-      family starting from the <command>init</command> process, and the
-      resulting set looks very much like a virtual machine. The official
-      name for such a setup is a “container” (hence the LXC moniker:
-      <emphasis>LinuX Containers</emphasis>), but a rather important
-      difference with “real” virtual machines such as provided by Xen
-      or KVM is that there's no second kernel; the container uses the very
-      same kernel as the host system. This has both pros and cons:
-      advantages include the total lack of overhead and therefore
-      performance costs, and the fact that the kernel has a global vision
-      of all the processes running on the system, so the scheduling can be
-      more efficient than it would be if two independent kernels were to
-      schedule different task sets. Chief among the inconveniences is the
-      impossibility to run a different kernel in a container (whether a
-      different Linux version or a different operating system
-      altogether).</para>
+      family starting from the <command>init</command> process, and
+      the resulting set looks very much like a virtual machine. The
+      official name for such a setup is a “container” (hence the LXC
+      moniker: <emphasis>LinuX Containers</emphasis>), but a rather
+      important difference with “real” virtual machines such as
+      provided by Xen or KVM is that there's no second kernel; the
+      container uses the very same kernel as the host system. This has
+      both pros and cons: advantages include excellent performance due
+      to the total lack of overhead, and the fact that the kernel has
+      a global vision of all the processes running on the system, so
+      the scheduling can be more efficient than it would be if two
+      independent kernels were to schedule different task sets. Chief
+      among the inconveniences is the impossibility to run a different
+      kernel in a container (whether a different Linux version or a
+      different operating system altogether).</para>
 
       <sidebar>
         <title><emphasis>NOTE</emphasis> LXC isolation limits</title>
@@ -1930,14 +1990,14 @@ testxen login: </computeroutput>
 	by heavier emulators or virtualizers. In particular:</para>
         <itemizedlist>
           <listitem>
-	    <para>the <emphasis role="distribution">Squeeze</emphasis>
-	    standard kernel does not allow limiting the amount of memory
-	    available to a container; this feature exists, and can be
-	    enabled by rebuilding the kernel with the <foreignphrase>Memory
-	    Resource Controller</foreignphrase> option, but it is still
-	    considered somewhat experimental, and it has a (slight) cost on
-	    overall system performance, which is why it's disabled by
-	    default;</para>
+	    <para>the <emphasis role="distribution">Wheezy</emphasis>
+	    standard kernel does not allow limiting the amount of
+	    memory available to a container; the feature exists, and
+	    is built in the kernel, but it's disabled by default
+	    because it has a (slight) cost on overall system
+	    performance; however, enabling it is a simple matter of
+	    setting the <command>cgroup_enable=memory</command> kernel
+	    at boot time;</para>
           </listitem>
           <listitem>
 	    <para>since the kernel is shared among the host system and the
@@ -1989,7 +2049,7 @@ cgroup            /sys/fs/cgroup           cgroup    defaults        0       0
 	filesystem should be manually mounted with <command>mount
 	/sys/fs/cgroup</command>.</para>
       </section>
-      <section id="section.lxc.network">
+      <section id="sect.lxc.network">
         <title>Network Configuration</title>
 
 	<para>The goal of installing LXC is to set up virtual machines;
@@ -2084,18 +2144,16 @@ iface br0 inet static
 	role="pkg">debootstrap</emphasis> package) will install a Debian
 	container:</para>
 
-        <screen><computeroutput>root@scouzmir:~# </computeroutput><userinput>mkdir /var/lib/lxc/testlxc/
-</userinput><computeroutput>root@scouzmir:~# </computeroutput><userinput>/usr/lib/lxc/templates/lxc-debian -p /var/lib/lxc/testlxc/
-</userinput><computeroutput>debootstrap is /usr/sbin/debootstrap
-Checking cache download in /var/cache/lxc/debian/rootfs-i386 ... 
-Downloading debian minimal ...
-I: Retrieving Release
-I: Retrieving Packages
+        <screen><computeroutput>root@mirwiz:~# </computeroutput><userinput>mkdir /var/lib/lxc/testlxc/
+</userinput><computeroutput>root@mirwiz:~# </computeroutput><userinput>/usr/share/lxc/templates/lxc-debian -p /var/lib/lxc/testlxc/
+</userinput><computeroutput>[...]
+Downloading minimal system...
+I: Retrieving InRelease
+I: Checking Release signature
 [...]
- Removing any system startup links for /etc/init.d/hwclockfirst.sh ...
-   /etc/rcS.d/S08hwclockfirst.sh
-Root password is 'root', please change !
-root@scouzmir:~# </computeroutput>
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+rm: cannot remove `/etc/lxc/auto/': Is a directory
+root@mirwiz:~# </computeroutput>
         </screen>
 
 	<para>Note that the filesystem is initially created in
@@ -2103,13 +2161,11 @@ root@scouzmir:~# </computeroutput>
 	directory. This allows creating identical containers much more
 	quickly, since only copying is then required.</para>
 
-	<para>Note also that the <command>lxc-debian</command> command as
-	shipped in <emphasis role="distribution">Squeeze</emphasis>
-	unfortunately creates a <emphasis
-	role="distribution">Lenny</emphasis> system, and not a <emphasis
-	role="distribution">Squeeze</emphasis> system as one could expect.
-	This problem can be worked around by simply installing a newer
-	version of the package (starting from 0.7.3-1).</para>
+	<para>Note also that the <command>lxc-debian</command> command
+	as shipped in <emphasis role="distribution">Wheezy</emphasis>
+	can create <emphasis role="distribution">Squeeze</emphasis>,
+	<emphasis role="distribution">Wheezy</emphasis> and <emphasis
+	role="distribution">Sid</emphasis> systems.</para>
 
 	<para>The newly-created filesystem now contains a minimal Debian
 	system, adapted to the aforementioned “simple” network
@@ -2135,6 +2191,25 @@ lxc.network.hwaddr = 4a:49:43:49:79:20
 	the host; and that its MAC address will be as specified. Should
 	this last entry be missing or disabled, a random MAC address will
 	be generated.</para>
+
+	<para>Another useful entry in that file is the setting of the
+	hostname:</para>
+
+<programlisting>lxc.utsname = testlxc
+</programlisting>
+
+	<para>Finally, note that as of this writing, the
+	<command>lxc-debian</command> provided in <emphasis
+	role="distribution">Wheezy</emphasis> leads to LXC systems
+	where the console is not accessible.  A work-around for this
+	problem is to edit the
+	<filename>/var/lib/lxc/testlxc/rootfs/etc/inittab</filename>
+	file and replace the six <command>getty</command> lines with a
+	single one:</para>
+
+<programlisting>1:2345:respawn:/sbin/getty 38400 console
+</programlisting>
+
       </section>
       <section>
         <title>Starting the Container</title>
@@ -2142,38 +2217,16 @@ lxc.network.hwaddr = 4a:49:43:49:79:20
 	<para>Now that our virtual machine image is ready, let's start the
 	container:</para>
 
-        <screen width="94" role="scale"><computeroutput>root@scouzmir:~# </computeroutput><userinput>lxc-start --name=testlxc
-</userinput><computeroutput>INIT: version 2.86 booting
-Activating swap...done.
-Cleaning up ifupdown....
-Checking file systems...fsck 1.41.3 (12-Oct-2008)
-done.
-Setting kernel variables (/etc/sysctl.conf)...done.
-Mounting local filesystems...done.
-Activating swapfile swap...done.
-Setting up networking....
-Configuring network interfaces...Internet Systems Consortium DHCP Client V3.1.1
-Copyright 2004-2008 Internet Systems Consortium.
-All rights reserved.
-For info, please visit http://www.isc.org/sw/dhcp/
+        <screen width="94" role="scale"><computeroutput>root@mirwiz:~# </computeroutput><userinput>lxc-start --name=testlxc
+</userinput><computeroutput>INIT: version 2.88 booting
+[info] Using makefile-style concurrent boot in runlevel S.
 
-Listening on LPF/eth0/52:54:00:99:01:01
-Sending on   LPF/eth0/52:54:00:99:01:01
-Sending on   Socket/fallback
-DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 4
-DHCPOFFER from 192.168.1.2
-DHCPREQUEST on eth0 to 255.255.255.255 port 67
-DHCPACK from 192.168.1.2
-bound to 192.168.1.243 -- renewal in 1392 seconds.
-done.
-INIT: Entering runlevel: 3
-Starting OpenBSD Secure Shell server: sshd.
+Debian GNU/Linux 7.0 testlxc console
 
-Debian GNU/Linux 5.0 scouzmir console
-
-scouzmir login: </computeroutput><userinput>root
+testlxc login: </computeroutput><userinput>root
 </userinput><computeroutput>Password: 
-Linux scouzmir 2.6.32-5-686 #1 SMP Tue Mar 8 21:36:00 UTC 2011 i686
+Last login: Thu Feb  7 14:53:11 UTC 2013 on console
+Linux testlxc 3.2.0-4-686-pae #1 SMP Debian 3.2.35-2 i686
 
 The programs included with the Debian GNU/Linux system are free software;
 the exact distribution terms for each program are described in the
@@ -2181,25 +2234,20 @@ individual files in /usr/share/doc/*/copyright.
 
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
-scouzmir:~# </computeroutput><userinput>ps auxwf</userinput>
+root@testlxc:~# </computeroutput><userinput>ps auxwf</userinput>
 <computeroutput>USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root         1  0.0  0.2   1984   680 ?        Ss   08:44   0:00 init [3]  
-root       197  0.0  0.1   2064   364 ?        Ss   08:44   0:00 dhclient3 -pf /var/run/dhclient.eth0.pid -lf /var/lib/dhcp3/dhclien
-root       286  0.1  0.4   2496  1256 console  Ss   08:44   0:00 /bin/login --     
-root       291  0.7  0.5   2768  1504 console  S    08:46   0:00  \_ -bash
-root       296  0.0  0.3   2300   876 console  R+   08:46   0:00      \_ ps auxwf
-root       287  0.0  0.2   1652   560 tty1     Ss+  08:44   0:00 /sbin/getty 38400 tty1 linux
-root       288  0.0  0.2   1652   560 tty2     Ss+  08:44   0:00 /sbin/getty 38400 tty2 linux
-root       289  0.0  0.2   1652   556 tty3     Ss+  08:44   0:00 /sbin/getty 38400 tty3 linux
-root       290  0.0  0.2   1652   560 tty4     Ss+  08:44   0:00 /sbin/getty 38400 tty4 linux
-scouzmir:~# </computeroutput></screen>
+root         1  0.0  0.1   2196   708 ?        Ss   15:01   0:00 init [2]  
+root      1107  0.0  0.2   6384  1032 ?        Ss   15:01   0:00 /usr/sbin/sshd
+root      1139  0.0  0.2   2756  1388 console  Ss   15:01   0:00 /bin/login --     
+root      1140  0.0  0.3   3096  1684 console  S    15:02   0:00  \_ -bash
+root      1144  0.0  0.1   2720   932 console  R+   15:02   0:00      \_ ps auxwf
+root@testlxc:~# </computeroutput></screen>
 
-	<para>We are now in the container; our access to the processes is
-	restricted to only those started from the container itself, and our
-	access to the filesystem is similarly restricted to the dedicated
-	subset of the full filesystem
-	(<filename>/var/lib/lxc/testlxc/rootfs</filename>), in which root's
-	password is initially set to <literal>root</literal>.</para>
+	<para>We are now in the container; our access to the processes
+	is restricted to only those started from the container itself,
+	and our access to the filesystem is similarly restricted to
+	the dedicated subset of the full filesystem
+	(<filename>/var/lib/lxc/testlxc/rootfs</filename>).</para>
 
 	<para>Should we want to run the container as a background process,
 	we would invoke <command>lxc-start</command> with the
@@ -2212,10 +2260,10 @@ scouzmir:~# </computeroutput></screen>
 	containers when the host boots; its configuration file,
 	<filename>/etc/default/lxc</filename>, is relatively
 	straightforward; note that the container configuration files need
-	to be stored in <filename>/etc/lxc/</filename>; many users may
+	to be stored in <filename>/etc/lxc/auto/</filename>; many users may
 	prefer symbolic links, such as can be created with <command>ln -s
 	/var/lib/lxc/testlxc/config
-	/etc/lxc/testlxc.config</command>.</para>
+	/etc/lxc/auto/testlxc.config</command>.</para>
 
         <sidebar>
           <title><emphasis>GOING FURTHER</emphasis> Mass virtualization</title>
@@ -2278,8 +2326,9 @@ scouzmir:~# </computeroutput></screen>
       http://www.linux-kvm.org/page/Status
       -->
 
-      <para>With Red Hat actively supporting its development, KVM looks
-      poised to become the reference for Linux virtualization.</para>
+      <para>With Red Hat actively supporting its development, KVM has
+      more or less become the reference for Linux
+      virtualization.</para>
       <section>
         <title>Preliminary Steps</title>
         <indexterm><primary><command>virt-install</command></primary></indexterm>
@@ -2326,7 +2375,7 @@ scouzmir:~# </computeroutput></screen>
 	<para>Just as in Xen and LXC, the most frequent network
 	configuration involves a bridge grouping the network interfaces of
 	the virtual machines (see <xref
-	linkend="section.lxc.network"/>).</para>
+	linkend="sect.lxc.network"/>).</para>
 
 	<para>Alternatively, and in the default configuration provided by
 	KVM, the virtual machine is assigned a private address (in the
@@ -2350,15 +2399,18 @@ scouzmir:~# </computeroutput></screen>
 	installer, by booting the virtual machine on a virtual DVD-ROM
 	drive that maps to a Debian DVD image stored on the host system.
 	The VM will export its graphical console over the VNC protocol (see
-	<xref linkend="section.bureau-distant"/> for details), which will
+	<xref linkend="sect.bureau-distant"/> for details), which will
 	allow us to control the installation process.</para>
 
 	<para>We first need to tell libvirtd where to store the disk
 	images, unless the default location
 	(<filename>/var/lib/libvirt/images/</filename>) is fine.</para>
 
-        <screen><computeroutput># </computeroutput><userinput>virsh pool-create-as srv-kvm dir --target /srv/kvm</userinput>
-</screen>
+        <screen><computeroutput>root@mirwiz:~# </computeroutput><userinput>mkdir /srv/kvm</userinput>
+<computeroutput>root@mirwiz:~# </computeroutput><userinput>virsh pool-create-as srv-kvm dir --target /srv/kvm</userinput>
+<computeroutput>Pool srv-kvm created
+
+root@mirwiz:~# </computeroutput></screen>
 
 	<para>Let us now start the installation process for the virtual
 	machine, and have a closer look at
@@ -2372,11 +2424,11 @@ scouzmir:~# </computeroutput></screen>
                --name testkvm            <co id="virtinst.name"/>
                --ram 1024                <co id="virtinst.ram"/>
                --disk /srv/kvm/testkvm.qcow,format=qcow2,size=10 <co id="virtinst.disk"/>
-               --cdrom /srv/isos/debian-6.0.0-amd64-DVD-1.iso    <co id="virtinst.cdrom"/>
+               --cdrom /srv/isos/debian-wheezy-DI-b4-amd64-netinst.iso    <co id="virtinst.cdrom"/>
                --network bridge=br0      <co id="virtinst.network"/>
                --vnc                     <co id="virtinst.vnc"/>
                --os-type linux           <co id="virtinst.os"/>
-               --os-variant debiansqueeze
+               --os-variant debianwheezy
 </userinput><computeroutput>
 Starting install...
 Allocating 'testkvm.qcow'             |  10 GB     00:00
@@ -2452,7 +2504,7 @@ to the console to complete the installation process.
 	    the local interface; if the VNC client is to be run on a
 	    different host, establishing the connection will require
 	    setting up an SSH tunnel (see <xref
-	    linkend="section.ssh-port-forwarding"/>). Alternatively, the
+	    linkend="sect.ssh-port-forwarding"/>). Alternatively, the
 	    <literal>--vnclisten=0.0.0.0</literal> can be used so that the
 	    VNC server is accessible from all interfaces; note that if you
 	    do that, you really should design your firewall
@@ -2547,6 +2599,96 @@ root@server's password: </computeroutput>
 	<para>All these subcommands take a virtual machine identifier as a
 	parameter.</para>
       </section>
+      <section>
+        <title>Installting an RPM based system in Debian with yum</title>
+
+	<para>If the Xen image is meant to run a Debian (or one of its
+	derivatives), the domU can be initialized with
+	<command>debootstrap</command>, as described above.  But if
+	the domU is to be installed with an RPM-based system (such as
+	Fedora, CentOS or Scientific Linux), the setup will need to be
+	done using the <command>yum</command> utility (which is packaged in Debian).</para>
+	
+	<para>The procedure requires setting up a
+	<filename>yum.conf</filename> file containing the necessary
+	parameters, including the path to the source RPM repositories,
+	the path to the plugin configuration, and the destination
+	folder. For this example, we will assume that the environment
+	will be stored in /var/tmp/yum-bootstrap. The file
+	/var/tmp/yum-bootstrap/yum.conf file should look like
+	this:</para>
+	
+<screen><userinput>[main]
+reposdir=/var/tmp/yum-bootstrap/repos.d
+pluginconfpath=/var/tmp/yum-bootstrap/pluginconf.d
+cachedir=/var/cache/yum
+installroot=/path/to/destination/domU/install
+exclude=$exclude
+keepcache=1
+#debuglevel=4  
+#errorlevel=4
+pkgpolicy=newest
+distroverpkg=centos-release
+tolerant=1
+exactarch=1
+obsoletes=1
+gpgcheck=1
+plugins=1
+metadata_expire=1800</userinput></screen>
+
+	    <para>The
+	    <filename>/var/tmp/yum-bootstrap/repos.d</filename>
+	    directory should contain the descriptions of the RPM
+	    source repositories, just as in
+	    <filename>/etc/yum.repo.d</filename> in an already
+	    installed RPM-based system. Here is an example for a
+	    CentOS 6 installation:</para>
+
+<screen><userinput>[base]
+name=CentOS-6 - Base
+#baseurl=http://mirror.centos.org/centos/$releasever/os/$basearch/
+mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=os
+gpgcheck=1
+gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6
+   
+[updates]
+name=CentOS-6 - Updates
+#baseurl=http://mirror.centos.org/centos/$releasever/updates/$basearch/
+mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=updates
+gpgcheck=1
+gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6
+
+[extras]
+name=CentOS-6 - Extras
+#baseurl=http://mirror.centos.org/centos/$releasever/extras/$basearch/
+mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=extras
+gpgcheck=1
+gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6
+
+[centosplus]
+name=CentOS-6 - Plus
+#baseurl=http://mirror.centos.org/centos/$releasever/centosplus/$basearch/
+mirrorlist=http://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=centosplus
+gpgcheck=1
+gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6
+</userinput></screen>
+
+	    <para>Finally,
+	    <filename>pluginconf.d/installonlyn.conf</filename> file
+	    should contain the following:</para>
+<screen><userinput>[main]
+enabled=1
+tokeep=5
+</userinput></screen>
+
+	    <para>Once all this is setup, make sure the
+	    <command>rpm</command> databases are correctly
+	    initialized, with a command such as <command>rpm
+	    --rebuilddb</command>.  An installation of CentOS 6 is
+	    then a matter of the following:</para>
+
+<screen><userinput>yum -c /var/tmp/yum-bootstrap/yum.conf -y install coreutils basesystem centos-release yum-basearchonly initscripts</userinput></screen>
+      </section>
     </section>
   </section>
   <section id="sect.automated-installation">
@@ -2596,7 +2738,7 @@ root@server's password: </computeroutput>
     installer… Fortunately, the installer is very modular, and there are
     tools to automate most of the work required for this customization,
     most importantly simple-CDD (CDD being an acronym for <emphasis>Custom
-    Debian Derivatives</emphasis>). Even the simple-CDD solution, however,
+    Debian Derivative</emphasis>). Even the simple-CDD solution, however,
     only handles initial installations; this is usually not a problem since
     the APT tools allow efficient deployment of updates later on.</para>
 
@@ -2604,7 +2746,7 @@ root@server's password: </computeroutput>
     altogether (which is no longer in Debian), in order to focus more
     intently on debian-installer and simple-CDD, which are more interesting
     in a Debian-only context.</para>
-    <section id="fai">
+    <section id="sect.fai">
       <title>Fully Automatic Installer (FAI)</title>
       <indexterm><primary>Fully Automatic Installer (FAI)</primary></indexterm>
 
@@ -2700,7 +2842,7 @@ root@server's password: </computeroutput>
         </listitem>
       </itemizedlist>
     </section>
-    <section id="d-i-preseeding">
+    <section id="sect.d-i-preseeding">
       <title>Preseeding Debian-Installer</title>
       <indexterm><primary>preseed</primary></indexterm>
       <indexterm><primary>preconfiguration</primary></indexterm>
@@ -2726,7 +2868,7 @@ root@server's password: </computeroutput>
 	need upgrading, and new answers may become required, the
 	<filename>/etc/debconf.conf</filename> configuration file can be
 	set up so that Debconf uses external data sources (such as an LDAP
-	directory server, or a remote file mounted via NFS or Samba).
+	directory server, or a remote file accessed via NFS or Samba).
 	Several external data sources can be defined at the same time, and
 	they complement one another. The local database is still used (for
 	read-write access), but the remote databases are usually restricted
@@ -2801,9 +2943,9 @@ root@server's password: </computeroutput>
           </listitem>
           <listitem>
 	    <para>the fourth and last field contains the value for the
-	    answer; note that it must be separated from the third field
-	    with a single space, so that the value can start with
-	    whitespace.</para>
+	    answer. Note that it must be separated from the third field
+	    with a single space; if there are more than one, the
+	    following space characters are considered part of the value.</para>
           </listitem>
         </itemizedlist>
 
@@ -2826,9 +2968,9 @@ root@server's password: </computeroutput>
 	  documentation on the use of a preseed file in an appendix. It
 	  also includes a detailed and commented sample file, which can
 	  serve as a base for local customizations. <ulink type="block"
-	  url="http://www.debian.org/releases/squeeze/i386/apb.html"/>
+	  url="http://www.debian.org/releases/wheezy/i386/apb.html"/>
 	  <ulink type="block"
-	  url="http://www.debian.org/releases/squeeze/example-preseed.txt"/></para>
+	  url="http://www.debian.org/releases/wheezy/example-preseed.txt"/></para>
         </sidebar>
       </section>
       <section>
@@ -2848,13 +2990,13 @@ root@server's password: </computeroutput>
 	  <filename>/tftpboot/pxelinux.cfg/default</filename> configuration
 	  file. Setting up network boot is a prerequisite; see the
 	  Installation Guide for details. <ulink type="block"
-	  url="http://www.debian.org/releases/squeeze/i386/ch04s05.html"/></para>
+	  url="http://www.debian.org/releases/wheezy/i386/ch04s05.html"/></para>
         </section>
         <section>
           <title>Preparing a Bootable USB Key</title>
 
 	  <para>Once a bootable key has been prepared (see <xref
-	  linkend="section.install-usb"/>), a few extra operations are
+	  linkend="sect.install-usb"/>), a few extra operations are
 	  needed. Assuming the key contents are available under
 	  <filename>/media/usbdisk/</filename>:</para>
           <itemizedlist>
@@ -2900,13 +3042,13 @@ append preseed/file=/hd-media/preseed.cfg locale=en_US console-keymaps-at/keymap
 	  image directory is finalized after debian-cd's <command>make
 	  image-trees</command> step. At that point, we insert the preseed
 	  file into the appropriate directory (usually
-	  <filename>$TDIR/squeeze/CD1/</filename>, $TDIR being one of the
+	  <filename>$TDIR/wheezy/CD1/</filename>, $TDIR being one of the
 	  parameters defined by the <filename>CONF.sh</filename>
 	  configuration file). The CD-ROM uses <command>isolinux</command>
 	  as its bootloader, and its configuration file must be adapted
 	  from what debian-cd generated, in order to insert the required
 	  boot parameters (the specific file is
-	  <filename>$TDIR/squeeze/boot1/isolinux/isolinux.cfg</filename>).
+	  <filename>$TDIR/wheezy/boot1/isolinux/isolinux.cfg</filename>).
 	  Then the “normal” process can be resumed, and we can go on to
 	  generating the ISO image with <command>make image CD=1</command>
 	  (or <command>make images</command> if several CD-ROMs are
@@ -3070,7 +3212,7 @@ append preseed/file=/hd-media/preseed.cfg locale=en_US console-keymaps-at/keymap
 	profiles, the remaining step is to invoke <command>build-simple-cdd
 	--conf simple-cdd.conf</command>. After a few minutes, we get the
 	required image in
-	<filename>images/debian-6.0-i386-CD-1.iso</filename>.</para>
+	<filename>images/debian-7.0-i386-CD-1.iso</filename>.</para>
       </section>
     </section>
   </section>
@@ -3081,8 +3223,8 @@ append preseed/file=/hd-media/preseed.cfg locale=en_US console-keymaps-at/keymap
     have several goals: on the one hand, following usage of the resources
     provided by a machine allows anticipating saturation and the subsequent
     required upgrades; on the other hand, alerting the administrator as
-    soon as a service is unavailable or not working properly means the
-    problem can be fixed earlier.</para>
+    soon as a service is unavailable or not working properly means
+    that the problems that do happen can be fixed sooner.</para>
 
     <para><emphasis>Munin</emphasis> covers the first area, by displaying
     graphical charts for historical values of a number of parameters (used
@@ -3104,7 +3246,10 @@ append preseed/file=/hd-media/preseed.cfg locale=en_US console-keymaps-at/keymap
       other). Zabbix, on the other hand, integrates both parts of
       monitoring; it also has a web interface for configuring the most
       common aspects. It has grown by leaps and bounds during the last few
-      years, and can now be considered a viable contender. <ulink
+      years, and can now be considered a viable contender;
+      unfortunately, Zabbix isn't present in Debian Wheezy due to
+      timing issues in the release process, but packages will be
+      provided as backports or in unofficial repositories.  <ulink
       type="block" url="http://www.zabbix.org/"/></para>
     </sidebar>
 
@@ -3119,7 +3264,7 @@ append preseed/file=/hd-media/preseed.cfg locale=en_US console-keymaps-at/keymap
       plugins, but it also adds extra features. <ulink type="block"
       url="http://www.icinga.org/"/></para>
     </sidebar>
-    <section id="section.munin">
+    <section id="sect.munin">
       <title>Setting Up Munin</title>
       <indexterm><primary>Munin</primary></indexterm>
 
@@ -3263,7 +3408,7 @@ load.info 5 minute load average
 	details.</para>
       </section>
     </section>
-    <section id="section.nagios">
+    <section id="sect.nagios">
       <title>Setting Up Nagios</title>
       <indexterm><primary>Nagios</primary></indexterm>
 

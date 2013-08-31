@@ -4,30 +4,22 @@ Updates for Wheezy
 * Fix all bugs: http://bugs.debian.org/debian-handbook
 
 * Update all chapters:
-  00a_preface.xml                 [Roland: todo]
+  00a_preface.xml                 [Roland: todo, Zack contacted]
     - request a preface from someone else (like the DPL or a tech-ctte member)
-  00b_foreword.xml                [Roland: todo]
-  01_the-debian-project.xml       [Roland: todo]
+  00b_foreword.xml                [Roland: done]
+  01_the-debian-project.xml       [Roland: mostly done]
     - new section “Follow Debian News” with introduction and pointers to
       interesting mailing lists, Debian Project News and other social
-      media (Identi.ca, Google+, Facebook, Twitter)
-  02_case-study.xml               [Roland: todo]
-  03_existing-setup.xml           [Roland: todo]
+      media (Identi.ca, Google+, Facebook, Twitter) [only Identi.ca done]
+  02_case-study.xml               [Roland: done]
+  03_existing-setup.xml           [Roland: done]
     - #681399: appletalk is obsolete, no longer mention it, find what's
       used nowadays on MacOS
-  04_installation.xml             [Roland: todo]
-    - #675458: update recommendation between 32 and 64 bits in light of
-      multiarch's availability
-  05_packaging-system.xml         [Raphael: todo]
-    - #675458: document multi-arch
-  06_apt.xml                      [Raphael: todo]
-    - #672488: do not recommend to use stable in sources.list but the
-      codename (wheezy)
-    - #675521: document sources.list for testing & unstable users
-    - document unattended-upgrades to install security updates
-    - document axi-cache to search packages
-    - present a package proxy/cache: approx/apt-cacher/apt-proxy
-  07_solving-problems.xml         [Roland: todo]
+  04_installation.xml             [Roland: done]
+    - #718470: fix/drop reference to menu which are no longer existing with GNOME 3
+  05_packaging-system.xml         [Raphael: done]
+  06_apt.xml                      [Raphael: done]
+  07_solving-problems.xml         [Roland: done]
   08_basic-configuration.xml      [Raphael: todo]
     - #675943: update incorrect "locate and updatedb" section (mlocate is
       the default, slocate is gone, etc.)
@@ -45,18 +37,15 @@ Updates for Wheezy
     - updates outdated references to Windows NT 
     - #696893: smb(u)mount is gone, use mount -t cifs
     - #700168: CIFS is no longer the official name?
-  12_advanced-administration.xml  [Roland: todo]
-    - #673230: Document use of yum to install RPM based systems on a Debian host
-    - explain that the speed of SSD disks is interesting for small database
-      with complex queries requiring heavy I/O
-  13_workstation.xml              [Roland: todo]
+  12_advanced-administration.xml  [Roland: done]
+  13_workstation.xml              [Roland: mostly done]
     - #674980: wine sections needs to be rewritten
     - #696892: add other examples in section "XFCE and others" as only
-      XFCE is mentioned right now
+      XFCE is mentioned right now -> mention LXDE in particular
     - #696894: KOffice is now Calligra Suite
     - #699926: gdmsetup gone? explanations about ways to configure gdm
-  14_security.xml                 [Roland: todo]
-  15_debian-packaging.xml         [Roland: todo]
+  14_security.xml                 [Roland: done]
+  15_debian-packaging.xml         [Roland: done]
   70_conclusion.xml               [Raphael: todo]
   90_derivative-distributions.xml [Raphael: todo]
   92_short-remedial-course.xml    [Roland: todo]

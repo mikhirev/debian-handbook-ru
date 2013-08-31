@@ -3,7 +3,7 @@
   <chapterinfo>
     <mediaobject condition="pdf">
       <imageobject>
-        <imagedata fileref="images/chap-services-reseau.png" scalefit="1"/>
+        <imagedata fileref="images/chap-network-services.png" scalefit="1"/>
       </imageobject>
     </mediaobject>
     <keywordset>
@@ -33,7 +33,7 @@
     <indexterm><primary>mail</primary><secondary>electronic</secondary></indexterm>
     <indexterm><primary>Postfix</primary></indexterm>
 
-    <sidebar role="fil">
+    <sidebar>
       <title><emphasis>ALTERNATIVE</emphasis> The Exim4 server</title>
       <indexterm><primary>Exim</primary></indexterm>
 
@@ -146,7 +146,7 @@
         <title>Role of the DNS <emphasis>MX</emphasis> record while sending a mail</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="images/serveur-mail.png" scalefit="1" width="60%"/>
+            <imagedata fileref="images/mail-server.png" scalefit="1" width="60%"/>
           </imageobject>
         </mediaobject>
       </figure>
@@ -723,7 +723,7 @@ body_checks = regexp:/etc/postfix/body_checks
 </programlisting>
         </example>
 
-        <sidebar id="encadre.expression-rationnelle">
+        <sidebar id="sidebar.regexp">
           <title><emphasis>BACK TO BASICS</emphasis> Regular expression</title>
 
 	  <para>The <emphasis>regular expression</emphasis> term (shortened
@@ -807,7 +807,7 @@ smtpd_recipient_restrictions = permit_mynetworks,
       increases the burden on servers that send many legitimate
       emails.</para>
 
-      <sidebar role="fil">
+      <sidebar>
         <title><emphasis>IN PRACTICE</emphasis> Shortcomings of greylisting</title>
 
 	<para>Theoretically, greylisting should only delay the first mail
@@ -2105,7 +2105,7 @@ arrakis.interne.falcot.com:/srv/shared /shared nfs rw,nosuid 0 0
 	company.</para>
       </sidebar>
 
-      <sidebar role="fil">
+      <sidebar>
         <title><emphasis>TOOL</emphasis> Authenticating with a Windows Server</title>
 
 	<para>Winbind gives system administrators the option of using a
@@ -2782,11 +2782,11 @@ result: 0 Success
       time has come to make use of this data. This section focuses on how
       to configure a Linux system so that the various system directories
       use the LDAP database.</para>
-      <section id="section.config-nss">
+      <section id="sect.config-nss">
         <title>Configuring NSS</title>
 
 	<para>The NSS system (Name Service Switch, see sidebar <xref
-	linkend="cadre.intro-nss"/>) is a modular system designed to define
+	linkend="sidebar.intro-nss"/>) is a modular system designed to define
 	or fetch information for system directories. Using LDAP as a source
 	of data for NSS requires installing the <emphasis
 	role="pkg">libnss-ldap</emphasis> package. Its installation asks a
@@ -2896,15 +2896,15 @@ netgroup: files
 	resource does exist in one of the local files; these local files
 	will only be used when the LDAP service is down.</para>
       </section>
-      <section id="section.config-pam">
+      <section id="sect.config-pam">
         <title>Configuring PAM</title>
 
 	<para>This section describes a PAM configuration (see sidebar <xref
-	linkend="cadre.intro-pam"/>) that will allow applications to
+	linkend="sidebar.intro-pam"/>) that will allow applications to
 	perform the required authentications against the LDAP
 	database.</para>
 
-        <sidebar role="fil">
+        <sidebar>
           <title><emphasis>CAUTION</emphasis> Broken authentication</title>
 
 	  <para>Changing the standard PAM configuration used by various
