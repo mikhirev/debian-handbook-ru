@@ -1,10 +1,10 @@
 #
-# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Dmitry Mikhirev <mikhirev@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-05-09T20:00:22\n"
+"POT-Creation-Date: 2013-06-20T14:24:36\n"
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
@@ -20,13 +20,13 @@ msgstr "Настольная книга администратора Debian"
 
 #. Tag: subtitle
 #, no-c-format
-msgid "Debian Squeeze from Discovery to Mastery"
-msgstr ""
+msgid "Debian Wheezy from Discovery to Mastery"
+msgstr "Debian Wheezy: от первого знакомства к мастерству"
 
 #. Tag: productname
 #, no-c-format
 msgid "Debian"
-msgstr "Debian Squeeze: от первого знакомства к мастерству"
+msgstr "Debian"
 
 #. Tag: para
 #, no-c-format
@@ -35,12 +35,12 @@ msgstr "Книга-справочнмк, повествующая о дистр�
 
 #. Tag: para
 #, no-c-format
-msgid "ISBN: 979-10-91414-00-5 (paperback)"
+msgid "ISBN: to-be-assigned (paperback)"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "ISBN: 979-10-91414-01-2 (ebook)"
+msgid "ISBN: to-be-assigned (ebook)"
 msgstr ""
 
 #. Tag: para
@@ -86,4 +86,4 @@ msgstr "Выразите свою благодарность"
 #. Tag: para
 #, no-c-format
 msgid "This book is published under a free license because we want everybody to benefit from it. That said maintaining it takes time and lots of efforts, and we appreciate being thanked for this. If you find this book valuable, please consider contributing to its continued maintenance either by buying a paperback copy or by making a donation through the book's official website: <ulink type=\"block\" url=\"http://debian-handbook.info\" />"
-msgstr "Эта книга опубликована под свободной лицензией, поскольку мы хотим, чтобы она принесла пользу каждому. И всё же её поддержка требует времени и многих сил, и мы рады принять благодарность за этот труд. Если вы находите эту книгу достойной, пожалйста, посодействуйте продолжению её поддержки или купив бумажную копию, или сделав пожертвование на официальном сайте книги: <ulink type=\"block\" url=\"http://debian-handbook.info\" />"
+msgstr "Эта книга опубликована под свободной лицензией, поскольку мы хотим, чтобы она принесла пользу каждому. И всё же её поддержка требует времени и многих сил, и мы рады принять благодарность за этот труд. Если вы находите эту книгу достойной, пожалуйста, посодействуйте продолжению её поддержки или купив бумажную копию, или сделав пожертвование на официальном сайте книги: <ulink type=\"block\" url=\"http://debian-handbook.info\" />"
