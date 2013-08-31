@@ -56,7 +56,7 @@ msgstr "В этой главе описывается структура и со
 #. Tag: title
 #, no-c-format
 msgid "Structure of a Binary Package"
-msgstr "Структура двоичных пакетов"
+msgstr "Структура бинарных пакетов"
 
 #. Tag: indexterm
 #, no-c-format
@@ -562,7 +562,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>VOCABULARY</emphasis> Meta-package and virtual package"
-msgstr ""
+msgstr "<emphasis>СЛОВАРЬ</emphasis>"
 
 #. Tag: indexterm
 #, no-c-format
@@ -782,7 +782,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CAUTION</emphasis> Symbolic names of the scripts"
-msgstr ""
+msgstr "<emphasis>ВНИМАНИЕ</emphasis>"
 
 #. Tag: para
 #, no-c-format
@@ -847,37 +847,37 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "Package Removal"
-msgstr ""
+msgstr "Удаление пакета"
 
 #. Tag: para
 #, no-c-format
 msgid "Here is what happens during a package removal:"
-msgstr ""
+msgstr "Описание того, что происходит во время удаления пакета:"
 
 #. Tag: para
 #, no-c-format
 msgid "<command>dpkg</command> calls <command>prerm remove</command>."
-msgstr ""
+msgstr "<command>dpkg</command> вызывает <command>prerm remove</command>."
 
 #. Tag: para
 #, no-c-format
 msgid "<command>dpkg</command> removes all of the package's files, with the exception of the configuration files and configuration scripts."
-msgstr ""
+msgstr "<command>dpkg</command> удаляет все файлы того или иного пакета, за исключением конфигов и скриптов настройки."
 
 #. Tag: para
 #, no-c-format
 msgid "<command>dpkg</command> executes <command>postrm remove</command>. All of the configuration scripts, except <filename>postrm</filename>, are removed. If the user has not used the “purge” option, the operations are completed there."
-msgstr ""
+msgstr "<command>dpkg</command> запускает <command>postrm remove</command>. Все конфигурационные скрипты, за исключением <filename>postrm</filename>, будут удалены. Если пользователь не использовал опцию “purge”, операция удаления на этом завершается, т.е. ничего больше не будет сделано."
 
 #. Tag: para
 #, no-c-format
 msgid "For a complete purge of the package (command issued with <command>dpkg --purge</command> or <command>dpkg -P</command>), the configuration files are also deleted, as well as a certain number of copies (<filename>*.dpkg-tmp</filename>, <filename>*.dpkg-old</filename>, <filename>*.dpkg-new</filename>) and temporary files; <command>dpkg</command> then executes <command>postrm purge</command>."
-msgstr ""
+msgstr "Для полного удаления пакета (при использовании команды с опцией <command>dpkg --purge</command> или <command>dpkg -P</command>), его конфигурационные файлы тоже удаляются, как и копии (<filename>*.dpkg-tmp</filename>, <filename>*.dpkg-old</filename>, <filename>*.dpkg-new</filename>) и временные файлы; <command>dpkg</command> в этом случае запускает <command>postrm purge</command>."
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>dpkg</command>, internal operation</primary>"
-msgstr ""
+msgstr "<primary><command>dpkg</command>, взгляд изнутри</primary>"
 
 #. Tag: indexterm
 #, no-c-format
@@ -887,12 +887,12 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>VOCABULARY</emphasis> Purge, complete removal"
-msgstr ""
+msgstr "<emphasis>СЛОВАРЬ</emphasis> Purge, удаление пакета полностью"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>purge of a package</primary>"
-msgstr ""
+msgstr "<primary>удаление пакета</primary>"
 
 #. Tag: para
 #, no-c-format
@@ -917,12 +917,12 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>TOOL</emphasis> <command>debconf</command>"
-msgstr ""
+msgstr "<emphasis>ИНСТРУМЕНТ</emphasis> <command>debconf</command>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>debconf</command></primary>"
-msgstr ""
+msgstr "<primary><command>debconf</command></primary>"
 
 #. Tag: para
 #, no-c-format
@@ -947,17 +947,17 @@ msgstr ""
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><filename>conffiles</filename></primary>"
-msgstr ""
+msgstr "<primary><filename>conffiles</filename></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>files</primary><secondary>configuration files</secondary>"
-msgstr ""
+msgstr "<primary>файлы</primary><secondary>конфигурационные файлы</secondary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>configuration</primary><secondary>files</secondary>"
-msgstr ""
+msgstr "<primary>конфигурационные</primary><secondary>файлы</secondary>"
 
 #. Tag: para
 #, no-c-format
@@ -1124,7 +1124,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CAUTION</emphasis> Distinct namespaces"
-msgstr ""
+msgstr "<emphasis>ВНИМАНИЕ</emphasis>"
 
 #. Tag: para
 #, no-c-format
@@ -1174,12 +1174,12 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>TOOL</emphasis> Decompressing a source package"
-msgstr ""
+msgstr "<emphasis>ИНСТРУМЕНТ</emphasis>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>dpkg-source</command></primary>"
-msgstr ""
+msgstr "<primary><command>dpkg-source</command></primary>"
 
 #. Tag: para
 #, no-c-format
@@ -1189,7 +1189,7 @@ msgstr ""
 #. Tag: screen
 #, no-c-format
 msgid "<computeroutput>$ </computeroutput><userinput>dpkg-source -x package_0.7-1.dsc</userinput>\n"
-msgstr ""
+msgstr "<computeroutput>$ </computeroutput><userinput>dpkg-source -x package_0.7-1.dsc</userinput>\n"
 
 #. Tag: para
 #, no-c-format
@@ -1199,7 +1199,7 @@ msgstr ""
 #. Tag: screen
 #, no-c-format
 msgid "<computeroutput>$ </computeroutput><userinput>apt-get source <replaceable>package</replaceable></userinput>\n"
-msgstr ""
+msgstr "<computeroutput>$ </computeroutput><userinput>apt-get source <replaceable>package</replaceable></userinput>\n"
 
 #. Tag: title
 #, no-c-format
@@ -1219,37 +1219,37 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "Manipulating Packages with <command>dpkg</command>"
-msgstr ""
+msgstr "Работа с пакетами при помощи <command>dpkg</command>"
 
 #. Tag: para
 #, no-c-format
 msgid "<command>dpkg</command> is the base command for handling Debian packages on the system. If you have <filename>.deb</filename> packages, it is <command>dpkg</command> that allows installation or analysis of their contents. But this program only has a partial view of the Debian universe: it knows what is installed on the system, and whatever it is given on the command line, but knows nothing of the other available packages. As such, it will fail if a dependency is not met. Tools such as <command>apt-get</command>, on the contrary, will create a list of dependencies to be installed as automatically as possible."
-msgstr ""
+msgstr "<command>dpkg</command> представляет собой осовную программу в системе для работы с Debian пакетами. Если у Вас есть <filename>.deb</filename> пакеты, используйте <command>dpkg</command> для их установки или анализа их содержимого. Стоит отметить, что эта программа имеет только частичное представление о Debian системе: она знает какие пакеты установленны в системе, а также все, что Вы сообщаете ей по средствам командной строки, но она ничего не знает о других доступных пакетах. Другими словами, она не станет устанавливать другой пакет (зависимость), даже если он доступен (находится в репозитории). Такой инструмент, как <command>apt-get</command>, напротив, автоматически создаст список зависимостей для установки, и, если это возможно, все необходимые пакеты будут установленны."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>NOTE</emphasis> <command>dpkg</command> or <command>apt-get</command>?"
-msgstr ""
+msgstr "<emphasis>НА ЗАМЕТКУ</emphasis> <command>dpkg</command> или <command>apt-get</command>?"
 
 #. Tag: para
 #, no-c-format
 msgid "<command>dpkg</command> should be seen as a system tool (backend), and <command>apt-get</command> as a tool closer to the user, which overcomes the previous limitations. These tools work together, each one with its particularities, suited to specific tasks."
-msgstr ""
+msgstr "<command>dpkg</command> представляет из себя более низкоуровневый инструмент (backend), в то время как <command>apt-get</command> ближе к пользователю и более проста в использовании. Обе программы работают вместе, каждая со своими особенностями, которые лучше подходят для тех или иных задач."
 
 #. Tag: title
 #, no-c-format
 msgid "Installing Packages"
-msgstr ""
+msgstr "Установка пакетов"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>installation</primary><secondary>of packages</secondary>"
-msgstr ""
+msgstr "<primary>установка</primary><secondary>пакетов</secondary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>installation</secondary>"
-msgstr ""
+msgstr "<primary>пакет</primary><secondary>установка</secondary>"
 
 #. Tag: para
 #, no-c-format
@@ -1259,7 +1259,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "Installation of a package with <command>dpkg</command>"
-msgstr ""
+msgstr "Установка пакетов при помощи <command>dpkg</command>"
 
 #. Tag: screen
 #, no-c-format
@@ -1359,7 +1359,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CAUTION</emphasis> Effective use of <literal>--force-*</literal>"
-msgstr ""
+msgstr "<emphasis>ВНИМАНИЕ</emphasis> Эффективное использование <literal>--force-*</literal>"
 
 #. Tag: indexterm
 #, no-c-format
@@ -1382,6 +1382,13 @@ msgid ""
 "E: missing dependencies. Try to use the option -f.\n"
 "  "
 msgstr ""
+"# apt-get dist-upgrade\n"
+"[...]\n"
+"You can run \"apt-get -f install\" to correct these problems.\n"
+"The following packages contain unmet dependencies:\n"
+"  rdesktop: Depends on: libc6 (&gt;= 2.5) but 2.3.6.ds1-13etch7 is installed\n"
+"E: missing dependencies. Try to use the option -f.\n"
+"  "
 
 #. Tag: para
 #, no-c-format
@@ -1396,27 +1403,27 @@ msgstr ""
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>removing a package</primary>"
-msgstr ""
+msgstr "<primary>удаление пакета</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>removal</secondary>"
-msgstr ""
+msgstr "<primary>пакет</primary><secondary>удаление</secondary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>purge</secondary>"
-msgstr ""
+msgstr "<primary>пакет</primary><secondary>очистка</secondary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Invoking <command>dpkg</command> with the <literal>-r</literal> or <literal>--remove</literal> option, followed by the name of a package, removes that package. This removal is, however, not complete: all of the configuration files and scripts, log files (system logs) and other user data handled by the package remain. The reason for keeping them is to disable the program by uninstalling it, while preserving the option to reinstall it quickly and with the same configurations. To completely remove everything associated with a package, use the <literal>-P</literal> or <literal>--purge</literal> option, followed by the package name."
-msgstr ""
+msgstr "Запуск <command>dpkg</command> с опцией <literal>-r</literal> или <literal>--remove</literal>, за которой следует имя пакета, приведет к удалению этого пакета. Это удаление, тем не менее, не полное: все конфигурационные файлы и скрипты, файлы журналов (system logs) и другие данные, используемые этим пакетом, остаются в системе. Причина для такого поведения - удаление пакета, но сохранение возможности установки его еще раз с той же конфигурацией. Для полного удаления пакета используйте опцию <literal>-P</literal> или <literal>--purge</literal> перед названием пакета."
 
 #. Tag: title
 #, no-c-format
 msgid "Removal and purge of the <emphasis>debian-cd</emphasis> package"
-msgstr ""
+msgstr "Полное удаление пакета <emphasis>debian-cd</emphasis>"
 
 #. Tag: screen
 #, no-c-format
@@ -1460,7 +1467,7 @@ msgstr "<primary>пакет</primary><secondary>проверка содержи�
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>BACK TO BASICS</emphasis> Option syntax"
-msgstr "<emphasis>ВЕРНЕМСЯ К ОСНОВАМ</emphasis> синтаксис опций команд"
+msgstr "<emphasis>ВЕРНЕМСЯ К ОСНОВАМ</emphasis> Синтаксис опций команд"
 
 #. Tag: para
 #, no-c-format
@@ -1865,7 +1872,7 @@ msgstr "Как вы можете сами убедиться, тут нет ни
 #. Tag: para
 #, no-c-format
 msgid "Looking at the man page for the <command>alien</command> command, you will also note that this program also handles other packaging formats, especially the one used by the Slackware distribution (it is made of a simple <filename>tar.gz</filename> archive)."
-msgstr "Заглянув в страницу руководства команды <command>alien</command>, вы узнаете, что эта программы также работает с другими форматами пакетов, в частности с используемым в дистрибутиве Slackware (там используются самые обычные архивы <filename>tar.gz</filename>)."
+msgstr "Заглянув в страницу руководства команды <command>alien</command>, вы узнаете, что эта программа также работает с другими форматами пакетов, в частности с используемым в дистрибутиве Slackware (там используются самые обычные архивы <filename>tar.gz</filename>)."
 
 #. Tag: para
 #, no-c-format
