@@ -1,5 +1,5 @@
 #
-# AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Dmitry Mikhirev <mikhirev@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
@@ -16,112 +16,112 @@ msgstr ""
 #. Tag: keyword
 #, no-c-format
 msgid "RAID"
-msgstr ""
+msgstr "RAID"
 
 #. Tag: keyword
 #, no-c-format
 msgid "LVM"
-msgstr ""
+msgstr "LVM"
 
 #. Tag: keyword
 #, no-c-format
 msgid "FAI"
-msgstr ""
+msgstr "FAI"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Preseeding"
-msgstr ""
+msgstr "Пресидинг"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Monitoring"
-msgstr ""
+msgstr "Мониторинг"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Virtualization"
-msgstr ""
+msgstr "Виртуализация"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Xen"
-msgstr ""
+msgstr "Xen"
 
 #. Tag: keyword
 #, no-c-format
 msgid "LXC"
-msgstr ""
+msgstr "LXC"
 
 #. Tag: title
 #, no-c-format
 msgid "Advanced Administration"
-msgstr ""
+msgstr "Углублённое администрирование"
 
 #. Tag: para
 #, no-c-format
 msgid "This chapter revisits some aspects we already described, with a different perspective: instead of installing one single computer, we will study mass-deployment systems; instead of creating RAID or LVM volumes at install time, we'll learn to do it by hand so we can later revise our initial choices. Finally, we will discuss monitoring tools and virtualization techniques. As a consequence, this chapter is more particularly targeting professional administrators, and focuses somewhat less on individuals responsible for their home network."
-msgstr ""
+msgstr "Эта глава возвращается к некоторым аспектам, уже описанным ранее, но в другом ракурсе: вместо установки на одном компьютере мы изучим массовое разворачивание систем; вместо создания томов RAID или LVM во время установки мы научимся делать это вручную, чтобы иметь возможность пересмотреть наш изначальный выбор. Наконец, мы обсудим инструменты мониторинга и технологии виртуализации. Таким образом, эта глава предназначена главным образом для профессиональных администраторов и в несколько меньшей мере — для отдельных лиц, ответственных за свою домашнюю сеть."
 
 #. Tag: title
 #, no-c-format
 msgid "RAID and LVM"
-msgstr ""
+msgstr "RAID и LVM"
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "<xref linkend=\"installation\" /> presented these technologies from the point of view of the installer, and how it integrated them to make their deployment easy from the start. After the initial installation, an administrator must be able to handle evolving storage space needs without having to resort to an expensive reinstallation. They must therefore understand the required tools for manipulating RAID and LVM volumes."
-msgstr ""
+msgstr "В <link linkend=\"installation\">главе, посвящённой установке</link>, эти технологии были рассмотрены с точки зрения установщика и того, как они встроены в него, чтобы сделать начальное разворачивание максимально простым. После начальной установки администратор должен иметь возможность манипулировать меняющимся пространством хранилищ без необходимости прибегать к затратной переустановке. Поэтому ему необходимо освоить инструменты для настройки томов RAID и LVM."
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "RAID and LVM are both techniques to abstract the mounted volumes from their physical counterparts (actual hard-disk drives or partitions thereof); the former secures the data against hardware failure by introducing redundancy, the latter makes volume management more flexible and independent of the actual size of the underlying disks. In both cases, the system ends up with new block devices, which can be used to create filesystems or swap space, without necessarily having them mapped to one physical disk. RAID and LVM come from quite different backgrounds, but their functionality can overlap somewhat, which is why they are often mentioned together."
-msgstr ""
+msgstr "И RAID, и LVM являются технологиями абстрагирования монтируемых томов от их физических эквивалентов (жёстких дисков или разделов на них); первая обеспечивает надёжность хранения данных, добавляя избыточность, а вторая делает управление данными более гибким и независимым от реального размера физических дисков. В обоих случаях система получает новые блочные устройства, которые могут использоваться для создания файловых систем или пространства подкачки без обязательного размещения их на одном физическом диске. RAID и LVM возникли из разных нужд, но их функциональность может в чём-то перекрываться, поэтому их часто и упоминают вместе."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>PERSPECTIVE</emphasis> Btrfs combines LVM and RAID"
-msgstr ""
+msgstr "<emphasis>ПЕРСПЕКТИВА</emphasis> Btrfs сочетает LVM и RAID"
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "While LVM and RAID are two distinct kernel subsystems that come between the disk block devices and their filesystems, <emphasis>btrfs</emphasis> is a new filesystem, initially developed at Oracle, that purports to combine the featuresets of LVM and RAID and much more. It is mostly functional, and although it's still tagged “experimental” because its development is incomplete (some features aren't implemented yet), it has already seen some use in production environments. <ulink type=\"block\" url=\"http://btrfs.wiki.kernel.org/\" />"
-msgstr ""
+msgstr "В то время как LVM и RAID являются двумя отдельными подсистемами ядра, встраивающимися между дисковыми блочными устройствами и файловыми системами на них, <emphasis>btrfs</emphasis> — это новая файловая система, изначально разработанная в Oracle, целью которой является объединить функциональность LVM и RAID и дополнить её. Она в целом работоспособна, хотя до сих пор помечена как “экспериментальная”, поскольку её разработка не завершена (некоторые возможности ещё не реализованы). <ulink type=\"block\" url=\"http://btrfs.wiki.kernel.org/\" />"
 
 #. Tag: para
 #, no-c-format
 msgid "Among the noteworthy features are the ability to take a snapshot of a filesystem tree at any point in time. This snapshot copy doesn't initially use any disk space, the data only being duplicated when one of the copies is modified. The filesystem also handles transparent compression of files, and checksums ensure the integrity of all stored data."
-msgstr ""
+msgstr "Среди примечательных особенностей — возможность создания снимков дерева файловой системы в любой момент времени. Этот снимок изначально не занимает места на диске, данные копируются только при изменении одной из копий. Файловая система также обеспечивает прозрачное сжатие файлов, а контрольные суммы гарантируют сохранность всех записанных данных."
 
 #. Tag: para
 #, no-c-format
 msgid "In both the RAID and LVM cases, the kernel provides a block device file, similar to the ones corresponding to a hard disk drive or a partition. When an application, or another part of the kernel, requires access to a block of such a device, the appropriate subsystem routes the block to the relevant physical layer. Depending on the configuration, this block can be stored on one or several physical disks, and its physical location may not be directly correlated to the location of the block in the logical device."
-msgstr ""
+msgstr "В случае и RAID, и LVM ядро предоставляет файл блочного устройства, сходный с соответствующими жёсткому диску или разделу. Когда приложению или другой части ядра требуется доступ к блоку такого устройства, надлежащая подсистема передаёт блок соответствующему физическому слою. В зависимости от конфигурации этот блок может быть сохранён на одном или нескольких физических дисках, и его физическое расположение может не прямо соотноситься с расположением блока в логическом устройстве."
 
 #. Tag: title
 #, no-c-format
 msgid "Software RAID"
-msgstr ""
+msgstr "Программный RAID"
 
 #. Tag: para
 #, no-c-format
 msgid "RAID <indexterm><primary>RAID</primary></indexterm> means <emphasis>Redundant Array of Independent Disks</emphasis>. The goal of this system is to prevent data loss in case of hard disk failure. The general principle is quite simple: data are stored on several physical disks instead of only one, with a configurable level of redundancy. Depending on this amount of redundancy, and even in the event of an unexpected disk failure, data can be losslessly reconstructed from the remaining disks."
-msgstr ""
+msgstr "RAID <indexterm><primary>RAID</primary></indexterm> расшифровывается как <emphasis>Redundant Array of Independent Disks</emphasis> — избыточный массив независимых дисков. Цель этой системы — предотвратить потерю данных в случае сбоя жёсткого диска. Основной принцип прост: данные хранятся на нескольких физических дисках вместо одного, с настраиваемым уровнем избыточности, и даже в случае неожиданного выхода диска из строя данные могут быть без потерь восстановлены с остальных дисков."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CULTURE</emphasis> <foreignphrase>Independent</foreignphrase> or <foreignphrase>inexpensive</foreignphrase>?"
-msgstr ""
+msgstr "<emphasis>КУЛЬТУРА</emphasis> <foreignphrase>Independent</foreignphrase> или <foreignphrase>inexpensive</foreignphrase>?"
 
 #. Tag: para
 #, no-c-format
 msgid "The I in RAID initially stood for <emphasis>inexpensive</emphasis>, because RAID allowed a drastic increase in data safety without requiring investing in expensive high-end disks. Probably due to image concerns, however, it's now more customarily considered to stand for <emphasis>independent</emphasis>, which doesn't have the unsavory flavour of cheapness."
-msgstr ""
+msgstr "I в аббревиатуре RAID изначально обозначала <emphasis>inexpensive</emphasis> — “недорогой”, поскольку RAID позволял резко увеличить сохранность данных без необходимости инвестиций в дорогостоящие диски класса high-end. Возможно из соображений поддержания имиджа, однако, она сейчас чаще расшифровывается как <emphasis>independent</emphasis> — “независимый”, что не имеет неприятного привкуса дешевизны."
 
 #. Tag: para
 #, no-c-format
 msgid "RAID can be implemented either by dedicated hardware (RAID modules integrated into SCSI or SATA controller cards) or by software abstraction (the kernel). Whether hardware or software, a RAID system with enough redundancy can transparently stay operational when a disk fails; the upper layers of the stack (applications) can even keep accessing the data in spite of the failure. Of course, this “degraded mode” can have an impact on performance, and redundancy is reduced, so a further disk failure can lead to data loss. In practice, therefore, one will strive to only stay in this degraded mode for as long as it takes to replace the failed disk. Once the new disk is in place, the RAID system can reconstruct the required data so as to return to a safe mode. The applications won't notice anything, apart from potentially reduced access speed, while the array is in degraded mode or during the reconstruction phase."
-msgstr ""
+msgstr "RAID может быть реализован как в виде специального оборудования (модули RAID, встроенные в карты контроллеров SCSI или SATA), так и в виде программной абстракции (ядро). Как аппаратный, так и программный RAID с достаточной избыточностью может прозрачно продолжать работу, когда диск выходит из строя; верхние уровни стека (приложения) могут даже продолжать доступ к данным несмотря на сбой. Разумеется, такой “деградированный режим” может повлиять на производительность, а избыточность уменьшается, так что отказ следующего диска может привести к потере данных. На деле, однако, работать в этом деградированном режиме придётся лишь столько времени, сколько потребуется для замены отказавшего диска. Как только новый диск будет на месте, система RAID сможет восстановить необходимые данные для возврата в безопасный режим. Приложения не заметят ничего, кроме возможно снизившейся скорости доступа в то время, когда массив пребывает в деградированном состоянии, или на этапе восстановления."
 
 #. Tag: para
 #, no-c-format
@@ -136,82 +136,82 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "Different RAID Levels"
-msgstr ""
+msgstr "Разные уровни RAID"
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "RAID is actually not a single system, but a range of systems identified by their levels; the levels by their layout and the amount of redundancy they provide. The more redundant, the more failure-proof, since the system will be able to keep working with more failed disks. The counterpart is that the usable space shrinks for a given set of disks; seen the other way, more disks will be needed to store a given amount of data."
-msgstr ""
+msgstr "Вообще у RAID существует несколько уровней, различающихся по схеме размещения данных и по степени избыточности. Более избыточный является более отказоустойчивым, поскольку система сможет продолжить работу с большим числом вышедших из строя дисков. С другой стороны, доступное пространство уменьшается; другими словами, для хранения того же объёма данных потребуется больше дисков."
 
 #. Tag: term
 #, no-c-format
 msgid "Linear RAID"
-msgstr ""
+msgstr "Linear RAID"
 
 #. Tag: para
 #, no-c-format
 msgid "Even though the kernel's RAID subsystem allows creating “linear RAID”, this is not proper RAID, since this setup doesn't involve any redundancy. The kernel merely aggregates several disks end-to-end and provides the resulting aggregated volume as one virtual disk (one block device). That's about its only function. This setup is rarely used by itself (see later for the exceptions), especially since the lack of redundancy means that one disk failing makes the whole aggregate, and therefore all the data, unavailable."
-msgstr ""
+msgstr "Хотя RAID-подсистема ядра позволяет создавать так называемый “linear RAID”, собственно RAID он не является, поскольку не подразумевает какой-либо избыточности. Ядро просто объединяет несколько дисков “встык” и представляет получившийся том как один виртуальный диск (одно блочное устройство). Это единственное его назначение. Такая настройка редко используется сама по себе (об исключениях см. ниже), главным образом потому что отсутствие избыточности означает, что сбой одного диска делает всё объединение и, соответственно, все данные, недоступными."
 
 #. Tag: term
 #, no-c-format
 msgid "RAID-0"
-msgstr ""
+msgstr "RAID-0"
 
 #. Tag: para
 #, no-c-format
 msgid "This level doesn't provide any redundancy either, but disks aren't simply stuck on end one after another: they are divided in <emphasis>stripes</emphasis>, and the blocks on the virtual device are stored on stripes on alternating physical disks. In a two-disk RAID-0 setup, for instance, even-numbered blocks of the virtual device will be stored on the first physical disk, while odd-numbered blocks will end up on the second physical disk."
-msgstr ""
+msgstr "Этот уровень также не обеспечивает избыточности, но диски не просто соединяются один за другим : они разделяются на <emphasis>полосы</emphasis>, и блоки виртуального устройства сохраняются на полосах физических дисков поочерёдно. В двухдисковом RAID-0, например, чётные блоки виртуального устройства будут сохраняться на первом физическом диске, а нечётные разместятся на втором физическом диске."
 
 #. Tag: para
 #, no-c-format
 msgid "This system doesn't aim at increasing reliability, since (as in the linear case) the availability of all the data is jeopardized as soon as one disk fails, but at increasing performance: during sequential access to large amounts of contiguous data, the kernel will be able to read from both disks (or write to them) in parallel, which increases the data transfer rate. However, RAID-0 use is shrinking, its niche being filled by LVM (see later)."
-msgstr ""
+msgstr "Целью такой системы является не повышение надёжности, поскольку (как и в случае с linear) доступность всех данных оказывается под угрозой, как только один из дисков отказывает, а увеличение производительности: при последовательном доступе к большому объёму непрерывных данных ядро сможет читать с обоих дисков (или производить запись на них) параллельно, что увеличит скорость передачи данных. Однако RAID-0 используется всё реже: его нишу занимает LVM (см. ниже)."
 
 #. Tag: term
 #, no-c-format
 msgid "RAID-1"
-msgstr ""
+msgstr "RAID-1"
 
 #. Tag: para
 #, no-c-format
 msgid "This level, also known as “RAID mirroring”, is both the simplest and the most widely used setup. In its standard form, it uses two physical disks of the same size, and provides a logical volume of the same size again. Data are stored identically on both disks, hence the “mirror” nickname. When one disk fails, the data is still available on the other. For really critical data, RAID-1 can of course be set up on more than two disks, with a direct impact on the ratio of hardware cost versus available payload space."
-msgstr ""
+msgstr "Этот уровень, также известный как “зеркальный RAID”, является одновременно и самым простым, и самым широко используемым. В своём стандартном виде он использует два физических диска одного размера и предоставляет логический том опять-таки того же размера. Данные хранятся одинаково на обоих дисках, отсюда и название “зеркало”. Когда один диск выходит из строя, данные по-прежнему доступны с другого. Для действительно ценных данных RAID-1, конечно, может быть настроен на более чем двух дисках, с пропорциональным увеличением отношения цены оборудования к доступному пространству."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>NOTE</emphasis> Disks and cluster sizes"
-msgstr ""
+msgstr "<emphasis>ПРИМЕЧАНИЕ</emphasis> Размеры дисков и кластера"
 
 #. Tag: para
 #, no-c-format
 msgid "If two disks of different sizes are set up in a mirror, the bigger one will not be fully used, since it will contain the same data as the smallest one and nothing more. The useful available space provided by a RAID-1 volume therefore matches the size of the smallest disk in the array. This still holds for RAID volumes with a higher RAID level, even though redundancy is stored differently."
-msgstr ""
+msgstr "Если два диска разного размера настроены зеркалом, больший из них будет использоваться не полностью, поскольку он будет содержать те же данные, что и меньший, и ничего сверх этого. Таким образом доступное полезное пространство, предоставляемое томом RAID-1, соответствует размеру меньшего диска в массиве. Это справедливо и для томов RAID более высокого уровня, хотя избыточность в них реализована другим образом."
 
 #. Tag: para
 #, no-c-format
 msgid "It is therefore important, when setting up RAID arrays (except for RAID-0 and “linear RAID”), to only assemble disks of identical, or very close, sizes, to avoid wasting resources."
-msgstr ""
+msgstr "По этой причине при настройке RAID-массивов (за исключением RAID-0 и “linear RAID”) важно использовать диски идентичных или очень близких размеров, чтобы избежать пустой траты ресурсов."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>NOTE</emphasis> Spare disks"
-msgstr ""
+msgstr "<emphasis>ПРИМЕЧАНИЕ</emphasis> Резервные диски"
 
 #. Tag: para
 #, no-c-format
 msgid "RAID levels that include redundancy allow assigning more disks than required to an array. The extra disks are used as spares when one of the main disks fails. For instance, in a mirror of two disks plus one spare, if one of the first two disks fails, the kernel will automatically (and immediately) reconstruct the mirror using the spare disk, so that redundancy stays assured after the reconstruction time. This can be used as another kind of safeguard for critical data."
-msgstr ""
+msgstr "Уровни RAID, включающие избыточность, позволяют добавлять больше дисков, чем требуется для массива. Дополнительные диски используются в качестве резервных, когда один из основных дисков выходит из строя. К примеру, в зеркале из двух дисков с одним резервным при отказе одного из первых двух дисков ядро автоматически (и немедленно) восстанавливает зеркало с использованием резервного диска, так что избыточность остаётся на гарантированном уровне по истечении времени на восстановление. Это может быть использовано как ещё одна мера предосторожности для ценных данных."
 
 #. Tag: para
 #, no-c-format
 msgid "One would be forgiven for wondering how this is better than simply mirroring on three disks to start with. The advantage of the “spare disk” configuration is that the spare disk can be shared across several RAID volumes. For instance, one can have three mirrored volumes, with redundancy assured even in the event of one disk failure, with only seven disks (three pairs, plus one shared spare), instead of the nine disks that would be required by three triplets."
-msgstr ""
+msgstr "Естественно может возникнуть вопрос, чем это лучше простого зеркалирования сразу на три диска. Преимущество конфигурации с резервным диском заключается в том, что резервный диск может быть общим для нескольких RAID-томов. Например, можно иметь три зеркальных тома с гарантированной избыточностью даже в случае сбоя одного диска, при наличии всего семи дисков (три пары плюс один общий резерв) вместо девяти, которые потребовались бы для трёх триплетов."
 
 #. Tag: para
 #, no-c-format
 msgid "This RAID level, although expensive (since only half of the physical storage space, at best, is useful), is widely used in practice. It is simple to understand, and it allows very simple backups: since both disks have identical contents, one of them can be temporarily extracted with no impact on the working system. Read performance is often increased since the kernel can read half of the data on each disk in parallel, while write performance isn't too severely degraded. In case of a RAID-1 array of N disks, the data stays available even with N-1 disk failures."
-msgstr ""
+msgstr "Данный уровень RAID хотя и дорог (поскольку в лучшем случае используется только половина физического хранилища), но широко применяется на практике. Он прост для понимания и позволяет легко делать резервные копии: поскольку оба диска хранят одинаковое содержимое, один из них может быть временно извлечён без влияния на работающую систему. Скорость чтения часто возрастает, поскольку ядро может считывать половину данных с каждого диска одновременно, в то время как скорость записи существенно не уменьшается. В случае массива RAID-1 из N дисков данные остаются доступными даже при отказе N-1 диска."
 
 #. Tag: term
 #, no-c-format
@@ -221,127 +221,127 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "This RAID level, not widely used, uses N disks to store useful data, and an extra disk to store redundancy information. If that disk fails, the system can reconstruct its contents from the other N. If one of the N data disks fails, the remaining N-1 combined with the “parity” disk contain enough information to reconstruct the required data."
-msgstr ""
+msgstr "Этот довольно редко применяемый уровень RAID, использует N дисков для хранения полезных данных и дополнительный диск для хранения избыточной информации. Если этот диск выходит из строя, система восстанавливает его содержимое с оставшихся N дисков. Если один из N дисков с данными отказывает, оставшиеся N-1 в сочетании с диском контроля чётности содержат достаточно информации для восстановления необходимых данных."
 
 #. Tag: para
 #, no-c-format
 msgid "RAID-4 isn't too expensive since it only involves a one-in-N increase in costs and has no noticeable impact on read performance, but writes are slowed down. Furthermore, since a write to any of the N disks also involves a write to the parity disk, the latter sees many more writes than the former, and its lifespan can shorten dramatically as a consequence. Data on a RAID-4 array is safe only up to one failed disk (of the N+1)."
-msgstr ""
+msgstr "RAID-4 не так дорог, поскольку приводит к увеличению цены только на один из N и не оказывает существенного влияния на скорость чтения, но запись замедляется. Кроме того, поскольку запись на любой из N дисков влечёт за собой запись на диск контроля чётности, на последний запись производится значительно чаще, и как следствие его время жизни существенно сокращается. Данные на массиве RAID-4 сохранны при отказе только одного диска (из N+1)."
 
 #. Tag: term
 #, no-c-format
 msgid "RAID-5"
-msgstr ""
+msgstr "RAID-5"
 
 #. Tag: para
 #, no-c-format
 msgid "RAID-5 addresses the asymmetry issue of RAID-4: parity blocks are spread over all of the N+1 disks, with no single disk having a particular role."
-msgstr ""
+msgstr "RAID-5 нацелен на исправление асимметрии RAID-4: блоки контроля чётности распределяются по всем N+1 дискам, без выделения специального диска."
 
 #. Tag: para
 #, no-c-format
 msgid "Read and write performance are identical to RAID-4. Here again, the system stays functional with up to one failed disk (of the N+1), but no more."
-msgstr ""
+msgstr "Скорость чтения и записи идентичны RAID-4. Опять-таки, система остаётся работоспособной только с одним отказавшим диском (из N+1), не более."
 
 #. Tag: term
 #, no-c-format
 msgid "RAID-6"
-msgstr ""
+msgstr "RAID-6"
 
 #. Tag: para
 #, no-c-format
 msgid "RAID-6 can be considered an extension of RAID-5, where each series of N blocks involves two redundancy blocks, and each such series of N+2 blocks is spread over N+2 disks."
-msgstr ""
+msgstr "RAID-6 можно считать расширением RAID-5, где каждая последовательность из N блоков предполагает два избыточных блока, и каждая последовательность из N+2 блоков распределяется по N+2 дискам."
 
 #. Tag: para
 #, no-c-format
 msgid "This RAID level is slightly more expensive than the previous two, but it brings some extra safety since up to two drives (of the N+2) can fail without compromising data availability. The counterpart is that write operations now involve writing one data block and two redundancy blocks, which makes them even slower."
-msgstr ""
+msgstr "Этот уровень RAID несколько более дорогостоящ, чем предыдущие два, но он добавляет надёжности, поскольку до двух дисков (из N+2) могут выйти из строя без ущерба для доступа к данным. С другой стороны, операции записи теперь предполагают запись одного блока данных и двух избыточных блоков, что делает их ещё более медленными."
 
 #. Tag: term
 #, no-c-format
 msgid "RAID-1+0"
-msgstr ""
+msgstr "RAID-1+0"
 
 #. Tag: para
 #, no-c-format
 msgid "This isn't strictly speaking, a RAID level, but a stacking of two RAID groupings. Starting from 2×N disks, one first sets them up by pairs into N RAID-1 volumes; these N volumes are then aggregated into one, either by “linear RAID” or (increasingly) by LVM. This last case goes farther than pure RAID, but there's no problem with that."
-msgstr ""
+msgstr "Строго говоря, это не уровень RAID, а наложение двух группировок RAID. Начиная с 2×N дисков, первая собирает их попарно в тома RAID-1; эти N томов затем собираются в один при посредстве “linear RAID” или (всё чаще) LVM. Этот последний случай не является RAID в чистом виде, но это не создаёт проблем."
 
 #. Tag: para
 #, no-c-format
 msgid "RAID-1+0 can survive multiple disk failures: up to N in the 2×N array described above, provided that at least one disk keeps working in each of the RAID-1 pairs."
-msgstr ""
+msgstr "RAID-1+0 может пережить выход из строя нескольких дисков: до N в массиве из 2×N, описанном выше, в случае если хотя бы один диск остаётся работоспособным в каждой паре RAID-1."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> RAID-10"
-msgstr ""
+msgstr "<emphasis>ПОГРУЖЕНИЕ</emphasis> RAID-10"
 
 #. Tag: para
 #, no-c-format
 msgid "RAID-10 is generally considered a synonym of RAID-1+0, but a Linux specificity makes it actually a generalization. This setup allows a system where each block is stored on two different disks, even with an odd number of disks, the copies being spread out along a configurable model."
-msgstr ""
+msgstr "RAID-10 в общем случае считается синонимом RAID-1+0, но из-за специфики LINUX это на самом деле является обобщением. Эта установка позволяет создать систему, где каждый блок хранится на двух разных дисках, даже при нечётном числе дисков, и копии распределяются на основании изменяемой модели."
 
 #. Tag: para
 #, no-c-format
 msgid "Performances will vary depending on the chosen repartition model and redundancy level, and of the workload of the logical volume."
-msgstr ""
+msgstr "Производительность будет изменяться в зависимости от выбранной модели распределения и степени избыточности, а также нагрузки на логический том."
 
 #. Tag: para
 #, no-c-format
 msgid "Obviously, the RAID level will be chosen according to the constraints and requirements of each application. Note that a single computer can have several distinct RAID arrays with different configurations."
-msgstr ""
+msgstr "Безусловно, уровень RAID следует выбирать в соответствии с ограничениями и потребностями конкретного приложения. Учтите, что в одном компьютере может быть несколько отдельных RAID-массивов разных конфигураций."
 
 #. Tag: title
 #, no-c-format
 msgid "Setting up RAID"
-msgstr ""
+msgstr "Настройка RAID"
 
 #. Tag: para
 #, no-c-format
 msgid "Setting up RAID volumes requires the <emphasis role=\"pkg\">mdadm</emphasis> <indexterm><primary><emphasis role=\"pkg\">mdadm</emphasis></primary></indexterm> package; it provides the <command>mdadm</command> command, which allows creating and manipulating RAID arrays, as well as scripts and tools integrating it to the rest of the system, including the monitoring system."
-msgstr ""
+msgstr "Настройка томов RAID требует пакета <emphasis role=\"pkg\">mdadm</emphasis><indexterm><primary><emphasis role=\"pkg\">mdadm</emphasis></primary></indexterm>; он предоставляет команду <command>mdadm</command>, с помощью которой можно создавать RAID-массивы и манипулировать ими, а также сценарии и инструменты для интеграции с остальными компонентами системы, в том числе с системами мониторинга."
 
 #. Tag: para
 #, no-c-format
 msgid "Our example will be a server with a number of disks, some of which are already used, the rest being available to setup RAID. We initially have the following disks and partitions:"
-msgstr ""
+msgstr "Для примера рассмотрим сервер с несколькими дисками, некоторые из которых уже используются, а другие доступны для создания RAID. Изначально у нас есть такие диски и разделы:"
 
 #. Tag: para
 #, no-c-format
 msgid "the <filename>sdb</filename> disk, 4 GB, is entirely available;"
-msgstr ""
+msgstr "диск <filename>sdb</filename>, 4 ГБ, полностью доступен;"
 
 #. Tag: para
 #, no-c-format
 msgid "the <filename>sdc</filename> disk, 4 GB, is also entirely available;"
-msgstr ""
+msgstr "диск <filename>sdc</filename>, 4 ГБ, также полностью доступен;"
 
 #. Tag: para
 #, no-c-format
 msgid "on the <filename>sdd</filename> disk, only partition <filename>sdd2</filename> (about 4 GB) is available;"
-msgstr ""
+msgstr "на диске <filename>sdd</filename> доступен только раздел <filename>sdd2</filename> (около 4 ГБ);"
 
 #. Tag: para
 #, no-c-format
 msgid "finally, a <filename>sde</filename> disk, still 4 GB, entirely available."
-msgstr ""
+msgstr "наконец, диск <filename>sde</filename>, также 4 ГБ, полностью доступен."
 
 #. Tag: para
 #, no-c-format
 msgid "We're going to use these physical elements to build two volumes, one RAID-0 and one mirror (RAID-1). Let's start with the RAID-0 volume:"
-msgstr ""
+msgstr "Мы собираемся использовать эти физические носители для сборки двух томов, одного RAID-0 и одного зеркала (RAID-1). Начнём с тома RAID-0:"
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>NOTE</emphasis> Identifying existing RAID volumes"
-msgstr ""
+msgstr "<emphasis>ПРИМЕЧАНИЕ</emphasis> Идентификация существующих томов RAID"
 
 #. Tag: para
 #, no-c-format
 msgid "The <filename>/proc/mdstat</filename> file lists existing volumes and their states. When creating a new RAID volume, care should be taken not to name it the same as an existing volume."
-msgstr ""
+msgstr "В файл <filename>/proc/mdstat</filename> перечислены существующие тома и их состояние. При создании нового тома RAID следует быть осторожным, чтобы не дать ему имя, совпадающее с именем уже существующего тома."
 
 #. Tag: screen
 #, no-c-format
@@ -407,14 +407,14 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "The <command>mdadm --create</command> command requires several parameters: the name of the volume to create (<filename>/dev/md*</filename>, with MD standing for <foreignphrase>Multiple Device</foreignphrase>), the RAID level, the number of disks (which is compulsory despite being mostly meaningful only with RAID-1 and above), and the physical drives to use. Once the device is created, we can use it like we'd use a normal partition, create a filesystem on it, mount that filesystem, and so on. Note that our creation of a RAID-0 volume on <filename>md0</filename> is nothing but coincidence, and the numbering of the array doesn't need to be correlated to the chosen amount of redundancy. It's also possible to create named RAID arrays, by giving <command>mdadm</command> parameters such as <filename>/dev/md/linear</filename> instead of <filename>/dev/md0</filename>."
-msgstr ""
+msgstr "Команда <command>mdadm --create</command> требует нескольких параметров: имени создаваемого тома (<filename>/dev/md*</filename>, где MD расшифровывается как <foreignphrase>Multiple Device</foreignphrase>), уровня RAID, количества дисков (это обязательный параметр, хотя он и имеет значение только для RAID-1 и выше), и физические устройства для использования. Когда устройство создано, мы можем использовать его, как если бы это был обычный раздел: создавать файловую систему на нём, монтировать эту файловую систему и т. п. Обратите внимание, что создание тома RAID-0 под именем <filename>md0</filename> — не более чем совпадение, и нумерация массивов не обязана соответствовать выбранному уровню избыточности."
 
 #. Tag: para
 #, no-c-format
 msgid "Creation of a RAID-1 follows a similar fashion, the differences only being noticeable after the creation:"
-msgstr ""
+msgstr "RAID-1 создаётся сходным образом, различия заметны только после создания:"
 
 #. Tag: screen
 #, no-c-format
@@ -467,57 +467,57 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>TIP</emphasis> RAID, disks and partitions"
-msgstr ""
+msgstr "<emphasis>ПОДСКАЗКА</emphasis> RAID, диски и разделы"
 
 #. Tag: para
 #, no-c-format
 msgid "As illustrated by our example, RAID devices can be constructed out of disk partitions, and do not require full disks."
-msgstr ""
+msgstr "Как показано в нашем примере, устройства RAID могут быть собраны из дисковых разделов, а не обязательно из целых дисков."
 
 #. Tag: para
 #, no-c-format
 msgid "A few remarks are in order. First, <command>mdadm</command> notices that the physical elements have different sizes; since this implies that some space will be lost on the bigger element, a confirmation is required."
-msgstr ""
+msgstr "Здесь уместны несколько замечаний. Во-первых, <command>mdadm</command> предупреждает, что физические элементы имеют разные размеры; поскольку это подразумевает, что часть пространства на большем элементе будет потеряна, здесь требуется подтверждение."
 
 #. Tag: para
 #, no-c-format
 msgid "More importantly, note the state of the mirror. The normal state of a RAID mirror is that both disks have exactly the same contents. However, nothing guarantees this is the case when the volume is first created. The RAID subsystem will therefore provide that guarantee itself, and there will be a synchronization phase as soon as the RAID device is created. After some time (the exact amount will depend on the actual size of the disks…), the RAID array switches to the “active” state. Note that during this reconstruction phase, the mirror is in a degraded mode, and redundancy isn't assured. A disk failing during that risk window could lead to losing all the data. Large amounts of critical data, however, are rarely stored on a freshly created RAID array before its initial synchronization. Note that even in degraded mode, the <filename>/dev/md1</filename> is usable, and a filesystem can be created on it, as well as some data copied on it."
-msgstr ""
+msgstr "Что более важно, обратите внимание на состояние зеркала. Нормальное состояние зеркала RAID — когда содержимое двух дисков полностью идентично. Однако ничто не гарантирует этого, когда том только что создан. Поэтому подсистема RAID берёт эту гарантию на себя, и как только устройство RAID будет создано, начнётся этап синхронизации. Некоторое время спустя (точное его количество будет зависеть от размера дисков…) массив RAID переходит в состояние “active”. Заметьте что на этом этапе восстановления зеркало находится в деградированном состоянии, и избыточность не гарантируется. Сбой диска в этот рискованный промежуток времени может привести к потере всех данных. Большие объёмы важных данных, однако, редко сохраняются на только что созданном RAID до конца начальной синхронизации. Отметьте, что даже в деградированном состоянии <filename>/dev/md1</filename> может использоваться, на нём можно создать файловую систему и скопировать в неё какие-то данные."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>TIP</emphasis> Starting a mirror in degraded mode"
-msgstr ""
+msgstr "<emphasis>ПОДСКАЗКА</emphasis> Запуск зеркала в деградированном состоянии"
 
 #. Tag: para
 #, no-c-format
 msgid "Sometimes two disks are not immediately available when one wants to start a RAID-1 mirror, for instance because one of the disks one plans to include is already used to store the data one wants to move to the array. In such circumstances, it is possible to deliberately create a degraded RAID-1 array by passing <filename>missing</filename> instead of a device file as one of the arguments to <command>mdadm</command>. Once the data have been copied to the “mirror”, the old disk can be added to the array. A synchronization will then take place, giving us the redundancy that was wanted in the first place."
-msgstr ""
+msgstr "Иногда два диска недоступны сразу, когда появляется желание создать зеркало RAID-1, например потому что один из дисков, которые планируется включить в зеркало, уже используется для хранения данных, которые необходимо перенести на массив. В таких случаях можно специально создать деградированный массив RAID-1, передав <filename>missing</filename> вместо файла устройства как один из аргументов <command>mdadm</command>. После того, как данные будут скопированы на “зеркало”, старый диск можно добавить в массив. После этого начнётся синхронизация, которая и обеспечит нам избыточность, которой мы хотели добиться."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>TIP</emphasis> Setting up a mirror without synchronization"
-msgstr ""
+msgstr "<emphasis>ПОДСКАЗКА</emphasis> Настройка зеркала без синхронизации"
 
 #. Tag: para
 #, no-c-format
 msgid "RAID-1 volumes are often created to be used as a new disk, often considered blank. The actual initial contents of the disk is therefore not very relevant, since one only needs to know that the data written after the creation of the volume, in particular the filesystem, can be accessed later."
-msgstr ""
+msgstr "Тома RAID-1 часто создаются для использования в качестве нового диска, зачастую считающегося пустым. Начальное содержимое диска поэтому не особо важно, ведь необходимо обеспечить доступность только данных, записанных после создания тома, а именно файловой системы."
 
 #. Tag: para
 #, no-c-format
 msgid "One might therefore wonder about the point of synchronizing both disks at creation time. Why care whether the contents are identical on zones of the volume that we know will only be read after we have written to them?"
-msgstr ""
+msgstr "По этой причине можно усомниться в смысле синхронизации обоих дисков во время создания. Зачем беспокоиться об этом, если идентично содержимое тех областей тома, которые будут читаться только после того, как мы записали на них что-то?"
 
 #. Tag: para
 #, no-c-format
 msgid "Fortunately, this synchronization phase can be avoided by passing the <literal>--assume-clean</literal> option to <command>mdadm</command>. However, this option can lead to surprises in cases where the initial data will be read (for instance if a filesystem is already present on the physical disks), which is why it isn't enabled by default."
-msgstr ""
+msgstr "К счастью, этот этап синхронизации можно пропустить, передав опцию <literal>--assume-clean</literal> команде <command>mdadm</command>. Однако эта опция может повлечь неприятные сюрпризы в случаях, когда начальные данные будут читаться (например если на физических дисках уже присутствовала файловая система), поэтому она не включена по умолчанию."
 
 #. Tag: para
 #, no-c-format
 msgid "Now let's see what happens when one of the elements of the RAID-1 array fails. <command>mdadm</command>, in particular its <literal>--fail</literal> option, allows simulating such a disk failure:"
-msgstr ""
+msgstr "Теперь посмотрим, что происходит, когда один из элементов массива RAID-1 выходит из строя. <command>mdadm</command>, а точнее её опция <literal>--fail</literal>, позволяет симулировать такой отказ диска:"
 
 #. Tag: screen
 #, no-c-format
@@ -546,9 +546,9 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "The contents of the volume are still accessible (and, if it's mounted, the applications don't notice a thing), but the data safety isn't assured anymore: should the <filename>sdd</filename> disk fail in turn, the data would be lost. We want to avoid that risk, so we'll replace the failed disk with a new one, <filename>sdf</filename>:"
-msgstr ""
+msgstr "Содержимое тома по-прежнему доступно (и, если он смонтирован, приложения ничего не заметят), но сохранность данных больше не застрахована: если диск <filename>sdg</filename> в свою очередь выйдет из строя, данные будут потеряны. Мы хотим избежать такого риска, поэтому мы заменим отказавший диск новым, <filename>sdi</filename>:"
 
 #. Tag: screen
 #, no-c-format
@@ -604,9 +604,9 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "Here again, the kernel automatically triggers a reconstruction phase during which the volume, although still accessible, is in a degraded mode. Once the reconstruction is over, the RAID array is back to a normal state. One can then tell the system that the <filename>sde</filename> disk is about to be removed from the array, so as to end up with a classical RAID mirror on two disks:"
-msgstr ""
+msgstr "Опять-таки, ядро автоматически запускает этап восстановления, на протяжении которого том, хотя и по-прежнему доступный, находится в деградированном состоянии. Когда восстановление завершается, массив RAID возвращается в нормальное состояние. Можно сказать системе, что диск <filename>sdh</filename> следует удалить, в результате чего получится классическое зеркало RAID на двух дисках:"
 
 #. Tag: screen
 #, no-c-format
@@ -624,27 +624,27 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "From then on, the drive can be physically removed when the server is next switched off, or even hot-removed when the hardware configuration allows hot-swap. Such configurations include some SCSI controllers, most SATA disks, and external drives operating on USB or Firewire."
-msgstr ""
+msgstr "После этого диск может быть физически извлечён из сервера при следующем отключении, или даже из работающего сервера, если аппаратная конфигурация позволяет горячую замену. Такие конфигурации включают некоторые контроллеры SCSI, большинство SATA-дисков и внешние накопители, работающие через USB или Firewire."
 
 #. Tag: title
 #, no-c-format
 msgid "Backing up the Configuration"
-msgstr ""
+msgstr "Резервное копирование конфигурации"
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "Most of the meta-data concerning RAID volumes are saved directly on the disks that make up these arrays, so that the kernel can detect the arrays and their components and assemble them automatically when the system starts up. However, backing up this configuration is encouraged, because this detection isn't fail-proof, and it's only expected that it will fail precisely in sensitive circumstances. In our example, if the <filename>sde</filename> disk failure had been real (instead of simulated) and the system had been restarted without removing this <filename>sde</filename> disk, this disk could start working again due to having been probed during the reboot. The kernel would then have three physical elements, each claiming to contain half of the same RAID volume. Another source of confusion can come when RAID volumes from two servers are consolidated onto one server only. If these arrays were running normally before the disks were moved, the kernel would be able to detect and reassemble the pairs properly; but if the moved disks had been aggregated into an <filename>md1</filename> on the old server, and the new server already has an <filename>md1</filename>, one of the mirrors would be renamed."
-msgstr ""
+msgstr "Большая часть метаданных, касающихся томов RAID, сохраняется непосредственно на дисках, входящих в эти массивы, так что ядро может определить массивы и их компоненты и собрать их автоматически при запуске системы. И всё же резервное копирование конфигурации крайне желательно, поскольку такое определение не защищено от ошибок, и следует ожидать, что оно наверняка даст сбой в критической ситуации. В нашем примере, если бы отказ диска <filename>sdh</filename> был настоящим (а не симулированным), и система перезагрузилась бы без удаления этого диска, он мог бы начать работать опять, поскольку был бы обнаружен при перезагрузке. Ядро получило бы три физических элемента, каждый из которых заявлял бы, что содержит половину одного и того же тома RAID. Другой источник путаницы может возникнуть, когда тома RAID с двух серверов переносятся на один и тот же сервер. Если бы эти массивы работали нормально до того, как диски были перемещены, ядро смогло бы обнаружить и пересобрать пары корректно; но если перемещённые диски были бы объединены в <filename>md1</filename> на прежнем сервере, а на новом сервере уже был бы <filename>md1</filename>, одно из зеркал было бы переименовано."
 
 #. Tag: para
 #, no-c-format
 msgid "Backing up the configuration is therefore important, if only for reference. The standard way to do it is by editing the <filename>/etc/mdadm/mdadm.conf</filename> file, an example of which is listed here:"
-msgstr ""
+msgstr "Поэтому резервное копирование важно хотя бы для справки. Стандартный путь для этого — редактирование файла <filename>/etc/mdadm/mdadm.conf</filename>, пример которого приводится здесь:"
 
 #. Tag: title
 #, no-c-format
 msgid "<command>mdadm</command> configuration file"
-msgstr ""
+msgstr "Конфигурационный файл <command>mdadm</command>"
 
 #. Tag: programlisting
 #, no-c-format
@@ -677,19 +677,19 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "One of the most useful details is the <literal>DEVICE</literal> option, which lists the devices where the system will automatically look for components of RAID volumes at start-up time. In our example, we replaced the default value, <literal>partitions containers</literal>, with an explicit list of device files, since we chose to use entire disks and not only partitions, for some volumes."
-msgstr ""
+msgstr "Один из наиболее важных элементов здесь — опция <literal>DEVICE</literal>, в которой перечисляются устройства, на которых система будет автоматически искать компоненты томов RAID во время запуска. В нашем примере мы заменили значение по умолчанию, <literal>partitions</literal>, на явный список файлов устройств, поскольку мы выбрали использование целых дисков, а не только разделов, для некоторых томов."
 
 #. Tag: para
 #, no-c-format
 msgid "The last two lines in our example are those allowing the kernel to safely pick which volume number to assign to which array. The metadata stored on the disks themselves are enough to re-assemble the volumes, but not to determine the volume number (and the matching <filename>/dev/md*</filename> device name)."
-msgstr ""
+msgstr "Последние две строки в нашем примере позволяют ядру безопасно выбирать, какой номер тома какому массиву следует назначить. Метаданных, хранящихся на самих дисках, достаточно для пересборки томов, но не для определения номера тома (и соответствующего имени устройства <filename>/dev/md*</filename>)."
 
 #. Tag: para
 #, no-c-format
 msgid "Fortunately, these lines can be generated automatically:"
-msgstr ""
+msgstr "К счастью, эти строки могут быть сгенерированы автоматически:"
 
 #. Tag: screen
 #, no-c-format
@@ -702,102 +702,102 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "The contents of these last two lines doesn't depend on the list of disks included in the volume. It is therefore not necessary to regenerate these lines when replacing a failed disk with a new one. On the other hand, care must be taken to update the file when creating or deleting a RAID array."
-msgstr ""
+msgstr "Содержимое этих последних двух строк не зависит от списка дисков, входящих в том. Поэтому нет необходимости перегенерировать эти строки при замене вышедшего из строя диска новым. С другой стороны, следует аккуратно обновлять этот файл при создании или удалении массива RAID."
 
 #. Tag: para
 #, no-c-format
 msgid "<indexterm><primary>LVM</primary></indexterm> LVM, the <emphasis>Logical Volume Manager</emphasis>, is another approach to abstracting logical volumes from their physical supports, which focuses on increasing flexibility rather than increasing reliability. LVM allows changing a logical volume transparently as far as the applications are concerned; for instance, it is possible to add new disks, migrate the data to them, and remove the old disks, without unmounting the volume."
-msgstr ""
+msgstr "<indexterm><primary>LVM</primary></indexterm> LVM, или <emphasis>менеджер логических томов</emphasis> (<foreignphrase>Logical Volume Manager</foreignphrase>), — другой подход к абстрагированию логических томов от их физических носителей, который фокусируется на увеличении гибкости, а не надёжности. LVM позволяет изменять логические тома прозрачно для приложений; к примеру, можно добавить новые диски, перенести на них данные, удалить старые диски без отмонтирования тома."
 
 #. Tag: title
 #, no-c-format
 msgid "LVM Concepts"
-msgstr ""
+msgstr "Принципы работы LVM"
 
 #. Tag: para
 #, no-c-format
 msgid "This flexibility is attained by a level of abstraction involving three concepts."
-msgstr ""
+msgstr "Такая гибкость достигается за счёт уровня абстракции, включающего три понятия."
 
 #. Tag: para
 #, no-c-format
 msgid "First, the PV (<emphasis>Physical Volume</emphasis>) is the entity closest to the hardware: it can be partitions on a disk, or a full disk, or even any other block device (including, for instance, a RAID array). Note that when a physical element is set up to be a PV for LVM, it should only be accessed via LVM, otherwise the system will get confused."
-msgstr ""
+msgstr "Первое, PV (<emphasis>физический том</emphasis> — <foreignphrase>Physical Volume</foreignphrase>), ближе всего к аппаратной стороне: это могут быть разделы на диске, целый диск или иное блочное устройство (в том числе и RAID-массив). Обратите внимание, что когда физический элемент настроен на использование в роли PV для LVM, доступ к нему должен осуществляться только через LVM, иначе система будет сбита с толку."
 
 #. Tag: para
 #, no-c-format
 msgid "A number of PVs can be clustered in a VG (<emphasis>Volume Group</emphasis>), which can be compared to disks both virtual and extensible. VGs are abstract, and don't appear in a device file in the <filename>/dev</filename> hierarchy, so there's no risk of using them directly."
-msgstr ""
+msgstr "Несколько PV могут быть объединены в VG (<emphasis>группу томов</emphasis> — <foreignphrase>Volume Group</foreignphrase>), которую можно сравнить с виртуальными расширяемыми дисками. VG абстрактны и не имеют представления в виде файла в структуре иерархии <filename>/dev</filename>, так что риска использовать их напрямую нет."
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "The third kind of object is the LV (<emphasis>Logical Volume</emphasis>), which is a chunk of a VG; if we keep the VG-as-disk analogy, the LV compares to a partition. The LV appears as a block device with an entry in <filename>/dev</filename>, and it can be used as any other physical partition can be (most commonly, to host a filesystem or swap space)."
-msgstr ""
+msgstr "Третий тип объектов — LV (<emphasis>логический том</emphasis> — <foreignphrase>Logical Volume</foreignphrase>), который является частью VG; если продолжить аналогию VG с диском, то LV соответствует разделу. LV представляется как блочное устройство в <filename>/dev</filename> и может использоваться точно так же, как и любой физический раздел (как правило — для размещения файловой системы или пространства подкачки)."
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "The important thing is that the splitting of a VG into LVs is entirely independent of its physical components (the PVs). A VG with only a single physical component (a disk for instance) can be split into a dozen logical volumes; similarly, a VG can use several physical disks and appear as a single large logical volume. The only constraint, obviously, is that the total size allocated to LVs can't be bigger than the total capacity of the PVs in the volume group."
-msgstr ""
+msgstr "Важно, что разбиение VG на LV совершенно независимо от его физических компонент (PV). VG с единственным физическим компонентом (например диском) может быть разбита на десяток логических томов; точно так же VG может использовать несколько физических томов и представляться в виде единственного большого логического тома. Единственным ограничением является то, что, само собой, общий раздел, выделенный LV, не может быть больше, чем общая ёмкость всех PV в группе томов."
 
 #. Tag: para
 #, no-c-format
 msgid "It often makes sense, however, to have some kind of homogeneity among the physical components of a VG, and to split the VG into logical volumes that will have similar usage patterns. For instance, if the available hardware includes fast disks and slower disks, the fast ones could be clustered into one VG and the slower ones into another; chunks of the first one can then be assigned to applications requiring fast data access, while the second one will be kept for less demanding tasks."
-msgstr ""
+msgstr "Часто, однако, имеет смысл использовать однородные физические компоненты в составе VG. К примеру, если доступны быстрые диски и более медленные, быстрые можно объединить в одну VG, а более медленные — в другую; порции первой можно выдавать приложениям, требующим быстрого доступа к данным, а вторую оставить для менее требовательных задач."
 
 #. Tag: para
 #, no-c-format
 msgid "In any case, keep in mind that an LV isn't particularly attached to any one PV. It is possible to influence where the data from an LV are physically stored, but this possibility isn't required for day-to-day use. On the contrary: when the set of physical components of a VG evolves, the physical storage locations corresponding to a particular LV can be migrated across disks (while staying within the PVs assigned to the VG, of course)."
-msgstr ""
+msgstr "В любом случае помните, что LV не закреплены за конкретным PV. Можно повлиять на то, где физически хранятся данные с LV, но эта возможность не требуется для повседневного использования. С другой стороны, когда набор физических компонентов VG меняется, физические места хранения, соответствующие конкретному LV, можно переносить между дисками (в пределах PV, закреплённых за VG, разумеется)."
 
 #. Tag: title
 #, no-c-format
 msgid "Setting up LVM"
-msgstr ""
+msgstr "Настройка LVM"
 
 #. Tag: para
 #, no-c-format
 msgid "Let us now follow, step by step, the process of setting up LVM for a typical use case: we want to simplify a complex storage situation. Such a situation usually happens after some long and convoluted history of accumulated temporary measures. For the purposes of illustration, we'll consider a server where the storage needs have changed over time, ending up in a maze of available partitions split over several partially used disks. In more concrete terms, the following partitions are available:"
-msgstr ""
+msgstr "Давайте пройдём шаг за шагом процесс настройки LVM для типичного случая: мы хотим упростить чрезмерно усложнённую ситуацию с хранилищами. Такое обычно получается в результате долгой и витиеватой истории накопления временных мер. Для иллюстрации возьмём сервер, на котором со временем возникала потребность в изменении хранилища, что в конечном итоге привело к путанице из доступных разделов, распределённых по нескольким частично используемым дискам. Если более конкретно, доступны следующие разделы:"
 
 #. Tag: para
 #, no-c-format
 msgid "on the <filename>sdb</filename> disk, a <filename>sdb2</filename> partition, 4 GB;"
-msgstr ""
+msgstr "на диске <filename>sdb</filename> — раздел <filename>sdb2</filename>, 4 ГБ;"
 
 #. Tag: para
 #, no-c-format
 msgid "on the <filename>sdc</filename> disk, a <filename>sdc3</filename> partition, 3 GB;"
-msgstr ""
+msgstr "на диске <filename>sdс</filename> — раздел <filename>sdс3</filename>, 3 ГБ;"
 
 #. Tag: para
 #, no-c-format
 msgid "the <filename>sdd</filename> disk, 4 GB, is fully available;"
-msgstr ""
+msgstr "диск <filename>sdd</filename>, 4 ГБ, доступен полностью;"
 
 #. Tag: para
 #, no-c-format
 msgid "on the <filename>sdf</filename> disk, a <filename>sdf1</filename> partition, 4 GB; and a <filename>sdf2</filename> partition, 5 GB."
-msgstr ""
+msgstr "на диске <filename>sdf</filename> — раздел <filename>sdf1</filename>, 4 ГБ, и раздел <filename>sdf2</filename>, 5 ГБ."
 
 #. Tag: para
 #, no-c-format
 msgid "In addition, let's assume that disks <filename>sdb</filename> and <filename>sdf</filename> are faster than the other two."
-msgstr ""
+msgstr "Кроме того, давайте считать, что диски <filename>sdb</filename> и <filename>sdf</filename> быстрее двух других."
 
 #. Tag: para
 #, no-c-format
 msgid "Our goal is to set up three logical volumes for three different applications: a file server requiring 5 GB of storage space, a database (1 GB) and some space for back-ups (12 GB). The first two need good performance, but back-ups are less critical in terms of access speed. All these constraints prevent the use of partitions on their own; using LVM can abstract the physical size of the devices, so the only limit is the total available space."
-msgstr ""
+msgstr "Наша цель — настроить три логических тома для трёх разных приложений: файлового сервера, требующего 5 ГБ дискового пространства, базы данных (1 ГБ), и некоторое пространство для резервных копий (12 ГБ). Первым двум требуется хорошая производительность, а резервные копии менее критичны к скорости доступа. Все эти ограничения не позволяют разделы сами по себе; используя LVM, можно абстрагироваться от физического размера устройств, так что единственным ограничением является общее доступное пространство."
 
 #. Tag: para
 #, no-c-format
 msgid "The required tools are in the <emphasis role=\"pkg\">lvm2</emphasis> package and its dependencies. When they're installed, setting up LVM takes three steps, matching the three levels of concepts."
-msgstr ""
+msgstr "Необходимые инструменты находятся в пакете <emphasis role=\"pkg\">lvm2</emphasis> и его зависимостях. После их установки настройка LVM проходит в три шага, соответствующих трём уровням организации."
 
 #. Tag: para
 #, no-c-format
 msgid "First, we prepare the physical volumes using <command>pvcreate</command>:"
-msgstr ""
+msgstr "Первым делом мы подготавливаем физические тома с помощью <command>pvcreate</command>:"
 
 #. Tag: screen
 #, no-c-format
@@ -843,12 +843,12 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "So far, so good; note that a PV can be set up on a full disk as well as on individual partitions of it. As shown above, the <command>pvdisplay</command> command lists the existing PVs, with two possible output formats."
-msgstr ""
+msgstr "Пока всё идёт неплохо; отметим, что PV может быть размещён как на целом диске, так и на отдельном его разделе. Как показано выше, команда <command>pvdisplay</command> выводит список существующих PV, с двумя возможными форматами вывода."
 
 #. Tag: para
 #, no-c-format
 msgid "Now let's assemble these physical elements into VGs using <command>vgcreate</command>. We'll gather only PVs from the fast disks into a <filename>vg_critical</filename> VG; the other VG, <filename>vg_normal</filename>, will also include slower elements."
-msgstr ""
+msgstr "Теперь давайте соберём эти физические элементы в VG с помощью <command>vgcreate</command>. Мы соберём PV с быстрых дисков в VG под названием <filename>vg_critical</filename>; другая VG, <filename>vg_normal</filename>, будет также включать более медленные элементы."
 
 #. Tag: screen
 #, no-c-format
@@ -891,12 +891,12 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "Here again, commands are rather straightforward (and <command>vgdisplay</command> proposes two output formats). Note that it's quite possible to use two partitions of the same physical disk into two different VGs. Note also that we used a <filename>vg_</filename> prefix to name our VGs, but it's nothing more than a convention."
-msgstr ""
+msgstr "И снова команды довольно просты (и <command>vgdisplay</command> предоставляет два формата вывода). Заметьте, что можно использовать два раздела одного физического диска в двух разных VG. Мы использовали приставку <filename>vg_</filename> в именах наших VG, но это не более чем соглашение."
 
 #. Tag: para
 #, no-c-format
 msgid "We now have two “virtual disks”, sized about 8 GB and 12 GB, respectively. Let's now carve them up into “virtual partitions” (LVs). This involves the <command>lvcreate</command> command, and a slightly more complex syntax:"
-msgstr ""
+msgstr "Теперь у нас есть два “виртуальных диска” размером около 8 ГБ и 12 ГБ соответственно. Давайте разделим их на “виртуальные разделы” (LV). Для этого потребуется команда <command>lvcreate</command> и несколько более сложный синтаксис:"
 
 #. Tag: screen
 #, no-c-format
@@ -936,32 +936,32 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "Two parameters are required when creating logical volumes; they must be passed to the <command>lvcreate</command> as options. The name of the LV to be created is specified with the <literal>-n</literal> option, and its size is generally given using the <literal>-L</literal> option. We also need to tell the command what VG to operate on, of course, hence the last parameter on the command line."
-msgstr ""
+msgstr "При создании логических томов обязательны два параметра; они должны быть переданы <command>lvcreate</command> как опции. Имя создаваемого LV указывается с опцией <literal>-n</literal>, а его размер обычно указывается с опцией <literal>-L</literal>. Конечно, нужно ещё указать имя VG, который следует использовать, отсюда последний параметр командной строки."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> <command>lvcreate</command> options"
-msgstr ""
+msgstr "<emphasis>ПОГРУЖЕНИЕ</emphasis> Опции <command>lvcreate</command>"
 
 #. Tag: para
 #, no-c-format
 msgid "The <command>lvcreate</command> command has several options to allow tweaking how the LV is created."
-msgstr ""
+msgstr "У команды <command>lvcreate</command> есть ряд опций для тонкой настройки создания LV."
 
 #. Tag: para
 #, no-c-format
 msgid "Let's first describe the <literal>-l</literal> option, with which the LV's size can be given as a number of blocks (as opposed to the “human” units we used above). These blocks (called PEs, <emphasis>physical extents</emphasis>, in LVM terms) are contiguous units of storage space in PVs, and they can't be split across LVs. When one wants to define storage space for an LV with some precision, for instance to use the full available space, the <literal>-l</literal> option will probably be preferred over <literal>-L</literal>."
-msgstr ""
+msgstr "Сначала опишем опцию <literal>-l</literal>, с которой размер LV может быть указан в количестве блоков (в противоположность “человеческим” единицам, которые мы использовали выше). Эти блоки (называемые PE — <emphasis>физическими экстентами</emphasis>, <foreignphrase>Physical Extents</foreignphrase> — в терминологии LVM) являются непрерывными единицами хранения на PV, и они не могут быть распределены между LV. При необходимости указать пространство для LV с некоторой точностью, например для использования всего доступного пространства, опция <literal>-l</literal> может оказаться полезнее, чем <literal>-L</literal>."
 
 #. Tag: para
 #, no-c-format
 msgid "It's also possible to hint at the physical location of an LV, so that its extents are stored on a particular PV (while staying within the ones assigned to the VG, of course). Since we know that <filename>sdb</filename> is faster than <filename>sdf</filename>, we may want to store the <filename>lv_base</filename> there if we want to give an advantage to the database server compared to the file server. The command line becomes: <command>lvcreate -n lv_base -L 1G vg_critical /dev/sdb2</command>. Note that this command can fail if the PV doesn't have enough free extents. In our example, we would probably have to create <filename>lv_base</filename> before <filename>lv_files</filename> to avoid this situation – or free up some space on <filename>sdb2</filename> with the <command>pvmove</command> command."
-msgstr ""
+msgstr "Также можно указать физическое размещение LV, чтобы его экстенты физически размещались на конкретном PV (разумеется, из числа выделенных для VG). Поскольку мы знаем, что <filename>sdb</filename> быстрее <filename>sdf</filename>, мы можем предпочесть записать <filename>lv_base</filename> туда, если хотим дать преимущество серверу баз данных по сравнению с файловым сервером. Командная строка будет выглядеть так: <command>lvcreate -n lv_base -L 1G vg_critical /dev/sdb2</command>. Обратите внимание, что эта команда может завершиться с ошибкой, если на PV недостаточно свободных экстентов. В нашем примере имеет смысл создать <filename>lv_base</filename> раньше <filename>lv_files</filename> чтобы избежать такой ситуации — или освободить немного места на <filename>sdb2</filename> с помощью команды <command>pvmove</command>."
 
 #. Tag: para
 #, no-c-format
 msgid "Logical volumes, once created, end up as block device files in <filename>/dev/mapper/</filename>:"
-msgstr ""
+msgstr "Созданные логические тома появляются как блочные устройства в <filename>/dev/mapper/</filename>:"
 
 #. Tag: screen
 #, no-c-format
@@ -982,22 +982,22 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>NOTE</emphasis> Autodetecting LVM volumes"
-msgstr ""
+msgstr "<emphasis>ПРИМЕЧАНИЕ</emphasis> Автоматическое определение томов LVM"
 
 #. Tag: para
 #, no-c-format
 msgid "When the computer boots, the <filename>/etc/init.d/lvm</filename> script scans the available devices; those that have been initialized as physical volumes for LVM are registered into the LVM subsystem, those that belong to volume groups are assembled, and the relevant logical volumes are started and made available. There is therefore no need to edit configuration files when creating or modifying LVM volumes."
-msgstr ""
+msgstr "Когда компьютер загружается. сценарий <filename>/etc/init.d/lvm</filename> сканирует доступные устройства; те, которые были инициализированы как физические тома LVM регистрируются в подсистеме LVM, принадлежащие к группам томов собираются, и соответствующие логические тома запускаются и делаются доступными. Поэтому нет необходимости редактировать конфигурационные файлы при создании или изменении томов LVM."
 
 #. Tag: para
 #, no-c-format
 msgid "Note, however, that the layout of the LVM elements (physical and logical volumes, and volume groups) is backed up in <filename>/etc/lvm/backup</filename>, which can be useful in case of a problem (or just to sneak a peek under the hood)."
-msgstr ""
+msgstr "Обратите внимание, однако, что резервная копия конфигурации элементов LVM (физических и логических томов и групп томов) сохраняется в <filename>/etc/lvm/backup</filename>, что может пригодиться при возникновении проблем (или просто чтобы мельком взглянуть под капот)."
 
 #. Tag: para
 #, no-c-format
 msgid "To make things easier, convenience symbolic links are also created in directories matching the VGs:"
-msgstr ""
+msgstr "Для облегчения жизни также создаются символические ссылки в каталогах, соответствующих VG:"
 
 #. Tag: screen
 #, no-c-format
@@ -1014,7 +1014,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "The LVs can then be used exactly like standard partitions:"
-msgstr ""
+msgstr "LV можно использовать в точности как обычные разделы:"
 
 #. Tag: screen
 #, no-c-format
@@ -1044,17 +1044,17 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "From the applications' point of view, the myriad small partitions have now been abstracted into one large 12 GB volume, with a friendlier name."
-msgstr ""
+msgstr "С точки зрения приложений, множество маленьких разделов теперь представлены в виде одного 12-гигабайтного тома с удобным именем."
 
 #. Tag: title
 #, no-c-format
 msgid "LVM Over Time"
-msgstr ""
+msgstr "Эволюция LVM"
 
 #. Tag: para
 #, no-c-format
 msgid "Even though the ability to aggregate partitions or physical disks is convenient, this is not the main advantage brought by LVM. The flexibility it brings is especially noticed as time passes, when needs evolve. In our example, let's assume that new large files must be stored, and that the LV dedicated to the file server is too small to contain them. Since we haven't used the whole space available in <filename>vg_critical</filename>, we can grow <filename>lv_files</filename>. For that purpose, we'll use the <command>lvresize</command> command, then <command>resize2fs</command> to adapt the filesystem accordingly:"
-msgstr ""
+msgstr "Хотя возможность объединять разделы или физические диски и удобна, не она является главным преимуществом LVM. Её гибкость особенно заметна с течением времени, когда возникают потребности в изменениях. Допустим, что в нашем примере возникла потребность в сохранении новых больших файлов, и что LV, выделенный файловому серверу, слишком мал для них. Поскольку мы использовали не всё пространство, доступное на <filename>vg_critical</filename>, мы можем увеличить <filename>lv_files</filename>. Для этого мы используем команду <command>lvresize</command>, затем <command>resize2fs</command> чтобы соответствующим образом подогнать файловую систему:"
 
 #. Tag: screen
 #, no-c-format
@@ -1089,22 +1089,22 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CAUTION</emphasis> Resizing filesystems"
-msgstr ""
+msgstr "<emphasis>ВНИМАНИЕ</emphasis> Изменение размера файловых систем"
 
 #. Tag: para
 #, no-c-format
 msgid "Not all filesystems can be resized online; resizing a volume can therefore require unmounting the filesystem first and remounting it afterwards. Of course, if one wants to shrink the space allocated to an LV, the filesystem must be shrunk first; the order is reversed when the resizing goes in the other direction: the logical volume must be grown before the filesystem on it. It's rather straightforward, since at no time must the filesystem size be larger than the block device where it resides (whether that device is a physical partition or a logical volume)."
-msgstr ""
+msgstr "Размеры не всех файловых систем можно изменять во время работы; поэтому изменение размера тома может потребовать отмонтирования файловой системы в начале и обратного монтирования её в конце. Разумеется, при желании уменьшить пространство, выделенное под LV, файловая система должна быть уменьшена первой; при изменении размера в другом направлении порядок обратный: логический том должен быть увеличен прежде, чем файловая система на нём. Это вполне очевидно, ведь файловая система никогда не должна быть больше блочного устройства, на котором она размещается (будь это устройство физическим разделом или логическим томом)."
 
 #. Tag: para
 #, no-c-format
 msgid "The ext3, ext4 and xfs filesystems can be grown online, without unmounting; shrinking requires an unmount. The reiserfs filesystem allows online resizing in both directions. The venerable ext2 allows neither, and always requires unmounting."
-msgstr ""
+msgstr "Файловые системы ext3, ext4 и xfs могут быть увеличены онлайн, без размонтирования; уменьшение требует размонтирования. Файловая система reiserfs позволяет изменение размера онлайн в обоих направлениях. Преклонная ext2 не позволяет ни того, ни другого, и всегда должна быть отмонтирована."
 
 #. Tag: para
 #, no-c-format
 msgid "We could proceed in a similar fashion to extend the volume hosting the database, only we've reached the VG's available space limit:"
-msgstr ""
+msgstr "Мы могли бы, действуя тем же образом, расширить том, на котором размещается база данных, только мы достигли предела доступного места на VG:"
 
 #. Tag: screen
 #, no-c-format
@@ -1120,7 +1120,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "No matter, since LVM allows adding physical volumes to existing volume groups. For instance, maybe we've noticed that the <filename>sdb1</filename> partition, which was so far used outside of LVM, only contained archives that could be moved to <filename>lv_backups</filename>. We can now recycle it and integrate it to the volume group, and thereby reclaim some available space. This is the purpose of the <command>vgextend</command> command. Of course, the partition must be prepared as a physical volume beforehand. Once the VG has been extended, we can use similar commands as previously to grow the logical volume then the filesystem:"
-msgstr ""
+msgstr "Это не имеет значения, поскольку LVM позволяет добавлять физические тома в существующие группы томов. Например, мы заметили, что на разделе <filename>sdb1</filename>, использовавшемся вне LVM, размещались только архивы, которые можно переместить на <filename>lv_backups</filename>. Теперь можно утилизировать его и ввести в группу томов, тем самым восстановив доступное пространство. Для этой цели существует команда <command>vgextend</command>. Само собой, раздел должен быть предварительно подготовлен как физический раздел. Когда VG расширена, мы можем использовать такие же команды, как и раньше, для увеличения логического тома, а затем файловой системы:"
 
 #. Tag: screen
 #, no-c-format
@@ -1143,27 +1143,27 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> Advanced LVM"
-msgstr ""
+msgstr "<emphasis>ПОГРУЖЕНИЕ</emphasis> LVM углублённо"
 
 #. Tag: para
 #, no-c-format
 msgid "LVM also caters for more advanced uses, where many details can be specified by hand. For instance, an administrator can tweak the size of the blocks that make up physical and logical volumes, as well as their physical layout. It is also possible to move blocks across PVs, for instance to fine-tune performance or, in a more mundane way, to free a PV when one needs to extract the corresponding physical disk from the VG (whether to affect it to another VG or to remove it from LVM altogether). The manual pages describing the commands are generally clear and detailed. A good entry point is the <citerefentry><refentrytitle>lvm</refentrytitle> <manvolnum>8</manvolnum></citerefentry> manual page."
-msgstr ""
+msgstr "LVM угодит и более опытным пользователям, позволяя задавать вручную множество параметров. Например, администратор может настроить размер блоков, составляющих физические и логические тома, как и их физическое размещение. Также можно перемещать блоки между PV, к примеру для тонкой настройки производительности или, в более прозаичном случае, чтобы освободить PV, когда необходимо извлечь соответствующий физический диск из VG (чтобы присоединить его к другой VG или вовсе удалить из LVM). Страницы руководства, описывающие команды, в целом ясны и подробны. Для начала хорошо подойдёт страница <citerefentry><refentrytitle>lvm</refentrytitle> <manvolnum>8</manvolnum></citerefentry>."
 
 #. Tag: title
 #, no-c-format
 msgid "RAID or LVM?"
-msgstr ""
+msgstr "RAID или LVM?"
 
 #. Tag: para
 #, no-c-format
 msgid "RAID and LVM both bring indisputable advantages as soon as one leaves the simple case of a desktop computer with a single hard disk where the usage pattern doesn't change over time. However, RAID and LVM go in two different directions, with diverging goals, and it is legitimate to wonder which one should be adopted. The most appropriate answer will of course depend on current and foreseeable requirements."
-msgstr ""
+msgstr "Как RAID, так и LVM предоставляют бесспорные преимущества как только мы выходим за рамки простейшего случая настольного компьютера с одним жёстким диском, где схема использования не меняется с течением времени."
 
 #. Tag: para
 #, no-c-format
 msgid "There are a few simple cases where the question doesn't really arise. If the requirement is to safeguard data against hardware failures, then obviously RAID will be set up on a redundant array of disks, since LVM doesn't really address this problem. If, on the other hand, the need is for a flexible storage scheme where the volumes are made independent of the physical layout of the disks, RAID doesn't help much and LVM will be the natural choice."
-msgstr ""
+msgstr "Есть несколько простых примеров, где вопрос выбора не встаёт. Если требуется защитить данные от аппаратных сбоев, безусловно следует создать RAID на избыточном дисковом массиве, ведь LVM просто не предназначен для решения этой проблемы. Если, с другой стороны, требуется гибкая система хранения, где тома не зависят от реальных физических дисков, RAID мало чем поможет, и естественно выбрать LVM."
 
 #. Tag: title
 #, no-c-format
@@ -1176,24 +1176,24 @@ msgid "If input/output speed is of the essence, especially in terms of access ti
 msgstr ""
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "The third notable use case is when one just wants to aggregate two disks into one volume, either for performance reasons or to have a single filesystem that is larger than any of the available disks. This case can be addressed both by a RAID-0 (or even linear-RAID) and by an LVM volume. When in this situation, and barring extra constraints (for instance, keeping in line with the rest of the computers if they only use RAID), the configuration of choice will often be LVM. The initial set up is barely more complex, and that slight increase in complexity more than makes up for the extra flexibility that LVM brings if the requirements change or if new disks need to be added."
-msgstr ""
+msgstr "Третий характерный случай — когда хочется просто объединить два диска в один том из соображений производительности или чтобы иметь единую файловую систему, которая больше любого из доступных дисков. В этом случае подходят как RAID-0 (или liner-RAID), так и том LVM. В таком случае если нет дополнительных ограничений (вроде унификации с другими компьютерами, на которых используется только RAID), более предпочтительным является выбор LVM. Начальная настройка несколько более сложна, но это небольшое увеличение сложности более чем покрывается дополнительной гибкостью, которую предоставит LVM, если потребности изменятся, или если понадобится добавить новые диски."
 
 #. Tag: para
 #, no-c-format
 msgid "Then of course, there is the really interesting use case, where the storage system needs to be made both resistant to hardware failure and flexible when it comes to volume allocation. Neither RAID nor LVM can address both requirements on their own; no matter, this is where we use both at the same time — or rather, one on top of the other. The scheme that has all but become a standard since RAID and LVM have reached maturity is to ensure data redundancy first by grouping disks in a small number of large RAID arrays, and to use these RAID arrays as LVM physical volumes; logical partitions will then be carved from these LVs for filesystems. The selling point of this setup is that when a disk fails, only a small number of RAID arrays will need to be reconstructed, thereby limiting the time spent by the administrator for recovery."
-msgstr ""
+msgstr "Ну и конечно, есть ещё по-настоящему интересный случай, когда систему хранения нужно сделать одновременно устойчивой к аппаратным сбоям и гибкой, когда дело доходит до выделения томов. Ни RAID, ни LVM не могут удовлетворить обоим требованиям сами по себе; не страшно, в этом случае мы используем их одновременно — точнее, одно поверх другого. Схема, включающая всё и ставшая стандартом с тех пор, как RAID и LVM достигли стабильности, заключается в обеспечении сначала избыточности группировкой дисков в небольшое число RAID-массивов и использовании этих массивов в качестве физических томов LVM; логические разделы будут потом выделяться из этих LV для файловых систем. Преимущество такой настройки заключается в том, что при отказе диска потребуется пересобрать только небольшое число RAID-массивов, тем самым экономя время, которое потребуется администратору на восстановление."
 
 #. Tag: para
 #, no-c-format
 msgid "Let's take a concrete example: the public relations department at Falcot Corp needs a workstation for video editing, but the department's budget doesn't allow investing in high-end hardware from the bottom up. A decision is made to favor the hardware that is specific to the graphic nature of the work (monitor and video card), and to stay with generic hardware for storage. However, as is widely known, digital video does have some particular requirements for its storage: the amount of data to store is large, and the throughput rate for reading and writing this data is important for the overall system performance (more than typical access time, for instance). These constraints need to be fulfilled with generic hardware, in this case two 300 GB SATA hard disk drives; the system data must also be made resistant to hardware failure, as well as some of the user data. Edited videoclips must indeed be safe, but video rushes pending editing are less critical, since they're still on the videotapes."
-msgstr ""
+msgstr "Возьмём конкретный пример: отделу связей с общественностью Falcot Corp требуется рабочая станция для редактирования видео, но бюджет отдела не позволяет приобрести полный комплект оборудования класса high-end. Решено отдать предпочтение оборудованию, специфичному для работы с графикой (монитору и видеокарте), а для хранения использовать оборудование общего назначения. Однако, как общеизвестно, цифровое видео предъявляет определённые требования к хранилищу: объём данных велик, а скорость чтения и записи важна для производительности системы в целом (больше чем типичное время доступа, к примеру). Эти требования должны быть удовлетворены с помощью обычного оборудования, в данном случае двух жёстких дисков SATA объёмом по 300 ГБ; также необходимо сделать системные данные устойчивыми к аппаратным сбоям, в то время как обрабатываемое видео менее важно, поскольку оно ещё записано на видеокассеты."
 
 #. Tag: para
 #, no-c-format
 msgid "RAID-1 and LVM are combined to satisfy these constraints. The disks are attached to two different SATA controllers to optimize parallel access and reduce the risk of a simultaneous failure, and they therefore appear as <filename>sda</filename> and <filename>sdc</filename>. They are partitioned identically along the following scheme:"
-msgstr ""
+msgstr "Чтобы удовлетворить этим требованиям, совмещены RAID-1 и LVM. Диски подключены к двум разным SATA-контроллерам для оптимизации параллельного доступа и снижения риска одновременного отказа, поэтому они представлены как <filename>sda</filename> и <filename>sdc</filename>. Они размечены одинаково по следующей схеме:"
 
 #. Tag: screen
 #, no-c-format
@@ -1219,142 +1219,142 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "The first partitions of both disks (about 1 GB) are assembled into a RAID-1 volume, <filename>md0</filename>. This mirror is directly used to store the root filesystem."
-msgstr ""
+msgstr "Первые разделы обоих дисков (около 1 ГБ) собраны в том RAID-1, <filename>md0</filename>. Это зеркало напрямую используется для корневой файловой системы."
 
 #. Tag: para
 #, no-c-format
 msgid "The <filename>sda2</filename> and <filename>sdc2</filename> partitions are used as swap partitions, providing a total 2 GB of swap space. With 1 GB of RAM, the workstation has a comfortable amount of available memory."
-msgstr ""
+msgstr "Разделы <filename>sda2</filename> и <filename>sdc2</filename> используются как разделы подкачки, предоставляющие 2 ГБ пространства подкачки. С 1 ГБ ОЗУ рабочая станция имеет достаточный объём доступной памяти."
 
 #. Tag: para
 #, no-c-format
 msgid "The <filename>sda5</filename> and <filename>sdc5</filename> partitions, as well as <filename>sda6</filename> and <filename>sdc6</filename>, are assembled into two new RAID-1 volumes of about 100 GB each, <filename>md1</filename> and <filename>md2</filename>. Both these mirrors are initialized as physical volumes for LVM, and assigned to the <filename>vg_raid</filename> volume group. This VG thus contains about 200 GB of safe space."
-msgstr ""
+msgstr "Разделы <filename>sda5</filename> и <filename>sdc5</filename>, как и <filename>sda6</filename> с <filename>sdc6</filename>, собраны в два новых тома RAID-1, примерно по 100 ГБ каждый, <filename>md1</filename> и <filename>md2</filename>. Оба эти зеркала инициализированы как физические тома LVM, и добавлены в группу томов <filename>vg_raid</filename>. Таким образом эта VG содержит около 200 ГБ надёжного пространства."
 
 #. Tag: para
 #, no-c-format
 msgid "The remaining partitions, <filename>sda7</filename> and <filename>sdc7</filename>, are directly used as physical volumes, and assigned to another VG called <filename>vg_bulk</filename>, which therefore ends up with roughly 200 GB of space."
-msgstr ""
+msgstr "Остальные разделы, <filename>sda7</filename> и <filename>sdc7</filename>, напрямую используются как физические тома, и добавлены в другую VG под названием <filename>vg_bulk</filename>, которая поэтому содержит приблизительно 200 ГБ пространства."
 
 #. Tag: para
 #, no-c-format
 msgid "Once the VGs are created, they can be partitioned in a very flexible way. One must keep in mind that LVs created in <filename>vg_raid</filename> will be preserved even if one of the disks fails, which will not be the case for LVs created in <filename>vg_bulk</filename>; on the other hand, the latter will be allocated in parallel on both disks, which allows higher read or write speeds for large files."
-msgstr ""
+msgstr "После создания VG можно разбить их весьма гибким образом. Следует помнить, что LV, созданные на <filename>vg_raid</filename> будут сохранны даже если один из дисков выйдет из строя, чего нельзя сказать о LV, созданных на <filename>vg_bulk</filename>; с другой стороны, последние будут размещаться параллельно на обоих дисках, что обеспечит более высокие скорости чтения и записи больших файлов."
 
 #. Tag: para
 #, no-c-format
 msgid "We'll therefore create the <filename>lv_usr</filename>, <filename>lv_var</filename> and <filename>lv_home</filename> LVs on <filename>vg_raid</filename>, to host the matching filesystems; another large LV, <filename>lv_movies</filename>, will be used to host the definitive versions of movies after editing. The other VG will be split into a large <filename>lv_rushes</filename>, for data straight out of the digital video cameras, and a <filename>lv_tmp</filename> for temporary files. The location of the work area is a less straightforward choice to make: while good performance is needed for that volume, is it worth risking losing work if a disk fails during an editing session? Depending on the answer to that question, the relevant LV will be created on one VG or the other."
-msgstr ""
+msgstr "По этой причине мы создадим LV <filename>lv_usr</filename>, <filename>lv_var</filename> и <filename>lv_home</filename> на <filename>vg_raid</filename> для размещения соответствующих файловых систем; другой большой LV, <filename>lv_movies</filename>, будет использоваться для размещения окончательных версий роликов после редактирования. Другая VG будет разбита на большой <filename>lv_rushes</filename> для данных, захваченных с видеокамер, и <filename>lv_tmp</filename> для временных файлов. Размещение рабочей области — не такой простой выбор: в то время как для этого тома нужна хорошая производительность, стоит ли она риска потери работы, если диск выйдет из строя во время сессии? В зависимости от ответа на этот вопрос соответствующий LV следует создать на одной VG или на другой."
 
 #. Tag: para
 #, no-c-format
 msgid "We now have both some redundancy for important data and much flexibility in how the available space is split across the applications. Should new software be installed later on (for editing audio clips, for instance), the LV hosting <filename>/usr/</filename> can be grown painlessly."
-msgstr ""
+msgstr "Теперь у нас есть некоторая избыточность для важных данных и большая гибкость в распределении доступного пространства между приложениями. Если в дальнейшем будет устанавливаться новое программное обеспечение (для редактирования аудиозаписей, например), LV, на котором размещается <filename>/usr/</filename>, может быть безболезненно увеличен."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>NOTE</emphasis> Why three RAID-1 volumes?"
-msgstr ""
+msgstr "<emphasis>ПРИМЕЧАНИЕ</emphasis> Почему три тома RAID-1?"
 
 #. Tag: para
 #, no-c-format
 msgid "We could have set up one RAID-1 volume only, to serve as a physical volume for <filename>vg_raid</filename>. Why create three of them, then?"
-msgstr ""
+msgstr "Мы могли ограничиться одним томом RAID-1 для размещения физического тома под <filename>vg_raid</filename>. Зачем же создавать три?"
 
 #. Tag: para
 #, no-c-format
 msgid "The rationale for the first split (<filename>md0</filename> vs. the others) is about data safety: data written to both elements of a RAID-1 mirror are exactly the same, and it is therefore possible to bypass the RAID layer and mount one of the disks directly. In case of a kernel bug, for instance, or if the LVM metadata become corrupted, it is still possible to boot a minimal system to access critical data such as the layout of disks in the RAID and LVM volumes; the metadata can then be reconstructed and the files can be accessed again, so that the system can be brought back to its nominal state."
-msgstr ""
+msgstr "Смысл первого разделения (<filename>md0</filename> от остальных) в обеспечении сохранности данных: данные, записанные на оба элемента зеркала RAID-1 в точности совпадают, поэтому можно обойти RAID и смонтировать один из дисков напрямую. В случае ошибки в ядре, например, или если метаданные LVM окажутся повреждены, всё равно можно загрузить минимальную систему для доступа к важным данным, таким как выделение дисков под RAID и LVM тома; метаданные можно восстановить и получить доступ к файлам снова, так что система может быть возвращена в рабочее состояние."
 
 #. Tag: para
 #, no-c-format
 msgid "The rationale for the second split (<filename>md1</filename> vs. <filename>md2</filename>) is less clear-cut, and more related to acknowledging that the future is uncertain. When the workstation is first assembled, the exact storage requirements are not necessarily known with perfect precision; they can also evolve over time. In our case, we can't know in advance the actual storage space requirements for video rushes and complete video clips. If one particular clip needs a very large amount of rushes, and the VG dedicated to redundant data is less than halfway full, we can re-use some of its unneeded space. We can remove one of the physical volumes, say <filename>md2</filename> from <filename>vg_raid</filename> and either assign it to <filename>vg_bulk</filename> directly (if the expected duration of the operation is short enough that we can live with the temporary drop in performance), or undo the RAID setup on <filename>md2</filename> and integrate its components <filename>sda6</filename> and <filename>sdc6</filename> into the bulk VG (which grows by 200 GB instead of 100 GB); the <filename>lv_rushes</filename> logical volume can then be grown according to requirements."
-msgstr ""
+msgstr "Смысл второго разделения (<filename>md1</filename> от <filename>md2</filename>) менее очевиден и базируется на тезисе о непредсказуемости будущего. При первичной сборке рабочей станции точные требования к хранилищу не обязательно известны; они могут и изменяться со временем. В нашем случае мы не можем заведомо знать, сколько потребуется места для рабочего видеоматериала и для готовых видеороликов. Если отдельный ролик потребует большого количества рабочего материала, а VG, выделенный для данных с избыточностью, заполнен менее чем наполовину, мы можем использовать часть невостребованного пространства на нём. Мы можем удалить один из физических томов, скажем <filename>md2</filename>, из <filename>vg_raid</filename> и либо подключить его к <filename>vg_bulk</filename> напрямую (если ожидаемая продолжительность операции достаточно коротка, чтобы мы могли пережить временное падение производительности), либо разобрать RAID на <filename>md2</filename> и интегрировать его компоненты <filename>sda6</filename> и <filename>sdc6</filename> в <filename>vg_bulk</filename> (который увеличится в таком случае на 200 ГБ, а не на 100); логический том <filename>lv_rushes</filename> тогда можно будет увеличить в соответствии с требованиями."
 
 #. Tag: para
 #, no-c-format
 msgid "Virtualization <indexterm><primary>virtualization</primary></indexterm> is one of the most major advances in the recent years of computing. The term covers various abstractions and techniques simulating virtual computers with a variable degree of independence on the actual hardware. One physical server can then host several systems working at the same time and in isolation. Applications are many, and often derive from this isolation: test environments with varying configurations for instance, or separation of hosted services across different virtual machines for security."
-msgstr ""
+msgstr "Виртуализация <indexterm><primary>виртуализация</primary></indexterm> — это одно из крупнейших достижений вычислительной техники последних лет. Этот термин включает в себя различные абстракции и технологии имитации виртуальных компьютеров с разной степенью независимости от реального оборудования. На одном физическом сервере могут размещаться несколько систем, работающих одновременно и изолированных друг от друга. Приложений много, и зачастую они были бы невозможны без такой изоляции: к примеру, тестовые окружения с различными конфигурациями или разделение сервисов по разным виртуальным машинам для безопасности."
 
 #. Tag: para
 #, no-c-format
 msgid "There are multiple virtualization solutions, each with its own pros and cons. This book will focus on Xen, LXC, and KVM, but other noteworthy implementations include the following:"
-msgstr ""
+msgstr "Существует множество решений для виртуализации, каждое со своими достоинствами и недостатками. Эта книга сфокусируется на Xen, LXC и KVM, но есть и другие реализации, достойные упоминания:"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><emphasis>VMWare</emphasis></primary>"
-msgstr ""
+msgstr "<primary><emphasis>VMWare</emphasis></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><emphasis>Bochs</emphasis></primary>"
-msgstr ""
+msgstr "<primary><emphasis>Bochs</emphasis></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><emphasis>QEMU</emphasis></primary>"
-msgstr ""
+msgstr "<primary><emphasis>QEMU</emphasis></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><emphasis>VirtualBox</emphasis></primary>"
-msgstr ""
+msgstr "<primary><emphasis>VirtualBox</emphasis></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><emphasis>KVM</emphasis></primary>"
-msgstr ""
+msgstr "<primary><emphasis>KVM</emphasis></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><emphasis>LXC</emphasis></primary>"
-msgstr ""
+msgstr "<primary><emphasis>LXC</emphasis></primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "QEMU is a software emulator for a full computer; performances are far from the speed one could achieve running natively, but this allows running unmodified or experimental operating systems on the emulated hardware. It also allows emulating a different hardware architecture: for instance, an <emphasis>amd64</emphasis> system can emulate an <emphasis>arm</emphasis> computer. QEMU is free software. <ulink type=\"block\" url=\"http://www.qemu.org/\" />"
-msgstr ""
+msgstr "QEMU — это программный эмулятор полноценного компьютера; производительность далека от скоростей, которых можно было бы достичь, запуская программы нативно, но это позволяет запуск немодифицированных или экспериментальных операционных систем на эмулируемом оборудовании. Он также позволяет эмулировать разные аппаратные архитектуры, например на системе <emphasis>amd64</emphasis> можно сэмулировать <emphasis>arm</emphasis>-компьютер. QEMU является свободным ПО. <ulink type=\"block\" url=\"http://www.qemu.org/\" />"
 
 #. Tag: para
 #, no-c-format
 msgid "Bochs is another free virtual machine, but it only emulates the x86 architectures (i386 and amd64)."
-msgstr ""
+msgstr "Bochs — другая свободная виртуальная машина, но она эмулирует только архитектуры x86 (i386 и amd64)."
 
 #. Tag: para
 #, no-c-format
 msgid "VMWare is a proprietary virtual machine; being one of the oldest out there, it's also one of the most widely-known. It works on principles similar to QEMU. VMWare proposes advanced features such as snapshotting a running virtual machine. <ulink type=\"block\" url=\"http://www.vmware.com/\" />"
-msgstr ""
+msgstr "VMWare — это собственническая виртуальная машина; будучи одной из самых старых, она является и одной из самых известных. Она работает на принципах, сходных с QEMU. VMWare предлагает расширенный функционал, такой как создание снимков работающей виртуальной машины. <ulink type=\"block\" url=\"http://www.vmware.com/\" />"
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "VirtualBox is a virtual machine that is mostly free software (although some extra components are available under a proprietary license). It's younger than VMWare and restricted to the i386 and amd64 architectures, but it still includes some snapshotting and other interesting features. VirtualBox has been part of Debian since <emphasis role=\"distribution\">Lenny</emphasis>. <ulink type=\"block\" url=\"http://www.virtualbox.org/\" />"
-msgstr ""
+msgstr "VirtualBox — преимущественно свободная виртуальная машина (хотя некоторые дополнительные компоненты распространяются под собственнической лицензией). Хотя она моложе VMWare и ограничена архитектурами i386 и amd64, выглядит она многообещающе; к примеру, она уже позволяет создавать снимки. VirtualBox входит в состав Debian начиная с <emphasis role=\"distribution\">Lenny</emphasis>. <ulink type=\"block\" url=\"http://www.virtualbox.org/\" />"
 
 #. Tag: para
 #, no-c-format
 msgid "Xen <indexterm><primary>Xen</primary></indexterm> is a “paravirtualization” solution. It introduces a thin abstraction layer, called a “hypervisor”, between the hardware and the upper systems; this acts as a referee that controls access to hardware from the virtual machines. However, it only handles a few of the instructions, the rest is directly executed by the hardware on behalf of the systems. The main advantage is that performances are not degraded, and systems run close to native speed; the drawback is that the kernels of the operating systems one wishes to use on a Xen hypervisor need to be adapted to run on Xen."
-msgstr ""
+msgstr "Xen <indexterm><primary>Xen</primary></indexterm> — это решение для “паравиртуализации”. Оно вводит тонкий слой абстракции, называемый “гипервизором”, между оборудованием и вышележащими системами; он играет роль арбитра, контролирующего доступ к оборудованию из виртуальных машин. Однако он обрабатывает лишь немногие инструкции, остальные напрямую выполняются оборудованием от имени систем. Главное преимущество заключается в том, что производительность не страдает, и системы работают со скоростью, близкой к нативной; минусом является то, что ядра операционных систем, которые нужно запускать на гипервизоре Xen, должны быть адаптированы для этого."
 
 #. Tag: para
 #, no-c-format
 msgid "Let's spend some time on terms. The hypervisor is the lowest layer, that runs directly on the hardware, even below the kernel. This hypervisor can split the rest of the software across several <emphasis>domains</emphasis>, which can be seen as so many virtual machines. One of these domains (the first one that gets started) is known as <emphasis>dom0</emphasis>, and has a special role, since only this domain can control the hypervisor and the execution of other domains. These other domains are known as <emphasis>domU</emphasis>. In other words, and from a user point of view, the <emphasis>dom0</emphasis> matches the “host” of other virtualization systems, while a <emphasis>domU</emphasis> can be seen as a “guest”."
-msgstr ""
+msgstr "Уделим немного времени терминологии. Гипервизор является нижним слоем, выполняющимся непосредственно на оборудовании, даже ниже ядра. Гипервизор может разделять остальное программное обеспечение по нескольким <emphasis>доменам</emphasis>, которые могут выглядеть как множество виртуальных машин. Один из этих доменов (первый, который запускается) известен как <emphasis>dom0</emphasis> и имеет особую роль, поскольку только этот домен может управлять гипервизором и исполнением других доменов. Эти другие домены известны как <emphasis>domU</emphasis>. Другими словами, с точки зрения пользователя <emphasis>dom0</emphasis> соответствует “хосту” в других системах виртуализации, а <emphasis>domU</emphasis> — “гостю”."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CULTURE</emphasis> Xen and the various versions of Linux"
-msgstr ""
+msgstr "<emphasis>КУЛЬТУРА</emphasis> Xen и разные версии Linux"
 
 #. Tag: para
 #, no-c-format
 msgid "Xen was initially developed as a set of patches that lived out of the official tree, and not integrated to the Linux kernel. At the same time, several upcoming virtualization systems (including KVM) required some generic virtualization-related functions to facilitate their integration, and the Linux kernel gained this set of functions (known as the <emphasis>paravirt_ops</emphasis> or <emphasis>pv_ops</emphasis> interface). Since the Xen patches were duplicating some of the functionality of this interface, they couldn't be accepted officially."
-msgstr ""
+msgstr "Xen изначально разрабатывался как набор заплат, живший вне официального дерева и не интегрированный в ядро Linux. В то же время некоторые развивающиеся системы виртуализации (включая KVM) требовали некоторых общих функций, связанных с виртуализацией, для облегчения их интеграции, и ядро Linux получило такой набор функций (известный как интерфейс <emphasis>paravirt_ops</emphasis> или <emphasis>pv_ops</emphasis>). Поскольку заплаты Xen дублировали часть функционала этого интерфейса, они не могли быть приняты официально."
 
 #. Tag: para
 #, no-c-format
 msgid "Xensource, the company behind Xen, therefore had to port Xen to this new framework, so that the Xen patches could be merged into the official Linux kernel. That meant a lot of code rewrite, and although Xensource soon had a working version based on the paravirt_ops interface, the patches were only progressively merged into the official kernel. The merge was completed in Linux 3.0. <ulink type=\"block\" url=\"http://wiki.xensource.com/xenwiki/XenParavirtOps\" />"
-msgstr ""
+msgstr "Xensource, компания, стоящая за Xen, по этой причине должна была перенести Xen на этот новый каркас, чтобы заплаты Xen могли быть влиты в официальное ядро Linux. Это означало переписывание большого объёма кода, и хотя Xensource вскоре получила работающую версию, основанную на интерфейсе paravirt_ops, заплаты были лишь постепенно влиты в официальное ядро. Процесс закончился в Linux 3.0. <ulink type=\"block\" url=\"http://wiki.xensource.com/xenwiki/XenParavirtOps\" />"
 
 #. Tag: para
 #, no-c-format
@@ -1364,52 +1364,52 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "Using Xen under Debian requires three components:"
-msgstr ""
+msgstr "Чтобы использовать Xen в Debian, нужны три компонента:"
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>NOTE</emphasis> Architectures compatible with Xen"
-msgstr ""
+msgstr "<emphasis>ПРИМЕЧАНИЕ</emphasis> Архитектуры, совместимые с Xen"
 
 #. Tag: para
 #, no-c-format
 msgid "Xen is currently only available for the i386 and amd64 architectures. Moreover, it uses processor instructions that haven't always been provided in all i386-class computers. Note that most of the Pentium-class (or better) processors made after 2001 will work, so this restriction won't apply to very many situations."
-msgstr ""
+msgstr "Xen в настоящее время доступен только для архитектур i386 и amd64. Более того, он использует инструкции процессора, которые были реализованы не во всех компьютерах класса i386. Большинство процессоров класса Pentium (или лучше), выпущенных после 2001 года, будут работать, так что это ограничение действует в немногих случаях."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CULTURE</emphasis> Xen and non-Linux kernels"
-msgstr ""
+msgstr "<emphasis>КУЛЬТУРА</emphasis> Xen и ядра, отличные от Linux"
 
 #. Tag: para
 #, no-c-format
 msgid "Xen requires modifications to all the operating systems one wants to run on it; not all kernels have the same level of maturity in this regard. Many are fully-functional, both as dom0 and domU: Linux 3.0 and later, NetBSD 4.0 and later, and OpenSolaris. Others, such as OpenBSD 4.0, FreeBSD 8 and Plan 9, only work as a domU."
-msgstr ""
+msgstr "Xen требует изменений во всех операционных системах, которые хочется на нём запустить; не все ядра достигли полной функциональности в этом отношении. Многие полнофункциональны как dom0 и domU: Linux 3.0 и выше, NetBSD 4.0 и выше и OpenSolaris. Другие, такие как OpenBSD 4.0, FreeBSD 8 и Plan 9, работают только как domU."
 
 #. Tag: para
 #, no-c-format
 msgid "However, if Xen can rely on the hardware functions dedicated to virtualization (which are only present in more recent processors), even non-modified operating systems can run as domU (including Windows)."
-msgstr ""
+msgstr "Однако если Xen может положиться на аппаратные функции виртуализации (которые наличествуют только в недавно выпущенных процессорах), даже немодифицированные операционные системы могут запускаться как domU (включая Windows)."
 
 #. Tag: para
 #, no-c-format
 msgid "The hypervisor itself. According to the available hardware, the appropriate package will be either <emphasis role=\"pkg\">xen-hypervisor-4.1-i386</emphasis> or <emphasis role=\"pkg\">xen-hypervisor-4.1-amd64</emphasis>."
-msgstr ""
+msgstr "Сам гипервизор. В соответствии с доступным оборудованием пакет называется <emphasis role=\"pkg\">xen-hypervisor-4.1-i386</emphasis> или <emphasis role=\"pkg\">xen-hypervisor-4.1-amd64</emphasis>."
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "A kernel that runs on that hypervisor. Any kernel more recent than 3.0 will do, including the 3.2 version present in <emphasis role=\"distribution\">Wheezy</emphasis>."
-msgstr ""
+msgstr "Ядро, работающее на этом гипервизоре. В случае 2.6.32, как в <emphasis role=\"distribution\">Squeeze</emphasis>, доступное оборудование обусловит выбор из пакетов <emphasis role=\"pkg\">xen-linux-system-2.6.32-5-xen-*</emphasis>."
 
 #. Tag: para
 #, no-c-format
 msgid "The i386 architecture also requires a standard library with the appropriate patches taking advantage of Xen; this is in the <emphasis role=\"pkg\">libc6-xen</emphasis> package."
-msgstr ""
+msgstr "Для архитектуры i386 также требуется стандартная библиотека с заплатами, использующими Xen; она находится в пакете <emphasis role=\"pkg\">libc6-xen</emphasis>."
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "In order to avoid the hassle of selecting these components by hand, a few convenience packages (such as <emphasis role=\"pkg\">xen-linux-system-686-pae</emphasis> and <emphasis role=\"pkg\">xen-linux-system-amd64</emphasis>) have been made available; they all pull in a known-good combination of the appropriate hypervisor and kernel packages. The hypervisor also brings <emphasis role=\"pkg\">xen-utils-4.1</emphasis>, which contains tools to control the hypervisor from the dom0. This in turn brings the appropriate standard library. During the installation of all that, configuration scripts also create a new entry in the Grub bootloader menu, so as to start the chosen kernel in a Xen dom0. Note however that this entry is not usually set to be the first one in the list, and will therefore not be selected by default. If that is not the desired behavior, the following commands will change it:"
-msgstr ""
+msgstr "Чтобы избежать мороки с выбором этих компонентов вручную, для удобства создано несколько пакетов (таких как <emphasis role=\"pkg\">xen-linux-system-2.6.32-5-xen-686</emphasis> и подобные); они тянут за собой заведомо работоспособный набор соответствующих пакетов гипервизора и ядра. С гипервизором также поставляется пакет <emphasis role=\"pkg\">xen-utils-4.0</emphasis>, содержащий инструменты для управления гипервизором из dom0. Он в свою очередь зависит от соответствующей стандартной библиотеки. Во время установки всего этого конфигурационные сценарии также создают новую запись в меню загрузчика Grub, чтобы запустить выбранное ядро в Xen dom0. Заметьте однако, что эта запись обычно устанавливается не первой в списке, и поэтому не выбирается по умолчанию. Если это не то поведение, которого вы хотели, следующие команды изменят его:"
 
 #. Tag: screen
 #, no-c-format
@@ -1422,62 +1422,62 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "Once these prerequisites are installed, the next step is to test the behavior of the dom0 by itself; this involves a reboot to the hypervisor and the Xen kernel. The system should boot in its standard fashion, with a few extra messages on the console during the early initialization steps."
-msgstr ""
+msgstr "Когда всё необходимое установлено, следующим шагом будет тестирование поведения самого dom0; оно включает перезагрузку в гипервизор и ядро Xen. Система должна загрузиться обычным образом, с несколькими дополнительными сообщениями в консоли на ранних стадиях инициализации."
 
 #. Tag: para
 #, no-c-format
 msgid "Now is the time to actually install useful systems on the domU systems, using the tools from <emphasis role=\"pkg\">xen-tools</emphasis>. This package provides the <command>xen-create-image</command> command, which largely automates the task. The only mandatory parameter is <literal>--hostname</literal>, giving a name to the domU; other options are important, but they can be stored in the <filename>/etc/xen-tools/xen-tools.conf</filename> configuration file, and their absence from the command line doesn't trigger an error. It is therefore important to either check the contents of this file before creating images, or to use extra parameters in the <command>xen-create-image</command> invocation. Important parameters of note include the following:"
-msgstr ""
+msgstr "Теперь время собственно установить подходящие системы в domU с помощью инструментов из <emphasis role=\"pkg\">xen-tools</emphasis>. Этот пакет предоставляет команду <command>xen-create-image</command>, которая в значительной мере автоматизирует задачу. Единственный обязательный параметр — <literal>--hostname</literal>, передающий имя domU; другие опции важны, но они могут быть сохранены в конфигурационном файле <filename>/etc/xen-tools/xen-tools.conf</filename>, и их отсутствие в командной строке не вызовет ошибки. Поэтому следует проверить содержимое этого файла перед созданием образов, или же использовать дополнительные параметры в вызове <command>xen-create-image</command>. Отметим следующие важные параметры:"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>--memory</literal>, to specify the amount of RAM dedicated to the newly created system;"
-msgstr ""
+msgstr "<literal>--memory</literal> для указания количества ОЗУ, выделенного вновь создаваемой системе;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>--size</literal> and <literal>--swap</literal>, to define the size of the “virtual disks” available to the domU;"
-msgstr ""
+msgstr "<literal>--size</literal> и <literal>--swap</literal>, чтобы задать размер “виртуальных дисков”, доступных для domU;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>--debootstrap</literal>, to cause the new system to be installed with <command>debootstrap</command>; in that case, the <literal>--dist</literal> option will also most often be used (with a distribution name such as <emphasis role=\"distribution\">wheezy</emphasis>)."
-msgstr ""
+msgstr "<literal>--debootstrap</literal>, чтобы новая система устанавливалась с помощью <command>debootstrap</command>; в этом случае также чаще всего используется опция <literal>--dist</literal> (с указанием имени дистрибутива, например <emphasis role=\"distribution\">wheezy</emphasis>)."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> Installing a non-Debian system in a domU"
-msgstr ""
+msgstr "<emphasis>ПОГРУЖЕНИЕ</emphasis> Установка систем, отличных от Debian, в domU"
 
 #. Tag: para
 #, no-c-format
 msgid "In case of a non-Linux system, care should be taken to define the kernel the domU must use, using the <literal>--kernel</literal> option."
-msgstr ""
+msgstr "В случае системы, основанной не на Linux, следует быть аккуратным при указании ядра, которое должно использоваться domU, с помощью опции <literal>--kernel</literal>."
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>--dhcp</literal> states that the domU's network configuration should be obtained by DHCP while <literal>--ip</literal> allows defining a static IP address."
-msgstr ""
+msgstr "<literal>--dhcp</literal> объявляет, что конфигурация сети domU должна быть получена по DHCP, в то время как <literal>--ip</literal> позволяет задать статический IP-адрес."
 
 #. Tag: para
 #, no-c-format
 msgid "Lastly, a storage method must be chosen for the images to be created (those that will be seen as hard disk drives from the domU). The simplest method, corresponding to the <literal>--dir</literal> option, is to create one file on the dom0 for each device the domU should be provided. For systems using LVM, the alternative is to use the <literal>--lvm</literal> option, followed by the name of a volume group; <command>xen-create-image</command> will then create a new logical volume inside that group, and this logical volume will be made available to the domU as a hard disk drive."
-msgstr ""
+msgstr "Наконец, следует выбрать метод хранения для создаваемых образов (тех, которые будут видны как жёсткие диски из domU). Самый простой метод, соответствующий опции <literal>--dir</literal>, заключается в создании одного файла на dom0 для каждого устройства, которое будет передано domU. Для систем, использующих LVM, альтернативой является использование опции <literal>--lvm</literal>, за которой указывается имя группы томов; в таком случае <command>xen-create-image</command> создаст новый логический том в этой группе, и этот логический том станет доступным для domU как жёсткий диск."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>NOTE</emphasis> Storage in the domU"
-msgstr ""
+msgstr "<emphasis>ПРИМЕЧАНИЕ</emphasis> Хранилище в domU"
 
 #. Tag: para
 #, no-c-format
 msgid "Entire hard disks can also be exported to the domU, as well as partitions, RAID arrays or pre-existing LVM logical volumes. These operations are not automated by <command>xen-create-image</command>, however, so editing the Xen image's configuration file is in order after its initial creation with <command>xen-create-image</command>."
-msgstr ""
+msgstr "Целые жёсткие диски также могут быть экспортированы в domU, равно как разделы, RAID-массивы или ранее созданные логические тома LVM. Эти операции не автоматизированы <command>xen-create-image</command>, однако, поэтому требуется редактирование конфигурационного файла образа Xen после его создания с помощью <command>xen-create-image</command>."
 
 #. Tag: para
 #, no-c-format
 msgid "Once these choices are made, we can create the image for our future Xen domU:"
-msgstr ""
+msgstr "Когда выборы сделаны, мы можем создать образ для нашего будущего Xen domU:"
 
 #. Tag: screen
 #, no-c-format
@@ -1513,37 +1513,37 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "We now have a virtual machine, but it is currently not running (and therefore only using space on the dom0's hard disk). Of course, we can create more images, possibly with different parameters."
-msgstr ""
+msgstr "Теперь у нас есть виртуальная машина, но она ещё не запущена (и поэтому только занимает место на жёстком диске dom0). Разумеется, мы можем создать больше образов, возможно с разными параметрами."
 
 #. Tag: para
 #, no-c-format
 msgid "Before turning these virtual machines on, we need to define how they'll be accessed. They can of course be considered as isolated machines, only accessed through their system console, but this rarely matches the usage pattern. Most of the time, a domU will be considered as a remote server, and accessed only through a network. However, it would be quite inconvenient to add a network card for each domU; which is why Xen allows creating virtual interfaces, that each domain can see and use in a standard way. Note that these cards, even though they're virtual, will only be useful once connected to a network, even a virtual one. Xen has several network models for that:"
-msgstr ""
+msgstr "До включения этих виртуальных машин нам нужно определить, как будет получаться доступ к ним. Разумеется, они могут быть назначены изолированными машинами, доступными только через системную консоль, но это редко соответствует сценарию работы. Большую часть времени domU будет считаться удалённым сервером, и доступ к нему будет осуществляться только через сеть. Однако было бы весьма неудобным добавлять сетевую карту для каждого domU; по этой причине Xen позволяет создавать виртуальные интерфейсы, которые каждый домен может видеть и использовать обычным образом. Заметьте, что эти карты, хоть они и виртуальные, будут полезными только когда они подключены к сети, хотя бы виртуальной. У Xen есть несколько сетевых моделей для этого:"
 
 #. Tag: para
 #, no-c-format
 msgid "The simplest model is the <emphasis>bridge</emphasis> model; all the eth0 network cards (both in the dom0 and the domU systems) behave as if they were directly plugged into an Ethernet switch."
-msgstr ""
+msgstr "Простейшей является модель <emphasis>моста</emphasis>; все сетевые карты eth0 (как в dom0, так и в domU-системах) ведут себя, как если бы они были напрямую подключены к Ethernet-коммутатору."
 
 #. Tag: para
 #, no-c-format
 msgid "Then comes the <emphasis>routing</emphasis> model, where the dom0 behaves as a router that stands between the domU systems and the (physical) external network."
-msgstr ""
+msgstr "Следующая модель — <emphasis>маршрутизируемая</emphasis>, когда dom0 ведёт себя как маршрутизатор, находящийся между domU-системами и (физической) внешней сетью."
 
 #. Tag: para
 #, no-c-format
 msgid "Finally, in the <emphasis>NAT</emphasis> model, the dom0 is again between the domU systems and the rest of the network, but the domU systems are not directly accessible from outside, and traffic goes through some network address translation on the dom0."
-msgstr ""
+msgstr "Наконец, в модели <emphasis>NAT</emphasis> dom0 опять находится между domU-системами и остальной сетью, но domU-системы не доступны извне напрямую, и трафик проходит через преобразование адресов на dom0."
 
 #. Tag: para
 #, no-c-format
 msgid "These three networking nodes involve a number of interfaces with unusual names, such as <filename>vif*</filename>, <filename>veth*</filename>, <filename>peth*</filename> and <filename>xenbr0</filename>. The Xen hypervisor arranges them in whichever layout has been defined, under the control of the user-space tools. Since the NAT and routing models are only adapted to particular cases, we will only address the bridging model."
-msgstr ""
+msgstr "Эти три сетевых режима включают различные интерфейсы с необычными именами, такими как <filename>vif*</filename>, <filename>veth*</filename>, <filename>peth*</filename> и <filename>xenbr0</filename>. Гипервизор Xen комбинирует их в соответствии с заданной схемой под контролем инструментов пространства пользователя. Поскольку NAT и маршрутизируемая модель приспособлены лишь для отдельных случаев, мы рассмотрим только модель моста."
 
 #. Tag: para
 #, no-c-format
 msgid "The standard configuration of the Xen packages does not change the system-wide network configuration. However, the <command>xend</command> daemon is configured to integrate virtual network interfaces into any pre-existing network bridge (with <filename>xenbr0</filename> taking precedence if several such bridges exist). We must therefore set up a bridge in <filename>/etc/network/interfaces</filename> (which requires installing the <emphasis role=\"pkg\">bridge-utils</emphasis> package, which is why the <emphasis role=\"pkg\">xen-utils-4.1</emphasis> package recommends it) to replace the existing eth0 entry:"
-msgstr ""
+msgstr "Стандартная конфигурация пакетов Xen не меняет общесистемных сетевых настроек. Однако демон xend настроен на подключение виртуальных сетевых интерфейсов к любому уже существующему сетевому мосту (при наличии нескольких таких мостов предпочтение отдаётся <filename>xenbr0</filename>). Поэтому нам надо настроить мост в <filename>/etc/network/interfaces</filename> (для этого требуется установить пакет <emphasis role=\"pkg\">bridge-utils</emphasis>, поэтому он рекомендуется пакетом <emphasis role=\"pkg\">xen-utils-4.1</emphasis>), заменив существующую запись eth0:"
 
 #. Tag: programlisting
 #, no-c-format
@@ -1558,7 +1558,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "After rebooting to make sure the bridge is automatically created, we can now start the domU with the Xen control tools, in particular the <command>xm</command> command. This command allows different manipulations on the domains, including listing them and, starting/stopping them."
-msgstr ""
+msgstr "Перезагрузившись для проверки, что мост создаётся автоматически, мы можем запустить domU с помощью инструментов управления Xen, а именно команды <command>xm</command>. Эта команда позволяет производить различные манипуляции с доменами, в частности выводить их список, запускать их и останавливать."
 
 #. Tag: screen
 #, no-c-format
@@ -1578,22 +1578,22 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CAUTION</emphasis> Only one domU per image!"
-msgstr ""
+msgstr "<emphasis>ОСТОРОЖНО</emphasis> Только один domU на образ!"
 
 #. Tag: para
 #, no-c-format
 msgid "While it is of course possible to have several domU systems running in parallel, they will all need to use their own image, since each domU is made to believe it runs on its own hardware (apart from the small slice of the kernel that talks to the hypervisor). In particular, it isn't possible for two domU systems running simultaneously to share storage space. If the domU systems are not run at the same time, it is however quite possible to reuse a single swap partition, or the partition hosting the <filename>/home</filename> filesystem."
-msgstr ""
+msgstr "Хотя, безусловно, возможно запускать несколько domU-систем параллельно, каждая из них должна иметь свой собственный образ, ведь каждый domU создан, как если бы он работал на своём собственном оборудовании (за исключением маленькой части ядра, общающейся с гипервизором). В частности, две запущенных одновременно domU-системы не могут использовать общее хранилище. Если системы не запускаются одновременно, всё же возможно использовать для них один раздел подкачки или раздел, на котором размещается файловая система <filename>home</filename>."
 
 #. Tag: para
 #, no-c-format
 msgid "Note that the <filename>testxen</filename> domU uses real memory taken from the RAM that would otherwise be available to the dom0, not simulated memory. Care should therefore be taken, when building a server meant to host Xen instances, to provision the physical RAM accordingly."
-msgstr ""
+msgstr "Заметьте, что domU <filename>testxen</filename> использует реальную память, взятую из ОЗУ, которая иначе была бы доступна dom0, а не виртуальную. Поэтому при сборке сервера для размещения машин Xen следует побеспокоиться об обеспечении достаточного объёма физического ОЗУ."
 
 #. Tag: para
 #, no-c-format
 msgid "Voilà! Our virtual machine is starting up. We can access it in one of two modes. The usual way is to connect to it “remotely” through the network, as we would connect to a real machine; this will usually require setting up either a DHCP server or some DNS configuration. The other way, which may be the only way if the network configuration was incorrect, is to use the <filename>hvc0</filename> console, with the <command>xm console</command> command:"
-msgstr ""
+msgstr "Voilà! Наша виртуальная машина запускается. Мы можем получить доступ к ней в одном из двух режимов. Обычный путь — подключаться к ней “удалённо” через сеть, как мы подключались бы к реальной машине; для этого обычно требуется настройка либо DHCP-сервера, либо DNS. Другой путь, который может стать единственно возможным в случае неправильной настройки сети, — использование консоли <filename>hvc0</filename> с помощью команды <command>xm console</command>:"
 
 #. Tag: screen
 #, no-c-format
@@ -1609,117 +1609,117 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "One can then open a session, just like one would do if sitting at the virtual machine's keyboard. Detaching from this console is achieved through the <keycombo action=\"simul\"><keycap>Control</keycap> <keycap>]</keycap></keycombo> key combination."
-msgstr ""
+msgstr "После этого можно начать сессию, как если бы вы сидели за клавиатурой виртуальной машины. Для отключения от этой консоли служит сочетание клавиш <keycombo action=\"simul\"><keycap>Control</keycap> <keycap>]</keycap></keycombo>."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>TIP</emphasis> Getting the console straight away"
-msgstr ""
+msgstr "<emphasis>СОВЕТ</emphasis> Получение консоли сразу"
 
 #. Tag: para
 #, no-c-format
 msgid "Sometimes one wishes to start a domU system and get to its console straight away; this is why the <command>xm create</command> command takes a <literal>-c</literal> switch. Starting a domU with this switch will display all the messages as the system boots."
-msgstr ""
+msgstr "Иногда хочется запустить domU-систему и сразу же подключиться к её консоли; для этого команда <command>xm create</command> может принимать флаг <literal>-c</literal>. Запуск domU с этим флагом приведёт к отображению всех сообщений во время загрузки системы."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>TOOL</emphasis> ConVirt"
-msgstr ""
+msgstr "<emphasis>ИНСТРУМЕНТ</emphasis> ConVirt"
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "ConVirt (in the <emphasis role=\"pkg\">convirt</emphasis> package, previously XenMan) is a graphical interface allowing controlling Xen domains installed on a machine. It provides most of the features of the <command>xm</command> command. Note that due to bugs and a slackening of development, <emphasis role=\"pkg\">convirt</emphasis>, which was included in <emphasis role=\"distribution\">Squeeze</emphasis>, has been removed and is no longer present in <emphasis role=\"distribution\">Wheezy</emphasis>."
-msgstr ""
+msgstr "ConVirt (в пакете <emphasis role=\"pkg\">convirt</emphasis>, ранее XenMan) — графический интерфейс, позволяющий управлять доменами Xen, установленными на машине. Он предоставляет большинство возможностей команды <command>xm</command>."
 
 #. Tag: para
 #, no-c-format
 msgid "Once the domU is up, it can be used just like any other server (since it is a GNU/Linux system after all). However, its virtual machine status allows some extra features. For instance, a domU can be temporarily paused then resumed, with the <command>xm pause</command> and <command>xm unpause</command> commands. Note that even though a paused domU does not use any processor power, its allocated memory is still in use. It may be interesting to consider the <command>xm save</command> and <command>xm restore</command> commands: saving a domU frees the resources that were previously used by this domU, including RAM. When restored (or unpaused, for that matter), a domU doesn't even notice anything beyond the passage of time. If a domU was running when the dom0 is shut down, the packaged scripts automatically save the domU, and restore it on the next boot. This will of course involve the standard inconvenience incurred when hibernating a laptop computer, for instance; in particular, if the domU is suspended for too long, network connections may expire. Note also that Xen is so far incompatible with a large part of ACPI power management, which precludes suspending the host (dom0) system."
-msgstr ""
+msgstr "Когда domU запущен, он может использоваться как любой другой сервер (ведь это, помимо прочего, система GNU/Linux). Однако благодаря тому, что это виртуальная машина, доступны и некоторые дополнительные возможности. К примеру, domU может быть временно приостановлен, а затем вновь запущен с помощью команд <command>xm pause</command> и <command>xm unpause</command>. Заметьте, что хотя приостановленный domU не использует ресурсы процессора, выделенная ему память по-прежнему занята. Может иметь смысл использовать команды <command>xm save</command> и <command>xm restore</command>: сохранение domU освобождает ресурсы, которые ранее использовались этим domU, в том числе и ОЗУ. После восстановления (или снятия с паузы) domU не замечает ничего кроме того, что прошло некоторое время. Если domU был запущен, когда dom0 выключается, сценарии из пакетов автоматически сохраняют domU и восстанавливают его при следующей загрузке. Отсюда, конечно, проистекает обычное неудобство, проявляющееся, например, при переводе ноутбука в спящий режим; в частности, если domU приостановлен слишком надолго, сетевые подключения могут завершиться. Заметьте также, что Xen на данный момент несовместим с большей частью системы управления питанием ACPI, что мешает приостановке dom0-системы."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>DOCUMENTATION</emphasis> <command>xm</command> options"
-msgstr ""
+msgstr "<emphasis>ДОКУМЕНТАЦИЯ</emphasis> Опции <command>xm</command>"
 
 #. Tag: para
 #, no-c-format
 msgid "Most of the <command>xm</command> subcommands expect one or more arguments, often a domU name. These arguments are well described in the <citerefentry><refentrytitle>xm</refentrytitle> <manvolnum>1</manvolnum></citerefentry> manual page."
-msgstr ""
+msgstr "Большая часть подкоманд <command>xm</command> требуют одного или более аргументов, часто — имени domU. Эти аргументы подробно описаны в странице руководства <citerefentry><refentrytitle>xm</refentrytitle> <manvolnum>1</manvolnum></citerefentry>."
 
 #. Tag: para
 #, no-c-format
 msgid "Halting or rebooting a domU can be done either from within the domU (with the <command>shutdown</command> command) or from the dom0, with <command>xm shutdown</command> or <command>xm reboot</command>."
-msgstr ""
+msgstr "Выключение или перезагрузка domU могут быть выполнены как изнутри domU (с помощью команды <command>shutdown</command>), так и из dom0, с помощью <command>xm shutdown</command> или <command>xm reboot</command>."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> Advanced Xen"
-msgstr ""
+msgstr "<emphasis>ПОГРУЖЕНИЕ</emphasis> Xen углублённо"
 
 #. Tag: para
 #, no-c-format
 msgid "Xen has many more features than we can describe in these few paragraphs. In particular, the system is very dynamic, and many parameters for one domain (such as the amount of allocated memory, the visible hard drives, the behavior of the task scheduler, and so on) can be adjusted even when that domain is running. A domU can even be migrated across servers without being shut down, and without losing its network connections! For all these advanced aspects, the primary source of information is the official Xen documentation. <ulink type=\"block\" url=\"http://www.xen.org/support/documentation.html\" />"
-msgstr ""
+msgstr "У Xen есть гораздо больше возможностей, чем мы могли описать в этих нескольких абзацах. В частности, система очень динамична, и многие параметры домена (такие как объём выделенной памяти, видимые жёсткие диски, поведение планировщика задач и так далее) могут быть изменены даже когда домен запущен. domU может быть даже перенесён с одного сервера на другой без отключения, и даже без потери сетевых подключений! Главным источником информации обо всех этих углублённых аспектах является официальная документация Xen. <ulink type=\"block\" url=\"http://www.xen.org/support/documentation.html\" />"
 
 #. Tag: para
 #, no-c-format
 msgid "Even though it's used to build “virtual machines”, LXC <indexterm><primary>LXC</primary></indexterm> is not, strictly speaking, a virtualization system, but a system to isolate groups of processes from each other even though they all run on the same host. It takes advantage of a set of recent evolutions in the Linux kernel, collectively known as <emphasis>control groups</emphasis>, by which different sets of processes called “groups” have different views of certain aspects of the overall system. Most notable among these aspects are the process identifiers, the network configuration, and the mount points. Such a group of isolated processes will not have any access to the other processes in the system, and its accesses to the filesystem can be restricted to a specific subset. It can also have its own network interface and routing table, and it may be configured to only see a subset of the available devices present on the system."
-msgstr ""
+msgstr "Хотя она и используется для создания “виртуальных машин”, LXC <indexterm><primary>LXC</primary></indexterm> является, строго говоря, не системой виртуализации, а системой для изоляции групп процессов друг от друга, даже если они все выполняются на одном узле. Она использует набор недавних изменений в ядре Linux, известных под общим названием <emphasis>control groups</emphasis>, благодаря которуму разные наборы процессов, называемые “группами”, имеют разные представления о некоторых аспектах системы. Наиболее примечательные из этих аспектов — идентификаторы процессов, конфигурация сети и точки монтирования. Такая группа изолированных процессов не будет иметь доступа к другим процессам в системе, и её доступ к файловой системе может быть ограничен определённым подмножеством. У неё также могут быть свои собственные сетевой интерфейс и таблица маршрутизации, и она может быть настроена так, чтобы видеть только подмножество устройств, присутствующих в системе."
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "These features can be combined to isolate a whole process family starting from the <command>init</command> process, and the resulting set looks very much like a virtual machine. The official name for such a setup is a “container” (hence the LXC moniker: <emphasis>LinuX Containers</emphasis>), but a rather important difference with “real” virtual machines such as provided by Xen or KVM is that there's no second kernel; the container uses the very same kernel as the host system. This has both pros and cons: advantages include excellent performance due to the total lack of overhead, and the fact that the kernel has a global vision of all the processes running on the system, so the scheduling can be more efficient than it would be if two independent kernels were to schedule different task sets. Chief among the inconveniences is the impossibility to run a different kernel in a container (whether a different Linux version or a different operating system altogether)."
-msgstr ""
+msgstr "С помощью комбинации этих возможностей можно изолировать целое семейство процессов начиная с процесса <command>init</command>, и получившийся набор будет выглядеть чрезвычайно похоже на виртуальную машину. Официальное название для такой схемы “контейнер” (отсюда и неофициальное название LXC: <emphasis>LinuX Containers</emphasis>), но весьма значительным отличием от “настоящих” виртуальных машин, таких как предоставляемые Xen или KVM, заключается в отсутствии второго ядра; контейнер использует то же самое ядро, что и хост-система. У этого есть как преимущества, так и недостатки: к преимуществам относится полное отсутствие накладных расходов и, как следствие, потерь производительности, а также тот факт, что ядро видит все процессы в системе, поэтому планировщик может работать более эффективно, чем если бы два независимых ядра занимались планированием выполнения разных наборов задач. Основное из неудобств — невозможность запустить другое ядро в контейнере (как другую версию Linux, так и другую операционную систему)."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>NOTE</emphasis> LXC isolation limits"
-msgstr ""
+msgstr "<emphasis>ПРИМЕЧАНИЕ</emphasis> Ограничения изоляции LXC"
 
 #. Tag: para
 #, no-c-format
 msgid "LXC containers do not provide the level of isolation achieved by heavier emulators or virtualizers. In particular:"
-msgstr ""
+msgstr "Контейнеры LXC не предоставляют такого уровня изоляции, который достижим с помощью более серьёзных эмуляторов или виртуальных машин. В частности:"
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "the <emphasis role=\"distribution\">Wheezy</emphasis> standard kernel does not allow limiting the amount of memory available to a container; the feature exists, and is built in the kernel, but it's disabled by default because it has a (slight) cost on overall system performance; however, enabling it is a simple matter of setting the <command>cgroup_enable=memory</command> kernel at boot time;"
-msgstr ""
+msgstr "стандартное ядро <emphasis role=\"distribution\">Wheezy</emphasis> не позволяет ограничивать объём памяти, доступный контейнеру; эта возможность существует  и может быть включена путём пересборки ядра с опцией <foreignphrase>Memory Resource Controller</foreignphrase>, но она пока считается экспериментальной, а также (незначительно) снижает общую производительность системы, поэтому она отключена по умолчанию;"
 
 #. Tag: para
 #, no-c-format
 msgid "since the kernel is shared among the host system and the containers, processes constrained to containers can still access the kernel messages, which can lead to information leaks if messages are emitted by a container;"
-msgstr ""
+msgstr "поскольку ядро разделяется между хост-системой и контейнерами, процессы, заключённые в контейнеры, всё же могут получать доступ к сообщениям ядра, что может привести к утечкам информации, если сообщения исходят из контейнера;"
 
 #. Tag: para
 #, no-c-format
 msgid "for similar reasons, if a container is compromised and a kernel vulnerability is exploited, the other containers may be affected too;"
-msgstr ""
+msgstr "по той же причине, если контейнер скомпрометирован и была эксплуатирована уязвимость ядра, другие контейнеры также могут быть затронуты;"
 
 #. Tag: para
 #, no-c-format
 msgid "on the filesystem, the kernel checks permissions according to the numerical identifiers for users and groups; these identifiers may designate different users and groups depending on the container, which should be kept in mind if writable parts of the filesystem are shared among containers."
-msgstr ""
+msgstr "ядро проверяет права доступа файловых систем в соответствии с числовыми идентификаторами пользователей и групп; эти идентификаторы могут обозначать разных пользователей и группы в зависимости от контейнера, что следует помнить, если доступные для записи части файловой системы разделяются между контейнерами."
 
 #. Tag: para
 #, no-c-format
 msgid "Since we're dealing with isolation and not plain virtualization, setting up LXC containers is more complex than just running debian-installer on a virtual machine. We'll describe a few prerequisites, then go on to the network configuration; we will then be able to actually create the system to be run in the container."
-msgstr ""
+msgstr "Поскольку мы имеем дело с изоляцией, а не обычной виртуализацией, настройка контейнеров LXC более сложна, чем простой запуск debian-installer на виртуальной машине. Мы опишем некоторые предварительные требования, затем перейдём к конфигурации сети; после этого мы сможем собственно создать систему для запуска в контейнере."
 
 #. Tag: title
 #, no-c-format
 msgid "Preliminary Steps"
-msgstr ""
+msgstr "Предварительные шаги"
 
 #. Tag: para
 #, no-c-format
 msgid "The <emphasis role=\"pkg\">lxc</emphasis> package contains the tools required to run LXC, and must therefore be installed."
-msgstr ""
+msgstr "Пакет <emphasis role=\"pkg\">lxc</emphasis> содержит инструменты, необходимые для запуска LXC, поэтому его необходимо установить."
 
 #. Tag: para
 #, no-c-format
 msgid "LXC also requires the <emphasis>control groups</emphasis> configuration system, which is a virtual filesystem to be mounted on <filename>/sys/fs/cgroup</filename>. The <filename>/etc/fstab</filename> should therefore include the following entry:"
-msgstr ""
+msgstr "LXC также требует систему конфигурации <emphasis>control groups</emphasis>, представляющую собой виртуальную файловую систему, которая должна быть смонтирована в <filename>/sys/fs/cgroup</filename>. Поэтому <filename>/etc/fstab</filename> должен содержать следующую запись:"
 
 #. Tag: programlisting
 #, no-c-format
@@ -1732,22 +1732,22 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "<filename>/sys/fs/cgroup</filename> will then be mounted automatically at boot time; if no immediate reboot is planned, the filesystem should be manually mounted with <command>mount /sys/fs/cgroup</command>."
-msgstr ""
+msgstr "<filename>/sys/fs/cgroup</filename> будет в таком случае монтироваться автоматически во время загрузки; если немедленная перезагрузка не планируется, файловую систему следует смонтировать вручную с помощью команды <command>mount /sys/fs/cgroup</command>."
 
 #. Tag: title
 #, no-c-format
 msgid "Network Configuration"
-msgstr ""
+msgstr "Сетевые настройки"
 
 #. Tag: para
 #, no-c-format
 msgid "The goal of installing LXC is to set up virtual machines; while we could of course keep them isolated from the network, and only communicate with them via the filesystem, most use cases involve giving at least minimal network access to the containers. In the typical case, each container will get a virtual network interface, connected to the real network through a bridge. This virtual interface can be plugged either directly onto the host's physical network interface (in which case the container is directly on the network), or onto another virtual interface defined on the host (and the host can then filter or route traffic). In both cases, the <emphasis role=\"pkg\">bridge-utils</emphasis> package will be required."
-msgstr ""
+msgstr "Цель установки LXC — в запуске виртуальных машин; хотя мы, разумеется, можем держать их изолированными от сети и взаимодействовать с ними только через файловую систему, для большинства задач требуется хотя бы минимальный сетевой доступ к контейнерам. В типичном случае каждый контейнер получит виртуальный сетевой интерфейс присоединённый к реальной сети через мост. Этот виртуальный интерфейс может быть подключён либо напрямую к физическому сетевому интерфейсу хост-системы (в таком случае контейнер непосредственно в сети), либо к другому виртуальному интерфейсу, определённому в хост-системе (тогда хост сможет фильтровать или маршрутизировать трафик). В обоих случаях потребуется пакет <emphasis role=\"pkg\">bridge-utils</emphasis>."
 
 #. Tag: para
 #, no-c-format
 msgid "The simple case is just a matter of editing <filename>/etc/network/interfaces</filename>, moving the configuration for the physical interface (for instance <literal>eth0</literal>) to a bridge interface (usually <literal>br0</literal>), and configuring the link between them. For instance, if the network interface configuration file initially contains entries such as the following:"
-msgstr ""
+msgstr "В простейшем случае это всего лишь вопрос правки <filename>/etc/network/interfaces</filename>, переноса конфигурации физического интерфейса (например <literal>eth0</literal>) на интерфейс моста (обычно <literal>br0</literal>) и настройки связи между ними. Например, если конфигурационный файл сетевых интерфейсов изначально содержит записи вроде таких:"
 
 #. Tag: programlisting
 #, no-c-format
@@ -1759,7 +1759,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "They should be disabled and replaced with the following:"
-msgstr ""
+msgstr "Их следует отключить и заменить на следующие:"
 
 #. Tag: programlisting
 #, no-c-format
@@ -1775,17 +1775,17 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "The effect of this configuration will be similar to what would be obtained if the containers were machines plugged into the same physical network as the host. The “bridge” configuration manages the transit of Ethernet frames between all the bridged interfaces, which includes the physical <literal>eth0</literal> as well as the interfaces defined for the containers."
-msgstr ""
+msgstr "Результат такой настройки будет похож на тот, какой мы получили бы, если бы контейнеры были машинами, подключёнными к той же физической сети, что и хост-машина. Конфигурация “мост” управляет прохождением кадров Ethernet между всеми связанными интерфейсами, включая и физический <literal>eth0</literal>, и интерфейсы, заданные для контейнеров."
 
 #. Tag: para
 #, no-c-format
 msgid "In cases where this configuration cannot be used (for instance if no public IP addresses can be assigned to the containers), a virtual <emphasis>tap</emphasis> interface will be created and connected to the bridge. The equivalent network topology then becomes that of a host with a second network card plugged into a separate switch, with the containers also plugged into that switch. The host must then act as a gateway for the containers if they are meant to communicate with the outside world."
-msgstr ""
+msgstr "В случаях, когда такую конфигурацию использовать невозможно (например если контейнерам нельзя выделить публичные IP-адреса), будет создан и подключён к мосту виртуальный <emphasis>tap</emphasis>-интерфейс. Это будет эквивалентно сетевой топологии, при которой вторая сетевая карта подключена к отдельному коммутатору, и к нему же подключены контейнеры. Хост тогда должен выступать как шлюз для контейнеров, если им требуется соединяться с остальным миром."
 
 #. Tag: para
 #, no-c-format
 msgid "In addition to <emphasis role=\"pkg\">bridge-utils</emphasis>, this “rich” configuration requires the <emphasis role=\"pkg\">vde2</emphasis> package; the <filename>/etc/network/interfaces</filename> file then becomes:"
-msgstr ""
+msgstr "В дополнение к <emphasis role=\"pkg\">bridge-utils</emphasis> для “продвинутой” конфигурации потребуется пакет <emphasis role=\"pkg\">vde2</emphasis>; файл <filename>/etc/network/interfaces</filename> тогда примет следующий вид:"
 
 #. Tag: programlisting
 #, no-c-format
@@ -1806,21 +1806,36 @@ msgid ""
 "  address 10.0.0.1\n"
 "  netmask 255.255.255.0\n"
 msgstr ""
+"# Интерфейс eth0 без изменений\n"
+"auto eth0\n"
+"iface eth0 inet dhcp\n"
+"\n"
+"# Виртуальный интерфейс\n"
+"auto tap0\n"
+"iface tap0 inet manual\n"
+"  vde2-switch -t tap0\n"
+"\n"
+"# Мост для контейнеров\n"
+"auto br0\n"
+"iface br0 inet static\n"
+"  bridge-ports tap0\n"
+"  address 10.0.0.1\n"
+"  netmask 255.255.255.0\n"
 
 #. Tag: para
 #, no-c-format
 msgid "The network can then be set up either statically in the containers, or dynamically with DHCP server running on the host. Such a DHCP server will need to be configured to answer queries on the <literal>br0</literal> interface."
-msgstr ""
+msgstr "Сеть может быть настроена как статически в контейнерах, так и динамически и помощью DHCP-сервера, запущенного на хост-системе. Такой DHCP-сервер должен быть сконфигурирован для ответа на запросы на интерфейсе <literal>br0</literal>."
 
 #. Tag: title
 #, no-c-format
 msgid "Setting Up the System"
-msgstr ""
+msgstr "Установка системы"
 
 #. Tag: para
 #, no-c-format
 msgid "Let us now set up the filesystem to be used by the container. Since this “virtual machine” will not run directly on the hardware, some tweaks are required when compared to a standard filesystem, especially as far as the kernel, devices and consoles are concerned. Fortunately, the <emphasis role=\"pkg\">lxc</emphasis> includes scripts that mostly automate this configuration. For instance, the following commands (which require the <emphasis role=\"pkg\">debootstrap</emphasis> package) will install a Debian container:"
-msgstr ""
+msgstr "Давайте теперь настроим файловую систему для использования контейнером. Поскольку эта “виртуальная машина” не будет запускаться непосредственно на оборудовании, потребуются некоторые дополнительные манипуляции по сравнению с обычной файловой системой, особенно когда дело касается ядра, устройств и консолей. К счастью, пакет <emphasis role=\"pkg\">lxc</emphasis> включает сценарии, которые в значительной степени автоматизируют эту настройку. В частности, следующие команды (для которых требуется пакет <emphasis role=\"pkg\">debootstrap</emphasis>) установят контейнер с Debian:"
 
 #. Tag: screen
 #, no-c-format
@@ -1841,17 +1856,17 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "Note that the filesystem is initially created in <filename>/var/cache/lxc</filename>, then moved to its destination directory. This allows creating identical containers much more quickly, since only copying is then required."
-msgstr ""
+msgstr "Заметьте, что файловая система изначально создана в <filename>/var/cache/lxc</filename>, а затем перемещена в каталог назначения. Это позволяет создавать идентичные контейнеры намного быстрее, поскольку требуется лишь скопировать их."
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "Note also that the <command>lxc-debian</command> command as shipped in <emphasis role=\"distribution\">Wheezy</emphasis> can create <emphasis role=\"distribution\">Squeeze</emphasis>, <emphasis role=\"distribution\">Wheezy</emphasis> and <emphasis role=\"distribution\">Sid</emphasis> systems."
-msgstr ""
+msgstr "Отметьте также, что команда <command>lxc-debian</command>, поставляемая в <emphasis role=\"distribution\">Squeeze</emphasis>, к сожалению создаёт систему <emphasis role=\"distribution\">Lenny</emphasis>, а не <emphasis role=\"distribution\">Squeeze</emphasis>, как можно было ожидать. Эту проблему можно обойти, просто установив более новую версию пакета (начиная с 0.7.3-1)."
 
 #. Tag: para
 #, no-c-format
 msgid "The newly-created filesystem now contains a minimal Debian system, adapted to the aforementioned “simple” network configuration. In the “rich” configuration, the <filename>/var/lib/lxc/testlxc/rootfs/etc/network/interfaces</filename> file will need some modifications; more important, though, is that the network interface that the container sees must not be the host's physical interface. This can be configured by adding a few <literal>lxc.network.*</literal> entries to the container's configuration file, <filename>/var/lib/lxc/testlxc/config</filename>:"
-msgstr ""
+msgstr "Только что созданная файловая система теперь содержит минимальную систему Debian, приспособленную к вышеупомянутой “простой” конфигурации сети. В случае “продвинутой” конфигурации потребуется внести некоторые изменения в файл <filename>/var/lib/lxc/testlxc/rootfs/etc/network/interfaces</filename>; важнее, однако, то, что сетевой интерфейс, видимый контейнером, не должен быть физическим интерфейсом хоста. Это может быть настроено путём добавления нескольких записей <literal>lxc.network.*</literal> в конфигурационный файл контейнера, <filename>/var/lib/lxc/testlxc/config</filename>:"
 
 #. Tag: programlisting
 #, no-c-format
@@ -1865,7 +1880,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "These entries mean, respectively, that a virtual interface will be created in the container; that it will automatically be brought up when said container is started; that it will automatically be connected to the <literal>br0</literal> bridge on the host; and that its MAC address will be as specified. Should this last entry be missing or disabled, a random MAC address will be generated."
-msgstr ""
+msgstr "Эти записи означают, соответственно, что в контейнере будет создан виртуальный интерфейс, что он будет автоматически подниматься при запуске этого контейнера, что он будет автоматически соединяться с мостом <literal>br0</literal> на хост-системе и что его MAC-адрес будет соответствовать указанному. Если бы эта последняя запись отсутствовала или была отключена, генерировался бы случайный MAC-адрес."
 
 #. Tag: para
 #, no-c-format
@@ -1890,12 +1905,12 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "Starting the Container"
-msgstr ""
+msgstr "Запуск контейнера"
 
 #. Tag: para
 #, no-c-format
 msgid "Now that our virtual machine image is ready, let's start the container:"
-msgstr ""
+msgstr "Теперь, когда наша виртуальная машина готова, давайте запустим контейнер:"
 
 #. Tag: screen
 #, no-c-format
@@ -1928,139 +1943,139 @@ msgid ""
 msgstr ""
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "We are now in the container; our access to the processes is restricted to only those started from the container itself, and our access to the filesystem is similarly restricted to the dedicated subset of the full filesystem (<filename>/var/lib/lxc/testlxc/rootfs</filename>)."
-msgstr ""
+msgstr "Теперь мы в контейнере; наш доступ к процессам ограничен только теми, которые запущены изнутри самого контейнера, и наш доступ к файловой системе также ограничен до выделенного подмножества полной файловой системы (<filename>/var/lib/lxc/testlxc/rootfs</filename>), в которой пароль пользователя root изначально установлен в <literal>root</literal>."
 
 #. Tag: para
 #, no-c-format
 msgid "Should we want to run the container as a background process, we would invoke <command>lxc-start</command> with the <option>--daemon</option> option. We can then interrupt the container with a command such as <command>lxc-kill --name=testlxc</command>."
-msgstr ""
+msgstr "Если бы мы хотели запустить контейнер как фоновый процесс, нам следовало бы вызвать <command>lxc-start</command> с опцией <option>--daemon</option>. Контейнер можно прервать впоследствии с помощью такой команды как <command>lxc-kill --name=testlxc</command>."
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "The <emphasis role=\"pkg\">lxc</emphasis> package contains an initialization script that can automatically start one or several containers when the host boots; its configuration file, <filename>/etc/default/lxc</filename>, is relatively straightforward; note that the container configuration files need to be stored in <filename>/etc/lxc/auto/</filename>; many users may prefer symbolic links, such as can be created with <command>ln -s /var/lib/lxc/testlxc/config /etc/lxc/auto/testlxc.config</command>."
-msgstr ""
+msgstr "Пакет <emphasis role=\"pkg\">lxc</emphasis>  содержит инициализационный скрипт, который может автоматически запускать один или несколько контейнеров при загрузке хост-системы; его конфигурационный файл, <filename>/etc/default/lxc</filename>, относительно прост; отметьте, что конфигурационные файлы контейнера должны храниться в <filename>/etc/lxc/</filename>; многие пользователи могут предпочесть символьные ссылки, вроде создаваемой командой <command>ln -s /var/lib/lxc/testlxc/config /etc/lxc/testlxc.config</command>."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> Mass virtualization"
-msgstr ""
+msgstr "<emphasis>ПОГРУЖЕНИЕ</emphasis> Массовая виртуализация"
 
 #. Tag: para
 #, no-c-format
 msgid "Since LXC is a very lightweight isolation system, it can be particularly adapted to massive hosting of virtual servers. The network configuration will probably be a bit more advanced than what we described above, but the “rich” configuration using <literal>tap</literal> and <literal>veth</literal> interfaces should be enough in many cases."
-msgstr ""
+msgstr "Поскольку LXC — очень легковесная система изоляции, её в частности можно приспособить для массового размещения виртуальных серверов. Сетевая конфигурация будет, возможно, несколько более сложной, чем мы описали выше, но “продвинутой” конфигурации с использованием интерфейсов <literal>tap</literal> и <literal>veth</literal> должно быть достаточно во многих случаях."
 
 #. Tag: para
 #, no-c-format
 msgid "It may also make sense to share part of the filesystem, such as the <filename>/usr</filename> and <filename>/lib</filename> subtrees, so as to avoid duplicating the software that may need to be common to several containers. This will usually be achieved with <literal>lxc.mount.entry</literal> entries in the containers configuration file. An interesting side-effect is that the processes will then use less physical memory, since the kernel is able to detect that the programs are shared. The marginal cost of one extra container can then be reduced to the disk space dedicated to its specific data, and a few extra processes that the kernel must schedule and manage."
-msgstr ""
+msgstr "Может также иметь смысл сделать общей часть файловой системы, такую как ветки <filename>/usr</filename> и <filename>/lib</filename>, чтобы избежать дупликации программного обеспечения, которое может быть общим для нескольких контейнеров. Это обычно достигается с помощью записей <literal>lxc.mount.entry</literal> в конфигурационных файлах контейнеров. Интересным побочным эффектом является то, что процессы станут потреблять меньше физической памяти, поскольку ядро способно определить, что программы используются совместно. Минимальные затраты на один дополнительный контейнер могут быть снижены до дискового пространства, выделенного под его специфические данные, и нескольких дополнительных процессов, которыми должно управлять ядро."
 
 #. Tag: para
 #, no-c-format
 msgid "We haven't described all the available options, of course; more comprehensive information can be obtained from the <citerefentry> <refentrytitle>lxc</refentrytitle> <manvolnum>7</manvolnum> </citerefentry> and <citerefentry> <refentrytitle>lxc.conf</refentrytitle> <manvolnum>5</manvolnum></citerefentry> manual pages and the ones they reference."
-msgstr ""
+msgstr "Разумеется, мы не описали всех доступных опций; более исчерпывающая информация может быть получена из страниц руководства <citerefentry> <refentrytitle>lxc</refentrytitle> <manvolnum>7</manvolnum> </citerefentry> и <citerefentry> <refentrytitle>lxc.conf</refentrytitle> <manvolnum>5</manvolnum></citerefentry> и тех, на которые они ссылаются."
 
 #. Tag: title
 #, no-c-format
 msgid "Virtualization with KVM"
-msgstr ""
+msgstr "Виртуализация с помощью KVM"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>KVM</primary>"
-msgstr ""
+msgstr "<primary>KVM</primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "KVM, which stands for <emphasis>Kernel-based Virtual Machine</emphasis>, is first and foremost a kernel module providing most of the infrastructure that can be used by a virtualizer, but it is not a virtualizer by itself. Actual control for the virtualization is handled by a QEMU-based application. Don't worry if this section mentions <command>qemu-*</command> commands: it's still about KVM."
-msgstr ""
+msgstr "KVM, что расшифровывается как <emphasis>Kernel-based Virtual Machine</emphasis>, является первым и главным модулем ядра, предоставляющим большую часть инфраструктуры, которая может использоваться виртуализатором, но не является самим виртуализатором. Собственно контроль за виртуализацией осуществляется приложением, основанным на QEMU. Не переживайте, если в этом разделе будут упоминаться команды <command>qemu-*</command>: речь всё равно о KVM."
 
 #. Tag: para
 #, no-c-format
 msgid "Unlike other virtualization systems, KVM was merged into the Linux kernel right from the start. Its developers chose to take advantage of the processor instruction sets dedicated to virtualization (Intel-VT and AMD-V), which keeps KVM lightweight, elegant and not resource-hungry. The counterpart, of course, is that KVM mainly works on i386 and amd64 processors, and only those recent enough to have these instruction sets. You can ensure that you have such a processor if you have “vmx” or “svm” in the CPU flags listed in <filename>/proc/cpuinfo</filename>."
-msgstr ""
+msgstr "В отличие от других систем виртуализации, KVM был влит в ядро Linux с самого начала. Его разработчики выбрали использование наборов инструкций процессора, выделенных для виртуализации (Intel-VT и AMD-V), благодаря чему KVM получился легковесным, элегантным и не прожорливым до ресурсов. Обратной стороной медали является, естественно, то, что KVM работает главным образом на процессорах i386 и amd64, и только достаточно недавних из них, имеющих эти наборы инструкций. Вы можете убедиться, такой ли у вас процессор, проверив наличие флага “vmx” или “svm” в файле <filename>/proc/cpuinfo</filename>."
 
 #. Tag: para
-#, no-c-format
+#, fuzzy, no-c-format
 msgid "With Red Hat actively supporting its development, KVM has more or less become the reference for Linux virtualization."
-msgstr ""
+msgstr "Поскольку его разработка активно поддерживается Red Hat, KVM выглядит достойным того, чтобы стать эталоном виртуализации в Linux."
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>virt-install</command></primary>"
-msgstr ""
+msgstr "<primary><command>virt-install</command></primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Unlike such tools as VirtualBox, KVM itself doesn't include any user-interface for creating and managing virtual machines. The <emphasis role=\"pkg\">qemu-kvm</emphasis> package only provides an executable able to start a virtual machine, as well as an initialization script that loads the appropriate kernel modules."
-msgstr ""
+msgstr "В отличие от таких инструментов, как VirtualBox, сам по себе KVM не включает никакого пользовательского интерфейса для создания виртуальных машин и управления ими. Пакет <emphasis role=\"pkg\">qemu-kvm</emphasis> предоставляет лишь исполняемый файл, способный запустить виртуальную машину, а также инициализационный скрипт, загружающий соответствующие модули ядра."
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>libvirt</primary>"
-msgstr ""
+msgstr "<primary>libvirt</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><emphasis role=\"pkg\">virt-manager</emphasis></primary>"
-msgstr ""
+msgstr "<primary><emphasis role=\"pkg\">virt-manager</emphasis></primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Fortunately, Red Hat also provides another set of tools to address that problem, by developing the <emphasis>libvirt</emphasis> library and the associated <emphasis>virtual machine manager</emphasis> tools. libvirt allows managing virtual machines in a uniform way, independently of the virtualization system involved behind the scenes (it currently supports QEMU, KVM, Xen, LXC, OpenVZ, VirtualBox, VMWare and UML). <command>virtual-manager</command> is a graphical interface that uses libvirt to create and manage virtual machines."
-msgstr ""
+msgstr "К счастью, Red Hat также предоставляет набор инструментов для решения этой проблемы, разрабатывая библиотеку <emphasis>libvirt</emphasis> и связанные с ней инструменты <emphasis>менеджера виртуальных машин</emphasis>. libvirt позволяет управлять виртуальными машинами унифицированным образом, независимо от стоящей за ней системой виртуализации (на данный момент она поддерживает QEMU, KVM, Xen, LXC, OpenVZ, VirtualBox, VMWare и UML). <command>virtual-manager</command> — это графический интерфейс, который использует libvirt для создания виртуальных машин и управления ими."
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><emphasis role=\"pkg\">virtinst</emphasis></primary>"
-msgstr ""
+msgstr "<primary><emphasis role=\"pkg\">virtinst</emphasis></primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "We first install the required packages, with <command>apt-get install qemu-kvm libvirt-bin virtinst virt-manager virt-viewer</command>. <emphasis role=\"pkg\">libvirt-bin</emphasis> provides the <command>libvirtd</command> daemon, which allows (potentially remote) management of the virtual machines running of the host, and starts the required VMs when the host boots. In addition, this package provides the <command>virsh</command> command-line tool, which allows controlling the <command>libvirtd</command>-managed machines."
-msgstr ""
+msgstr "Первым делом мы установим необходимые пакеты с помощью команды <command>apt-get install qemu-kvm libvirt-bin virtinst virt-manager virt-viewer</command>. <emphasis role=\"pkg\">libvirt-bin</emphasis> предоставляет демон <command>libvirtd</command>, позволяющий (возможно удалённо) управлять виртуальными машинами, запущенными на хосте, и запускает необходимые виртуальные машины при загрузке хоста. Кроме того, этот пакет предоставляет утилиту <command>virsh</command> с интерфейсом командной строки, которая позволяет контролировать виртуальные машины, управляемые <command>libvirt</command>."
 
 #. Tag: para
 #, no-c-format
 msgid "The <emphasis role=\"pkg\">virtinst</emphasis> package provides <command>virt-install</command>, which allows creating virtual machines from the command line. Finally, <emphasis role=\"pkg\">virt-viewer</emphasis> allows accessing a VM's graphical console."
-msgstr ""
+msgstr "Пакет <emphasis role=\"pkg\">virtinst</emphasis> предоставляет <command>virt-install</command>, которая позволяет создавать виртуальные машины из командной строки. Наконец, <emphasis role=\"pkg\">virt-viewer</emphasis> позволяет получать доступ к графической консоли виртуальной машины."
 
 #. Tag: para
 #, no-c-format
 msgid "Just as in Xen and LXC, the most frequent network configuration involves a bridge grouping the network interfaces of the virtual machines (see <xref linkend=\"sect.lxc.network\" />)."
-msgstr ""
+msgstr "Как и в случаях Xen и LXC, наиболее распространённая сетевая конфигурация включает мост, группирующий сетевые интерфейсы виртуальных машин (см. <xref linkend=\"sect.lxc.network\" />)."
 
 #. Tag: para
 #, no-c-format
 msgid "Alternatively, and in the default configuration provided by KVM, the virtual machine is assigned a private address (in the 192.168.122.0/24 range), and NAT is set up so that the VM can access the outside network."
-msgstr ""
+msgstr "В качестве альтернативы, в конфигурации KVM по умолчанию, виртуальной машине выдаётся адрес из частного диапазона (192.168.122.0/24), и NAT настраивается таким образом, чтобы виртуальная машина могла получить доступ во внешнюю сеть."
 
 #. Tag: para
 #, no-c-format
 msgid "The rest of this section assumes that the host has an <literal>eth0</literal> physical interface and a <literal>br0</literal> bridge, and that the former is connected to the latter."
-msgstr ""
+msgstr "Ниже в этом разделе считается, что на хост-системе имеются физический интерфейс <literal>eth0</literal> и мост <literal>br0</literal>, и что первый присоединён к последнему."
 
 #. Tag: title
 #, no-c-format
 msgid "Installation with <command>virt-install</command>"
-msgstr ""
+msgstr "Установка с помощью <command>virt-install</command>"
 
 #. Tag: para
 #, no-c-format
 msgid "Creating a virtual machine is very similar to installing a normal system, except that the virtual machine's characteristics are described in a seemingly endless command line."
-msgstr ""
+msgstr "Создание виртуальной машины очень похоже на установку обычной системы с той разницей, что характеристики виртуальной машины описываются в командной строке, кажущейся бесконечной."
 
 #. Tag: para
 #, no-c-format
 msgid "Practically speaking, this means we will use the Debian installer, by booting the virtual machine on a virtual DVD-ROM drive that maps to a Debian DVD image stored on the host system. The VM will export its graphical console over the VNC protocol (see <xref linkend=\"sect.bureau-distant\" /> for details), which will allow us to control the installation process."
-msgstr ""
+msgstr "С практической точки зрения это значит, что мы будем использовать установщик Debian, загружая виртуальную машину с виртуального привода DVD-ROM, соответствующего образу DVD Debian, хранящемуся на хост-системе. Виртуальная машина экспортирует свой графический интерфейс по протоколу VNC (см. подробности в <xref linkend=\"sect.bureau-distant\" />), что позволит нам контролировать процесс установки."
 
 #. Tag: para
 #, no-c-format
 msgid "We first need to tell libvirtd where to store the disk images, unless the default location (<filename>/var/lib/libvirt/images/</filename>) is fine."
-msgstr ""
+msgstr "Для начала потребуется сказать libvirtd, где хранить образы дисков, если только нас не устраивает расположение по умолчанию (<filename>/var/lib/libvirt/images/</filename>)."
 
 #. Tag: screen
 #, no-c-format
@@ -2075,7 +2090,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "Let us now start the installation process for the virtual machine, and have a closer look at <command>virt-install</command>'s most important options. This command registers the virtual machine and its parameters in libvirtd, then starts it so that its installation can proceed."
-msgstr ""
+msgstr "Давайте запустим процесс установки на виртуальной машине и поближе взглянем на наиболее важные опции <command>virt-install</command>. Эта команда регистрирует виртуальную машину и её параметры в libvirtd, а затем запускает её, чтобы приступить к установке."
 
 #. Tag: screen
 #, no-c-format
@@ -2104,52 +2119,52 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "The <literal>--connect</literal> option specifies the “hypervisor” to use. Its form is that of an URL containing a virtualization system (<literal>xen://</literal>, <literal>qemu://</literal>, <literal>lxc://</literal>, <literal>openvz://</literal>, <literal>vbox://</literal>, and so on) and the machine that should host the VM (this can be left empty in the case of the local host). In addition to that, and in the QEMU/KVM case, each user can manage virtual machines working with restricted permissions, and the URL path allows differentiating “system” machines (<literal>/system</literal>) from others (<literal>/session</literal>)."
-msgstr ""
+msgstr "Опция <literal>--connect</literal> указывает, какой “гипервизор” использовать. Он указывается в виде URL, содержащего систему виртуализации(<literal>xen://</literal>, <literal>qemu://</literal>, <literal>lxc://</literal>, <literal>openvz://</literal>, <literal>vbox://</literal> и т. п.) и машину, на которой должны размещаться виртуальные машины (это поле можно оставить пустым в случае локального узла). В дополнение к этому, в случае QEMU/KVM каждый пользователь может управлять виртуальными машинами, работающими с ограниченными правами, и путь URL позволяет дифференцировать “системные” машины (<literal>/system</literal>) от остальных (<literal>/session</literal>)."
 
 #. Tag: para
 #, no-c-format
 msgid "Since KVM is managed the same way as QEMU, the <literal>--virt-type kvm</literal> allows specifying the use of KVM even though the URL looks like QEMU."
-msgstr ""
+msgstr "Так как KVM управляется тем же образом, что и QEMU, в <literal>--virt-type kvm</literal> можно указать использование KVM, хотя URL и выглядит так же, как для QEMU."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>--name</literal> option defines a (unique) name for the virtual machine."
-msgstr ""
+msgstr "Опция <literal>--name</literal> задаёт (уникальное) имя виртуальной машины."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>--ram</literal> option allows specifying the amount of RAM (in MB) to allocate for the virtual machine."
-msgstr ""
+msgstr "Опция <literal>--ram</literal> позволяет указать объём ОЗУ (в МБ), который будет выделен виртуальной машине."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>--disk</literal> specifies the location of the image file that is to represent our virtual machine's hard disk; that file is created, unless present, with a size (in GB) specified by the <literal>size</literal> parameter. The <literal>format</literal> parameter allows choosing among several ways of storing the image file. The default format (<literal>raw</literal>) is a single file exactly matching the disk's size and contents. We picked a more advanced format here, that is specific to QEMU and allows starting with a small file that only grows when the virtual machine starts actually using space."
-msgstr ""
+msgstr "<literal>--disk</literal> служит для указания местоположения файла образа, который будет представляться жёстким диском виртуальной машины; этот файл создаётся, если только ещё не существует, а его размер (в ГБ) указывается параметром <literal>size</literal>. Параметр <literal>format</literal> позволяет выбрать из нескольких способов хранения образа файла. Формат по умолчанию (<literal>raw</literal>) — это отдельный файл, в точности соответствующий диску по размеру и содержимому. Мы выбрали здесь более передовой формат, специфичный для QEMU и позволяющий начать с небольшого файла, увеличивающегося только по мере того, как виртуальная машина использует пространство."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>--cdrom</literal> option is used to indicate where to find the optical disk to use for installation. The path can be either a local path for an ISO file, an URL where the file can be obtained, or the device file of a physical CD-ROM drive (i.e. <literal>/dev/cdrom</literal>)."
-msgstr ""
+msgstr "Опция <literal>--cdrom</literal> используется, чтобы указать, где искать оптический диск для установки. Путь может быть либо локальным путём к ISO-файлу, либо URL, по которому можно получить файл, либо файлом устройства физического привода CD-ROM (то есть <filename>/dev/cdrom</filename>)."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>--network</literal> specifies how the virtual network card integrates in the host's network configuration. The default behavior (which we explicitly forced in our example) is to integrate it into any pre-existing network bridge. If no such bridge exists, the virtual machine will only reach the physical network through NAT, so it gets an address in a private subnet range (192.168.122.0/24)."
-msgstr ""
+msgstr "С помощью опции <literal>--network</literal> указывается, каким образом виртуальная сетевая карта интегрируется в сетевую конфигурацию хоста. Поведением по умолчанию (которое мы задали явно в этом примере) является интеграция в любой существующий сетевой мост. Если ни одного моста нет, виртуальная машина сможет получить доступ к физической сети только через NAT, поэтому она получает адрес в подсети из частного диапазона (192.168.122.0/24)."
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>--vnc</literal> states that the graphical console should be made available using VNC. The default behavior for the associated VNC server is to only listen on the local interface; if the VNC client is to be run on a different host, establishing the connection will require setting up an SSH tunnel (see <xref linkend=\"sect.ssh-port-forwarding\" />). Alternatively, the <literal>--vnclisten=0.0.0.0</literal> can be used so that the VNC server is accessible from all interfaces; note that if you do that, you really should design your firewall accordingly."
-msgstr ""
+msgstr "<literal>--vnc</literal> означает, что подключение к графической консоли нужно сделать доступным через VNC. По умолчанию соответствующий VNC-сервер слушает только на локальном интерфейсе; если VNC-клиент должен запускаться на другой системе, для подключения потребуется использовать SSH-туннель (см. <xref linkend=\"sect.ssh-port-forwarding\" />). Как вариант, можно использовать опцию <literal>--vnclisten=0.0.0.0</literal>, чтобы VNC-сервер стал доступен на всех интерфейсах; заметьте, что если вы сделаете так, вам серьёзно стоит заняться настройкой межсетевого экрана."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>--os-type</literal> and <literal>--os-variant</literal> options allow optimizing a few parameters of the virtual machine, based on some of the known features of the operating system mentioned there."
-msgstr ""
+msgstr "Опции <literal>--os-type</literal> и <literal>--os-variant</literal> позволяют оптимизировать некоторые параметры виртуальной машины, исходя из известных особенностей указанной операционной системы."
 
 #. Tag: para
 #, no-c-format
 msgid "At this point, the virtual machine is running, and we need to connect to the graphical console to proceed with the installation process. If the previous operation was run from a graphical desktop environment, this connection should be automatically started. If not, or if we operate remotely, <command>virt-viewer</command> can be run from any graphical environment to open the graphical console (note that the root password of the remote host is asked twice because the operation requires 2 SSH connections):"
-msgstr ""
+msgstr "Сейчас виртуальная машина запущена, и нам надо подключиться к графической консоли, чтобы произвести установку. Если предыдущий шаг выполнялся в графическом окружении, это подключение установится автоматически. В противном случае, или же при удалённой работе, чтобы открыть графическую консоль, можно запустить <command>virt-viewer</command> в любом графическом окружении (пароль root на удалённой машине запрашивается дважды, поскольку для работы требуется два SSH-соединения):"
 
 #. Tag: screen
 #, no-c-format
@@ -2162,22 +2177,22 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "When the installation process ends, the virtual machine is restarted, now ready for use."
-msgstr ""
+msgstr "Когда процесс установки завершится, виртуальная машина перезагрузится и будет готова к работе."
 
 #. Tag: title
 #, no-c-format
 msgid "Managing Machines with <command>virsh</command>"
-msgstr ""
+msgstr "Управление машинами с помощью <command>virsh</command>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>virsh</command></primary>"
-msgstr ""
+msgstr "<primary><command>virsh</command></primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Now that the installation is done, let us see how to handle the available virtual machines. The first thing to try is to ask <command>libvirtd</command> for the list of the virtual machines it manages:"
-msgstr ""
+msgstr "Теперь, когда установка выполнена, давайте посмотрим, как обращаться с имеющимися виртуальными машинами. Первым делом попробуем попросить у <command>libvirtd</command> список управляемых им виртуальных машин:"
 
 #. Tag: screen
 #, no-c-format
@@ -2192,7 +2207,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "Let's start our test virtual machine:"
-msgstr ""
+msgstr "Давайте запустим нашу тестовую виртуальную машину:"
 
 #. Tag: screen
 #, no-c-format
@@ -2204,7 +2219,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "We can now get the connection instructions for the graphical console (the returned VNC display can be given as parameter to <command>vncviewer</command>):"
-msgstr ""
+msgstr "Теперь можно получить инструкции для подключения к графической консоли (возвращённый VNC-дисплей можно передать в качестве параметра команде <command>vncviewer</command>):"
 
 #. Tag: screen
 #, no-c-format
@@ -2216,47 +2231,47 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "Other available <command>virsh</command> subcommands include:"
-msgstr ""
+msgstr "В число прочих подкоманд <command>virsh</command> входят:"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>reboot</literal> to restart a virtual machine;"
-msgstr ""
+msgstr "<literal>reboot</literal> для перезапуска виртуальной машины;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>shutdown</literal> to trigger a clean shutdown;"
-msgstr ""
+msgstr "<literal>shutdown</literal> для корректного завершения работы;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>destroy</literal>, to stop it brutally;"
-msgstr ""
+msgstr "<literal>destroy</literal> для грубого прерывания работы;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>suspend</literal> to pause it;"
-msgstr ""
+msgstr "<literal>suspend</literal> для временной приостановки;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>resume</literal> to unpause it;"
-msgstr ""
+msgstr "<literal>resume</literal> для продолжения работы после приостановки;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>autostart</literal> to enable (or disable, with the <literal>--disable</literal> option) starting the virtual machine automatically when the host starts;"
-msgstr ""
+msgstr "<literal>autostart</literal> для включения (или для выключения, с опцией <literal>--disable</literal>) автоматического запуска виртуальной машины при запуске хост-системы;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>undefine</literal> to remove all traces of the virtual machine from <command>libvirtd</command>."
-msgstr ""
+msgstr "<literal>undefine</literal> для удаления всех следов виртуальной машины из <command>libvirtd</command>."
 
 #. Tag: para
 #, no-c-format
 msgid "All these subcommands take a virtual machine identifier as a parameter."
-msgstr ""
+msgstr "Все эти подкоманды принимают идентификатор виртуальной машины в качестве параметра."
 
 #. Tag: title
 #, no-c-format
@@ -2360,7 +2375,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "Automated Installation"
-msgstr ""
+msgstr "Автоматизированная установка"
 
 #. Tag: indexterm
 #, no-c-format
