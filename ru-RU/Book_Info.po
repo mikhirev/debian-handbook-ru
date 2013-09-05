@@ -8,7 +8,7 @@ msgstr ""
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
-"Language: \n"
+"Language: Russian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgid "The Debian Administrator's Handbook"
 msgstr "Настольная книга администратора Debian"
 
 #. Tag: subtitle
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Debian Wheezy from Discovery to Mastery"
 msgstr "Debian Wheezy: от первого знакомства к мастерству"
 
@@ -31,17 +31,17 @@ msgstr "Debian"
 #. Tag: para
 #, no-c-format
 msgid "A reference book presenting the Debian distribution, from initial installation to configuration of services."
-msgstr "Книга-справочнмк, повествующая о дистрибутиве Debian от первичной установки до настройки сервисов."
+msgstr "Книга-справочник, повествующая о дистрибутиве Debian от первичной установки до настройки сервисов."
 
 #. Tag: para
 #, no-c-format
 msgid "ISBN: to-be-assigned (paperback)"
-msgstr ""
+msgstr "ISBN: не присвоен (бумажная версия)"
 
 #. Tag: para
 #, no-c-format
 msgid "ISBN: to-be-assigned (ebook)"
-msgstr ""
+msgstr "ISBN: не присвоен (электронная книга)"
 
 #. Tag: para
 #, no-c-format
