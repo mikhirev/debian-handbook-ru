@@ -1,5 +1,5 @@
 #
-# Alexander Naumov <posix.ru@gmail.com>, 2012.
+# Alexander Naumov <posix.ru@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
@@ -1060,57 +1060,57 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "Structure of a Source Package"
-msgstr ""
+msgstr "Структура пакета с исходниками"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>source package</secondary>"
-msgstr ""
+msgstr "<primary>пакет</primary><secondary>пакет с исходниками</secondary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary>source</primary><secondary>package</secondary>"
-msgstr "<primary>пакет</primary><secondary>двоичный пакет</secondary>"
+msgstr "<primary>исходники</primary><secondary>пакет</secondary>"
 
 #. Tag: title
 #, no-c-format
 msgid "Format"
-msgstr ""
+msgstr "Формат"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>DSC file</primary>"
-msgstr ""
+msgstr "<primary>DSC файл</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><filename>diff.gz</filename> file</primary>"
-msgstr ""
+msgstr "<primary><filename>diff.gz</filename> файл</primary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary><filename>debian.tar.gz</filename> file</primary>"
-msgstr "<primary><filename>control</filename></primary>"
+msgstr "<primary><filename>debian.tar.gz</filename> файл</primary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary><filename>orig.tar.gz</filename> file</primary>"
-msgstr "<primary><filename>control</filename></primary>"
+msgstr "<primary><filename>orig.tar.gz</filename> файл</primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "A source package is usually comprised of three files, a <filename>.dsc</filename>, a <filename>.orig.tar.gz</filename>, and a <filename>.debian.tar.gz</filename> (or <filename>.diff.gz</filename>). They allow creation of binary packages (<filename>.deb</filename> files described above) from the source code files of the program, which are written in a programming language."
-msgstr ""
+msgstr "Пакет с исходниками, как правило, состоит из трех файлов: <filename>.dsc</filename>, <filename>.orig.tar.gz</filename> и <filename>debian.tar.gz</filename> (или <filename>.diff.gz</filename>). Используя их, а также исходные коды программ на том или ином языке программирования, можно собрать и бинарные пакеты (файлы <filename>.deb</filename> описаны выше)."
 
 #. Tag: para
 #, no-c-format
 msgid "The <filename>.dsc</filename> (Debian Source Control) file is a short text file containing an RFC 2822 header (just like the <filename>control</filename> file studied in <xref linkend=\"sect.control\" />) which describes the source package and indicates which other files are part thereof. It is signed by its maintainer, which guarantees authenticity. See <xref linkend=\"sect.package-authentication\" /> for further details on this subject."
-msgstr ""
+msgstr "Файл <filename>.dsc</filename> (Debian Source Control) представлят из себя текстовый файл с заголовком, описанным в RFC 2822 (точно так же, как <filename>control</filename> файл, описание которого Вы найдете в <xref linkend=\"sect.control\" />), где описывается сам пакет, а также указываются файлы, относящиеся к нему. Там так же находится информация о том, кто поддерживает и занмается этим пакетом. См. <xref linkend=\"sect.package-authentication\" /> для получения дополнительной информации по этому вопросу."
 
 #. Tag: title
 #, no-c-format
 msgid "A <filename>.dsc</filename> file"
-msgstr ""
+msgstr "<filename>.dsc</filename> файл"
 
 #. Tag: programlisting
 #, no-c-format
@@ -1154,66 +1154,104 @@ msgid ""
 "=qnbh\n"
 "-----END PGP SIGNATURE-----\n"
 msgstr ""
+"\n"
+"-----BEGIN PGP SIGNED MESSAGE-----\n"
+"Hash: SHA256\n"
+"\n"
+"Format: 3.0 (quilt)\n"
+"Source: zim\n"
+"Binary: zim\n"
+"Architecture: all\n"
+"Version: 0.48-1\n"
+"Maintainer: Emfox Zhou &lt;emfox@debian.org&gt;\n"
+"Uploaders: Raphaël Hertzog &lt;hertzog@debian.org&gt;\n"
+"Homepage: http://zim-wiki.org\n"
+"Standards-Version: 3.9.0\n"
+"Vcs-Browser: http://svn.debian.org/wsvn/collab-maint/deb-maint/zim/trunk?op=log\n"
+"Vcs-Svn: svn://svn.debian.org/collab-maint/deb-maint/zim/trunk\n"
+"Build-Depends: debhelper (&gt;= 7.4.12), python-support (&gt;= 0.8), xdg-utils, python (&gt;= 2.5), libgtk2.0-0 (&gt;= 2.6), python-gtk2, python-xdg, python-simplejson | python (&gt;= 2.6)\n"
+"Checksums-Sha1: \n"
+" bd84fa5104de5ed85a49723d26b350856de93217 966899 zim_0.48.orig.tar.gz\n"
+" 352111ff372a20579664416c9abd4970839835b3 9615 zim_0.48-1.debian.tar.gz\n"
+"Checksums-Sha256: \n"
+" 77d8df7dc89b233fdc3aab1a8ad959c6888881ae160770f50bf880a56e02f895 966899 zim_0.48.orig.tar.gz\n"
+" 0fceab5d3b099075cd38c225fa4002d893c1cdf4bbcc51d1391a34248e1e1a22 9615 zim_0.48-1.debian.tar.gz\n"
+"Files: \n"
+" 88cfc18c0c7339528d5f5f463647bb5f 966899 zim_0.48.orig.tar.gz\n"
+" 608b6e74aa14252dfc6236ab184bdb0c 9615 zim_0.48-1.debian.tar.gz\n"
+"\n"
+"-----BEGIN PGP SIGNATURE-----\n"
+"Version: GnuPG v1.4.10 (GNU/Linux)\n"
+"Comment: Signed by Raphael Hertzog\n"
+"\n"
+"iQEcBAEBCAAGBQJMSUAfAAoJEAOIHavrwpq5qjUIAKmM8p86GcHYTxMmKENoBUoW\n"
+"UPi5R7DzrLMbFrUXKgXWLvEKQTXpmkJhh2aSWq2iY+5piBSHwMiITfaBTpdTRvzU\n"
+"5nT/n9MlF8sJFESet/NgZaMPFDzWUbIy5aYbuG1TXmn/7XiDrBaQGiVqKkVLPrqc\n"
+"yWhsotn3JNKIjbPDW/DjImYyKD5RZpXrbVjuIgDT1E6yxtNYwUyBlK0cx/GITNep\n"
+"uV48hsT8cj0paqVXl5+P9Ww8XIE3clxNpE/45/tvKvkqGOeysc6OPAqsIw6HYFY9\n"
+"0EnvMTfMpeQOA68ZqsNpUjomv5r/EGwdCbAWo5iJDsZzXQ1Feh6iSNrjv3yeRzg=\n"
+"=qnbh\n"
+"-----END PGP SIGNATURE-----\n"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><literal>Build-Depends</literal>, header field</primary>"
-msgstr ""
+msgstr "<primary><literal>Зависимости</literal>, поле заголовка</primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Note that the source package also has dependencies (<literal>Build-Depends</literal>) completely distinct from those of binary packages, since they indicate tools required to compile the software in question and construct its binary package."
-msgstr ""
+msgstr "Обратите внимание, что пакет с исходниками имеет зависимости (<literal>Build-Depends</literal>), кардинально отличающиеся от зависимостей для бинарных пакетов, поскольку включают в себя компоненты, необходимые для компиляции и сборки бинарного пакета."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CAUTION</emphasis> Distinct namespaces"
-msgstr ""
+msgstr "<emphasis>ВНИМАНИЕ</emphasis> Отдельное пространство имен"
 
 #. Tag: para
 #, no-c-format
 msgid "It is important to note here that there is no required correspondence between the name of the source package and that of the binary package(s) that it generates. It is easy enough to understand if you know that each source package may generate several binary packages. This is why the <filename>.dsc</filename> file has the <literal>Source</literal> and <literal>Binary</literal> fields to explicitly name the source package and store the list of binary packages that it generates."
-msgstr ""
+msgstr "Важно отметить, что имена пакета с исходниками и бинарного пакета, который он генерирует, могут отличаться. Это не трудно запомнить, если Вы знаете, что исходный код при компиляции и сборке может иметь несколько целей. Вот почему <filename>.dsc</filename> файл имеет поля <literal>Source</literal> и <literal>Binary</literal>, где явно указываются имена пакета с исходниками и бинарного пакета, или пакетов, которые он сгенерирует."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CULTURE</emphasis> Why divide into several packages"
-msgstr ""
+msgstr "<emphasis>КУЛЬТУРА</emphasis> Зачем разделять на несколько пакетов"
 
 #. Tag: para
 #, no-c-format
 msgid "Quite frequently, a source package (for a given software) can generate several binary packages. The split is justified by the possibility to use (parts of) the software in different contexts. Consider a shared library, it may be installed to make an application work (for example, <emphasis role=\"pkg\">libc6</emphasis>), or it can be installed to develop a new program (<emphasis role=\"pkg\">libc6-dev</emphasis> will then be the correct package). We find the same logic for client/server services where we want to install the server part on one machine and the client part on others (this is the case, for example, of <emphasis role=\"pkg\">openssh-server</emphasis> and <emphasis role=\"pkg\">openssh-client</emphasis>)."
-msgstr ""
+msgstr "Довольно часто при помощи исходного пакета (того или иного программного обеспечения) можно сгенерировать несколько бинарных пакетов. Смысл разделения заключается в возможности использовать части программного обеспечения в различных контекстах. Рассмотрим динамическую библиотеку, она может быть установлена для работы того или иного приложения (например, <emphasis role=\"pkg\">libc6</emphasis>), или она может быть установлена для разработки новой программы (в этом случае нам понадобится <emphasis role=\"pkg\">libc6-dev</emphasis>). Та же логика используется и для клиент-серверных приложений; например мы хотим установить серверную часть на одной машине, а клиентскую на нескольких других (типичным примером может служить <emphasis role=\"pkg\">openssh-server</emphasis> и <emphasis role=\"pkg\">openssh-client</emphasis>)."
 
 #. Tag: para
 #, no-c-format
 msgid "Just as frequently, the documentation is provided in a dedicated package: the user may install it independently from the software, and may at any time choose to remove it to save disk space. Additionally, this also saves disk space on the Debian mirrors, since the documentation package will be shared amongst all of the architectures (instead of having the documentation duplicated in the packages for each architecture)."
-msgstr ""
+msgstr "Довольно часто документация предоставляется в отдельном пакете: пользователь может установить этот пакет, если она ему нужна, или удалить (например, для экономии места на диске). Кроме того, это также поможет сэкономить место на сервере с репозиторием, так как пакет с документацией будет собран один раз для всех архитектур (вместо того, чтобы дублировать его для каждой архитектуры)."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>PERSPECTIVE</emphasis> Different source package formats"
-msgstr ""
+msgstr "<emphasis>ПЕРСПЕКТИВА</emphasis> Различные форматы исходных пакетов"
 
 #. Tag: para
 #, no-c-format
 msgid "Originally there was only one source package format. This is the <literal>1.0</literal> format, which associates an <filename>.orig.tar.gz</filename> archive to a <filename>.diff.gz</filename> “debianization” patch (there is also a variant, consisting of a single <filename>.tar.gz</filename> archive, which is automatically used if no <filename>.orig.tar.gz</filename> is available)."
-msgstr ""
+msgstr "Первоначально был только один формат для пакетов с исходниками. Это формат <literal>1.0</literal>, который связывает <filename>.orig.tar.gz</filename> архив с патчем из <filename>.diff.gz</filename> (есть также вариант, когда автоматически используется единственный архив <filename>.tar.gz</filename>, если <filename>.orig.tar.gz</filename> не доступен)."
 
 #. Tag: para
 #, no-c-format
 msgid "Since Debian <emphasis role=\"distribution\">Squeeze</emphasis>, Debian developers have the option to use new formats that correct many problems of the historical format. Format <literal>3.0 (quilt)</literal> can combine multiple upstream archives in the same source package: in addition to the usual <filename>.orig.tar.gz</filename>, supplementary <filename>.orig-<replaceable>component</replaceable>.tar.gz</filename> archives can be included. This is useful with software that are distributed in several upstream components but for which a single source package is desired. These archives can also be compressed with <command>bzip2</command> or <command>xz</command> rather than <command>gzip</command> (<command>lzma</command> is also supported by <command>dpkg-source</command> but not accepted into the official archive), which saves disk space and network resources. Finally, the monolithic patch, <filename>.diff.gz</filename> is replaced by a <filename>.debian.tar.gz</filename> archive containing the compiling instructions and a set of upstream patches contributed by the package maintainer. These last are recorded in a format compatible with <command>quilt</command> — a tool that facilitates the management of a series of patches."
-msgstr ""
+msgstr "Начиная с Debian <emphasis role=\"distribution\">Squeeze</emphasis>, разработчики Debian имеют возможность использовать новые форматы, в которых исправленны многие проблемы. Формат <literal>3.0 (quilt)</literal> позволяет объединить несколько архивов при сборке пакета: в дополнение к обычному <filename>.orig.tar.gz</filename>, могут быть включены дополнительные <filename>.orig-<replaceable>имя_компонента</replaceable>.tar.gz</filename> архивы. Это полезно в случаях, когда программне обеспечение распределенно на несколько компонентов, но для которого нужно собрать один исходный пакет. Эти архивы можно сжимать при помощи <command>bzip2</command> или <command>xz</command>, но не <command>gzip</command> (<command>lzma</command> также поддерживается <command>dpkg-source</command>, но не принимаются в официальном архиве), что позволяет экономить место на диске и сетевых ресурсах. Наконец, вместо монолитного <filename>.diff.gz</filename> используется архив <filename>.debian.tar.gz</filename>, содержащий инструкции и набор патчей, предоставляемых сопровождающим (maintainer) пакета. Патчи должны быть в формате, совместимом с <command>quilt</command> - инструментом для работы с цепочкой патчей."
 
 #. Tag: para
 #, no-c-format
 msgid "The <filename>.orig.tar.gz</filename> file is an archive containing the source code as provided by the original developer. Debian package maintainers are asked to not modify this archive in order to be able to easily check the origin and integrity of the file (by simple comparison with a checksum) and to respect the wishes of some authors."
-msgstr ""
+msgstr "Архив <filename>.orig.tar.gz</filename> содержит исходный код, как это предусмотрено разработчиком. Сопровождающие пакетов (maintainers) Debian просят не изменять этот архив для того, чтобы иметь возможность легко проверить его подлинность (путем простого сравнения контрольной суммы), а также уважать желания некоторых авторов."
 
 #. Tag: para
 #, no-c-format
 msgid "The <filename>.debian.tar.gz</filename> contains all of the modifications made by the Debian maintainer, especially the addition of a <filename>debian</filename> directory containing the instructions to execute to construct a Debian package."
-msgstr ""
+msgstr "Архив <filename>.debian.tar.gz</filename> содержит все изменения, произведенные сопровождающим пакета, особенно добавление <filename>debian</filename> каталога, который содержит скрипты для сборки пакета."
 
 #. Tag: title
 #, no-c-format
@@ -1253,7 +1291,7 @@ msgstr "<computeroutput>$ </computeroutput><userinput>dpkg-source -x package_0.7
 #. Tag: para
 #, no-c-format
 msgid "You can also use <command>apt-get</command> to download a source package and unpack it right away. It requires that the appropriate <emphasis>deb-src</emphasis> lines be present in the <filename>/etc/apt/sources.list</filename> file, however (for further details, see <xref linkend=\"sect.apt-sources.list\" />). These are used to list the “sources” of source packages (meaning the servers on which a group of source packages are hosted)."
-msgstr ""
+msgstr "Вы также можете использовать <command>apt-get</command> для загрузки пакета с исходными кодами и его последующей распаковки. Не забудьте только, чтобы файл <filename>/etc/apt/sources.list</filename> содержал соответствующие <emphasis>deb-src</emphasis> строки с адресами репозиториев (подробнее см. <xref linkend=\"sect.apt-sources.list\" />). Они используются для поиска “источников” пакетов, содержащих исходные коды (подразумеваются сервера, на которых находятся репозитории)."
 
 #. Tag: screen
 #, no-c-format
@@ -1268,12 +1306,12 @@ msgstr "Использование в Debian"
 #. Tag: para
 #, no-c-format
 msgid "The source package is the foundation of everything in Debian. All Debian packages come from a source package, and each modification in a Debian package is the consequence of a modification made to the source package. The Debian maintainers work with the source package, knowing, however, the consequences of their actions on the binary packages. The fruits of their labors are thus found in the source packages available from Debian: you can easily go back to them and everything stems from them."
-msgstr ""
+msgstr "Пакеты с исходными кодами являютмя основой всего в системе Debian. При помощи их собраны все остальные Debian пакеты, и любое изменение в бинарных пакетах - следствие изменений, внесенных в исходный пакет. Те, кто поддерживает Debian пакеты, работают только с пакетами, содержащими исходники, потому что изменения в них отражаются и на работе бинарных пакетов. "
 
 #. Tag: para
 #, no-c-format
 msgid "When a new version of a package (source package and one or more binary packages) arrives on the Debian server, the source package is the most important. Indeed, it will then be used by a network of machines of different architectures for compilation on the various architectures supported by Debian. The fact that the developer also sends one or more binary packages for a given architecture (usually i386 or amd64) is relatively unimportant, since these could just as well have been automatically generated."
-msgstr ""
+msgstr "При появлении новой версии пакета (пакета с исходниками и одного или нескольких бинарных пакетов) на сервере Debian, наиболее важным является исходный пакет. Ведь именно исходные коды, которые он содержит, будут использоваться для компиляции и сборки для различных архитектур, поддерживаемых Debian. Тот факт, что разработчик посылает один или несколько бинарных пакетов для той или иной архитектуры (как правило, это i386 и/или amd64) не имеет столь большого значения, поскольку они и так могут быть сгенерированны при помощи исходного пакета."
 
 #. Tag: title
 #, no-c-format
@@ -1313,7 +1351,7 @@ msgstr "<primary>пакет</primary><secondary>установка</secondary>"
 #. Tag: para
 #, no-c-format
 msgid "<command>dpkg</command> is, above all, the tool for installing an already available Debian package (because it does not download anything). To do this, we use its <literal>-i</literal> or <literal>--install</literal> option."
-msgstr ""
+msgstr "<command>dpkg</command> это инструмент главным образом для установки доступных в репозитории пакетов. Чтобы установить пакет, используйте опцию <literal>-i</literal> или <literal>--install</literal>."
 
 #. Tag: title
 #, no-c-format
@@ -1342,15 +1380,15 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "We can see the different steps performed by <command>dpkg</command>; we know, thus, at what point any error may have occurred. The installation can also be effected in two stages: first unpacking, then configuration. <command>apt-get</command> takes advantage of this, limiting the number of calls to <command>dpkg</command> (since each call is costly, due to loading of the database in memory, especially the list of already installed files)."
-msgstr ""
+msgstr "Мы можем увидеть каждый этап, выполняемый <command>dpkg</command>; это может помочь определить причину проблемы, если такая возникнет. Установку можно разделить на два этапа: распаковка и конфигурация. В этом случае <command>apt-get</command> делает меньше обращений к <command>dpkg</command> (каждый такой запрос, как Вы понимаете, стоит процесорного времени из-за необходимости загрузки базы данных в память, особенно списка установленных файлов)."
 
 #. Tag: title
 #, no-c-format
 msgid "Separate unpacking and configuration"
-msgstr ""
+msgstr "Раздельная распаковка и конфигурация"
 
 #. Tag: screen
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "\n"
 "<computeroutput># </computeroutput><userinput>dpkg --unpack man-db_2.6.2-1_amd64.deb</userinput>\n"
@@ -1362,26 +1400,23 @@ msgid ""
 "Building database of manual pages ...</computeroutput>\n"
 msgstr ""
 "\n"
-"<computeroutput># </computeroutput><userinput>dpkg --unpack man-db_2.5.7-4_i386.deb</userinput>\n"
-"<computeroutput>(Reading database... 284247 files already installed.)\n"
-"Preparing replacement of man-db 2.5.7-3 (using .../man-db_2.5.7-4_i386.deb) ...\n"
-"Unpacking the man-db update...\n"
-"Processing triggers for “doc-base”...\n"
-"Treatment of a modified documentation file(s) \n"
-"Recording documents with scrollkeeper ... \n"
+"<computeroutput># </computeroutput><userinput>dpkg --unpack man-db_2.6.2-1_amd64.deb</userinput>\n"
+"<computeroutput>(Reading database ... 96357 files and directories currently installed.)\n"
+"Preparing to replace man-db 2.6.2-1 (using man-db_2.6.2-1_amd64.deb) ...\n"
+"Unpacking replacement man-db ...\n"
 "# </computeroutput><userinput> dpkg --configure man-db</userinput>\n"
-"<computeroutput>Configuring man-db (2.5.7-4) ...\n"
-"Updating database of manual pages ...</computeroutput>\n"
+"<computeroutput>Setting up man-db (2.6.2-1) ...\n"
+"Building database of manual pages ...</computeroutput>\n"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>unpacking</secondary>"
-msgstr ""
+msgstr "<primary>пакет</primary><secondary>распаковка</secondary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary>unpacking</primary><secondary>binary package</secondary>"
-msgstr "<primary>пакет</primary><secondary>двоичный пакет</secondary>"
+msgstr "<primary>распаковка</primary><secondary>двоичный пакет</secondary>"
 
 #. Tag: para
 #, no-c-format
@@ -1389,7 +1424,7 @@ msgid "Sometimes <command>dpkg</command> will fail to install a package and retu
 msgstr ""
 
 #. Tag: screen
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "\n"
 "<computeroutput>Unpacking libgdm (from .../libgdm_3.8.3-2_amd64.deb) ...\n"
@@ -1397,9 +1432,9 @@ msgid ""
 " trying to overwrite '/usr/bin/gdmflexiserver', which is also in package gdm3 3.4.1-9</computeroutput>\n"
 msgstr ""
 "\n"
-"<computeroutput>Unpacking libisc52 (from .../libisc52_1%3a9.6.ESV.R1+dfsg-0+lenny2_amd64.deb) ...\n"
-"dpkg : error processing /var/cache/apt/archives/libisc52_1%3a9.6.ESV.R1+dfsg-0+lenny2_amd64.deb (--unpack) :\n"
-" trying to overwrite \"/usr/lib/libisc.so.50\", which is also in package libisc50 1:9.6.1.dfsg.P1-3</computeroutput>\n"
+"<computeroutput>Unpacking libgdm (from .../libgdm_3.8.3-2_amd64.deb) ...\n"
+"dpkg: error processing /var/cache/apt/archives/libgdm_3.8.3-2_amd64.deb (--unpack):\n"
+" trying to overwrite '/usr/bin/gdmflexiserver', which is also in package gdm3 3.4.1-9</computeroutput>\n"
 
 #. Tag: para
 #, no-c-format
@@ -1535,9 +1570,9 @@ msgid "Most options are available in a “long” version (one or more relevant 
 msgstr "Для большинста опций существуют “длинные” (один или несколько слов, перед двойным тире) и “короткие” версии (часто первая буква “длинной” версии после одного тире). Это соглашение так распространено, что уже является стандартом POSIX."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Before concluding this section, we will study <command>dpkg</command> options that query the internal database in order to obtain information. Giving first the long options and then corresponding short options (that will evidently take the same possible arguments) we cite <literal>--listfiles <replaceable>package</replaceable></literal> (or <literal>-L</literal>), which lists the files installed by this package; <literal>--search <replaceable>file</replaceable></literal> (or <literal>-S</literal>), which finds the package(s) containing the file; <literal>--status <replaceable>package</replaceable></literal> (or <literal>-s</literal>), which displays the headers of an installed package; <literal>--list</literal> (or <literal>-l</literal>), which displays the list of packages known to the system and their installation status; <literal>--contents <replaceable>file.deb</replaceable></literal> (or <literal>-c</literal>), which lists the files in the Debian package specified; <literal>--info<replaceable> file.deb </replaceable></literal> (or <literal>-I</literal>), which displays the headers of this Debian package."
-msgstr "Прежде чем завершить этот раздел, отметим, что, при использовании некоторых опций, <command>dpkg</command> может обращаться к пакетной базе данных для получения различной информации об установленных пакетах. Используя для этого длинные и короткие параметры (которые, в свою очередь, ожидают одинаковые аргументы) мы можем получить, к примеру, список файлов пакета <literal>--listfiles <replaceable>пакет</replaceable></literal> (или <literal>-L</literal>); <literal>--search <replaceable>файл</replaceable></literal>  (или <literal>-S</literal>) для поиска пакета, к которому относится этот файл; <literal>--status <replaceable>пакет</replaceable></literal> (or <literal>-s</literal>), который выводит информацию о том или ином установленном пакете; <literal>--list</literal> (или <literal>-l</literal>), который покажет список пакетов, известных системе и их статус; <literal>--contents <replaceable>file.deb</replaceable></literal> (или <literal>-c</literal>), который покажет список файлов в этом пакете; <literal>--info<replaceable> file.deb </replaceable></literal> (или <literal>-I</literal>), который покажет информацию о Debian-пакете."
+msgstr "Прежде чем завершить этот раздел, отметим, что, при использовании некоторых опций, <command>dpkg</command> может обращаться к пакетной базе данных для получения различной информации об установленных пакетах. Используя для этого длинные и короткие параметры (которые, в свою очередь, ожидают одинаковые аргументы) мы можем получить, к примеру, список файлов пакета <literal>--listfiles <replaceable>имя_пакета</replaceable></literal> (или <literal>-L</literal>); <literal>--search <replaceable>файл</replaceable></literal> (или <literal>-S</literal>) для поиска пакета, к которому относится этот файл; <literal>--status <replaceable>имя_пакета</replaceable></literal> (or <literal>-s</literal>), который выводит информацию о том или ином установленном пакете; <literal>--list</literal> (или <literal>-l</literal>), который покажет список пакетов, известных системе и их статус; <literal>--contents <replaceable>file.deb</replaceable></literal> (или <literal>-c</literal>), который покажет список файлов в этом пакете; <literal>--info<replaceable> file.deb </replaceable></literal> (или <literal>-I</literal>), который покажет информацию о Debian-пакете."
 
 #. Tag: title
 #, no-c-format
@@ -1545,7 +1580,7 @@ msgid "Various queries with <command>dpkg</command>"
 msgstr "Получение информации с помощью <command>dpkg</command>"
 
 #. Tag: screen
-#, fuzzy, no-c-format
+#, no-c-format
 msgid ""
 "\n"
 "<computeroutput>$ </computeroutput><userinput>dpkg -L base-passwd</userinput>\n"
@@ -1704,12 +1739,14 @@ msgstr ""
 "Status: install ok installed\n"
 "Priority: required\n"
 "Section: utils\n"
-"Installed-Size: 12188\n"
+"Installed-Size: 13822\n"
 "Maintainer: Michael Stone &lt;mstone@debian.org&gt;\n"
-"Architecture: i386\n"
-"Version: 8.5-1\n"
+"Architecture: amd64\n"
+"Multi-Arch: foreign\n"
+"Version: 8.13-3.5\n"
 "Replaces: mktemp, timeout\n"
-"Pre-Depends: libacl1 (&gt;= 2.2.11-1), libattr1 (&gt;= 2.4.41-1), libc6 (&gt;= 2.6), libselinux1 (&gt;= 1.32)\n"
+"Depends: dpkg (&gt;= 1.15.4) | install-info\n"
+"Pre-Depends: libacl1 (&gt;= 2.2.51-8), libattr1 (&gt;= 1:2.4.46-8), libc6 (&gt;= 2.7), libselinux1 (&gt;= 1.32)\n"
 "Conflicts: timeout\n"
 "Description: GNU core utilities\n"
 " This package contains the basic file, shell and text manipulation\n"
@@ -1725,64 +1762,55 @@ msgstr ""
 " timeout touch tr true truncate tsort tty uname unexpand uniq unlink\n"
 " users vdir wc who whoami yes\n"
 "Homepage: http://gnu.org/software/coreutils\n"
-"$ </computeroutput><userinput>dpkg -l 'b*' | head</userinput>\n"
+"$ </computeroutput><userinput>dpkg -l 'b*'</userinput>\n"
 "<computeroutput>Desired=Unknown/Install/Remove/Purge/Hold\n"
 "| Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend\n"
 "|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)\n"
-"||/ Name                   Version    Description\n"
-"+++-===================-==========-============================================\n"
-"un  backupninja         &lt;none&gt;    (no description available)\n"
-"un  base                &lt;none&gt;    (no description available)\n"
-"un  base-config         &lt;none&gt;    (no description available)\n"
-"ii  base-files          4          Debian base system miscellaneous files\n"
-"ii  base-passwd         3.5.11     Debian base system master password and group\n"
-"$ </computeroutput><userinput>dpkg -c /var/cache/apt/archives/iceweasel_2.0.0.18-0etch1_i386.deb</userinput>\n"
-"<computeroutput>\n"
-"drwxr-xr-x root/root         0 2008-11-23 23:18 ./\n"
-"drwxr-xr-x root/root         0 2008-11-23 23:16 ./etc/\n"
-"drwxr-xr-x root/root         0 2008-11-23 23:18 ./etc/iceweasel/\n"
-"drwxr-xr-x root/root         0 2008-11-23 23:18 ./etc/iceweasel/profile/\n"
-"-rw-r--r-- root/root      7138 2006-08-19 08:04 ./etc/iceweasel/profile/bookmarks.html\n"
-"-rw-r--r-- root/root       153 2006-09-14 19:13 ./etc/iceweasel/profile/localstore.rdf\n"
-"-rw-r--r-- root/root      3287 2005-02-01 18:36 ./etc/iceweasel/profile/search.rdf\n"
-"-rw-r--r-- root/root       287 2004-11-30 22:26 ./etc/iceweasel/profile/mimeTypes.rdf\n"
-"drwxr-xr-x root/root         0 2008-11-23 23:18 ./etc/iceweasel/profile/chrome/\n"
-"-rw-r--r-- root/root      1078 2004-11-30 22:26 ./etc/iceweasel/profile/chrome/userChrome-example.css\n"
-"-rw-r--r-- root/root       663 2004-11-30 22:26 ./etc/iceweasel/profile/chrome/userContent-example.css\n"
-"-rw-r--r-- root/root       347 2004-07-28 23:20 ./etc/iceweasel/profile/prefs.js\n"
-"-rw-r--r-- root/root        53 2008-11-23 22:43 ./etc/iceweasel/iceweaselrc\n"
+"||/ Name         Version        Architecture   Description\n"
+"+++-============-==============-==============-================================\n"
+"un  backupninja  &lt;none&gt;                        (no description available)\n"
+"un  base         &lt;none&gt;                        (no description available)\n"
+"un  base-config  &lt;none&gt;                        (no description available)\n"
+"ii  base-files   7.1            amd64          Debian base system miscellaneous\n"
+"ii  base-passwd  3.5.26         amd64          Debian base system master passwo\n"
 "[...]\n"
-"$ </computeroutput><userinput>dpkg -I /var/cache/apt/archives/iceweasel_2.0.0.18-0etch1_i386.deb</userinput>\n"
-"<computeroutput> new Debian package, version 2.0.\n"
-" size 9126828 bytes : control file = 37297 bytes.\n"
-"     346 bytes,     9 lines      conffiles            \n"
-"    1255 bytes,    20 lines      control              \n"
-"  122920 bytes,  1249 lines      md5sums              \n"
-"    1267 bytes,    37 lines   *  postinst             #!/bin/sh\n"
-"     293 bytes,     8 lines   *  postrm               #!/bin/sh\n"
-"    2763 bytes,    70 lines   *  preinst              #!/bin/sh\n"
-"     274 bytes,    12 lines   *  prerm                #!/bin/sh\n"
-" Package: iceweasel\n"
-" Version: 2.0.0.18-0etch1\n"
-" Section: web\n"
-" Priority: optional\n"
-" Architecture: i386\n"
-" Depends: fontconfig, psmisc, debianutils (&gt;= 1.16), libatk1.0-0 (&gt;= 1.12.2), libc6 (&gt;= 2.3.6-6)...\n"
-" Suggests: iceweasel-gnome-support (= 2.0.0.18-0etch1), latex-xft-fonts, xprint, mozplugger, libkrb53\n"
-" Conflicts: mozilla-firefox (&lt;&lt; 1.5.dfsg-1), firefox (&lt;&lt; 2.0+dfsg-1)\n"
-" Replaces: mozilla-firefox, firefox (&lt;&lt; 2.0+dfsg-1)\n"
-" Provides: www-browser\n"
-" Installed-Size: 26364\n"
-" Maintainer: Eric Dorland &lt;eric@debian.org&gt;\n"
-" Description: lightweight web browser based on Mozilla\n"
-"  Iceweasel is a redesign of the Mozilla browser component, similar to\n"
-"  Galeon, K-Meleon and Camino, but written using the XUL user interface\n"
-"  language and designed to be lightweight and cross-platform.\n"
-"  .\n"
-"  This browser is based on the Firefox source-code, with minor\n"
-"  modifications. Historically, this browser was previously known as\n"
-"  Firebird and Phoenix.\n"
-"</computeroutput>\n"
+"$ </computeroutput><userinput>dpkg -c /var/cache/apt/archives/gnupg_1.4.12-7_amd64.deb</userinput>\n"
+"<computeroutput>drwxr-xr-x root/root         0 2013-01-02 19:28 ./\n"
+"drwxr-xr-x root/root         0 2013-01-02 19:28 ./usr/\n"
+"drwxr-xr-x root/root         0 2013-01-02 19:28 ./usr/share/\n"
+"drwxr-xr-x root/root         0 2013-01-02 19:28 ./usr/share/doc/\n"
+"drwxr-xr-x root/root         0 2013-01-02 19:28 ./usr/share/doc/gnupg/\n"
+"-rw-r--r-- root/root      3258 2012-01-20 10:51 ./usr/share/doc/gnupg/TODO\n"
+"-rw-r--r-- root/root       308 2011-12-02 18:34 ./usr/share/doc/gnupg/FAQ\n"
+"-rw-r--r-- root/root      3543 2012-02-20 18:41 ./usr/share/doc/gnupg/Upgrading_From_PGP.txt\n"
+"-rw-r--r-- root/root       690 2012-02-20 18:41 ./usr/share/doc/gnupg/README.Debian\n"
+"-rw-r--r-- root/root      1418 2012-02-20 18:41 ./usr/share/doc/gnupg/TODO.Debian\n"
+"[...]\n"
+"$ </computeroutput><userinput>dpkg -I /var/cache/apt/archives/</userinput>\n"
+"<computeroutput> new debian package, version 2.0.\n"
+" size 1952176 bytes: control archive=3312 bytes.\n"
+"    1449 bytes,    30 lines      control              \n"
+"    4521 bytes,    65 lines      md5sums              \n"
+"     479 bytes,    13 lines   *  postinst             #!/bin/sh\n"
+"     473 bytes,    13 lines   *  preinst              #!/bin/sh\n"
+" Package: gnupg\n"
+" Version: 1.4.12-7\n"
+" Architecture: amd64\n"
+" Maintainer: Debian GnuPG-Maintainers &lt;pkg-gnupg-maint@lists.alioth.debian.org&gt;\n"
+" Installed-Size: 4627\n"
+" Depends: libbz2-1.0, libc6 (&gt;= 2.4), libreadline6 (&gt;= 6.0), libusb-0.1-4 (&gt;= 2:0.1.12), zlib1g (&gt;= 1:1.1.4), dpkg (&gt;= 1.15.4) | install-info, gpgv\n"
+" Recommends: libldap-2.4-2 (&gt;= 2.4.7), gnupg-curl\n"
+" Suggests: gnupg-doc, xloadimage | imagemagick | eog, libpcsclite1\n"
+" Section: utils\n"
+" Priority: important\n"
+" Multi-Arch: foreign\n"
+" Homepage: http://www.gnupg.org\n"
+" Description: GNU privacy guard - a free PGP replacement\n"
+"  GnuPG is GNU's tool for secure communication and data storage.\n"
+"  It can be used to encrypt data and to create digital signatures.\n"
+"  It includes an advanced key management facility and is compliant\n"
+"  with the proposed OpenPGP Internet standard as described in RFC 4880.\n"
+"[...]</computeroutput>\n"
 
 #. Tag: title
 #, no-c-format
@@ -1854,9 +1882,9 @@ msgid "<command>dpkg</command>'s Log File"
 msgstr "Log-файл <command>dpkg</command>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<command>dpkg</command> keeps a log of all of its actions in <filename>/var/log/dpkg.log</filename>. This log is extremely verbose, since it details every one of the stages through which packages handled by <command>dpkg</command> go. In addition to offering a way to track dpkg's behavior, it helps, above all, to keep a history of the development of the system: one can find the exact moment when each package has been installed or updated, and this information can be extremely useful in understanding a recent change in behavior. Additionally, all versions being recorded, it is easy to cross-check the information with the <filename>changelog.Debian.gz</filename> for packages in question, or even with online bug reports."
-msgstr "Одной из функций <command>dpkg</command> является вести журнал, т.е. записывать все его действия в <filename>/var/log/dpkg.log</filename>. Журнал достаточно подробный. В нем задокументирован каждый этап работы с пакетом. Этот журнал поможет отследить историю изменений в системе: вы можете найти точный момент, когда какой пакет был установлен или обновлен, и эта информация может быть чрезвычайно полезной при выяснении причин изменения в поведении системы в целом. Кроме того, информацию обо всех установеленных версиях можно получить из <filename>changelog.Debian.gz</filename>, включая отчеты об ошибках."
+msgstr "Одной из функций <command>dpkg</command> является вести журнал, т.е. записывать все его действия в <filename>/var/log/dpkg.log</filename>. Журнал достаточно подробный. В нем задокументирован каждый этап работы с пакетом. Этот журнал поможет отследить историю изменений в системе: Вы можете найти точный момент, когда какой пакет был установлен или обновлен, и эта информация может быть чрезвычайно полезной при выяснении причин изменения в поведении системы в целом. Кроме того, информацию обо всех установеленных версиях можно получить из <filename>changelog.Debian.gz</filename>, включая отчеты об ошибках."
 
 #. Tag: title
 #, no-c-format
@@ -1921,6 +1949,30 @@ msgid ""
 "<computeroutput># </computeroutput><userinput>dpkg --print-foreign-architectures</userinput>\n"
 "<computeroutput>armhf</computeroutput>\n"
 msgstr ""
+"\n"
+"<computeroutput># </computeroutput><userinput>dpkg --print-architecture</userinput>\n"
+"<computeroutput>amd64\n"
+"# </computeroutput><userinput>dpkg --print-foreign-architectures</userinput>\n"
+"<computeroutput>#</computeroutput><userinput>dpkg -i gcc-4.7-base_4.7.2-5_armhf.deb</userinput>\n"
+"<computeroutput>dpkg: error processing gcc-4.7-base_4.7.2-5_armhf.deb (--install):\n"
+" package architecture (armhf) does not match system (amd64)\n"
+"Errors were encountered while processing:\n"
+" gcc-4.7-base_4.7.2-5_armhf.deb\n"
+"# </computeroutput><userinput>dpkg --add-architecture armhf</userinput>\n"
+"<computeroutput># </computeroutput><userinput>dpkg --add-architecture armel</userinput>\n"
+"<computeroutput># </computeroutput><userinput>dpkg --print-foreign-architectures</userinput>\n"
+"<computeroutput>armhf\n"
+"armel\n"
+"# </computeroutput><userinput>dpkg -i gcc-4.7-base_4.7.2-5_armhf.deb</userinput>\n"
+"<computeroutput>Selecting previously unselected package gcc-4.7-base:armhf.\n"
+"(Reading database ... 97399 files and directories currently installed.)\n"
+"Unpacking gcc-4.7-base:armhf (from gcc-4.7-base_4.7.2-5_armhf.deb) ...\n"
+"Setting up gcc-4.7-base:armhf (4.7.2-5) ...\n"
+"# </computeroutput><userinput>dpkg --remove-architecture armhf</userinput>\n"
+"<computeroutput>dpkg: error: cannot remove architecture 'armhf' currently in use by the database\n"
+"# </computeroutput><userinput>dpkg --remove-architecture armel</userinput>\n"
+"<computeroutput># </computeroutput><userinput>dpkg --print-foreign-architectures</userinput>\n"
+"<computeroutput>armhf</computeroutput>\n"
 
 #. Tag: title
 #, no-c-format
@@ -1983,6 +2035,18 @@ msgid ""
 "$ <userinput>dpkg -S /usr/share/doc/gcc-4.7-base/copyright</userinput>\n"
 "gcc-4.7-base:armhf, gcc-4.7-base:amd64: /usr/share/doc/gcc-4.7-base/copyright\n"
 msgstr ""
+"\n"
+"$ <userinput>dpkg -s gcc-4.7-base</userinput>\n"
+"dpkg-query: error: --status needs a valid package name but 'gcc-4.7-base' is not: ambiguous package name 'gcc-4.7-base' with more than one installed instance\n"
+"\n"
+"Use --help for help about querying packages.\n"
+"$ <userinput>dpkg -s gcc-4.7-base:amd64 gcc-4.7-base:armhf | grep ^Multi</userinput>\n"
+"Multi-Arch: same\n"
+"Multi-Arch: same\n"
+"$ <userinput>dpkg -L libgcc1:amd64 |grep .so</userinput>\n"
+"/lib/x86_64-linux-gnu/libgcc_s.so.1\n"
+"$ <userinput>dpkg -S /usr/share/doc/gcc-4.7-base/copyright</userinput>\n"
+"gcc-4.7-base:armhf, gcc-4.7-base:amd64: /usr/share/doc/gcc-4.7-base/copyright\n"
 
 #. Tag: para
 #, no-c-format
