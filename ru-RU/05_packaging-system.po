@@ -1196,7 +1196,7 @@ msgstr ""
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><literal>Build-Depends</literal>, header field</primary>"
-msgstr "<primary><literal>Зависимости</literal>, поле заголовка"
+msgstr "<primary><literal>Зависимости</literal>, поле заголовка</primary>"
 
 #. Tag: para
 #, no-c-format
@@ -1351,7 +1351,7 @@ msgstr "<primary>пакет</primary><secondary>установка</secondary>"
 #. Tag: para
 #, no-c-format
 msgid "<command>dpkg</command> is, above all, the tool for installing an already available Debian package (because it does not download anything). To do this, we use its <literal>-i</literal> or <literal>--install</literal> option."
-msgstr ""
+msgstr "<command>dpkg</command> это инструмент главным образом для установки доступных в репозитории пакетов. Чтобы установить пакет, используйте опцию <literal>-i</literal> или <literal>--install</literal>."
 
 #. Tag: title
 #, no-c-format
@@ -1380,12 +1380,12 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "We can see the different steps performed by <command>dpkg</command>; we know, thus, at what point any error may have occurred. The installation can also be effected in two stages: first unpacking, then configuration. <command>apt-get</command> takes advantage of this, limiting the number of calls to <command>dpkg</command> (since each call is costly, due to loading of the database in memory, especially the list of already installed files)."
-msgstr ""
+msgstr "Мы можем увидеть каждый этап, выполняемый <command>dpkg</command>; это может помочь определить причину проблемы, если такая возникнет. Установку можно разделить на два этапа: распаковка и конфигурация. В этом случае <command>apt-get</command> делает меньше обращений к <command>dpkg</command> (каждый такой запрос, как Вы понимаете, стоит процесорного времени из-за необходимости загрузки базы данных в память, особенно списка установленных файлов)."
 
 #. Tag: title
 #, no-c-format
 msgid "Separate unpacking and configuration"
-msgstr ""
+msgstr "Раздельная распаковка и конфигурация"
 
 #. Tag: screen
 #, no-c-format
@@ -1411,7 +1411,7 @@ msgstr ""
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>unpacking</secondary>"
-msgstr ""
+msgstr "<primary>пакет</primary><secondary>распаковка</secondary>"
 
 #. Tag: indexterm
 #, no-c-format
