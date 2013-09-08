@@ -8,7 +8,7 @@ msgstr ""
 "PO-Revision-Date: 2012-05-09T20:00:16\n"
 "Last-Translator: Mikhail Karpenko <veegboo@gmail.com>\n"
 "Language-Team: None\n"
-"Language: \n"
+"Language: ru-RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,9 +49,9 @@ msgid "Maintenance and Updates: The APT Tools"
 msgstr "Поддержка и обновление"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "What makes Debian so popular with administrators is how easily software can be installed and how easily the whole system can be updated. This unique advantage is largely due to the <emphasis>APT</emphasis> program, that Falcot Corp administrators studied with enthusiasm."
-msgstr "Простота установки программного обеспечения и обновления всей системы делает Debian таким популярным среди администраторов. Это однозначное преимущество в основном существует благодаря программе <emphasis>APT</emphasis>, возможности которой с энтузиазмом изучали администраторы Falcot Corp."
+msgstr "Простота установки программного обеспечения и обновления всей системы делает Debian таким популярным среди администраторов. Это однозначное преимущество в основном существует благодаря программе <emphasis>APT</emphasis>, которую администраторы Falcot Corp изучали с энтузиазмом."
 
 #. Tag: para
 #, no-c-format
@@ -69,9 +69,9 @@ msgid "The word <emphasis>source</emphasis> can be ambiguous. A source package �
 msgstr "Слово <emphasis>источник</emphasis> может быть двусмысленным. Пакет с исходными кодами - это пакет, содержащий исходный код программы и его не следует путать с источником пакетов - репозиторием (сайт, FTP сервер, CD-ROM, локальная директория и т. д.), который содержит пакеты."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "APT needs to be given a “list of package sources”: the file <filename>/etc/apt/sources.list</filename> will list the different repositories (or “sources”) that publish Debian packages. APT will then import the list of packages published by each of these sources. This operation is achieved by downloading <filename>Packages.{gz,bz2,lzma,xz}</filename> files (in case of a source of binary packages) and <filename>Sources.{gz,bz2,lzma,xz}</filename> (in case of a source of source packages) and by analyzing their contents. When an old copy of these files is already present, APT can update it by only downloading the differences (see sidebar <xref linkend=\"sidebar.apt-pdiff\" />)."
-msgstr "APT необходимо передать “список источников пакетов”: файл <filename>/etc/apt/sources.list</filename> будет содержать различные репозитории (или “источники”), которые публикуют пакеты Debian. APT затем импортирует список пакетов, опубликованный каждым из этих источников. Эта операция выполняется путём загрузки файлов <filename>Packages.gz</filename> или <filename>Packages.bz2</filename> (в случае источника бинарных пакетов) и файлов <filename>Sources.gz</filename> или <filename>Sources.bz2</filename> (в случае источника пакетов с исходными кодами) и анализа их содержимого. Если устаревшая копия этих файлов уже присутствует, то APT может обновить их, загрузив только изменения (см. врезку <xref linkend=\"encadre.apt-pdiff\" />)."
+msgstr "APT необходимо передать “список источников пакетов”: файл <filename>/etc/apt/sources.list</filename> будет содержать различные репозитории (или “источники”), которые публикуют пакеты Debian. APT затем импортирует список пакетов, опубликованный каждым из этих источников. Эта операция выполняется путём загрузки файлов <filename>Packages.{gz,bz2,lzma,xz}</filename> (в случае источника бинарных пакетов) и файлов <filename>Sources.{gz,bz2,lzma,xz}</filename> (в случае источника пакетов с исходными кодами) и анализа их содержимого. Если устаревшая копия этих файлов уже присутствует, то APT может обновить их, загрузив только изменения (см. врезку <xref linkend=\"sidebar.apt-pdiff\" />)."
 
 #. Tag: indexterm
 #, no-c-format
@@ -124,9 +124,9 @@ msgid "<primary><filename>sources.list</filename></primary>"
 msgstr "<primary><filename>sources.list</filename></primary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary>source</primary><secondary>of packages</secondary>"
-msgstr "<primary>подпись</primary><secondary>пакета</secondary>"
+msgstr "<primary>источник</primary><secondary>пакетов</secondary>"
 
 #. Tag: indexterm
 #, no-c-format
@@ -141,7 +141,7 @@ msgstr "<primary><filename>/etc/apt/sources.list</filename></primary>"
 #. Tag: title
 #, no-c-format
 msgid "Syntax"
-msgstr ""
+msgstr "Синтаксис"
 
 #. Tag: para
 #, no-c-format
@@ -164,69 +164,69 @@ msgid "“<literal>deb-src</literal>” for source packages."
 msgstr "“<literal>deb-src</literal>” для пакетов с исходными кодами."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "The second field gives the base URL of the source (combined with the filenames present in the <filename>Packages.gz</filename> files, it must give a full and valid URL): this can consist in a Debian mirror or in any other package archive set up by a third party. The URL can start with <literal>file://</literal> to indicate a local source installed in the system's file hierarchy, with <literal>http://</literal> to indicate a source accessible from a web server, or with <literal>ftp://</literal> for a source available on an FTP server. The URL can also start with <literal>cdrom://</literal> for CD-ROM/DVD-ROM/Blu-ray disc based installations, although this is less frequent, since network-based installation methods are more and more common."
-msgstr "Второе поле содержит базовый URL источника (сгруппированный с именами файлов, содержащимися в <filename>Packages.gz</filename>, он должен составлять полный и допустимый URL): он может быть зеркалом Debian или любым другим архивом пакетов, установленным третьим лицом. URL может начинаться с <literal>file://</literal> для указания локального источника, установленного в файловой иерархии системы; с <literal>http://</literal> для указания источника, доступного с интернет-сервера; или с <literal>ftp://</literal> для источника, доступного на FTP сервере. URL также может начинаться с <literal>cdrom://</literal> в случае установки с CD-ROM, хотя этот случай встречается не столь часто, поскольку методы установки по сети являются более распространёнными."
+msgstr "Второе поле содержит базовый URL источника (сгруппированный с именами файлов, содержащимися в <filename>Packages.gz</filename>, он должен составлять полный и допустимый URL): он может быть зеркалом Debian или любым другим архивом пакетов, установленным третьим лицом. URL может начинаться с <literal>file://</literal> для указания локального источника, установленного в файловой иерархии системы; с <literal>http://</literal> для указания источника, доступного с интернет-сервера; или с <literal>ftp://</literal> для источника, доступного на FTP сервере. URL также может начинаться с <literal>cdrom://</literal> в случае установки с CD-ROM/DVD-ROM/Blu-ray, хотя этот случай встречается не столь часто, поскольку методы установки по сети являются более распространёнными."
 
 #. Tag: para
 #, no-c-format
 msgid "The syntax of the last field depends on the structure of the repository. In the simplest cases, you can simply indicate a subdirectory (with a required trailing slash) of the desired source (this is often a simple “<filename>./</filename>” which refers to the absence of a subdirectory — the packages are then directly at the specified URL). But in the most common case, the repositories will be structured like a Debian mirror, with multiple distributions each having multiple components. In those cases, name the chosen distribution (by its “codename” — see the list in sidebar <xref linkend=\"sidebar.bruce-perens\" /> — or by the corresponding “suites” — <literal>stable</literal>, <literal>testing</literal>, <literal>unstable</literal>), then the components (or sections) to enable (chosen between <literal>main</literal>, <literal>contrib</literal>, and <literal>non-free</literal> in a typical Debian mirror)."
-msgstr ""
+msgstr "Синтаксис последнего поля зависит от структуры репозитория. В самом простом случае вам достаточно указать подкаталог (вместе с завершающим слэшем) желаемого источника (зачастую вместо подкаталога указывается “<filename>./</filename>”, что означает его отсутствие - пакеты находятся непосредственно по указанному URL). Но в общем случае репозитории структурированы в виде зеркала Debian, которое содержит множество сборок, состоящих из множества компонентов. В таких случаях перечислите необходимые сборки (по их кодовому имени - см. список во врезке <xref linkend=\"sidebar.bruce-perens\" /> - или по соответствующим именам веток - <literal>stable</literal>, <literal>testing</literal>, <literal>unstable</literal>), а затем используемые компоненты (или секции) (выбирайте из <literal>main</literal>, <literal>contrib</literal> и <literal>non-free</literal> в случае типичного зеркала Debian)."
 
 #. Tag: title
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<emphasis>VOCABULARY</emphasis> The <literal>main</literal>, <literal>contrib</literal> and <literal>non-free</literal> archives"
-msgstr "<emphasis>СЛОВАРЬ</emphasis> Архивы <foreignphrase>main</foreignphrase>, <foreignphrase>contrib</foreignphrase> и <foreignphrase>non-free</foreignphrase>"
+msgstr "<emphasis>СЛОВАРЬ</emphasis> Архивы <literal>main</literal>, <literal>contrib</literal> и <literal>non-free</literal>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary>section</primary><secondary><literal>main</literal></secondary>"
-msgstr "<primary>секция</primary><secondary><foreignphrase>main</foreignphrase></secondary>"
+msgstr "<primary>секция</primary><secondary><literal>main</literal></secondary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary><literal>main</literal>, section</primary>"
-msgstr "<primary><literal>Pin</literal></primary>"
+msgstr "<primary><literal>main</literal>, секция</primary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary>section</primary><secondary><literal>contrib</literal></secondary>"
-msgstr "<primary>секция</primary><secondary><foreignphrase>contrib</foreignphrase></secondary>"
+msgstr "<primary>секция</primary><secondary><literal>contrib</literal></secondary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary><literal>contrib</literal>, section</primary>"
-msgstr "<primary><literal>Pin</literal></primary>"
+msgstr "<primary><literal>contrib</literal>, секция</primary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary>section</primary><secondary><literal>non-free</literal></secondary>"
-msgstr "<primary>секция</primary><secondary><foreignphrase>non-free</foreignphrase></secondary>"
+msgstr "<primary>секция</primary><secondary><literal>non-free</literal></secondary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary><literal>non-free</literal>, section</primary>"
-msgstr "<primary><literal>Pin</literal></primary>"
+msgstr "<primary><literal>non-free</literal>, секция</primary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary>component (of a repository)</primary>"
-msgstr "<primary>source of packages</primary>"
+msgstr "<primary>компоненты (репозитория)</primary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Debian uses three sections to differentiate packages according to the licenses chosen by the authors of each work. <literal>Main</literal> gathers all packages which fully comply with the Debian Free Software Guidelines."
-msgstr "В Debian используется три секции для разграничения пакетов по типу лицензии, выбранной автором каждой программы. В <foreignphrase>main</foreignphrase> (основной архив) собраны все пакеты, которые полностью соответствуют Критериям Debian по определению свободного программного обеспечения."
+msgstr "В Debian используется три секции для разграничения пакетов по типу лицензии, выбранной автором каждого проекта. В <literal>Main</literal> собраны все пакеты, которые полностью соответствуют Критериям Debian по определению свободного программного обеспечения."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "The <literal>non-free</literal> archive is different because it contains software which does not (entirely) conform to these principles but which can nevertheless be distributed without restrictions. This archive, which is not officially part of Debian, is a service for users who could need some of those programs — however Debian always recommends giving priority to free software. The existence of this section represents a considerable problem for Richard M. Stallman and keeps the Free Software Foundation from recommending Debian to users."
-msgstr "Архив <foreignphrase>non-free</foreignphrase> отличается тем, что содержит программное обеспечение, которое не (полностью) соответствует этим принципам, но которое тем не менее может распространяться без ограничений. Данный архив, который официально не является частью Debian, служит нуждам тех пользователей, которым могут понадобиться эти программы, — однако Debian всегда рекомендует отдавать предпочтение свободному программному обеспечению. Существование этой секции представляет значительную проблему для Ричарда М. Столлмана и не позволяет Фонду Свободного Программного Обеспечения рекомендовать Debian пользователям."
+msgstr "Архив <literal>non-free</literal> отличается тем, что содержит программное обеспечение, которое не (полностью) соответствует этим принципам, но которое тем не менее может распространяться без ограничений. Данный архив, который официально не является частью Debian, служит нуждам тех пользователей, которым могут понадобиться эти программы, — однако Debian всегда рекомендует отдавать предпочтение свободному программному обеспечению. Существование этой секции представляет значительную проблему для Ричарда М. Столлмана и не позволяет Фонду Свободного Программного Обеспечения рекомендовать Debian пользователям."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<literal>Contrib</literal> (contributions) is a set of open source software which cannot function without some non-free elements. These elements can be software from the <literal>non-free</literal> section, or non-free files such as game ROMs, BIOS of consoles, etc. <literal>Contrib</literal> also includes free software whose compilation requires proprietary elements. This was initially the case for the OpenOffice.org office suite, which used to require a proprietary Java environment."
-msgstr "<foreignphrase>Contrib</foreignphrase> (contributions) - это репозиторий программного обеспечения с открытым кодом, которое не может функционировать без некоторых несвободных элементов. Этими элементами могут быть программы из секции <foreignphrase>non-free</foreignphrase>, несвободные файлы, как, например, ROM игр, BIOS консолей и т. д. <foreignphrase>Contrib</foreignphrase> также включает в себя программное обеспечение, компиляция которого требует проприетарных элементов. Изначально это было справедливо для офисного пакета OpenOffice.org, который требовал проприетарного окружения Java."
+msgstr "<literal>Contrib</literal> (contributions) - это репозиторий программного обеспечения с открытым кодом, которое не может функционировать без некоторых несвободных элементов. Этими элементами могут быть программы из секции <literal>non-free</literal>, несвободные файлы, как, например, ROM игр, BIOS консолей и т. д. <literal>Contrib</literal> также включает в себя программное обеспечение, компиляция которого требует проприетарных элементов. Изначально это было справедливо для офисного пакета OpenOffice.org, который требовал проприетарного окружения Java."
 
 #. Tag: title
 #, no-c-format
@@ -234,9 +234,9 @@ msgid "<emphasis>TIP</emphasis> <filename>/etc/apt/sources.list.d/*.list</filena
 msgstr "<emphasis>СОВЕТ</emphasis> файлы <filename>/etc/apt/sources.list.d/*.list</filename>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "If many package sources are referenced, it can be useful to split them in multiple files. Each part is then stored in <filename>/etc/apt/sources.list.d/<replaceable>filename</replaceable>.list</filename> (see sidebar <xref linkend=\"sidebar.directory.d\" />)."
-msgstr "Если имеется множество ссылок на источники пакетов, то разделение их на несколько файлов может быть полезным. В этом случае каждая часть хранится в <filename>/etc/apt/sources.list.d/<replaceable>filename</replaceable>.list</filename> (смотрите врезку <xref linkend=\"cadre-repertoire.d\" />)."
+msgstr "Если имеется множество ссылок на источники пакетов, то можно разделить их на несколько файлов. В этом случае каждая часть хранится в <filename>/etc/apt/sources.list.d/<replaceable>filename</replaceable>.list</filename> (смотрите врезку <xref linkend=\"sidebar.directory.d\" />)."
 
 #. Tag: indexterm
 #, no-c-format
@@ -244,9 +244,9 @@ msgid "<primary><command>apt-cdrom</command></primary>"
 msgstr "<primary><command>apt-cdrom</command></primary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "The <literal>cdrom</literal> entries describe the CD/DVD-ROMs you have. Contrary to other entries, a CD-ROM is not always available since it has to be inserted into the drive and since only one disc can be read at a time. For those reasons, these sources are managed in a slightly different way, and need to be added with the <command>apt-cdrom</command> program, usually executed with the <literal>add</literal> parameter. The latter will then request the disc to be inserted in the drive and will browse its contents looking for <filename>Packages</filename> files. It will use these files to update its database of available packages (this operation is usually done by the <command>apt-get update</command> command). From then on, APT can require the disc to be inserted if it needs one of its packages."
-msgstr "Файл <filename>sources.list</filename> может содержать несколько других типов записей: некоторые описывают ваши CD-ROM с Debian. В отличие от других записей, CD-ROM не всегда доступны, поскольку их необходимо вставлять в дисковод и только один диск может быть прочитан в данный момент времени - следовательно, эти источники управляются несколько по-иному. Данные записи должны быть добавлены программой <command>apt-cdrom</command>, обычно запускаемой с параметром <literal>add</literal>. Эта программа попросит вставить диск в дисковод и затем просканирует его содержимое в поиске файлов <filename>Packages</filename>. Она использует эти файлы для обновления своей базы данных доступных пакетов (обычно эта операция выполняется командой <command>aptitude update</command>). С этого момента APT может потребовать вставить диск, если ей потребуется один из этих пакетов."
+msgstr "Элементы <literal>cdrom</literal> относятся к вашим носителям CD/DVD-ROM. В отличии от других записей, CD-ROM не всегда доступны, поскольку их необходимо вставлять в дисковод и только один диск может быть прочитан в данный момент времени. По этой причине подобные источники управляются несколько иначе, и записи о них должны быть добавлены программой <command>apt-cdrom</command>, обычно запускаемой с параметром <literal>add</literal>. Эта программа попросит вставить диск в дисковод и затем просканирует его содержимое в поиске файлов <filename>Packages</filename>. Она использует эти файлы для обновления своей базы данных доступных пакетов (обычно эта операция выполняется командой <command>apt-get update</command>). С этого момента APT может потребовать вставить диск, если ей потребуется один из этих пакетов."
 
 #. Tag: title
 #, fuzzy, no-c-format
