@@ -1421,7 +1421,7 @@ msgstr "<primary>распаковка</primary><secondary>двоичный па�
 #. Tag: para
 #, no-c-format
 msgid "Sometimes <command>dpkg</command> will fail to install a package and return an error; if the user orders it to ignore this, it will only issue a warning; it is for this reason that we have the different <literal>--force-*</literal> options. The <command>dpkg --force-help</command> command, or documentation of this command, will give a complete list of these options. The most frequent error, which you are bound to encounter sooner or later, is a file collision. When a package contains a file that is already installed by another package, <command>dpkg</command> will refuse to install it. The following messages will then appear:"
-msgstr ""
+msgstr "Иногда <command>dpkg</command> по той или иной причине не может установить пакет и возвращает ошибку; в этом случае пользователь может сообщить о необходимости проигнорировать эту ошибку и выдать лишь предупреждение; для этого существуют различные варианты опции <literal>--force-*</literal>. Команда <command>dpkg --force-help</command> (или документация к ней) даст полный список всех вариантов её использования. Самой частой ошибкой, с которой Вы тоже скорее всего столкнетесь, является конфликт файлов. Она происходит при установке пакета, который содержит файл, имя которого уже существует в системе, т.е. файл с таким же именем принадлежит другом установленному пакету. В этом случае <command>dpkg</command> откажется устанавливать новый пакет, и мы получим такое сообщение:"
 
 #. Tag: screen
 #, no-c-format
@@ -1439,12 +1439,12 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "In this case, if you think that replacing this file is not a significant risk to the stability of your system (which is usually the case), you can use the option <literal>--force-overwrite</literal>, which tells <command>dpkg</command> to ignore this error and overwrite the file."
-msgstr ""
+msgstr "В этом случае, если Вы уверены, что замена этого файла не отразится на стабильности вашей системы (что обычно и бывает), Вы можете использовать опцию - <literal>--force-overwrite</literal>, которая сообщит <command>dpkg</command> о необходимости проигнорировать эту ошибку и перезаписать файл."
 
 #. Tag: para
 #, no-c-format
 msgid "While there are many available <literal>--force-*</literal> options, only <literal>--force-overwrite</literal> is likely to be used regularly. These options only exist for exceptional situations, and it is better to leave them alone as much as possible in order to respect the rules imposed by the packaging mechanism. Do not forget, these rules ensure the consistency and stability of your system."
-msgstr ""
+msgstr "Хотя доступно много вариантов опции <literal>--force-*</literal>, только <literal>--force-overwrite</literal> рекомендуется для регулярного использования. Остальные варианты используйте только в исключительных случаях, а лучше не прибегать к их помощи вообще, чтобы соблюдать правила, предусмотренные логикой при создании пакета. Не забывайте, что эти правила являются гарантией стабильности системы."
 
 #. Tag: title
 #, no-c-format
@@ -1459,7 +1459,7 @@ msgstr "<primary>проблемы с зависимостями</primary>"
 #. Tag: para
 #, no-c-format
 msgid "If you are not careful, the use of an option <literal>--force-*</literal> can lead to a system where the APT family of commands will refuse to function. In effect, some of these options allow installation of a package when a dependency is not met, or when there is a conflict. The result is an inconsistent system from the point of view of dependencies, and the APT commands will refuse to execute any action except those that will bring the system back to a consistent state (this often consists of installing the missing dependency or removing a problematic package). This often results in a message like this one, obtained after installing a new version of <emphasis role=\"pkg\">rdesktop</emphasis> while ignoring its dependency on a newer version of the <emphasis role=\"pkg\">libc6</emphasis>:"
-msgstr ""
+msgstr "Если Вы не будете осторожны, использование опции <literal>--force-*</literal> может привести к тому, что apt-команды перестанут работать. Некоторые из этих опций позволяют установить пакет, даже при наличии проблем с зависимостями или их конфликтом. В результате мы получаем систему, где пакеты работают с неправильными зависимостями, и APT команды в этом случае будут попросту поломаны. Другими словами, они не будут выполнять каких-либо действий, кроме тех, которые вернут систему в согласованное с зависимостями состояние (например, установки отсутствующих зависимостей или удаление пакетов, которые имеют проблемы с зависимостями). Вот пример сообщения, которое Вы получите после установки новой версии <emphasis role=\"pkg\">rdesktop</emphasis>, игнорируя при этом зависимость с более новой версией библиотеки <emphasis role=\"pkg\">libc6</emphasis>:"
 
 #. Tag: programlisting
 #, no-c-format
@@ -1483,12 +1483,12 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "A courageous administrator who is certain of the correctness of their analysis may choose to ignore a dependency or conflict and use the corresponding <literal>--force-*</literal> option. In this case, if they want to be able to continue to use <command>apt-get</command> or <command>aptitude</command>, they must edit <filename>/var/lib/dpkg/status</filename> to delete/modify the dependency, or conflict, that they chose to override."
-msgstr ""
+msgstr "Те администраторы, которые уверенны в правильности своих действий, могут проигнорировать предупреждения по поводу проблем с зависимостями или конфликтами, используя опции <literal>--force-*</literal>. В этом случае, если необходимо продолжать использовать <command>apt-get</command> или <command>aptitude</command>, нужно отредактировать <filename>/var/lib/dpkg/status</filename>, чтобы переопределить (удалить/изменить) статус зависимостей или конфликтов."
 
 #. Tag: para
 #, no-c-format
 msgid "This manipulation is an ugly hack, and should never be used, except in the most extreme case of necessity. Quite frequently, a more fitting solution is to recompile the package that's causing the problem (see <xref linkend=\"sect.rebuilding-package\" />) or use a new version (potentially corrected) from a repository such as the <literal>stable-backports</literal> one (see <xref linkend=\"sect.backports\" />)."
-msgstr ""
+msgstr "Редакрирование этого файла - это грязный хак. Не стоит прибегать к подобным манипуляциям в системе, кроме как в самых крайних случаях. В качестве альтернативы лучше прибегнуть к перекомпиляции и пересборке пакета, который вызывает проблему (см. <xref linkend=\"sect.rebuilding-package\" />) или использовать его новую версию (исправленную) из таких репозиториев как <literal>stable-backports</literal> (см. <xref linkend=\"sect.backports\" />)."
 
 #. Tag: indexterm
 #, no-c-format
@@ -1542,7 +1542,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "Querying <command>dpkg</command>'s Database and Inspecting <filename>.deb</filename> Files"
-msgstr ""
+msgstr "Запросы <command>dpkg</command> к базе данных и анализ <filename>.deb</filename> файлов"
 
 #. Tag: indexterm
 #, no-c-format
@@ -1879,7 +1879,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<command>dpkg</command>'s Log File"
-msgstr "Log-файл <command>dpkg</command>"
+msgstr "Файл журнала <command>dpkg</command> (log file)"
 
 #. Tag: para
 #, no-c-format
@@ -1889,37 +1889,38 @@ msgstr "Одной из функций <command>dpkg</command> является 
 #. Tag: title
 #, no-c-format
 msgid "Multi-Arch Support"
-msgstr ""
+msgstr "Мультиархитектурная поддержка"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary>Multi-Arch</primary>"
-msgstr "<primary>APT</primary>"
+msgstr "<primary>Мультиархитектура</primary>"
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary>architecture</primary><secondary>multi-arch support</secondary>"
-msgstr "<primary>package</primary><secondary>conflict</secondary>"
+msgstr "<primary>архитектура</primary><secondary>поддержка мультиархитектуры</secondary>"
 
 #. Tag: para
 #, no-c-format
 msgid "All Debian packages have an <literal>Architecture</literal> field in their control information. This field can contain either “<literal>all</literal>” (for packages that are architecture independent) or the name of the architecture that it targets (like “amd64”, “armhf”, …). In the latter case, by default, <command>dpkg</command> will only accept to install the package if its architecture matches the host's architecture as returned by <command>dpkg --print-architecture</command>."
-msgstr ""
+msgstr "Все Debian пакеты имеют поле <literal>Architecture</literal> в своем control файле. Это поле может содержать либо значение “<literal>all</literal>” (для пакетов, которые не зависят от архитектуры) или значение, соответствующее конкретной архитектуре ​​(например, “amd64”, “armhf”, …). По умолчанию, <command>dpkg</command> установит пакет только в том случае, если архитектура, для которой он был собран, соответствует архитектуре системы, в которой Вы его собираетесь установить. Название архитектуры системы можно посмотреть с помощью команды <command>dpkg --print-architecture</command>."
 
 #. Tag: para
 #, no-c-format
 msgid "This restriction ensures that users do not end up with binaries compiled for an incorrect architecture. Everything would be perfect except that (some) computers can run binaries for multiple architectures, either natively (an “amd64“ system can run “i386” binaries) or through emulators."
-msgstr ""
+msgstr "Это ограничение гарантирует установку только тех пакетов, которые были собраны именно для неё (для такой же архитектуры). Стоит упомянуть, что на некоторых компьютерах можно запускать бинарные файлы для различных архитектур (к примеру, на системах “amd64“ без проблем будут работать бинарные файлы, скомпилированные для “i386” архитектуры) или через эмуляторы."
+
 
 #. Tag: title
 #, no-c-format
 msgid "Enabling Multi-Arch"
-msgstr ""
+msgstr "Включение поддержки мультиархитектуры"
 
 #. Tag: para
 #, no-c-format
 msgid "<command>dpkg</command>'s multi-arch support allows users to define “foreign architectures” that can be installed on the current system. This is simply done with <command>dpkg --add-architecture</command> like in the example below. There's a corresponding <command>dpkg --remove-architecture</command> to drop support of a foreign architecture, but it can only be used when no packages of this architecture remain."
-msgstr ""
+msgstr "Поддержка мультиархитектуры <command>dpkg</command> позволяет определять “ряд архитектур”, с которыми мы можем работать (устанавливать пакеты) в нашей системе. Добавить ту или иную архитектуру можно с помощью <command>dpkg --add-architecture</command>, как будет показанно в примере ниже. Напротив, удалить какую-либо поддерживаемую архитектуру можно с помощью <command>dpkg --remove-architecture</command>, но только в том случае, если ни один из установленных пакетов не относится к этой архитектуре."
 
 #. Tag: screen
 #, no-c-format
@@ -1977,42 +1978,42 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>NOTE</emphasis> APT's multi-arch support"
-msgstr ""
+msgstr "<emphasis>НА ЗАМЕТКУ</emphasis> мультиархитектурная поддержка APT"
 
 #. Tag: para
 #, no-c-format
 msgid "APT will automatically detect when dpkg has been configured to support foreign architectures and will start downloading the corresponding <filename>Packages</filename> files durings its update process."
-msgstr ""
+msgstr "APT автоматически определит, когда dpkg будет настроен на поддержку дополнительных архитектур, и начнет загрузку соответствующих <filename>Packages</filename> файлов в процессе обновления."
 
 #. Tag: para
 #, no-c-format
 msgid "Foreign packages can then be installed with <command>apt-get install <replaceable>package</replaceable>:<replaceable>architecture</replaceable></command>."
-msgstr ""
+msgstr "Пакеты с отличной (от вашей системы) архитектурой могут быть установлены при помощи команды <command>apt-get install <replaceable>package</replaceable>:<replaceable>architecture</replaceable></command>."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>IN PRACTICE</emphasis> Using proprietary i386 binaries on amd64"
-msgstr ""
+msgstr "<emphasis>НА ПРАКТИКЕ</emphasis> Использование проприетарных i386 бинарников в системах amd64"
 
 #. Tag: para
 #, no-c-format
 msgid "There are multiple use cases for multi-arch, but the most popular one is the possibbility to execute 32 bit binaries (i386) on 64 bit systems (amd64), in particular since several popular proprietary applications (like Skype) are only provided in 32 bit versions."
-msgstr ""
+msgstr "Есть несколько вариантов использования мультиархитектурной установки, но самым популярным из них является возможность запускать 32-битные файлы (i386) на 64-битных системах (amd64). Для нескольких популярных проприетарных приложений (например, Skype) доступны только 32-разрядные версии."
 
 #. Tag: para
 #, no-c-format
 msgid "Before multi-arch, when you wanted to uses a 32 bit appliction on a 64 bit system, you had to install <emphasis role=\"pkg\">ia32-libs</emphasis> to have 32 bit versions of the most popular libraries. That package was a huge hack that repackaged 32 bit libraries in an “amd64” package."
-msgstr ""
+msgstr "Перед тем, как была добавленна мультиархитектурная поддержка, если Вы хотели использовать 32-битные приложения в 64-битной системе, нужно было устанавливать <emphasis role=\"pkg\">ia32-libs</emphasis>, которая представляла из себя огромный хак, так как содержала 32-битные версии популярных библиотек, при том, что пакет этот был для архитектуры “amd64”."
 
 #. Tag: indexterm
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<primary><emphasis role=\"pkg\">ia32-libs</emphasis></primary>"
-msgstr "<primary><command>alien</command></primary>"
+msgstr "<primary><emphasis role=\"pkg\">ia32-libs</emphasis></primary>"
 
 #. Tag: title
 #, no-c-format
 msgid "Multi-Arch Related Changes"
-msgstr ""
+msgstr "Изменения, связанные с мультиархитектурной поддержкой"
 
 #. Tag: para
 #, no-c-format
