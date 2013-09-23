@@ -1560,7 +1560,7 @@ msgstr "Термин “квота” относится к ограничени
 #. Tag: para
 #, no-c-format
 msgid "The creation of an account populates the user's home directory with the contents of the <filename>/etc/skel/</filename> template. This provides the user with a set of standard directories and configuration files."
-msgstr "При создании учётной записи в домашний каталог пользователя копируется содержимое <filename>/etc/skel/</filename>. Таким образом пользователю предоставляется набор стандартных каталогов и конфигурационных фалов."
+msgstr "При создании учётной записи в домашний каталог пользователя копируется содержимое <filename>/etc/skel/</filename>. Таким образом пользователю предоставляется набор стандартных каталогов и конфигурационных файлов."
 
 #. Tag: indexterm
 #, no-c-format
@@ -1625,7 +1625,7 @@ msgstr "<primary><command>mknod</command></primary>"
 #. Tag: para
 #, no-c-format
 msgid "Each hardware peripheral device is represented under Unix with a special file, usually stored in the file tree under <filename>/dev/</filename> (DEVices). Two types of special files exist according to the nature of the device: “character mode” and “block mode” files, each mode allowing for only a limited number of operations. While character mode limits interaction with read/write operations, block mode also allows seeking within the available data. Finally, each special file is associated with two numbers (“major” and “minor”) that identify the device to the kernel in a unique manner. Such a file, created by the <command>mknod</command> command, simply contains a symbolic (and more human-friendly) name."
-msgstr "В Unix каждое периферийное устройство представлено специальным файлом, который обычно находится в структуре <filename>/dev/</filename> (DEVices, устройства). Существуют два типа специальных фалов в соответствии с природой самих устройств: файлы с символьным режимом доступа и файлы с блочным режимом доступа, каждый из которых имеет ограниченный набор операций. Символьный режим ограничивает взаимодействие операциями чтения/записи, в то время как блочный режим допускает ещё и поиск в массиве данных. Наконец, каждому специальному файлу присваиваются два номера (“основной” и “второстепенный”), которые однозначно идентифицируют файлы в ядре. Созданный командой <command>mknod</command> подобный файл имеет буквенное (и более понятное пользователю) имя."
+msgstr "В Unix каждое периферийное устройство представлено специальным файлом, который обычно находится в структуре <filename>/dev/</filename> (DEVices, устройства). Существуют два типа специальных файлов в соответствии с природой самих устройств: файлы с символьным режимом доступа и файлы с блочным режимом доступа, каждый из которых имеет ограниченный набор операций. Символьный режим ограничивает взаимодействие операциями чтения/записи, в то время как блочный режим допускает ещё и поиск в массиве данных. Наконец, каждому специальному файлу присваиваются два номера (“основной” и “второстепенный”), которые однозначно идентифицируют файлы в ядре. Созданный командой <command>mknod</command> подобный файл имеет буквенное (и более понятное пользователю) имя."
 
 #. Tag: para
 #, no-c-format
