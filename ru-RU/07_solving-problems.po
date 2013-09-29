@@ -8,7 +8,7 @@ msgstr ""
 "PO-Revision-Date: 2012-05-09T20:00:17\n"
 "Last-Translator: Mikhail Karpenko <veegboo@gmail.com>\n"
 "Language-Team: None\n"
-"Language: \n"
+"Language: ru-RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -64,7 +64,7 @@ msgid "<primary>documentation</primary>"
 msgstr "<primary>документация</primary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Before you can understand what is really going on when there is a problem, you need to know the theoretical role played by each program involved in the problem. To do this, the best reflex to have is consult their documentation; but since these documentations are many and can be scattered far and wide, you should know all the places where they can be found."
 msgstr "Прежде чем вы сможете разобраться в сути проблемы, вы должны понять теоретическую роль каждой программы, вовлечённой в данную проблему. Лучший способ сделать это - обратиться к документации программы; но поскольку документации может быть достаточно много и она может быть распределена по различным источникам, то вам следует знать о тех местах, где её можно найти."
 
@@ -99,17 +99,17 @@ msgid "<primary><acronym>RTFM</acronym></primary>"
 msgstr "<primary><acronym>RTFM</acronym></primary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "This acronym stands for “Read the F***ing Manual”, but can also be expanded in a friendlier variant, “Read the Fine Manual”. This phrase is sometimes used in (terse) responses to questions from newbies. It is rather abrupt, and betrays a certain annoyance at a question asked by someone who has not even bothered to read the documentation. Some say that this classic response is better than no response at all (since it indicates that the documentation contains the information sought), or than a more verbose and angry answer."
 msgstr "Данное сокращение означает “Читай эту чертову инструкцию”, но оно может быть раскрыто и в более дружественной форме: “Читайте это прекрасное руководство”. Иногда эта фраза используется для (немногословного) ответа на вопросы новичков. Она довольно резкая и выдаёт некоторое раздражение от вопроса, заданного кем-либо, кто даже не удосужился прочитать документацию. Кто-то может сказать, что подобный классический ответ лучше, чем вообще никакого ответа (поскольку он подразумевает, что документация содержит искомый ответ) или более развёрнутый и раздражённый ответ."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "In any case, if someone responds “RTFM” to you, it is often wise not to take offense. Since this answer may be perceived as vexing, you might want to try and avoid receiving it. If the information that you need is not in the manual, which can happen, you might want to say so, preferably in your initial question. You should also describe the various steps that you have personally taken to find information before you raised a question on a forum. Eric Raymond listed a few guidelines, widely accepted as common sense, for what to do before asking for help on forums. <ulink type=\"block\" url=\"http://catb.org/~esr/faqs/smart-questions.html\" />"
-msgstr "В любом случае, если кто-то отвечает вам “RTFM”, то не стоит воспринимать подобный ответ как оскорбление. Поскольку ответ может быть раздражающим, то вам захочется избежать получения подобных ответов. Если искомая информация отсутствует в руководстве, что иногда случается, то вам следует сразу сообщить об этом в вашем вопросе. Вам также следует описать те действия, что вы уже предприняли по поиску необходимой информации до размещения вопроса на форуме. Прежде чем задавать вопросы на форумах, вам следует воспользоваться некоторыми рекомендациями, продиктованными здравым смыслом и перечисленными Эриком Рэймондом. <ulink type=\"block\" url=\"http://catb.org/~esr/faqs/smart-questions.html\" />"
+msgstr "В любом случае, если кто-то отвечает вам “RTFM”, то не стоит воспринимать подобный ответ как оскорбление. Поскольку ответ может быть раздражающим, то вам захочется избежать получения подобных ответов. Если искомая информация отсутствует в руководстве, что иногда случается, то вам следует сразу сообщить об этом в вашем вопросе. Вам также следует описать те действия, что вы уже предприняли по поиску необходимой информации до размещения вопроса на форуме. Эрик Рэймонд привёл некоторые рекомендации, продиктованные здравым смыслом, по поводу того, что вам стоит сделать прежде чем просить помощи на форумах. <ulink type=\"block\" url=\"http://catb.org/~esr/faqs/smart-questions.html\" />"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Manual pages, while relatively terse in style, contain a great deal of essential information. We will quickly go over the command for viewing them. Simply type <command>man <replaceable>manual-page</replaceable></command> — the manual page usually goes by the same name as the command whose documentation is sought. For example, to learn about the possible options for the <command>cp</command> command, you would type the <command>man cp</command> command at the shell prompt (see sidebar)."
 msgstr "Страницы руководств содержат достаточно много важной информации, даже если они и бывают относительно немногословны. Далее мы кратко рассмотрим команды для просмотра страниц руководств. Просто наберите <command>man <replaceable>manual-page</replaceable></command> - название страницы руководства обычно совпадает с именем команды, для которой вы ищите документацию. Например, чтоб узнать о возможных опциях команды <command>cp</command>, вам следует набрать команду <command>man cp</command> в терминале (см. врезку)."
 
@@ -144,7 +144,7 @@ msgid "Among other things, most shells offer help during input at the prompt, su
 msgstr "Среди прочих функций большинство оболочек предоставляют помощь во время набора в строке ввода в виде автодополнения команд или имён файлов (обычно активируется нажатием клавиши табуляции) или вызова предыдущих команд (управление историей команд)."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Man pages not only document programs accessible from the command line, but also configuration files, system calls, C library functions, and so forth. Sometimes names can collide. For example, the shell's <command>read</command> command has the same name as the <function>read</function> system call. This is why manual pages are organized in numbered sections:"
 msgstr "В страницах руководств описываются не только те команды, что доступны из командной строки, но и конфигурационные файлы, системные вызовы, функции библиотек C и так далее. Их имена иногда могут совпадать. Например, команда оболочки <command>read</command> совпадает с системным вызовом <command>read</command>. По этой причине страницы руководств организованы в виде пронумерованных секций:"
 
@@ -164,12 +164,12 @@ msgid "library functions (provided by system libraries);"
 msgstr "библиотечные функции (предоставляемые системными библиотеками);"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "devices (on Unix-like systems, these are special files, usually placed in the <filename>/dev/</filename> directory);"
-msgstr "устройства (в системах Unix они являются специальными файлами и обычно находятся в каталоге <filename>/dev/</filename>);"
+msgstr "устройства (в Unix-подобных системах они являются специальными файлами и обычно находятся в каталоге <filename>/dev/</filename>);"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "configuration files (formats and conventions);"
 msgstr "конфигурационные файлы (форматы и соглашения);"
 
@@ -227,9 +227,9 @@ msgid "This short description is included in the <emphasis>NAME</emphasis> secti
 msgstr "Такое краткое описание содержится в секции <emphasis>NAME</emphasis> каждой страницы руководства."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Of course, if you do not know the names of the commands, the manual is not going to be of much use to you. This is the purpose of the <command>apropos</command> command, which helps you conduct a search in the manual pages, or more specifically in their short descriptions. Each manual page begins essentially with a one line summary. <command>apropos</command> returns a list of manual pages whose summary mentions the requested keyword(s). If you choose them well, you will find the name of the command that you need."
-msgstr "Разумеется, если вам не известны имена команд, то от руководства будет мало пользы. В этом случае поможет команда <command>apropos</command>, которая выполняет поиск в страницах руководств, точнее, в их секциях коротких описаний. Каждая страница руководства начинается с однострочного описания. <command>apropos</command> выводит список тех страниц руководств, что содержат запрашиваемые ключевые слова. В случае правильного выбора ключевых слов вы найдёте необходимые вам команды. "
+msgstr "Разумеется, если вам не известны имена команд, то от руководства будет мало пользы. В этом случае поможет команда <command>apropos</command>, которая выполняет поиск в страницах руководств, точнее, в их секциях коротких описаний. Каждая страница руководства начинается с однострочного описания. <command>apropos</command> выводит список тех страниц руководств, что содержат запрашиваемые ключевые слова в коротком описании. В случае правильного выбора ключевых слов вы найдёте необходимые вам команды. "
 
 #. Tag: title
 #, no-c-format
@@ -349,7 +349,7 @@ msgid "<primary><filename>NEWS.Debian.gz</filename></primary>"
 msgstr "<primary><filename>NEWS.Debian.gz</filename></primary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "The <filename>/usr/share/doc/<replaceable>package</replaceable>/</filename> directory also contains some files provided by Debian which complete the documentation by specifying the package's particularities or improvements compared to a traditional installation of the software. The <filename>README.Debian</filename> file also indicates all of the adaptations that were made to comply with the Debian Policy. The <filename>changelog.Debian.gz</filename> file allows the user to follow the modifications made to the package over time: it is very useful to try to understand what has changed between two installed versions that do not have the same behavior. Finally, there is sometimes a <filename>NEWS.Debian.gz</filename> file which documents the major changes in the program that may directly concern the administrator."
 msgstr "В каталоге <filename>/usr/share/doc/<replaceable>package</replaceable>/</filename> находятся файлы, предоставляемые Debian, которые дополняют документацию и в которых детально указаны особенности или усовершенствования пакета в сравнении с обычной установкой данного программного обеспечения. Также в файле <filename>README.Debian</filename> перечислены все изменения, добавленные с целью соответствия Политике Debian. Файл <filename>changelog.Debian.gz</filename> позволяет пользователю проследить все модификации пакета в течение длительного времени: иногда бывает полезно понять, какие изменения произошли между двумя установленными версиями, в поведении которых существуют отличия. В заключение, иногда присутствует ещё и файл <filename>NEWS.Debian.gz</filename>, в котором указаны основные изменения в программе и которые могут быть интересны непосредственно администратору."
 
@@ -359,14 +359,14 @@ msgid "Websites"
 msgstr "Интернет-ресурсы"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "In most cases, free software programs have websites that are used to distribute it and to bring together the community of its developers and users. These sites are frequently loaded with relevant information in various forms: official documentation, FAQ (Frequently Asked Questions), mailing list archives, etc. Often, problems that you may have have already been the subject of many questions; the FAQ or mailing list archives may have a solution for it. A good mastery of search engines will prove immensely valuable to find relevant pages quickly (by restricting the search to the Internet domain or sub-domain dedicated to the program). If the search returns too many pages or if the results do not match what you seek, you can add the keyword <userinput>debian</userinput> to limit results and target relevant information."
 msgstr "Свободное программное обеспечение в большинстве случаев распространяется через сайты, которые также служат ещё и для объединения сообщества его разработчиков и пользователей. Подобные сайты зачастую содержат исчерпывающую информацию в различном виде: официальную документацию, FAQ (часто задаваемые вопросы), архивы списков рассылки, и т. д. Часто бывает так, что проблемы, с которыми вы столкнулись, уже были предметом множества вопросов; FAQ или списки рассылок могут содержать готовые решения. Хорошие навыки работы с поисковыми системами окажутся очень ценными для быстрого поиска необходимых страниц (путём ограничения запросов одним доменом или поддоменом, посвящённым программе). В том случае, когда поиск возвращает слишком много страниц или результат не удовлетворяет вашему запросу, вы можете добавить ключевое слово <userinput>debian</userinput> для ограничения результатов и более целенаправленного поиска."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>TIPS</emphasis> From error to solution"
-msgstr "<emphasis>ПОДСКАЗКА</emphasis> От ошибки к решению"
+msgstr "<emphasis>ПОДСКАЗКИ</emphasis> От ошибки к решению"
 
 #. Tag: para
 #, no-c-format
@@ -399,9 +399,9 @@ msgid "<primary><emphasis>wiki.debian.org</emphasis></primary>"
 msgstr "<primary><emphasis>wiki.debian.org</emphasis></primary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "You might also want to check the Debian wiki, a collaborative website where anybody, even simple visitors, can make suggestions directly from their browsers. It is used equally by developers who design and specify their projects and by users who share their knowledge by writing documents collaboratively. <ulink type=\"block\" url=\"http://wiki.debian.org/\" />"
-msgstr "Вы также можете заглянуть в Debian wiki - ресурс, предназначенный для совместной работы и на котором любой пользователь, даже обычный посетитель, может внести предложение непосредственно из своего браузера. Этот ресурс используется как разработчиками для проектирования и документации своих проектов, так и пользователями, которые делятся своими знаниями и совместно работают над документацией. <ulink type=\"block\" url=\"http://wiki.debian.org/\" />"
+msgstr "Вы также можете заглянуть в Debian wiki - ресурс, предназначенный для совместной работы и на котором любой пользователь, даже обычный посетитель, может внести предложение непосредственно из своего браузера. Этот ресурс используется в равной мере как разработчиками для проектирования и документации своих проектов, так и пользователями, которые делятся своими знаниями и совместно работают над документацией. <ulink type=\"block\" url=\"http://wiki.debian.org/\" />"
 
 #. Tag: title
 #, no-c-format
@@ -414,9 +414,9 @@ msgid "<primary><emphasis>HOWTO</emphasis></primary>"
 msgstr "<primary><emphasis>HOWTO</emphasis></primary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "A howto is a document that describes, in concrete terms and step by step, “how to” reach a predefined goal. The covered goals are relatively varied, but often technical in nature: for example, setting up IP Masquerading, configuring software RAID, installing a Samba server, etc. These documents often attempt to cover all of the potential problems likely to occur during the implementation of a given technology."
-msgstr "Практическое руководство (HOWTO) - это разновидность документации, в которой четко, шаг за шагом, описаны действия для достижения определённой цели. Цели могут быть самыми разными, но они всегда являются техническими по своей сути: например, настройка преобразования IP адресов, программного RAID, установка сервера Samba и т. д. Эти документы зачастую пытаются охватить все возможные проблемы, которые могут возникнуть при использовании той или иной технологии."
+msgstr "Практическое руководство (HOWTO) - это документ, в котором четко, шаг за шагом, описаны действия для достижения определённой цели. Цели могут быть самыми разными, но они всегда являются техническими по своей сути: например, настройка преобразования IP адресов, программного RAID, установка сервера Samba и т. д. Эти документы зачастую пытаются охватить все возможные проблемы, которые могут возникнуть при использовании той или иной технологии."
 
 #. Tag: para
 #, no-c-format
@@ -434,7 +434,7 @@ msgid "<primary>Linux Documentation Project</primary>"
 msgstr "<primary>Проект Документации Linux</primary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "These documents should be taken with a grain of salt. They are often several years old; the information they contain is sometimes obsolete. This phenomenon is even more frequent for their translations, since updates are neither systematic nor instant after the publication of a new version of the original documents. This is part of the joys of working in a volunteer environment and without constraints…"
 msgstr "Вам следует скептически относиться к этим документам. Зачастую они были подготовлены несколько лет назад и поэтому могут содержать устаревшую информацию. Такое положение ещё более вероятно для переводов, поскольку обновления выполняются несистематически и не сразу после выхода обновлённой версии оригинального документа. Это следствие работы в волонтёрской среде без всяких ограничений."
 
@@ -464,9 +464,9 @@ msgid "Often, documentation translated into a non-English language is available 
 msgstr "Часто документация, переведённая на отличный от английского язык, находится в отдельном пакете с таким же именем и суффиксом <literal>-<replaceable>lang</replaceable></literal> (где <replaceable>lang</replaceable> соответствует двухбуквенному ISO коду языка)."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "For instance, the <emphasis>apt-howto-fr</emphasis> package contains the French translation of the howto for <emphasis>APT</emphasis>. Likewise, the <emphasis>quick-reference-fr</emphasis> and <emphasis>debian-reference-fr</emphasis> packages are the French versions of the reference guides for Debian (initially written in English by Osamu Aoki)."
-msgstr "Поэтому пакет <emphasis>apt-howto-fr</emphasis> содержит французский перевод практического руководства по <emphasis>APT</emphasis>. Точно так же пакеты <emphasis>quick-reference-fr</emphasis> и <emphasis>debian-reference-fr</emphasis> (руководство по Debian) являются французскими версиями руководства по Debian (изначально оно было написано на английском Osamu Aoki)."
+msgstr "Например, пакет <emphasis>apt-howto-fr</emphasis> содержит французский перевод практического руководства по <emphasis>APT</emphasis>. Точно так же пакеты <emphasis>quick-reference-fr</emphasis> и <emphasis>debian-reference-fr</emphasis> являются французскими версиями руководства по Debian (изначально оно было написано на английском Osamu Aoki)."
 
 #. Tag: title
 #, no-c-format
@@ -489,9 +489,9 @@ msgid "When you want to configure an unknown package, you must proceed in stages
 msgstr "Настройку неизвестного вам пакета необходимо выполнять в несколько этапов. Во-первых, стоит прочитать документацию, которую подготовил сопровождающий пакета. Чтение <filename>/usr/share/doc/<replaceable>package</replaceable>/README.Debian</filename> позволит вам узнать о каких-либо специальных мерах, упрощающих использование программного обеспечения. Иногда это бывает важно для понимания отличий в работе от поведения оригинальной версии программы, которое описано в общей документации, например, в практических руководствах. Иногда в этом файле перечислены наиболее распространённые ошибки с тем, чтоб вы не тратили время на устранение общих проблем."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Then, you should look at the software's official documentation — refer to the previous section to identify the various existing documentation sources. The <command>dpkg -L <replaceable>package</replaceable></command> command gives a list of files included in the package; you can therefore quickly identify the available documentation (as well as the configuration files, located in <filename>/etc/</filename>). <command>dpkg -s <replaceable>package</replaceable></command> displays the package meta-data and shows any possible recommended or suggested packages; in there, you can find documentation or a utility that will ease the configuration of the software."
-msgstr "Далее вам следует заглянуть в официальную документацию программного обеспечения - вернитесь к предыдущему разделу для поиска различных источников документации. Команда <command>dpkg -L <replaceable>package</replaceable></command> выводит список файлов, содержащихся в пакете, и таким образом позволяет быстро установить наличие документации (а также файлов конфигурации, расположенных в <filename>/etc/</filename>). <command>dpkg -s <replaceable>package</replaceable></command> выведет заголовок пакета и отобразит все рекомендованные или предложенные пакеты. Там вы можете найти документацию или утилиту, упрощающую настройку программы."
+msgstr "Далее вам следует заглянуть в официальную документацию программного обеспечения - вернитесь к предыдущему разделу для поиска различных источников документации. Команда <command>dpkg -L <replaceable>package</replaceable></command> выводит список файлов, содержащихся в пакете, и таким образом позволяет быстро установить наличие документации (а также файлов конфигурации, расположенных в <filename>/etc/</filename>). <command>dpkg -s <replaceable>package</replaceable></command> выведет метаданные пакета и отобразит все рекомендованные или предложенные пакеты. Там вы можете найти документацию или утилиту, упрощающую настройку программы."
 
 #. Tag: para
 #, no-c-format
@@ -519,9 +519,9 @@ msgid "Monitoring What Daemons Are Doing"
 msgstr "Наблюдение за работой демонов"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Understanding what a daemon does is somewhat more complicated, since it does not interact directly with the administrator. To check that a daemon is actually working, you need to test it. For example, to check the Apache (web server) daemon, test it with an HTTP request."
-msgstr "Демоны несколько усложняют понимание ситуации, поскольку они не взаимодействуют напрямую с администратором. Вам необходимо протестировать демона для выяснения его текущего состояния. Например, для проверки демона Apache (веб-сервер) отправьте ему HTTP-запрос."
+msgstr "Понимание действий демонов несколько сложнее, поскольку они не взаимодействуют напрямую с администратором. Вам необходимо протестировать демона для выяснения его текущего состояния. Например, для проверки демона Apache (веб-сервер) отправьте ему HTTP-запрос."
 
 #. Tag: para
 #, no-c-format
@@ -549,9 +549,9 @@ msgid "<primary>files</primary><secondary>logs</secondary>"
 msgstr "<primary>файлы</primary><secondary>журналов</secondary>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "<command>rsyslogd</command> is special: it collects logs (internal system messages) that are sent to it by other programs. Each log entry is associated with a subsystem (e-mail, kernel, authentication, etc.) and a priority; <command>rsyslogd</command> processes these two pieces of information to decide on what to do. The log message may be recorded in various log files, and/or sent to an administration console. The details are defined in the <filename>/etc/rsyslog.conf</filename> configuration file (documented in the manual page of the same name)."
-msgstr "<command>rsyslogd</command> является особым демоном: он собирает сообщения (внутренние системные сообщения), которые ему отправляют остальные программы. Каждая запись в журнале связана с какой-либо подсистемой (почта, ядро, идентификация и т. д.) и имеет определённый приоритет - два бита информации, которые <command>rsyslogd</command> обрабатывает для принятия дальнейших решений. Сообщение может быть записано в разные журналы и/или отправлено на административную консоль. Все детали определены в конфигурационном файле <filename>/etc/rsyslog.conf</filename> (описание находится на странице руководства с таким же именем)."
+msgstr "<command>rsyslogd</command> является особым демоном: он собирает сообщения (внутренние системные сообщения), которые ему отправляют остальные программы. Каждая запись в журнале связана с какой-либо подсистемой (почта, ядро, идентификация и т. д.) и имеет определённый приоритет; <command>rsyslogd</command> обрабатывает эти два параметра для принятия дальнейших решений. Сообщение может быть записано в разные журналы и/или отправлено на административную консоль. Все детали определены в конфигурационном файле <filename>/etc/rsyslog.conf</filename> (описание находится на странице руководства с таким же именем)."
 
 #. Tag: para
 #, no-c-format
@@ -574,9 +574,9 @@ msgid "A daemon is a program that is not explicitly invoked by the user and that
 msgstr "Демон - это программа, которая неявно вызывается пользователем и остаётся в фоне, ожидая наступления определённых событий для выполнения своей задачи. Многие серверные программы являются демонами, поэтому их названия часто оканчиваются на “d” (<command>sshd</command>, <command>smtpd</command>, <command>httpd</command> и т. д.)."
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "As a preventive operation, the administrator should regularly read the most relevant server logs. They can thus diagnose problems before they are even reported by disgruntled users. Indeed users may sometimes wait for a problem to occur repeatedly over several days before reporting it. In many cases, there are specific tools to analyze the contents of the larger log files. In particular, such utilities exist for web servers (such as <command>analog</command>, <command>awstats</command>, <command>webalizer</command> for Apache), for FTP servers, for proxy/cache servers, for firewalls, for e-mail servers, for DNS servers, and even for print servers. Some of these utilities operate in a modular manner and allow analysis of several types of log files. This is the case of <command>lire</command> or also <command>modlogan</command>. Other tools, such as <command>logcheck</command> (a software discussed in <xref linkend=\"security\" />), scan these files in search of alerts to be dealt with."
-msgstr "Любая превентивная операция начинается с регулярного просмотра последних журналов сервера. Таким образом вы сможете диагностировать проблемы ещё до того, как раздражённые пользователи сообщат о них. Действительно, пользователи могут ждать несколько дней повторного возникновения проблемы прежде, чем сообщать о ней. Вам доступны специализированные инструменты для анализа содержимого больших файлов журналов. Такие утилиты существуют для веб-серверов (например, <command>analog</command>, <command>awstats</command>, <command>webalizer</command> для Apache), для FTP серверов, для прокси/кэширующих серверов, межсетевых экранов, для почтовых серверов, для DNS серверов и даже для серверов печати. Некоторые из этих утилит имеют модульную структуру и позволяют анализировать несколько типов файлов журналов. Таковыми являются <command>lire</command> и <command>modlogan</command>. Другие инструменты, например, <command>logcheck</command> (это программное обеспечение обсуждается в разделе <xref linkend=\"security\" />), могут сканировать эти файлы с целью поиска индикаторов, на которые стоит обратить внимание."
+msgstr "Администратору следует регулярно просматривать последние журналы сервера в качестве предупредительной меры. Таким образом он сможет диагностировать проблемы ещё до того, как раздражённые пользователи сообщат о них. Действительно, пользователи могут ждать несколько дней повторного возникновения проблемы прежде, чем сообщать о ней. В большинстве случаев доступны специализированные инструменты для анализа содержимого больших файлов журналов. В частности, такие утилиты существуют для веб-серверов (например, <command>analog</command>, <command>awstats</command>, <command>webalizer</command> для Apache), для FTP серверов, для прокси/кэширующих серверов, межсетевых экранов, для почтовых серверов, для DNS серверов и даже для серверов печати. Некоторые из этих утилит имеют модульную структуру и позволяют анализировать несколько типов файлов журналов. Таковыми являются <command>lire</command> и <command>modlogan</command>. Другие инструменты, например, <command>logcheck</command> (это программное обеспечение обсуждается в разделе <xref linkend=\"security\" />), могут сканировать эти файлы с целью поиска индикаторов, на которые стоит обратить внимание."
 
 #. Tag: indexterm
 #, no-c-format
@@ -649,12 +649,12 @@ msgid "In general, for all correspondence on e-mail lists, the rules of Netiquet
 msgstr "Вообще, правила сетевого этикета применимы для всей корреспонденции в списках рассылки. Данный термин относится к набору правил, продиктованных здравым смыслом: от простой вежливости до ошибок, которые следует избегать. <ulink type=\"block\" url=\"http://tools.ietf.org/html/rfc1855\" /> <indexterm><primary>Netiquette</primary></indexterm>"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "Once those two conditions are met, you can think of describing your problem to the mailing list. Include as much relevant information as possible: various tests conducted, documentation consulted, how you attempted to diagnose the problem, the packages concerned or those that may be involved, etc. Check the Debian Bug Tracking System (BTS, described in sidebar <xref linkend=\"sidebar.bts\" />) for similar problems, and mention the results of that search, providing links to bugs found. BTS starts on: <ulink type=\"block\" url=\"http://www.debian.org/Bugs/index.html\" />"
-msgstr "Как только выполнены эти два условия, вам стоит обдумать описание вашей проблемы в списке рассылки. Включите в описание как можно больше имеющей отношения к проблеме информации: различные выполненные тесты, чтение документации, ваши попытки диагностирования проблемы, затронутые пакеты или пакеты, которые могут иметь отношение, и т. д. Попробуйте отыскать подобные проблемы в системе отслеживания ошибок Debian (BTS, описана во врезке <xref linkend=\"cadre.bts\" />) и упомяните о результатах поиска, а также предоставьте ссылки на найденные ошибки. BTS размещается по адресу: <ulink type=\"block\" url=\"http://www.debian.org/Bugs/index.html\" />"
+msgstr "Как только выполнены эти два условия, вам стоит обдумать описание вашей проблемы в списке рассылки. Включите в описание как можно больше имеющей отношения к проблеме информации: различные выполненные тесты, чтение документации, ваши попытки диагностирования проблемы, затронутые пакеты или пакеты, которые могут иметь отношение, и т. д. Попробуйте отыскать подобные проблемы в системе отслеживания ошибок Debian (BTS, описана во врезке <xref linkend=\"sidebar.bts\" />) и упомяните о результатах поиска, а также предоставьте ссылки на найденные ошибки. BTS размещается по адресу: <ulink type=\"block\" url=\"http://www.debian.org/Bugs/index.html\" />"
 
 #. Tag: para
-#, fuzzy, no-c-format
+#, no-c-format
 msgid "The more courteous and precise you have been, the greater your chances are of getting an answer, or, at least, some elements of response. If you receive relevant information by private e-mail, think of summarizing this information publicly so that others can benefit. This also allows the list's archives, searched through various search engines, to show the resolution for others who may have the same question."
 msgstr "Чем вежливее и точнее вы задали вопрос, тем выше ваши шансы получить ответ или, как минимум, какую-нибудь подсказку. Если вы получили ответ в частном письме, то подумайте о публикации этой информации для общей пользы. Позвольте вашим последователям, которые столкнутся с этой проблемой, найти решение в архивах списка рассылки с помощью поисковых систем."
 
