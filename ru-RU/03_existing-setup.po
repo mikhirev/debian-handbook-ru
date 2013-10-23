@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: 0\n"
 "POT-Creation-Date: 2013-08-31T08:15:01\n"
 "PO-Revision-Date: 2012-05-09T20:00:15\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Mikhail Karpenko veegboo@gmail.com\n"
 "Language-Team: None\n"
-"Language: \n"
+"Language: ru-RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,152 +16,152 @@ msgstr ""
 #. Tag: keyword
 #, no-c-format
 msgid "Existing Setup"
-msgstr ""
+msgstr "Существующая установка"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Reuse"
-msgstr ""
+msgstr "Повторное использование"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Migration"
-msgstr ""
+msgstr "Миграция"
 
 #. Tag: title
 #, no-c-format
 msgid "Analyzing the Existing Setup and Migrating"
-msgstr ""
+msgstr "Анализ существующей установки и миграция"
 
 #. Tag: para
 #, no-c-format
 msgid "Any computer system overhaul should take the existing system into account. This allows reuse of available resources as much as possible and guarantees interoperability of the various elements comprising the system. This study will introduce a generic framework to follow in any migration of a computing infrastructure to Linux."
-msgstr ""
+msgstr "При модернизация любой компьютерной системы необходимо учитывать уже существующую систему. Подобный подход позволит максимально использовать имеющиеся ресурсы и гарантирует взаимодействие различных элементов, составляющих сеть. В этой работе мы представим общий подход к миграции компьютерной инфраструктуры на Linux."
 
 #. Tag: title
 #, no-c-format
 msgid "Coexistence in Heterogeneous Environments"
-msgstr ""
+msgstr "Сосуществование в гетерогенных средах"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>environment</primary><secondary>heterogeneous environment</secondary>"
-msgstr ""
+msgstr "<primary>среда</primary><secondary>гетерогенная среда</secondary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Debian integrates very well in all types of existing environments and plays well with any other operating system. This near-perfect harmony comes from market pressure which demands that software publishers develop programs that follow standards. Compliance with standards allows administrators to switch out programs: clients or servers, whether free or not."
-msgstr ""
+msgstr "Debian легко интегрируется во все существующие типы окружений и хорошо работает совместно с любыми другими типами операционных систем. Столь гармоничное поведение обусловлено требованиями рынка, который @@@требует соблюдения стандартов от разработчиков программного обеспечения. Следование стандартам позволяет администраторам заменять программы, будь то серверная или клиентская часть, свободное программа или нет."
 
 #. Tag: title
 #, no-c-format
 msgid "Integration with Windows Machines"
-msgstr ""
+msgstr "Интеграция с ситемами Windows"
 
 #. Tag: para
 #, no-c-format
 msgid "Samba's SMB/CIFS support ensures excellent communication within a Windows context. It shares files and print queues to Windows clients and includes software that allow a Linux machine to use resources available on Windows servers."
-msgstr ""
+msgstr "Поддержка SMB/CIFS в Samba обеспечивает превосходное взаимодействие с окружением Windows и позволяет обмениваться файлами, направлять очередь печати на Windows-клиенты, и включает в себя программное обеспечение, необходимое Linux-машинам для использования ресурсов Windows-серверов."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>TOOL</emphasis> Samba"
-msgstr ""
+msgstr "<emphasis>ИНСТРУМЕНТ</emphasis> Samba"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>Samba</primary>"
-msgstr ""
+msgstr "<primary>Samba</primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Samba version 2 behaves like a Windows NT server (authentication, files, print queues, downloading printer drivers, DFS, etc.) Version 3 works with Active Directory, brings interoperability with NT4 domain controllers, and supports RPCs (Remote Procedure Calls). Version 4 is a rewrite that can provide a domain controller compatible with Active Directory."
-msgstr ""
+msgstr "Samba второй версии ведёт себя как сервер Windows NT (аутентификация, файлы, очереди печати, загрузка драйверов принтеров, DFS и т. д.). Третья версия поддерживает Active Directory, обеспечивает взаимодействие с контроллерами доменов NT4 и реализует механизм RPC (удалённый вызов процедур). Четвёртая версия была значительно переработана и ntgthm предоставляет совместимвй с Active Directory контроллер домена."
 
 #. Tag: title
 #, no-c-format
 msgid "Integration with Mac OS machines"
-msgstr ""
+msgstr "Интеграция с системами Mac OS"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>Zeroconf</primary>"
-msgstr ""
+msgstr "<primary>Zeroconf</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>Bonjour</primary>"
-msgstr ""
+msgstr "<primary>Bonjour</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>Avahi</primary>"
-msgstr ""
+msgstr "<primary>Avahi</primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Mac OS machines provide, and are able to use, network services such as file servers and printer sharing. These services are published on the local network, which allows other machines to discover them and make use of them without any manual configuration, using the Bonjour implementation of the Zeroconf protocol suite. Debian includes another implementation, called Avahi, which provides the same functionality."
-msgstr ""
+msgstr "Системы Mac OS предоставляют, а также могут использовать, такие сетевые службы как файловые серверы и разделяемые принтеры. Данные службы @@@объявляются доступными в локальной сети, а другие машины могут обнаружить и использовать их без необходимости какой-либо ручной настройки посредством протокола Zeroconf, реализация которого называется Bonjour. Debian содержит другую реализацию этого протокола, Avahi, которая обеспечивает аналогичную функциональность."
 
 #. Tag: para
 #, no-c-format
 msgid "Older Mac OS networks (before Mac OSX) use a different protocol called Appletalk. For environments involving machines using this protocol, Debian provides Netatalk, a program which uses the Appletalk protocol. It ensures the operation of the file server and print queues, as well as time server (clock synchronization). Its router function allows interconnection with Appletalk networks."
-msgstr ""
+msgstr "В сетях на основе предыдущих реализаций Mac OS (до Mac OSX) использовался другой протокол - Appletalk. Debian предоставляет Netatalk, программу на основе протокола Appletalk, для работы в окружении систем, используещих этот протокол. Она реализует функционирование как файлового сервера и очередей печати, так и сервера времени (для синхронизации часов). Функции маршрутизации этой программы обеспечивают взаимодействие с сетями Appletalk."
 
 #. Tag: title
 #, no-c-format
 msgid "Integration with Other Linux/Unix Machines"
-msgstr ""
+msgstr "Интеграция с другими системами Linux/Unix"
 
 #. Tag: para
 #, no-c-format
 msgid "Finally, NFS and NIS, both included, guarantee interaction with Unix systems. NFS ensures file server functionality, while NIS creates user directories. The BSD printing layer, used by most Unix systems, also allows sharing of print queues."
-msgstr ""
+msgstr "Наконец, NFS и NIS (обе включены в дистрибутив) гарантируют взаимодействие с системами Unix. NFS реализует функции файлового сервера, а NIS управляет каталогами пользователей. Система печати BSD, которая используется в большинстве Unix-систем, обеспечивает разделение очередей печати."
 
 #. Tag: title
 #, no-c-format
 msgid "Coexistence of Debian with MacOS, Windows and Unix systems"
-msgstr ""
+msgstr "Совместное существование систем Debian, MacOS, Windows и Unix"
 
 #. Tag: title
 #, no-c-format
 msgid "How To Migrate"
-msgstr ""
+msgstr "Как мигрировать"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>migration</primary>"
-msgstr ""
+msgstr "<primary>миграция</primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "In order to guarantee continuity of the services, each computer migration must be planned and executed according to the plan. This principle applies whatever the operating system used."
-msgstr ""
+msgstr "Необходимо планировать миграцию каждого компьютера и следовать этому плану с целью предоставления бесперебойной работы служб. Этот принцип применим вне зависимости от используемой операционной системы."
 
 #. Tag: title
 #, no-c-format
 msgid "Survey and Identify Services"
-msgstr ""
+msgstr "Обследование и определение служб"
 
 #. Tag: para
 #, no-c-format
 msgid "As simple as it seems, this step is essential. A serious administrator truly knows the principal roles of each server, but such roles can change, and sometimes experienced users may have installed “wild” services. Knowing that they exist will at least allow you to decide what to do with them, rather than delete them haphazardly."
-msgstr ""
+msgstr "Данный этап очень важен вне зависимости от того, насколько простым он кажется. Ответственный администратор хорошо осознаёт роль каждого сервера, но эти роли могут изменяться, а опытные пользователи могут самостоятельно установить некоторые службы. Информация о таких службах позволит вам принять взвешенное решение о их необходимости, и вы не удалите такие службы случайно."
 
 #. Tag: para
 #, no-c-format
 msgid "For this purpose, it is wise to inform your users of the project before migrating the server. To involve them in the project, it may be useful to install the most common free software programs on their desktops prior to migration, which they will come across again after the migration to Debian; Libre Office and the Mozilla suite are the best examples here."
-msgstr ""
+msgstr "Поэтому вам стоит проинформировать пользователей о предстоящем проекте до переноса сервера. Вы можете установить наиболее распространённые свободные программы на рабочие места пользователей до начала процесса миграции и тем самым привлечь самих пользователей к проекту; лучшими примерами здесь будут Libre Office и пакет программ Mozilla."
 
 #. Tag: title
 #, no-c-format
 msgid "Network and Processes"
-msgstr ""
+msgstr "Сеть и процессы"
 
 #. Tag: para
 #, no-c-format
 msgid "<indexterm><primary><command>nmap</command></primary></indexterm> The <command>nmap</command> tool (in the package with the same name) will quickly identify Internet services hosted by a network connected machine without even requiring to log in to it. Simply call the following command on another machine connected to the same network:"
-msgstr ""
+msgstr "<indexterm><primary><command>nmap</command></primary></indexterm>Инструмент <command>nmap</command> (из одноимённого пакета) позволит вам быстро определить службы сети интернет, которые размещены на подключенной к сети машине, при этом вам даже не потребуется входить под своей учётной записью. Просто наберите следующую команду на любой другой машине, подключенной к той же сети:"
 
 #. Tag: screen
 #, no-c-format
@@ -181,37 +181,37 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>ALTERNATIVE</emphasis> Use <command>netstat</command> to find the list of available services"
-msgstr ""
+msgstr "<emphasis>АЛЬТЕРНАТИВА</emphasis> Использование <command>netstat</command> для составления списка доступных служб"
 
 #. Tag: para
 #, no-c-format
 msgid "On a Linux machine, the <command>netstat -tupan</command> command will show the list of active or pending TCP sessions, as well UDP ports on which running programs are listening. This facilitates identification of services offered on the network."
-msgstr ""
+msgstr "Запустите <command>netstat -tupan</command> на компьютере с системой Linux, и эта команда выведет список активных или ожидающих TCP соединений, а также портов UPD, которые прослушивают запущенные программы. Данная команда упростит определение доступных в сети служб."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> IPv6"
-msgstr ""
+msgstr "<emphasis>УГЛУБЛЯЕМСЯ</emphasis> IPv6"
 
 #. Tag: para
 #, no-c-format
 msgid "Some network commands may work either with IPv4 (the default usually) or with IPv6. These include the <command>nmap</command> and <command>netstat</command> commands, but also others, such as <command>route</command> or <command>ip</command>. The convention is that this behavior is enabled by the <parameter>-6</parameter> command-line option."
-msgstr ""
+msgstr "Некоторые сетевые команды могут работать либо с протоколом IPv4 (поведение по умолчанию), либо с IPv6. К таким командам относятся <command>nmap</command> и <command>netstat</command>, а также <command>route</command> и <command>ip</command>. В соответствии с соглашением стоит использовать опцию командной строки <parameter>-6</parameter> для работы с протоколом IPv6."
 
 #. Tag: para
 #, no-c-format
 msgid "If the server is a Unix machine offering shell accounts to users, it is interesting to determine if processes are executed in the background in the absence of their owner. The command <command>ps auxw</command> displays a list of all processes with their user identity. By checking this information against the output of the <command>who</command> command, which gives a list of logged in users, it is possible to identify rogue or undeclared servers or programs running in the background. Looking at <filename>crontabs</filename> (tables listing automatic actions scheduled by users) will often provide interesting information on functions fulfilled by the server (a complete explanation of <command>cron</command> is available in <xref linkend=\"sect.task-scheduling-cron-atd\" />)."
-msgstr ""
+msgstr "Если сервер является Unix-машиной, преоставляющей пользователям @@@учётные записи в командной оболочке, то необходимо установить процессы, выполняемые в фоновом режиме во время отсутствия своего владельца. Команда <command>ps auxw</command> отобразит список всех процессов совместно с идентификаторами пользователей. Сравнив полученный список с выводом команды <command>who</command>, которая отображает список всех зарегистрированных пользователей, вы можете установить несанкционированно установленные серверы и программы, работающие в фоновом режиме. Просмотр <filename>crontabs</filename> (список автоматически выполняемых действий, запланированных пользователем) часто помогает выявить интересные детали о выполняемых сервером функциях (полное описание <command>cron</command> находится по ссылке <xref linkend=\"sect.task-scheduling-cron-atd\" />)."
 
 #. Tag: para
 #, no-c-format
 msgid "In any case, it is essential to backup your servers: this allows recovery of information after the fact, when users will report specific problems due to the migration."
-msgstr ""
+msgstr "Создание резервной копии вашего сервера - важная процедура в любом случае. Вы можете восстановить информацию из резервной копии после того, как пользователи сообщат об особых проблемах в процессе миграции."
 
 #. Tag: title
 #, no-c-format
 msgid "Backing up the Configuration"
-msgstr ""
+msgstr "Создание резервной копии настроек"
 
 #. Tag: para
 #, no-c-format
