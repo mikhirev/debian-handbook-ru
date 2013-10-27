@@ -289,7 +289,7 @@ msgstr ""
 #. Tag: para
 #, no-c-format
 msgid "This file lists all sources of packages associated with the <emphasis role=\"distribution\">Wheezy</emphasis> version of Debian (the current <emphasis role=\"distribution\">Stable</emphasis> as of this writing). We opted to name “wheezy” explicitly instead of using the corresponding “stable“ alias (<literal>stable</literal>, <literal>stable-updates</literal>, <literal>stable-backports</literal>) because we don't want to have the underlying distribution changed outside of our control when the next stable release comes out."
-msgstr "В этом фалйле перечислены все источноки пакетов для Debian <emphasis role=\"distribution\">Wheezy</emphasis> (текущая ветка <emphasis role=\"distribution\">Stable</emphasis> на момент написания книги). Мы предпочли явно указать имя “wheezy” вместо использования соответствующего псевдонима “stable“ (<literal>stable</literal>, <literal>stable-updates</literal>, <literal>stable-backports</literal>) потому, что хотим избежать бесконтрольной смены дистрибутива после выхода очереной стабильной версии."
+msgstr "В этом фалйле перечислены все источноки пакетов для Debian <emphasis role=\"distribution\">Wheezy</emphasis> (текущая ветка <emphasis role=\"distribution\">Stable</emphasis> на момент написания книги). Мы предпочли явно указать имя “wheezy” вместо использования соответствующего псевдонима “stable“ (<literal>stable</literal>, <literal>stable-updates</literal>, <literal>stable-backports</literal>) потому, что хотим избежать бесконтрольной смены дистрибутива после выхода очередной стабильной версии."
 
 #. Tag: title
 #, no-c-format
