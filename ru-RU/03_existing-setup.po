@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-31T08:15:01\n"
+"POT-Creation-Date: 2013-10-27T16:45:03\n"
 "PO-Revision-Date: 2012-05-09T20:00:15\n"
 "Last-Translator: Mikhail Karpenko veegboo@gmail.com\n"
 "Language-Team: None\n"
@@ -103,9 +103,29 @@ msgstr "<primary>Avahi</primary>"
 msgid "Mac OS machines provide, and are able to use, network services such as file servers and printer sharing. These services are published on the local network, which allows other machines to discover them and make use of them without any manual configuration, using the Bonjour implementation of the Zeroconf protocol suite. Debian includes another implementation, called Avahi, which provides the same functionality."
 msgstr "Системы Mac OS предоставляют, а также могут использовать, такие сетевые службы как файловые серверы и разделяемые принтеры. Данные службы объявляются доступными в локальной сети, а другие машины могут обнаружить и использовать их без необходимости какой-либо ручной настройки посредством протокола Zeroconf, реализация которого называется Bonjour. Debian содержит другую реализацию этого протокола, Avahi, которая обеспечивает аналогичную функциональность."
 
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>AFP</primary>"
+msgstr "<primary>Avahi</primary>"
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>AppleShare</primary>"
+msgstr "<primary>Avahi</primary>"
+
 #. Tag: para
 #, no-c-format
-msgid "Older Mac OS networks (before Mac OSX) use a different protocol called Appletalk. For environments involving machines using this protocol, Debian provides Netatalk, a program which uses the Appletalk protocol. It ensures the operation of the file server and print queues, as well as time server (clock synchronization). Its router function allows interconnection with Appletalk networks."
+msgid "In the other direction, the Netatalk daemon can be used to provide file servers to Mac OSX machines on the network. It implements the AFP (AppleShare) protocol as well as the required notifications so that the servers can be autodiscovered by the Mac OSX clients."
+msgstr ""
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>AppleTalk</primary>"
+msgstr "<primary>Avahi</primary>"
+
+#. Tag: para
+#, fuzzy, no-c-format
+msgid "Older Mac OS networks (before Mac OSX) used a different protocol called AppleTalk. For environments involving machines using this protocol, Netatalk, also provides the AppleTalk protocol (it started as only a reimplementation of that protocol). It ensures the operation of the file server and print queues, as well as time server (clock synchronization). Its router function allows interconnection with AppleTalk networks."
 msgstr "В сетях на основе предыдущих реализаций Mac OS (до Mac OSX) использовался другой протокол - Appletalk. Debian предоставляет Netatalk, программу на основе протокола Appletalk, для работы в окружении систем, использующих этот протокол. Она реализует функционирование как файлового сервера и очередей печати, так и сервера времени (для синхронизации часов). Функции маршрутизации этой программы обеспечивают взаимодействие с сетями Appletalk."
 
 #. Tag: title

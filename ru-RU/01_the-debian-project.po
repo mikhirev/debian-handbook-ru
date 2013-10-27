@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-31T08:15:01\n"
+"POT-Creation-Date: 2013-10-27T16:45:02\n"
 "PO-Revision-Date: 2012-05-09T20:00:15\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
@@ -1078,9 +1078,14 @@ msgstr ""
 msgid "<primary>Zacchiroli, Stefano</primary>"
 msgstr ""
 
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>Nussbaum, Lucas</primary>"
+msgstr ""
+
 #. Tag: para
 #, no-c-format
-msgid "Since its inception, the project has been successively led by Ian Murdock, Bruce Perens, Ian Jackson, Wichert Akkerman, Ben Collins, Bdale Garbee, Martin Michlmayr, Branden Robinson, Anthony Towns, Sam Hocevar, Steve McIntyre and Stefano Zacchiroli."
+msgid "Since its inception, the project has been successively led by Ian Murdock, Bruce Perens, Ian Jackson, Wichert Akkerman, Ben Collins, Bdale Garbee, Martin Michlmayr, Branden Robinson, Anthony Towns, Sam Hocevar, Steve McIntyre, Stefano Zacchiroli and Lucas Nussbaum."
 msgstr ""
 
 #. Tag: indexterm
@@ -1165,7 +1170,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Meritocracy is a form of government in which authority is exercised by those with the greatest merit. For Debian, merit is a measure of competence, which is, itself, assessed by observation of past actions by one or more others within the project (Stefano Zacchiroli, the current project leader, speaks of “do-ocracy”, meaning “power to those who get things done”). Their simple existence proves a certain level of competence; their achievements generally being free software, with available source code, which can easily be reviewed by peers to assess their quality."
+msgid "Meritocracy is a form of government in which authority is exercised by those with the greatest merit. For Debian, merit is a measure of competence, which is, itself, assessed by observation of past actions by one or more others within the project (Stefano Zacchiroli, the previous project leader, speaks of “do-ocracy”, meaning “power to those who get things done”). Their simple existence proves a certain level of competence; their achievements generally being free software, with available source code, which can easily be reviewed by peers to assess their quality."
 msgstr ""
 
 #. Tag: para
@@ -1923,9 +1928,34 @@ msgstr ""
 msgid "<primary>Identi.ca</primary>"
 msgstr ""
 
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>Twitter</primary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>StatusNet</primary>"
+msgstr ""
+
 #. Tag: para
 #, no-c-format
-msgid "The microblogging world also carries news about Debian, usually (and unsurprisingly) with a <emphasis>#debian</emphasis> hashtag. On federated microblogging servers such as Identi.ca, there's also a <emphasis>!debian</emphasis> group gathering members of the community. <ulink type=\"block\" url=\"https://identi.ca/tag/debian\" /> <ulink type=\"block\" url=\"https://identi.ca/group/debian\" />"
+msgid "The microblogging world also carries news about Debian, usually (and unsurprisingly) with a <emphasis>#debian</emphasis> hashtag. On federated microblogging servers using StatusNet, there's also a <emphasis>!debian</emphasis> group gathering members of the community. Finally, on Twitter and Identi.ca (now powered by the pump.io software), there's a <emphasis>debian</emphasis> user that gets a feed of important news. <ulink type=\"block\" url=\"https://statusnet.lebegue.org/group/debian\" /> <ulink type=\"block\" url=\"https://statusnet.lebegue.org/tag/debian\" /> <ulink type=\"block\" url=\"http://legadolibre.com.ar/group/debian\" /> <ulink type=\"block\" url=\"http://legadolibre.com.ar/tag/debian\" /> <ulink type=\"block\" url=\"https://twitter.com/debian\" /> <ulink type=\"block\" url=\"https://twitter.com/search?q=%23debian&amp;src=hash\" /> <ulink type=\"block\" url=\"https://identi.ca/debian\" />"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>Google Plus</primary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>Facebook</primary>"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Of course, Debian is also present on other social networking sites, such as Google Plus and Facebook. <ulink type=\"block\" url=\"https://plus.google.com/communities/111202776093075745991\" /> <ulink type=\"block\" url=\"https://www.facebook.com/debian\" />"
 msgstr ""
 
 #. Tag: title

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-31T08:15:01\n"
+"POT-Creation-Date: 2013-10-27T16:45:03\n"
 "PO-Revision-Date: 2012-05-09T20:00:15\n"
 "Last-Translator: Alexander Naumov <posix.ru@gmail.com>\n"
 "Language-Team: None\n"
@@ -440,7 +440,7 @@ msgstr "<primary>метапакет</primary>"
 
 #. Tag: para
 #, no-c-format
-msgid "The dependencies system is a good mechanism for guaranteeing the operation of a program, but it has another use with “meta-packages”. These are empty packages that only describe dependencies. They facilitate the installation of a consistent group of programs preselected by the meta-package maintainer; as such, <command>apt-get install <replaceable>meta-package</replaceable></command> will automatically install all of these programs using the meta-package's dependencies. The <emphasis role=\"pkg\">gnome</emphasis>, <emphasis role=\"pkg\">kde</emphasis> and <emphasis role=\"pkg\">linux-image-amd64</emphasis> packages are examples of meta-packages."
+msgid "The dependencies system is a good mechanism for guaranteeing the operation of a program, but it has another use with “meta-packages”. These are empty packages that only describe dependencies. They facilitate the installation of a consistent group of programs preselected by the meta-package maintainer; as such, <command>apt-get install <replaceable>meta-package</replaceable></command> will automatically install all of these programs using the meta-package's dependencies. The <emphasis role=\"pkg\">gnome</emphasis>, <emphasis role=\"pkg\">kde-full</emphasis> and <emphasis role=\"pkg\">linux-image-amd64</emphasis> packages are examples of meta-packages."
 msgstr ""
 
 #. Tag: title
@@ -615,7 +615,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Let us discuss the first case in greater detail with an example: all mail servers, such as <emphasis role=\"pkg\">postfix</emphasis> or <emphasis role=\"pkg\">sendmail</emphasis> are said to “provide” the <emphasis role=\"pkg\">mail-transport-agent</emphasis> virtual package. Thus, any package that needs this service to be functional (e.g. a mailing list manager, such as <emphasis role=\"pkg\">smartlist</emphasis> or <emphasis role=\"pkg\">sympa</emphasis>) simply states in its dependencies that it requires a <emphasis role=\"pkg\">mail-transport-agent</emphasis> instead of specifying a large yet incomplete list of possible solutions (e.g. <command>postfix | sendmail | exim | …</command>). Furthermore, it is useless to install two mail servers on the same machine, which is why each of these packages declares a conflict with the <emphasis role=\"pkg\">mail-transport-agent</emphasis> virtual package. The conflict with itself is ignored by the system, but this technique will prohibit the installation of two mail servers side by side."
+msgid "Let us discuss the first case in greater detail with an example: all mail servers, such as <emphasis role=\"pkg\">postfix</emphasis> or <emphasis role=\"pkg\">sendmail</emphasis> are said to “provide” the <emphasis role=\"pkg\">mail-transport-agent</emphasis> virtual package. Thus, any package that needs this service to be functional (e.g. a mailing list manager, such as <emphasis role=\"pkg\">smartlist</emphasis> or <emphasis role=\"pkg\">sympa</emphasis>) simply states in its dependencies that it requires a <emphasis role=\"pkg\">mail-transport-agent</emphasis> instead of specifying a large yet incomplete list of possible solutions (e.g. <command>postfix | sendmail | exim4 | …</command>). Furthermore, it is useless to install two mail servers on the same machine, which is why each of these packages declares a conflict with the <emphasis role=\"pkg\">mail-transport-agent</emphasis> virtual package. The conflict with itself is ignored by the system, but this technique will prohibit the installation of two mail servers side by side."
 msgstr ""
 
 #. Tag: title
@@ -1832,7 +1832,6 @@ msgstr "<primary>сравнение версий</primary>"
 msgid "Since <command>dpkg</command> is the program for handling Debian packages, it also provides the reference implementation of the logic of comparing version numbers. This is why it has a <literal>--compare-versions</literal> option, usable by external programs (especially configuration scripts executed by <command>dpkg</command> itself). This option requires three parameters: a version number, a comparison operator, and a second version number. The different possible operators are <literal>lt</literal> (strictly less than), <literal>le</literal> (less than or equal to), <literal>eq</literal> (equal), <literal>ne</literal> (not equal), <literal>ge</literal> (greater than or equal to), and <literal>gt</literal> (strictly greater than). If the comparison is correct, <command>dpkg</command> returns 0 (success); if not, it gives a non-zero return value (indicating failure)."
 msgstr "Так как <command>dpkg</command> представляет из себя программу для работы с Debian пакетами, она, помимо всего прочего, умеет логически сравнивать номера их версий. Для этого требуется три параметра: номера версии пакетов и оператор сравнения. Различные возможные операторы - <literal>lt</literal> (строго меньше, чем), <literal>le</literal> (меньше чем или равный), <literal>eq</literal> (равный), <literal>ne</literal> (не равный), <literal>ge</literal> (больше чем или равный), и <literal>gt</literal> (строго больше, чем). Если операция сравнения прошла без ошибок, <command>dpkg</command> вернет код возврата равный нулю (success); если нет, мы получаем ненулевое значение (indicating failure)."
 
-
 #. Tag: screen
 #, no-c-format
 msgid ""
@@ -1910,7 +1909,6 @@ msgstr "Все Debian пакеты имеют поле <literal>Architecture</li
 #, no-c-format
 msgid "This restriction ensures that users do not end up with binaries compiled for an incorrect architecture. Everything would be perfect except that (some) computers can run binaries for multiple architectures, either natively (an “amd64“ system can run “i386” binaries) or through emulators."
 msgstr "Это ограничение гарантирует установку только тех пакетов, которые были собраны именно для неё (для такой же архитектуры). Стоит упомянуть, что на некоторых компьютерах можно запускать бинарные файлы для различных архитектур (к примеру, на системах “amd64“ без проблем будут работать бинарные файлы, скомпилированные для “i386” архитектуры) или через эмуляторы."
-
 
 #. Tag: title
 #, no-c-format
@@ -2053,7 +2051,6 @@ msgstr ""
 #, no-c-format
 msgid "It is worth noting that <literal>Multi-Arch: same</literal> packages must have their names qualified with their architecture to be unambiguously identifiable. They also have the possibility to share files with other instances of the same package; <command>dpkg</command> ensures that all packages have bit-for-bit identical files when they are shared. Last but not least, all instances of a package must have the same version. They must thus be upgraded together."
 msgstr "Стоит отметить, что пакеты с полем <literal>Multi-Arch: same</literal> должны иметь имена, содержащие название архитектуры, чтобы быть однозначно опознаваемыми. Они также имеют возможность обмениваться файлами с этим же пакетом, но для другой архитектуры; <command>dpkg</command> в этом случае гарантирует, что все пакеты имеют бит-в-бит идентичные файлы, когда они являются общими. Они должны быть обновляться тоже вместе."
-
 
 #. Tag: para
 #, no-c-format

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-31T08:15:01\n"
+"POT-Creation-Date: 2013-10-27T16:45:03\n"
 "PO-Revision-Date: 2012-05-09T20:00:15\n"
 "Last-Translator: Yaroslav Shevchenko <lazy.starwing@gmail.com>\n"
 "Language-Team: None\n"
@@ -450,12 +450,12 @@ msgstr ""
 
 #. Tag: indexterm
 #, no-c-format
-msgid "<primary>keyboard</primary><secondary>layout</secondary>"
+msgid "<primary>keyboard layout</primary>"
 msgstr ""
 
 #. Tag: indexterm
 #, no-c-format
-msgid "<primary>keyboard layout</primary>"
+msgid "<primary>layout, keyboard</primary>"
 msgstr ""
 
 #. Tag: para
@@ -560,7 +560,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "If the network is available, the system's internal clock is updated (in a one-shot way) from an NTP server. This way the timestamps on logs will be correct from the first boot. For them to remain consistently precise over time, an NTP daemon needs to be set up after initial installation (see <xref linkend=\"sect.synchronisation-horaire\" />)."
+msgid "If the network is available, the system's internal clock is updated (in a one-shot way) from an NTP server. This way the timestamps on logs will be correct from the first boot. For them to remain consistently precise over time, an NTP daemon needs to be set up after initial installation (see <xref linkend=\"sect.time-synchronization\" />)."
 msgstr ""
 
 #. Tag: title
@@ -1285,7 +1285,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The installed packages correspond to the profiles selected during installation, but not necessarily to the use that will actually be made of the machine. As such, you might want to use a package management tool to refine the selection of installed packages. The two most frequently used tools (which are installed if the “Graphical desktop environment” profile was chosen) are <command>apt</command> (accessible from the command line) and <command>synaptic</command> (<menuchoice><guimenu>System</guimenu> <guisubmenu>Administration</guisubmenu> <guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>)."
+msgid "The installed packages correspond to the profiles selected during installation, but not necessarily to the use that will actually be made of the machine. As such, you might want to use a package management tool to refine the selection of installed packages. The two most frequently used tools (which are installed if the “Graphical desktop environment” profile was chosen) are <command>apt</command> (accessible from the command line) and <command>synaptic</command> (<menuchoice><guimenu>Applications</guimenu> <guisubmenu>Administration</guisubmenu> <guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice> or <menuchoice><guimenu>Applications</guimenu> <guisubmenu>System</guisubmenu> <guisubmenu>Administration</guisubmenu> <guimenuitem>Synaptic Package Manager</guimenuitem></menuchoice>)."
 msgstr ""
 
 #. Tag: para

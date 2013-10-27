@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-31T08:15:02\n"
+"POT-Creation-Date: 2013-10-27T16:45:04\n"
 "PO-Revision-Date: 2012-05-09T20:00:19\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
@@ -270,7 +270,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "<emphasis role=\"pkg\">file-rc</emphasis> is another boot system with a very simple process. It keeps the principle of runlevels, but replaces the directories and symbolic links with a configuration file, which indicates to <command>init</command> the processes that must be started and their launch order"
+msgid "<emphasis role=\"pkg\">file-rc</emphasis> is another boot system with a very simple process. It keeps the principle of runlevels, but replaces the directories and symbolic links with a configuration file, which indicates to <command>init</command> the processes that must be started and their launch order."
 msgstr ""
 
 #. Tag: para

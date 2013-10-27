@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-31T08:15:03\n"
+"POT-Creation-Date: 2013-10-27T16:45:05\n"
 "PO-Revision-Date: 2012-05-09T20:00:21\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
@@ -100,7 +100,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The keyboard configuration is currently set up in <filename>/etc/default/keyboard</filename>. This file is used both to configure the text console and the graphical interface, and it is handled by the <emphasis role=\"pkg\">keyboard-configuration</emphasis> package. Details on configuring the keyboard layout are available in <xref linkend=\"sect.config-clavier\" />."
+msgid "The keyboard configuration is currently set up in <filename>/etc/default/keyboard</filename>. This file is used both to configure the text console and the graphical interface, and it is handled by the <emphasis role=\"pkg\">keyboard-configuration</emphasis> package. Details on configuring the keyboard layout are available in <xref linkend=\"sect.keyboard-config\" />."
 msgstr ""
 
 #. Tag: para
@@ -207,7 +207,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The graphical interface only provides display space. Running the X server by itself only leads to an empty screen, which is why most installations use a <emphasis>display manager</emphasis> to display a user authentication screen and start the graphical desktop once the user has authenticated. The three most popular display managers in current use are <emphasis role=\"pkg\">gdm3</emphasis> (<foreignphrase>GNOME Display Manager</foreignphrase>), <emphasis role=\"pkg\">kdm</emphasis> (<foreignphrase>KDE Display Manager</foreignphrase>) and <emphasis role=\"pkg\">xdm</emphasis> (<foreignphrase>X Display Manager</foreignphrase>). Since the Falcot Corp administrators have opted to use the GNOME desktop environment, they logically picked <command>gdm3</command> as a display manager too. The <filename>/etc/gdm3/daemon.conf</filename> configuration file has many options. Up to <emphasis role=\"distribution\">Squeeze</emphasis>, some of these options could be set by <command>gdmsetup</command>, a graphical interface for <command>gdm3</command> configuration that could be run from the <menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu> <guimenuitem>Display screen</guimenuitem></menuchoice> menu in the GNOME desktop. This tool is no longer available in <emphasis role=\"distribution\">Wheezy</emphasis>, but some of its functionality can be found in GNOME's control center."
+msgid "The graphical interface only provides display space. Running the X server by itself only leads to an empty screen, which is why most installations use a <emphasis>display manager</emphasis> to display a user authentication screen and start the graphical desktop once the user has authenticated. The three most popular display managers in current use are <emphasis role=\"pkg\">gdm3</emphasis> (<foreignphrase>GNOME Display Manager</foreignphrase>), <emphasis role=\"pkg\">kdm</emphasis> (<foreignphrase>KDE Display Manager</foreignphrase>) and <emphasis role=\"pkg\">xdm</emphasis> (<foreignphrase>X Display Manager</foreignphrase>). Since the Falcot Corp administrators have opted to use the GNOME desktop environment, they logically picked <command>gdm3</command> as a display manager too. The <filename>/etc/gdm3/daemon.conf</filename> configuration file has many options (the list can be found in the <filename>/usr/share/gdm/gdm.schemas</filename> schema file). Up to <emphasis role=\"distribution\">Squeeze</emphasis>, some of these options could be set by <command>gdmsetup</command>, a graphical interface for <command>gdm3</command> configuration that could be run from the <menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu> <guimenuitem>Display screen</guimenuitem></menuchoice> menu in the GNOME desktop. This tool is no longer available in <emphasis role=\"distribution\">Wheezy</emphasis>. Some of its functionality (in particular the configuration of automatic logins) can be found in GNOME's control center; the rest of the <command>gdm3</command> configuration is controlled by the <filename>/etc/gdm3/greeter.gsettings</filename> file."
 msgstr ""
 
 #. Tag: title
@@ -563,6 +563,16 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "The Xfce desktop"
+msgstr ""
+
+#. Tag: para
+#, no-c-format
+msgid "Another desktop environment provided in Wheezy is LXDE, which focuses on the “lightweight” aspect."
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>LXDE</primary>"
 msgstr ""
 
 #. Tag: title
@@ -1167,7 +1177,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Office software has long been seen as lacking in the free software world. Users have long asked for replacements for Microsoft tools such as Word and Excel, but these are so complex that replacements were hard to develop. The situation changed when the OpenOffice.org project started (following Sun's release of the StarOffice code under a free license), and the appearance of Libre Office as a variant. The GNOME and KDE projects are still working on their offerings (GNOME Office and KOffice), and the friendly competition leads to interesting results. For instance, the Gnumeric spreadsheet (part of GNOME Office) is even better than OpenOffice.org/Libre Office in some domains, notably the precision of its calculations. On the word processing front, the OpenOffice.org and Libre Office suites still lead the way."
+msgid "Office software has long been seen as lacking in the free software world. Users have long asked for replacements for Microsoft tools such as Word and Excel, but these are so complex that replacements were hard to develop. The situation changed when the OpenOffice.org project started (following Sun's release of the StarOffice code under a free license), and the appearance of Libre Office as a variant. The GNOME and KDE projects are still working on their offerings (GNOME Office and Calligra Suite), and the friendly competition leads to interesting results. For instance, the Gnumeric spreadsheet (part of GNOME Office) is even better than OpenOffice.org/Libre Office in some domains, notably the precision of its calculations. On the word processing front, the OpenOffice.org and Libre Office suites still lead the way."
 msgstr ""
 
 #. Tag: indexterm
@@ -1188,6 +1198,11 @@ msgstr ""
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>GNOME Office</primary>"
+msgstr ""
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>Calligra Suite</primary>"
 msgstr ""
 
 #. Tag: indexterm
@@ -1242,7 +1257,7 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "Libre Office, KOffice and GNOME Office are, respectively, available in the <emphasis role=\"pkg\">libreoffice</emphasis>, <emphasis role=\"pkg\">koffice</emphasis> and <emphasis role=\"pkg\">gnome-office</emphasis> Debian packages. Language-specific packs for Libre Office are distributed in separate packages: <emphasis role=\"pkg\">libreoffice-l10n-*</emphasis> and <emphasis role=\"pkg\">libreoffice-help-*</emphasis> most notably; some features such as spelling dictionaries, hyphenation patterns and thesauri are in separate packages, such as <emphasis role=\"pkg\">myspell-*</emphasis>, <emphasis role=\"pkg\">hyphen-*</emphasis> and <emphasis role=\"pkg\">mythes-*</emphasis>."
+msgid "Libre Office, Calligra Suite and GNOME Office are, respectively, available in the <emphasis role=\"pkg\">libreoffice</emphasis>, <emphasis role=\"pkg\">calligra</emphasis> and <emphasis role=\"pkg\">gnome-office</emphasis> Debian packages. Language-specific packs for Libre Office are distributed in separate packages: <emphasis role=\"pkg\">libreoffice-l10n-*</emphasis> and <emphasis role=\"pkg\">libreoffice-help-*</emphasis> most notably; some features such as spelling dictionaries, hyphenation patterns and thesauri are in separate packages, such as <emphasis role=\"pkg\">myspell-*</emphasis>, <emphasis role=\"pkg\">hyphen-*</emphasis> and <emphasis role=\"pkg\">mythes-*</emphasis>. Note that Calligra Suite used to be called KOffice, and the <emphasis role=\"pkg\">koffice</emphasis> package is a transition package."
 msgstr ""
 
 #. Tag: title
@@ -1302,23 +1317,6 @@ msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The simplest way of using Wine is with an instance of Microsoft Windows already installed on an existing partition (which will be the case on machines dual-booting with this system). When no installed Windows version is available, Wine works in a less complete way, and fewer programs will be able to run."
-msgstr ""
-
-#. Tag: para
-#, no-c-format
-msgid "The Windows partition must first be mounted (for instance under <filename>/windows/</filename>), and the <command>wine</command> user must have read and write access. The following <filename>fstab</filename> entry grants this access to all users:"
-msgstr ""
-
-#. Tag: programlisting
-#, no-c-format
-msgid ""
-"\n"
-"/dev/hda1 /windows fat defaults,uid=1000,gid=100,umask=002,nls=iso8859-1 0 0\n"
-msgstr ""
-
-#. Tag: para
-#, no-c-format
 msgid "Now let's install the required packages:"
 msgstr ""
 
@@ -1331,12 +1329,12 @@ msgstr ""
 
 #. Tag: indexterm
 #, no-c-format
-msgid "<primary><command>winesetup</command></primary>"
+msgid "<primary><command>winecfg</command></primary>"
 msgstr ""
 
 #. Tag: para
 #, no-c-format
-msgid "The user then needs to run <command>winecfg</command> and configure <filename>/windows/</filename> to be used as the <literal>C:</literal> drive. Other settings can be kept to their default values. Running Windows programs then becomes a simple matter of running <command>wine <replaceable>/windows/.../program.exe</replaceable></command>."
+msgid "The user then needs to run <command>winecfg</command> and configure which (Debian) locations are mapped to which (Windows) drives. <command>winecfg</command> has some sane defaults and can autodetect some more drives; note that even if you have a dual-boot system, you should not point the <literal>C:</literal> at where the Windows partition is mounted in Debian, as Wine is likely to overwrite some of the data on that partition, making Windows unusable. Other settings can be kept to their default values. To run Windows programs, you will first need to install them by running their (Windows) installer under Wine, with a command such as <command>wine <replaceable>.../setup.exe</replaceable></command>; once the program is installed, you can run it with <command>wine <replaceable>.../program.exe</replaceable></command>. The exact location of the <filename>program.exe</filename> file depends on where the <literal>C:</literal> drive is mapped; in many cases, however, simply running <command>wine <replaceable>program</replaceable></command> will work, since the program is usually installed in a location where Wine will look for it by itself."
 msgstr ""
 
 #. Tag: para
