@@ -8,14 +8,33 @@ debian-handbook (7.0~20120731) UNRELEASED; urgency=low
   * In chapter 15, replace reference to APT chapter with an xref.
     Closes: #681720 Thanks to Daniele Forsi for the patch.
   * Document multi-arch support. Closes: #675458
-  * In the chapter about APT:
+  * Chapter 6 (APT):
     - use codenames instead of suites and explain why we made that choice.
       Closes: #672488
     - document sources.list for users of testing/unstable. Closes: #675521
     - document approx/apt-cacher as proxy cache for APT repositories
     - document unattended-upgrades as a way to auto-install some updates
+  * Chapter 8 (basic configuration):
+    - update information about locate/updatedb. Closes: #675943
+    - document the Windows registry key to get it to consider the
+      clock as UTC. Closes: #686634
+    - update section about custom kernel to no longer mention
+      kernel-package but “make deb-pkg”
+    - indicate how to create “System connections” with Network Manager
 
- -- Raphaël Hertzog <hertzog@debian.org>  Tue, 31 Jul 2012 15:13:59 +0200
+  [ Roland Mas ]
+  * Chapter 3: rephrase paragraph about AppleTalk and Netatalk (closes:
+    #681399).
+  * Chapter 4: update location of Synaptic in Gnome menus (closes:
+    #718470).
+  * Chapter 13: mention LXDE in the "XFCE and others" section (closes:
+    #696892).
+  * Chapter 13: KOffice is now Calligra Suite (closes: #696894).
+  * Chapter 13: Document current workings of the gdm3 configuration
+    (closes: #699926).
+  * Chapter 13: Document proper way of running Wine (closes: #674980).
+
+ -- Roland Mas <lolando@debian.org>  Tue, 15 Oct 2013 18:22:19 +0200
 
 debian-handbook (6.0+20121031) unstable; urgency=low
 

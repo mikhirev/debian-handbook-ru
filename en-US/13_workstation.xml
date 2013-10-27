@@ -72,7 +72,7 @@
     configure the text console and the graphical interface, and it is
     handled by the <emphasis role="pkg">keyboard-configuration</emphasis>
     package. Details on configuring the keyboard layout are available in
-    <xref linkend="sect.config-clavier"/>.</para>
+    <xref linkend="sect.keyboard-config"/>.</para>
 
     <para>The <emphasis role="pkg">xserver-xorg-core</emphasis> package provides
     a generic X server, as used by the 7.x versions of X.org. This server
@@ -164,38 +164,21 @@
       have opted to use the GNOME desktop environment, they logically
       picked <command>gdm3</command> as a display manager too. The
       <filename>/etc/gdm3/daemon.conf</filename> configuration file
-      has many options.  Up to <emphasis
-      role="distribution">Squeeze</emphasis>, some of these options
-      could be set by <command>gdmsetup</command>, a graphical
-      interface for <command>gdm3</command> configuration that could be
-      run from the
+      has many options (the list can be found in the
+      <filename>/usr/share/gdm/gdm.schemas</filename> schema file).
+      Up to <emphasis role="distribution">Squeeze</emphasis>, some of
+      these options could be set by <command>gdmsetup</command>, a
+      graphical interface for <command>gdm3</command> configuration
+      that could be run from the
       <menuchoice><guimenu>System</guimenu><guisubmenu>Administration</guisubmenu>
       <guimenuitem>Display screen</guimenuitem></menuchoice> menu in
-      the GNOME desktop.  This tool is no longer available in <emphasis
-      role="distribution">Wheezy</emphasis>, but some of its
-      functionality can be found in GNOME's control center.</para>
+      the GNOME desktop.  This tool is no longer available in
+      <emphasis role="distribution">Wheezy</emphasis>.  Some of its
+      functionality (in particular the configuration of automatic
+      logins) can be found in GNOME's control center; the rest of the
+      <command>gdm3</command> configuration is controlled by the
+      <filename>/etc/gdm3/greeter.gsettings</filename> file.</para>
 
-      <!-- Obsolete
-      <sidebar>
-        <title><emphasis>ALTERNATIVE</emphasis> gdm vs. gdm3</title>
-
-	<para>A fresh installation of <emphasis
-	role="distribution">Squeeze</emphasis> sets up <emphasis
-	role="pkg">gdm3</emphasis>. On the other hand, a system upgraded to
-	<emphasis role="distribution">Squeeze</emphasis> from a previous
-	version of Debian will usually have <emphasis
-	role="pkg">gdm</emphasis> (the 2.x version). Version 3 is a full
-	rewrite, but it is still rather young: many of the options provided
-	by previous versions have been removed, and the
-	<command>gdmsetup</command> configuration interface is much more
-	limited in scope. This explains why both versions are available in
-	<emphasis role="distribution">Squeeze</emphasis>. Note, however,
-	the 2.x versions will be removed from the next stable Debian
-	release. It makes sense to anticipate the migration and install
-	<emphasis role="pkg">gdm3</emphasis> straight away if the missing
-	features are not important to you.</para>
-      </sidebar>
-      -->
     </section>
     <section>
       <title>Choosing a Window Manager</title>
@@ -507,6 +490,10 @@
           </imageobject>
         </mediaobject>
       </figure>
+
+      <para>Another desktop environment provided in Wheezy is LXDE,
+      which focuses on the “lightweight” aspect.</para>
+      <indexterm><primary>LXDE</primary></indexterm>
     </section>
   </section>
   <section id="sect.main-desktop-tools">
@@ -997,7 +984,7 @@
       when the OpenOffice.org project started (following Sun's release
       of the StarOffice code under a free license), and the appearance
       of Libre Office as a variant. The GNOME and KDE projects are
-      still working on their offerings (GNOME Office and KOffice), and
+      still working on their offerings (GNOME Office and Calligra Suite), and
       the friendly competition leads to interesting results. For
       instance, the Gnumeric spreadsheet (part of GNOME Office) is
       even better than OpenOffice.org/Libre Office in some domains,
@@ -1008,6 +995,7 @@
       <indexterm><primary>StarOffice</primary></indexterm>
       <indexterm><primary>Libre Office</primary></indexterm>
       <indexterm><primary>GNOME Office</primary></indexterm>
+      <indexterm><primary>Calligra Suite</primary></indexterm>
       <indexterm><primary>KOffice</primary></indexterm>
       <indexterm><primary>Gnumeric</primary></indexterm>
 
@@ -1050,9 +1038,10 @@
       <indexterm><primary>Microsoft</primary><secondary>Word</secondary></indexterm>
       <indexterm><primary>Microsoft</primary><secondary>Excel</secondary></indexterm>
 
-      <para>Libre Office, KOffice and GNOME Office are, respectively,
-      available in the <emphasis role="pkg">libreoffice</emphasis>,
-      <emphasis role="pkg">koffice</emphasis> and <emphasis
+      <para>Libre Office, Calligra Suite and GNOME Office are,
+      respectively, available in the <emphasis
+      role="pkg">libreoffice</emphasis>, <emphasis
+      role="pkg">calligra</emphasis> and <emphasis
       role="pkg">gnome-office</emphasis> Debian
       packages. Language-specific packs for Libre Office are
       distributed in separate packages: <emphasis
@@ -1062,7 +1051,10 @@
       thesauri are in separate packages, such as <emphasis
       role="pkg">myspell-*</emphasis>, <emphasis
       role="pkg">hyphen-*</emphasis> and <emphasis
-      role="pkg">mythes-*</emphasis>.</para>
+      role="pkg">mythes-*</emphasis>.  Note that Calligra Suite used
+      to be called KOffice, and the <emphasis
+      role="pkg">koffice</emphasis> package is a transition
+      package.</para>
     </section>
   </section>
   <section id="sect.windows-emulation">
@@ -1099,35 +1091,33 @@
     imitate the required features of the target system.</para>
     <indexterm><primary>Wine</primary></indexterm>
 
-    <para>The simplest way of using Wine is with an instance of Microsoft
-    Windows already installed on an existing partition (which will be the
-    case on machines dual-booting with this system). When no installed
-    Windows version is available, Wine works in a less complete way, and
-    fewer programs will be able to run.</para>
-
-    <para>The Windows partition must first be mounted (for instance under
-    <filename>/windows/</filename>), and the <command>wine</command> user
-    must have read and write access. The following
-    <filename>fstab</filename> entry grants this access to all
-    users:</para>
-
-    <programlisting>
-/dev/hda1 /windows fat defaults,uid=1000,gid=100,umask=002,nls=iso8859-1 0 0
-</programlisting>
-
     <para>Now let's install the required packages:</para>
 
     <screen>
 <computeroutput># </computeroutput><userinput>apt-get install wine ttf-mscorefonts-installer wine-doc</userinput>
 </screen>
-    <indexterm><primary><command>winesetup</command></primary></indexterm>
+    <indexterm><primary><command>winecfg</command></primary></indexterm>
 
     <para>The user then needs to run <command>winecfg</command> and
-    configure <filename>/windows/</filename> to be used as the
-    <literal>C:</literal> drive. Other settings can be kept to their
-    default values. Running Windows programs then becomes a simple matter
-    of running <command>wine
-    <replaceable>/windows/.../program.exe</replaceable></command>.</para>
+    configure which (Debian) locations are mapped to which (Windows)
+    drives.  <command>winecfg</command> has some sane defaults and can
+    autodetect some more drives; note that even if you have a
+    dual-boot system, you should not point the <literal>C:</literal>
+    at where the Windows partition is mounted in Debian, as Wine is
+    likely to overwrite some of the data on that partition, making
+    Windows unusable.  Other settings can be kept to their default
+    values.  To run Windows programs, you will first need to install
+    them by running their (Windows) installer under Wine, with a
+    command such as <command>wine
+    <replaceable>.../setup.exe</replaceable></command>; once the
+    program is installed, you can run it with <command>wine
+    <replaceable>.../program.exe</replaceable></command>.  The exact
+    location of the <filename>program.exe</filename> file depends on
+    where the <literal>C:</literal> drive is mapped; in many cases,
+    however, simply running <command>wine
+    <replaceable>program</replaceable></command> will work, since the
+    program is usually installed in a location where Wine will look
+    for it by itself.</para>
 
     <para>Note that you should not rely on Wine (or similar solutions)
     without actually testing the particular software: only a real-use test

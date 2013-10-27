@@ -439,8 +439,8 @@
     </section>
     <section id="sect.install-clavier">
       <title>Selecting the keyboard layout</title>
-      <indexterm><primary>keyboard</primary><secondary>layout</secondary></indexterm>
       <indexterm><primary>keyboard layout</primary></indexterm>
+      <indexterm><primary>layout, keyboard</primary></indexterm>
 
       <para>The proposed “American English” keyboard corresponds to the
       usual QWERTY layout.</para>
@@ -548,7 +548,7 @@
       timestamps on logs will be correct from the first boot. For them to
       remain consistently precise over time, an NTP daemon needs to be set
       up after initial installation (see <xref
-      linkend="sect.synchronisation-horaire"/>).</para>
+      linkend="sect.time-synchronization"/>).</para>
     </section>
     <section>
       <title>Administrator Password</title>
@@ -1275,14 +1275,19 @@
 
       <para>The installed packages correspond to the profiles selected
       during installation, but not necessarily to the use that will
-      actually be made of the machine. As such, you might want to use a
-      package management tool to refine the selection of installed
-      packages. The two most frequently used tools (which are installed if
-      the “Graphical desktop environment” profile was chosen) are
-      <command>apt</command> (accessible from the command line) and
-      <command>synaptic</command> (<menuchoice><guimenu>System</guimenu>
-      <guisubmenu>Administration</guisubmenu> <guimenuitem>Synaptic Package
-      Manager</guimenuitem></menuchoice>).</para>
+      actually be made of the machine. As such, you might want to use
+      a package management tool to refine the selection of installed
+      packages. The two most frequently used tools (which are
+      installed if the “Graphical desktop environment” profile was
+      chosen) are <command>apt</command> (accessible from the command
+      line) and <command>synaptic</command>
+      (<menuchoice><guimenu>Applications</guimenu>
+      <guisubmenu>Administration</guisubmenu> <guimenuitem>Synaptic
+      Package Manager</guimenuitem></menuchoice> or
+      <menuchoice><guimenu>Applications</guimenu>
+      <guisubmenu>System</guisubmenu>
+      <guisubmenu>Administration</guisubmenu> <guimenuitem>Synaptic
+      Package Manager</guimenuitem></menuchoice>).</para>
 
       <para>To facilitate the installation of coherent groups of programs,
       Debian creates “tasks” that are dedicated to specific uses (mail
