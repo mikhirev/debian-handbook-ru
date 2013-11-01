@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: 0\n"
 "POT-Creation-Date: 2013-08-31T08:15:04\n"
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Mikhail Karpenko <veegboo@gmail.com>\n"
 "Language-Team: None\n"
-"Language: \n"
+"Language: ru-RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: application/x-publican; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,82 +16,82 @@ msgstr ""
 #. Tag: keyword
 #, no-c-format
 msgid "Firewall"
-msgstr ""
+msgstr "Межсетевой экран"
 
 #. Tag: keyword
 #, no-c-format
 msgid "Netfilter"
-msgstr ""
+msgstr "Сетевой фильтр"
 
 #. Tag: keyword
 #, no-c-format
 msgid "IDS/NIDS"
-msgstr ""
+msgstr "IDS/NIDS"
 
 #. Tag: title
 #, no-c-format
 msgid "Security"
-msgstr ""
+msgstr "Безопасность"
 
 #. Tag: para
 #, no-c-format
 msgid "An information system can have a varying level of importance depending on the environment. In some cases, it is vital to a company's survival. It must therefore be protected from various kinds of risks. The process of evaluating these risks, defining and implementing the protection is collectively known as the “security process”."
-msgstr ""
+msgstr "В зависимости от окружения, информационная система может иметь различный уровень значимости. В некоторых случаях она может быть критически важной для функционирования компании. По этой причиние её необходимо защищать от различных угроз. Процесс оценки и определения подобных угроз, а также реализация защиты называется “механизмом безопасности”."
 
 #. Tag: title
 #, no-c-format
 msgid "Defining a Security Policy"
-msgstr ""
+msgstr "Определение политики безопасности"
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CAUTION</emphasis> Scope of this chapter"
-msgstr ""
+msgstr "<emphasis>ОСТОРОЖНО</emphasis> Предмет данноей главы"
 
 #. Tag: para
 #, no-c-format
 msgid "Security is a vast and very sensitive subject, so we cannot claim to describe it in any kind of comprehensive manner in the course of a single chapter. We will only delineate a few important points and describe some of the tools and methods that can be of use in the security domain. For further reading, literature abounds, and entire books have been devoted to the subject. An excellent starting point would be <citetitle>Linux Server Security</citetitle> by Michael D. Bauer (published by O'Reilly)."
-msgstr ""
+msgstr "Безопасность - обширный и очень тонкий предмет, поэтому мы не в силах утверждать, что его можно полностью охватить в рамках одной главы. Мы лишь укажем на некоторые вожные моменты и опишем несколько инструментов и методов, которые могут быть полезны в сфере безопасности. Существует множество книг для дальнейшего изучения этой области и некоторые из них посвящены предмету безопасности. Превосходной отправной точкой будет @@@<citetitle>Linux Server Security</citetitle> за авторством Michael D. Bauer (издательства O'Reilly)."
 
 #. Tag: para
 #, no-c-format
 msgid "The word “security” itself covers a vast range of concepts, tools and procedures, none of which apply universally. Choosing among them requires a precise idea of what your goals are. Securing a system starts with answering a few questions. Rushing headlong into implementing an arbitrary set of tools runs the risk of focusing on the wrong aspects of security."
-msgstr ""
+msgstr "Само слово “безопасность” подразумеват обширный пласт концепций, инструментов и процедур, которые сами по себе не применимы универсально. Выбор подходящих из данного множества подразумевает четкую постановку задач. Защита системы начинается с ответов на несколько вопросов. Слепое стремление к внедрению случайного набора инструментов может привести к концентраци внимания на неправильных аспектах безопасности."
 
 #. Tag: para
 #, no-c-format
 msgid "The very first thing to determine is therefore the goal. A good approach to help with that determination starts with the following questions:"
-msgstr ""
+msgstr "Поэтому первоочередной целью является постановка задачи. Хотоший подход к постановке задачи начинается с ответа на следующие вопросы:"
 
 #. Tag: para
 #, no-c-format
 msgid "<emphasis>What</emphasis> are we trying to protect? The security policy will be different depending on whether we want to protect computers or data. In the latter case, we also need to know which data."
-msgstr ""
+msgstr "<emphasis>Что</emphasis> мы пытаемся защитить? Политика безопасноти будет отличаться для случая защиты компьютеров и защиты данных. В последнем случае нам придётся установить ещё и какие данные мы хотим защитить."
 
 #. Tag: para
 #, no-c-format
 msgid "What are we trying to protect <emphasis>against</emphasis>? Is it leakage of confidential data? Accidental data loss? Revenue loss caused by disruption of service?"
-msgstr ""
+msgstr "<emphasis>От чего</emphasis> мы хотим защититься? От утечки конфиденциальных данных? Случайной потери даных? Потери прибыли по причине сбоя в предоставлении услуг?"
 
 #. Tag: para
 #, no-c-format
 msgid "Also, <emphasis>who</emphasis> are we trying to protect against? Security measures will be quite different for guarding against a typo by a regular user of the system than they would be when protecting against a determined attacker group."
-msgstr ""
+msgstr "Далее, <emphasis>от кого</emphasis> мы пытаемся защититься? Меры безопасности будут значительно отличатся в случае предотвращения опечаток, которые может допустить обычный оператор системы, и в случае защиты от направленой атаки, организованной группой лиц."
 
 #. Tag: para
 #, no-c-format
 msgid "The term “risk” is customarily used to refer collectively to these three factors: what to protect, what needs to be prevented from happening, and who will try to make it happen. Modeling the risk requires answers to these three questions. From this risk model, a security policy can be constructed, and the policy can be implemented with concrete actions."
-msgstr ""
+msgstr "Термин “угроза” употребляется достаточно вольно для отсылки ко всем трём перечисленным факторам: что защищать, что необходимо предотвратить и кто попытается это совершить. Моделиривание угроз предполагает наличие ответов на все три вопроса. Располагая моделью угрозы, вы сможете построить соответствующую политику безопасности, и эта политика может быть реализована вполне определённым набором действий."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>NOTE</emphasis> Permanent questioning"
-msgstr ""
+msgstr "<emphasis>ЗАМЕТКА</emphasis> Регулярная постановка вопросов"
 
 #. Tag: para
 #, no-c-format
 msgid "Bruce Schneier, a world expert in security matters (not only computer security) tries to counter one of security's most important myths with a motto: “Security is a process, not a product”. Assets to be protected change in time, and so do threats and the means available to potential attackers. Even if a security policy has initially been perfectly designed and implemented, one should never rest on one's laurels. The risk components evolve, and the response to that risk must evolve accordingly."
-msgstr ""
+msgstr "Брюс Шнайер, эксперт мирового уровня по вопросам безопасноти (не только компьютерной), пытается "
 
 #. Tag: para
 #, no-c-format
