@@ -551,22 +551,22 @@ msgstr "<primary><literal>Breaks</literal>, header field</primary>"
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>incompatibility</secondary>"
-msgstr "<primary>package</primary><secondary>incompatibility</secondary>"
+msgstr "<primary>пакет</primary><secondary>несовместимость</secondary>"
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>Breaks</literal> field has an effect similar to that of the <literal>Conflicts</literal> field, but with a special meaning. It signals that the installation of a package will “break” another package (or particular versions of it). In general, this incompatibility between two packages is transitory, and the <literal>Breaks</literal> relationship specifically refers to the incompatible versions."
-msgstr ""
+msgstr "Поле <literal>Breaks</literal> имеет схожий смысл, что и поле <literal>Conflicts</literal>. Оно подразумевает “поломку” другого пакета (или конкретные его версии). Другими словами, это несовместимость версий двух пакетов."
 
 #. Tag: para
 #, no-c-format
 msgid "<command>dpkg</command> will refuse to install a package that breaks an already installed package, and <command>apt-get</command> will try to resolve the problem by updating the package that would be broken to a newer version (which is assumed to be fixed and, thus, compatible again)."
-msgstr ""
+msgstr "<command>dpkg</command> откажется установить пакет, который поломает уже установленный пакет, и <command>apt-get</command> попытается решить проблему путем обновления пакета, которая, как предполагается, будет исправленной (не будет вызывать конфликта) и, таким образом, снова совместимой."
 
 #. Tag: para
 #, no-c-format
 msgid "This type of situation may occur in the case of updates without backwards compatibility: this is the case if the new version no longer functions with the older version, and causes a malfunction in another program without making special provisions. The <literal>Breaks</literal> field prevents the user from running into these problems."
-msgstr ""
+msgstr "Подобные ситуации могут возникнуть в случае обновления без обратной совместимости: например, если те или иные функции новой версии могут привести к поломке в другой программе. Поле <literal>Breaks</literal> позволяет пользователю обработать подобные проблемы."
 
 #. Tag: title
 #, no-c-format
