@@ -551,47 +551,47 @@ msgstr "<primary><literal>Breaks</literal>, header field</primary>"
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>incompatibility</secondary>"
-msgstr "<primary>package</primary><secondary>incompatibility</secondary>"
+msgstr "<primary>пакет</primary><secondary>несовместимость</secondary>"
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>Breaks</literal> field has an effect similar to that of the <literal>Conflicts</literal> field, but with a special meaning. It signals that the installation of a package will “break” another package (or particular versions of it). In general, this incompatibility between two packages is transitory, and the <literal>Breaks</literal> relationship specifically refers to the incompatible versions."
-msgstr ""
+msgstr "Поле <literal>Breaks</literal> имеет схожий смысл, что и поле <literal>Conflicts</literal>. Оно подразумевает “поломку” другого пакета (или конкретные его версии). Другими словами, это несовместимость версий двух пакетов."
 
 #. Tag: para
 #, no-c-format
 msgid "<command>dpkg</command> will refuse to install a package that breaks an already installed package, and <command>apt-get</command> will try to resolve the problem by updating the package that would be broken to a newer version (which is assumed to be fixed and, thus, compatible again)."
-msgstr ""
+msgstr "<command>dpkg</command> откажется установить пакет, который поломает уже установленный пакет, и <command>apt-get</command> попытается решить проблему путем обновления пакета, которая, как предполагается, будет исправленной (не будет вызывать конфликта) и, таким образом, снова совместимой."
 
 #. Tag: para
 #, no-c-format
 msgid "This type of situation may occur in the case of updates without backwards compatibility: this is the case if the new version no longer functions with the older version, and causes a malfunction in another program without making special provisions. The <literal>Breaks</literal> field prevents the user from running into these problems."
-msgstr ""
+msgstr "Подобные ситуации могут возникнуть в случае обновления без обратной совместимости: например, если те или иные функции новой версии могут привести к поломке в другой программе. Поле <literal>Breaks</literal> позволяет пользователю обработать подобные проблемы."
 
 #. Tag: title
 #, no-c-format
 msgid "Provided Items: the <literal>Provides</literal> Field"
-msgstr ""
+msgstr "Предоставляемое пакетом: поле <literal>Provides</literal>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><literal>Provides</literal>, header field</primary>"
-msgstr ""
+msgstr "<primary><literal>Provides</literal>, header field</primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "This field introduces the very interesting concept of a “virtual package”. It has many roles, but two are of particular importance. The first role consists in using a virtual package to associate a generic service with it (the package “provides” the service). The second indicates that a package completely replaces another, and that for this purpose it can also satisfy the dependencies that the other would satisfy. It is thus possible to create a substitution package without having to use the same package name."
-msgstr ""
+msgstr "Это поле представляет очень интересную концепцию “виртуального пакета”. Оно имеет много значений, две из которых особенно интересны. Первая состоит в использовании виртуального пакета, т.е. связывает тот или иной сервис с ней (пакет “включает в себя” службы). Вторая показывает, что пакет полностью заменяет другой, и что для этого он также может удовлетворить его зависимости. Таким образом, можно создать своего рода замену пакету без необходимости использовать одно и тот же имя пакета."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>VOCABULARY</emphasis> Meta-package and virtual package"
-msgstr ""
+msgstr "<emphasis>СЛОВАРЬ</emphasis> Метапакет и виртуальный пакет"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>virtual package</secondary>"
-msgstr ""
+msgstr "<primary>пакет</primary><secondary>виртуальный пакет</secondary>"
 
 #. Tag: indexterm
 #, no-c-format
@@ -601,22 +601,22 @@ msgstr "<primary>виртуальный пакет</primary>"
 #. Tag: para
 #, no-c-format
 msgid "It is essential to clearly distinguish meta-packages from virtual packages. The former are real packages (including real <filename>.deb</filename> files), whose only purpose is to express dependencies."
-msgstr ""
+msgstr "Очень важно четко понимать различие между метапакетами и виртуальными пакетами. Первые являются реальными (настоящими ) пакетами (<filename>.deb</filename> файлы), чья единственная цель состоит в том, чтобы сообщить о зависимостях."
 
 #. Tag: para
 #, no-c-format
 msgid "Virtual packages, however, do not exist physically; they are only a means of identifying real packages based on common, logical criteria (service provided, compatibility with a standard program or a pre-existing package, etc.)."
-msgstr ""
+msgstr "Виртуальные пакеты, однако, не существует физически; они являются только средством выявления реальных пакетов на основе общих, логических критериев (предоставление услуги, совместимостью со стандартной программой или заранее существующим пакетом, и т.д.)."
 
 #. Tag: title
 #, no-c-format
 msgid "Providing a “Service”"
-msgstr ""
+msgstr "Предоставление “Сервиса”"
 
 #. Tag: para
 #, no-c-format
 msgid "Let us discuss the first case in greater detail with an example: all mail servers, such as <emphasis role=\"pkg\">postfix</emphasis> or <emphasis role=\"pkg\">sendmail</emphasis> are said to “provide” the <emphasis role=\"pkg\">mail-transport-agent</emphasis> virtual package. Thus, any package that needs this service to be functional (e.g. a mailing list manager, such as <emphasis role=\"pkg\">smartlist</emphasis> or <emphasis role=\"pkg\">sympa</emphasis>) simply states in its dependencies that it requires a <emphasis role=\"pkg\">mail-transport-agent</emphasis> instead of specifying a large yet incomplete list of possible solutions (e.g. <command>postfix | sendmail | exim4 | …</command>). Furthermore, it is useless to install two mail servers on the same machine, which is why each of these packages declares a conflict with the <emphasis role=\"pkg\">mail-transport-agent</emphasis> virtual package. The conflict with itself is ignored by the system, but this technique will prohibit the installation of two mail servers side by side."
-msgstr ""
+msgstr "Давайте обсудим первый случай более подробно на примере: все почтовые серверы, такие как <emphasis role=\"pkg\">postfix</emphasis> или <emphasis role=\"pkg\">sendmail</emphasis>, предоставляют собой агента пересылки сообщений (<emphasis role=\"pkg\">mail-transport-agent</emphasis>). Таким образом, для работы любого пакета, который нуждается в этой службе (например менеджеры списков рассылки, такие как <emphasis role=\"pkg\">smartlist</emphasis> или <emphasis role=\"pkg\">sympa</emphasis>), надо просто добавить его в зависимости. Кроме того, бесполезно установливать два почтовых сервера на одной машине, поэтому каждый из этих пакетов сообщит о конфликте с виртуальным пакетом почтового транспортного агента (MTA). Конфликт игнорируется системой, но эта техника будет запрещать установку двух почтовых серверов."
 
 #. Tag: title
 #, no-c-format
@@ -626,7 +626,7 @@ msgstr "<emphasis>ПОЛИТИКА DEBIAN</emphasis> Список виртуал
 #. Tag: para
 #, no-c-format
 msgid "For virtual packages to be useful, everyone must agree on their name. This is why they are standardized in the Debian Policy. The list includes among others <emphasis role=\"pkg\">mail-transport-agent</emphasis> for mail servers, <emphasis role=\"pkg\">c-compiler</emphasis> for C programming language compilers, <emphasis role=\"pkg\">www-browser</emphasis> for web browsers, <emphasis role=\"pkg\">httpd</emphasis> for web servers, <emphasis role=\"pkg\">ftp-server</emphasis> for FTP servers, <emphasis role=\"pkg\">x-terminal-emulator</emphasis> for terminal emulators in graphical mode (<command>xterm</command>), and <emphasis role=\"pkg\">x-window-manager</emphasis> for window managers."
-msgstr ""
+msgstr "Для виртуального пакета, чтобы быть полезным, все должны использовать его имя. Именно поэтому они стандартизированы в политике Debian. Список, помимо всего прочего, включает в себя <emphasis role=\"pkg\">mail-transport-agent</emphasis> для почтовых серверов (MTA), <emphasis role=\"pkg\">c-compiler</emphasis> для компиляторов языка программирования C, <emphasis role=\"pkg\">www-browser</emphasis> для веб-браузеров, <emphasis role=\"pkg\">httpd</emphasis> для веб-серверов, <emphasis role=\"pkg\">ftp-server</emphasis> для FTP-серверов, <emphasis role=\"pkg\">x-terminal-emulator</emphasis> для эмуляторов терминала в графическом режиме (<command>xterm</command>), и <emphasis role=\"pkg\">x-window-manager</emphasis> для оконных менеджеров."
 
 #. Tag: para
 #, no-c-format
@@ -641,17 +641,17 @@ msgstr "Взаимозаменяемость другим пакетом"
 #. Tag: para
 #, no-c-format
 msgid "The <literal>Provides</literal> field is again interesting when the content of a package is included in a larger package. For example, the <emphasis role=\"pkg\">libdigest-md5-perl</emphasis> Perl module was an optional module in Perl 5.6, and has been integrated as standard in Perl 5.8 (and later versions, such as 5.14 present in <emphasis role=\"distribution\">Wheezy</emphasis>). As such, the package <emphasis role=\"pkg\">perl</emphasis> has since version 5.8 declared <literal>Provides: libdigest-md5-perl</literal> so that the dependencies on this package are met if the user has Perl 5.8 (or newer). The <emphasis role=\"pkg\">libdigest-md5-perl</emphasis> package itself has eventually been deleted, since it no longer had any purpose when old Perl versions were removed."
-msgstr ""
+msgstr "Поле <literal>Provides</literal> также интересно, когда содержание того или иного пакета включает в себя другой, более большой пакет. Например, <emphasis role=\"pkg\">libdigest-md5-perl</emphasis> Rerl-модуль был дополнительным модулем в Perl 5.6, и был интегрирован в качестве стандартного в Perl 5.8 (и более поздних версий, таких как 5,14 настоящее время в <emphasis role=\"distribution\">Wheezy</emphasis>). Таким образом, пакет <emphasis role=\"pkg\">perl</emphasis>, начиная с версии 5.8, содержит <literal>Provides: libdigest-md5-perl</literal>, чтобы удовлетворить так же и его зависимости, если пользователь имеет Perl версии 5.8 (или новее). Сам пакет <emphasis role=\"pkg\">libdigest-md5-perl</emphasis> не в конечном итоге был удален, так как он уже не было никакой цели, когда старые версии Perl были удалены."
 
 #. Tag: title
 #, no-c-format
 msgid "Use of a <literal>Provides</literal> field in order to not break dependencies"
-msgstr ""
+msgstr "Поле <literal>Provides</literal> используется для того, чтобы не нарушать зависимости"
 
 #. Tag: para
 #, no-c-format
 msgid "This feature is very useful, since it is never possible to anticipate the vagaries of development, and it is necessary to be able to adjust to renaming, and other automatic replacement, of obsolete software."
-msgstr ""
+msgstr "Эта функция очень полезна, так как очень сложно предвидеть изменения в процессе разработки, а так же необходимо иметь возможность безболезненно встретить такие изменения, как например переименование пакета или другие изменения."
 
 #. Tag: title
 #, no-c-format
@@ -676,72 +676,72 @@ msgstr "Perl (Practical Extraction and Report Language) представляет
 #. Tag: para
 #, no-c-format
 msgid "Since it is an interpreted language, a program written in Perl does not require compilation prior to execution. This is why they are called “Perl scripts”."
-msgstr "Так как он является интерпретируемым языком, программа, написанная на Perl, не требуют компиляции перед выполнением. Вот почему они называются “Perl скрипты”."
+msgstr "Так как он является интерпретируемым языком, программа, написанная на Perl, не требуют компиляции перед выполнением. Вот почему она называется “Perl-скрипт”."
 
 #. Tag: title
 #, no-c-format
 msgid "Current Limitations"
-msgstr ""
+msgstr "Текущие ограничения"
 
 #. Tag: para
 #, no-c-format
 msgid "Virtual packages suffer from some limitations, the most significant of which being the absence of a version number. To return to the previous example, a dependency such as <literal>Depends: libdigest-md5-perl (&gt;= 1.6)</literal>, despite the presence of Perl 5.10, will never be considered as satisfied by the packaging system — while in fact it most likely is satisfied. Unaware of this, the package system chooses the least risky option, assuming that the versions do not match."
-msgstr ""
+msgstr "Виртуальные пакеты имеют некоторые ограничения. Самым значительным является отсутствие номера версии. Вернемся к предыдущему примеру: зависимость, такая как <literal>Depends: libdigest-md5-perl (&gt;= 1.6)</literal>, несмотря на наличие Perl 5.10, никогда не будет удовлетворена (в то время как на самом деле проблем тут быть не должно). Не понимая это, пакетная система выбирает наименее опасный путь, предполагая, что версии не соответствуют."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> Virtual package versions"
-msgstr ""
+msgstr "<emphasis>УГЛУБЛЯЕМСЯ</emphasis> Версии виртуальных пакетов"
 
 #. Tag: para
 #, no-c-format
 msgid "Although today virtual packages can't have versions, this will not necessarily always be the case. Indeed, <command>apt</command> is already able to manage the versions of virtual packages and it is likely that <command>dpkg</command> eventually will too. We will then be able to write fields such as <literal>Provides: libstorable-perl (= 1.7)</literal> to indicate that a package provides the same functionality as <emphasis role=\"pkg\">libstorable-perl</emphasis> in its 1.7 version."
-msgstr ""
+msgstr "Хотя обычно виртуальные пакеты не имеют версий, это не всегда так. Так, к примеру, <command>apt</command> уже способен различать версии виртуальных пакетов, а, следовательно, <command>dpkg</command> тоже. В этом случае мы можем использовать такие поля, как <literal>Provides: libstorable-perl (= 1.7)</literal>, чтобы указать, что пакет обеспечивает ту же функциональность, как и <emphasis role=\"pkg\">libstorable-perl</emphasis> версии 1.7."
 
 #. Tag: title
 #, no-c-format
 msgid "Replacing Files: The <literal>Replaces</literal> Field"
-msgstr ""
+msgstr "Замена файлов: поле <literal>Replaces</literal>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>replacement</primary>"
-msgstr ""
+msgstr "<primary>замена</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><literal>Replaces</literal>, header field</primary>"
-msgstr ""
+msgstr "<primary><literal>Замена</literal>, header field</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>package</primary><secondary>replacement</secondary>"
-msgstr ""
+msgstr "<primary>package</primary><secondary>replacement</secondary>"
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>Replaces</literal> field indicates that the package contains files that are also present in another package, but that the package is legitimately entitled to replace them. Without this specification, <command>dpkg</command> fails, stating that it can not overwrite the files of another package (in fact, it is possible to force it to do so with the <literal>--force-overwrite</literal> option). This allows identification of potential problems and requires the maintainer to study the matter prior to choosing whether to add such a field."
-msgstr ""
+msgstr "Поле <literal>Replaces</literal> указывает, что пакет содержит файлы, которые также присутствуют в другом пакете, тем не менее мы можем перезаписать(заменить) их. Без испрользования этого поля <command>dpkg</command> не сможет перезаписать файлы, принадлежавшие другому пакету (исключение может составить лишь опция <literal>--force-overwrite</literal>, которая заставит его заменить существующие в системе файлы своими). Это позволяет выявить потенциальне проблемы и конфликты, т.е. требует от мейнтейнера явно указать список файлов, которые можно перезаписать, добавив это поле."
 
 #. Tag: para
 #, no-c-format
 msgid "The use of this field is justified when package names change or when a package is included in another. This also happens when the maintainer decides to distribute files differently among various binary packages produced from the same source package: a replaced file no longer belongs to the old package, but only to the new one."
-msgstr ""
+msgstr "Использовать это поле стоит при изменении имени пакета или когда один пакет входит в состав другого. Это также целесообразно в случае, если мейнтейнер решил размещать файлы в системе по-разному в разных бинарных пакетах, полученных из одного и того же исходного: стоить заменить файл, который больше не принадлежит старому пакету, а относится только к новому."
 
 #. Tag: para
 #, no-c-format
 msgid "If all of the files in an installed package have been replaced, the package is considered to be removed. Finally, this field also encourages <command>dpkg</command> to remove the replaced package where there is a conflict."
-msgstr ""
+msgstr "Если все файлы в установленном пакете были заменены, пакет считается удаленным. Наконец, это поле также указывает <command>dpkg</command> удалить или заменить пакет в случае конфликта."
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> The <literal>Tag</literal> field"
-msgstr "<emphasis>ШАГ ВПЕРЁД</emphasis> поле <literal>Tag</literal>"
+msgstr "<emphasis>УГЛУБЛЯЕМСЯ</emphasis> поле <literal>Tag</literal>"
 
 #. Tag: para
 #, no-c-format
 msgid "In the <emphasis role=\"pkg\">apt</emphasis> example above, we can see the presence of a field that we have not yet described, the <literal>Tag</literal> field. This field does not describe a relationship between packages, but is simply a way of categorizing a package in a thematic taxonomy. This classification of packages according to several criteria (type of interface, programming language, domain of application, etc.) has been available for a long time. Despite this, not all packages have accurate tags and it is not yet integrated in all Debian tools; <command>aptitude</command> displays these tags, and allows them to be used as search criteria. For those who are repelled by <command>aptitude</command>'s search criteria, the following website allows navigation of the tag database: <ulink type=\"block\" url=\"http://debtags.alioth.debian.org/\" />"
-msgstr ""
+msgstr "В приведенном выше примере мы видим присутствие еще не рассмотренного поля <literal>Tag</literal>. Это поле не описывает какую-либо связь между пакетами. Это просто способ отнести пакет к той или иной категории. Другими словами, мы можем классифицировать пакеты по нескольким критериям: тип интерфейса, язык программирования, область применения, и т.д. Не все пакеты имеют точные теги, и еще не во все Debian инструменты интегрированы механизмы для отображения этих тегов. <command>aptitude</command> отображает эти теги, и позволяет использовать их в качестве критериев поиска. Для тех, кто отталкивается от критериев поиска <command>aptitude</command>, следующий веб-сайт поможет при поиске, так как позволяет использовать навигацию по базе тегов:"
 
 #. Tag: title
 #, no-c-format
@@ -781,7 +781,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> <command>dpkg</command>'s database"
-msgstr "<emphasis>ШАГ ВПЕРЁД</emphasis> база данных <command>dpkg</command>"
+msgstr "<emphasis>УГЛУБЛЯЕМСЯ</emphasis> база данных <command>dpkg</command>"
 
 #. Tag: indexterm
 #, no-c-format
@@ -1815,7 +1815,7 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>GOING FURTHER</emphasis> Comparison of versions"
-msgstr "<emphasis>ШАГ ВПЕРЁД</emphasis> Сравнение версий"
+msgstr "<emphasis>УГЛУБЛЯЕМСЯ</emphasis> Сравнение версий"
 
 #. Tag: indexterm
 #, no-c-format
