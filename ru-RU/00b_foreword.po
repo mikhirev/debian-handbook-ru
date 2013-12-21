@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-31T08:15:01\n"
+"POT-Creation-Date: 2013-12-21T13:48:52\n"
 "PO-Revision-Date: 2012-05-09T20:00:15\n"
 "Last-Translator: Dmitry Mikhirev <mikhirev@gmail.com>\n"
 "Language-Team: None\n"
@@ -84,18 +84,18 @@ msgid "At the other end of the spectrum lie the likes of Debian and the Apache S
 msgstr "Противоположностью им являются подобные Debian и Apache Software Foundation (который управляет разработкой веб-сервера Apache). Debian — это прежде всего проект в мире свободного программного обеспечения, разрабатываемый добровольцами, работающими совместно через Интернет. Хотя некоторые из них получают оплату за  работу над Debian от различных компаний, проект в целом не принадлежит какой бы то ни было компании, и ни одна компания не имеет большего авторитета во внутренних делах проекта, чем независмый доброволец."
 
 #. Tag: para
-#, no-c-format
-msgid "Linux has gathered a fair amount of media coverage over the years; it mostly benefits the distributions supported by a real marketing department — in other words, company-backed distributions (Ubuntu, Red Hat, Suse, Mandriva, and so on). But Debian is far from being a marginal distribution; according to a German study made in early 2009, Debian is the most widely used distribution on servers (with nearly half of the responding companies having at least one Debian server), and the second most widely deployed on desktops (right behind Ubuntu, which is a Debian derivative). <ulink type=\"block\" url=\"http://www.heise.de/open/artikel/Eingesetzte-Produkte-224518.html\" />"
+#, fuzzy, no-c-format
+msgid "Linux has gathered a fair amount of media coverage over the years; it mostly benefits the distributions supported by a real marketing department — in other words, company-backed distributions (Ubuntu, Red Hat, SUSE, Mandriva, and so on). But Debian is far from being a marginal distribution; multiple studies have shown over the years that it is widely used both on servers and on desktops. This is particularly true among webservers where Debian is the leading Linux distribution. <ulink type=\"block\" url=\"http://www.heise.de/open/artikel/Eingesetzte-Produkte-224518.html\" /> <ulink type=\"block\" url=\"http://w3techs.com/blog/entry/debian_ubuntu_extend_the_dominance_in_the_linux_web_server_market_at_the_expense_of_red_hat_centos\" />"
 msgstr "Linux достаточно широко освещался в СМИ на протяжении многих лет, что главным образом заслуга дистрибутивов, продвигаемых рекламными отделами — иными словами, дистрибутивов, за которыми стоят компании (Ubuntu, Red Hat, Suse, Mandriva и иже с ними). Но Debian далеко не второстепенный дистрибутив; согласно германскому исследованию, проведённому в начале 2009, Debian — наиболее широко используемый дистрибутив на серверах (около половины опрошенных компаний имеют по крайней мере один сервер с Debian), и второй по использованию на рабочих станциях (сразу за Ubuntu, который является производным от Debian). <ulink type=\"block\" url=\"http://www.heise.de/open/artikel/Eingesetzte-Produkte-224518.html\" />"
 
 #. Tag: para
-#, no-c-format
-msgid "The purpose of this book is to help you discover this distribution. We hope to share the experience we've gathered since we joined the project as developers and contributors in 1998 (Raphaël) and 2000 (Roland). With any luck, our enthusiasm will be communicative, and maybe you'll join us sometime…"
+#, fuzzy, no-c-format
+msgid "The purpose of this book is to help you discover this distribution. We hope to share the experience that we have gathered since we joined the project as developers and contributors in 1998 (Raphaël) and 2000 (Roland). With any luck, our enthusiasm will be communicative, and maybe you will join us sometime…"
 msgstr "Цель этой книги — помочь вам познать этот дистрибутив. Мы надеемся поделиться опытом, который мы получили, присоединившись к проекту как участники и разработчики в 1998 (Рафаэль) и 2000 (Ролан). Если повезёт, вы заразитесь нашим энтузиазмом и, возможно, когда-нибудь присоединитесь к нам…"
 
 #. Tag: para
-#, no-c-format
-msgid "The first edition of this book (in 2004) served to fill a gaping hole: it was the first French-language book that focused exclusively on Debian. At that time, many other books were written on the topic both for French-speaking and English-speaking readers. Unfortunately almost none of them got updated, and over the years the situation slipped back to one where there were very few good books on Debian. We hope that this book, which has started a new life with its translation into English (and several translations from English into various other languages), helps to fill this gap and help many users."
+#, fuzzy, no-c-format
+msgid "The first edition of this book (in 2004) served to fill a gaping hole: it was the first French-language book that focused exclusively on Debian. At that time, many other books were written on the topic both for French-speaking and English-speaking readers. Unfortunately almost none of them got updated, and over the years the situation slipped back to one where there were very few good books on Debian. We hope that this book, which has started a new life with its translation into English (and several translations from English into various other languages), will fill this gap and help many users."
 msgstr "Первое издание этой книги (в 2004) заполнило пустующую нишу: это была первая книга на французском языке, посвящённая исключительно Debian. В ту пору было написано множество книг на эту тему как для франкоязычных, так и для англоязычных читателей. К сожалению, практически ни одна из них не обновлялась, и годы спустя ситуация стала прежней: качественных книг по Debian очень мало. Мы надеемся, что эта книга, начавшая новую жизнь с переводом её на английский (и несколькими переводами с английского на другие языки), заполнит данный пробел и поможет многим пользователям."
 
 #. Tag: title
@@ -159,8 +159,8 @@ msgid "<emphasis role=\"strong\">Chapter 1</emphasis> focuses on a non-technical
 msgstr "<emphasis role=\"strong\">Глава 1</emphasis> посвящена нетехническому представлению проекта Debian и описывает его цели и организацию. Эти вопросы очень важны, потому что они определяют общий каркас, которые последующие главы заполнят более конкретной информацией."
 
 #. Tag: para
-#, no-c-format
-msgid "<emphasis role=\"strong\">Chapters 2 and 3</emphasis> provide a broad outline of the case study. At this point, novice readers can take the time to read <emphasis role=\"strong\">appendix B</emphasis>, where they'll find a short remedial course explaining a number of basic computing notions, as well as concepts inherent to any Unix system."
+#, fuzzy, no-c-format
+msgid "<emphasis role=\"strong\">Chapters 2 and 3</emphasis> provide a broad outline of the case study. At this point, novice readers can take the time to read <emphasis role=\"strong\">appendix B</emphasis>, where they will find a short remedial course explaining a number of basic computing notions, as well as concepts inherent to any Unix system."
 msgstr "<emphasis role=\"strong\">Главы 2 и 3</emphasis> освещают общие черты учебного примера. На этом этапе новички могут обратиться к <emphasis role=\"strong\">приложению B</emphasis>, где они найдут краткий курс, объясняющий основные компьютерные понятия, а также принципы, общие для всех Unix-систем."
 
 #. Tag: para
@@ -214,8 +214,8 @@ msgid "A Debian package is an archive containing all the files required to insta
 msgstr "Пакет Debian — это архив, содержащий все файлы, необходимые для установки программного обеспечения. В общем случае это файл с расширением <filename>.deb</filename>, и он может быть обработан командой <command>dpkg</command>. Так называемый <emphasis>двоичный пакет</emphasis> содержит файлы, которые могут быть использованы напрямую (такие как программы или документация). С другой стороны <emphasis>исходный пакет</emphasis> содержит исходный код программного обеспечения и инструкции, необходимые для создания двоичного пакета."
 
 #. Tag: para
-#, no-c-format
-msgid "The present version is the first written primarily for English, and the second one available in English; the previous one was based on the fifth edition of the French book. This edition covers version 7.0 of Debian, code-named <emphasis role=\"distribution\">Wheezy</emphasis>. Among the changes, Debian now sports two new architectures — <emphasis>s390x</emphasis> as a replacement for <emphasis>s390</emphasis>, for IBM System Z mainframe computers, and <emphasis>armhf</emphasis> for ARM processors with a hardware floating point arithmetic unit. Speaking of architectures, Debian's package manager is now multi-architecture, and can handle installation of different architectures of the same package at the same time. All included packages have obviously been updated, including the Gnome desktop, which is now included in its version 3.4."
+#, fuzzy, no-c-format
+msgid "The present version is the first written primarily for English, and the second one available in English; the previous one was based on the fifth edition of the French book. This edition covers version 7 of Debian, code-named <emphasis role=\"distribution\">Wheezy</emphasis>. Among the changes, Debian now sports two new architectures — <emphasis>s390x</emphasis> as a replacement for <emphasis>s390</emphasis>, for IBM System Z mainframe computers, and <emphasis>armhf</emphasis> for ARM processors with a hardware floating point arithmetic unit. Speaking of architectures, Debian's package manager is now multi-architecture, and can handle installation of different architectures of the same package at the same time. All included packages have obviously been updated, including the GNOME desktop, which is now included in its version 3.4."
 msgstr "Настоящая версия является первой, написанной изначально на английском языке, и второй, доступной на английском; предыдущая базировалась на пятом издании французской книги. Данное издание освещает версирю Debian 7.0 с кодовым названием <emphasis role=\"distribution\">Wheezy</emphasis>. Помимо прочих изменений Debian теперь щеголяет двумя новыми архитектурами — <emphasis>s390x</emphasis> как заменой <emphasis>s390</emphasis> для мейнфреймов IBM System Z и <emphasis>armhf</emphasis> для процессоров ARM с аппаратным модулем арифметики с плавающей запятой. Кстати, об архитектурах: менеджер пакетов Debian теперь многоархитектурный и способен устанавливать разные архитектуры одного и того же пакета одновременно. Все входящие в дистрибутив пакеты, безусловно, были обновлены, включая рабочий стол Gnome, версия которого увеличилась до 3.4."
 
 #. Tag: para
@@ -274,8 +274,8 @@ msgid "In 2003, Nat Makarevitch contacted Raphaël because he wanted to publish 
 msgstr "В 2003 Нат Макаревич связался с Рафаэлем, потому что хотел опубликовать книгу о Debian в серии <foreignphrase>Cahier de l'Admin</foreignphrase> (Настольная книга админа), которой он занимался для ведущего французского издателя технических книг Eyrolles. Рафаэль незамедлительно согласился написать её. Первое издание вышло 14 октября 2004 и имело огромный успех: оно было полностью распродано 4 месяца спустя."
 
 #. Tag: para
-#, no-c-format
-msgid "Since then, we have released 4 other editions of the French book, one for each subsequent Debian release. Roland, who started working on the book as a proofreader, gradually became its co-author."
+#, fuzzy, no-c-format
+msgid "Since then, we have released 5 other editions of the French book, one for each subsequent Debian release. Roland, who started working on the book as a proofreader, gradually became its co-author."
 msgstr "С тех пор мы выпустили 4 других издания французской книги, по одной на каждый следующий релиз Debian. Ролан, который начинал работать над книгой как корректор, постепенно стал её соавтором."
 
 #. Tag: para
@@ -284,8 +284,8 @@ msgid "While we were obviously satisfied with the book's success, we always hope
 msgstr "Книга имела несомненный успех и мы всегда надеялись, что Eyrolles убедит международного издателя перевести её на английский. Мы получили многочисленные отзывы, рассказывающие, как книга помогла их авторам познакомиться с Debian, и мы хотели, чтобы книга точно так же принесла пользу ещё большему числу людей."
 
 #. Tag: para
-#, no-c-format
-msgid "Alas, no English-speaking editor that we contacted was willing to take the risk of translating and publishing the book. Not put off by this small setback, we negotiated with our French editor Eyrolles and got back the necessary rights to translate the book into English and publish it ourselves. Thanks to a successful crowd-funding campaign, we worked on the translation between December 2011 and May 2012. The “Debian Administrator's Handbook” was born and it was published under a free-software license!"
+#, fuzzy, no-c-format
+msgid "Alas, no English-speaking editor that we contacted was willing to take the risk of translating and publishing the book. Not put off by this small setback, we negotiated with our French editor Eyrolles and got back the necessary rights to translate the book into English and publish it ourselves. Thanks to a successful crowdfunding campaign, we worked on the translation between December 2011 and May 2012. The “Debian Administrator's Handbook” was born and it was published under a free-software license!"
 msgstr "Увы, ни один англоязычный редактор, с которым мы связывались, не хотел брать риски по переводу и публикации книги. Не испугавшись этой небольшой неудачи, мы договорились с нашим французским редактором Eyrolles и получили обратно права, необходимые для перевода книги на английский с последующей публикацией собственными силами. Благодаря успешной кампании по совместному финансированию мы трудились над переводом с декабря 2011 по май 2012 года. «Настольная книга администратора Debian» родилась и вышла в свет под сободной лицензией!"
 
 #. Tag: para
@@ -294,8 +294,8 @@ msgid "While this was an important milestone, we already knew that the story wou
 msgstr "Хотя это было важной вехой, мы уже знали, что на этом дело для нас не кончится до тех пор, пока мы не сможем предоставить французскую книгу как официальный перевод английской. Это было невозможно, поскольку французская кника по-прежнему распространялась коммерчески под несвободной лицензией издательством Eyrolles."
 
 #. Tag: para
-#, no-c-format
-msgid "In 2013, the release of Debian 7 gave us a good opportunity to discuss a new contract with Eyrolles. We convinced them that a license more in line with the Debian values would contribute to the book's success. That wasn't an easy deal to make, and we agreed to setup another crowd-funding campaign to cover some of the costs and reduce the risks involved. The operation was again a huge success and in July 2013, we added a French translation to the Debian Administrator's Handbook."
+#, fuzzy, no-c-format
+msgid "In 2013, the release of Debian 7 gave us a good opportunity to discuss a new contract with Eyrolles. We convinced them that a license more in line with the Debian values would contribute to the book's success. That wasn't an easy deal to make, and we agreed to setup another crowdfunding campaign to cover some of the costs and reduce the risks involved. The operation was again a huge success and in July 2013, we added a French translation to the Debian Administrator's Handbook."
 msgstr "В 2013 году выход Debian 7 дал нам хорошую возможность обсудить новый контракт с Eyrolles. Мы убедили их, что лицензия, более соответствующая ценностям Debian, будет способствовать успеху книги. Это было непростым делом, и мы согласились начать ещё одну кампанию по совместному финансированию, чтобы покрыть часть расходов и снизить сопутствующие риски. Процесс опять прошёл весьма успешно, и в июле 2013 года мы добавили французский перевод в «Настольную книгу администратора Debian»."
 
 #. Tag: title
@@ -304,13 +304,13 @@ msgid "The Birth of the English Book"
 msgstr "Рождение английской книги"
 
 #. Tag: para
-#, no-c-format
-msgid "We're back in 2011 and we just got the required rights to make an English translation of our French book. We're looking into ways to make this happen."
+#, fuzzy, no-c-format
+msgid "We are back in 2011 and we just got the required rights to make an English translation of our French book. We are looking into ways to make this happen."
 msgstr "Вернёмся в 2011 год, когда мы только получили необходимые права, чтобы выполнить перевод французской книги на английский язык. Мы рассматривали варианты, как это можно сделать."
 
 #. Tag: para
-#, no-c-format
-msgid "Translating a book of 450 pages is a considerable effort that requires several months of work. Self-employed people like us had to ensure a minimum income to mobilize the time necessary to complete the project. So we set up a crowd-funding campaign on Ulule and asked people to pledge money towards the project. <ulink type=\"block\" url=\"http://www.ulule.com/debian-handbook/\" />"
+#, fuzzy, no-c-format
+msgid "Translating a book of 450 pages is a considerable effort that requires several months of work. Self-employed people like us had to ensure a minimum income to mobilize the time necessary to complete the project. So we set up a crowdfunding campaign on Ulule and asked people to pledge money towards the project. <ulink type=\"block\" url=\"http://www.ulule.com/debian-handbook/\" />"
 msgstr "Перевод 450-страничной книги требует значительных усилий и нескольких месяцев работы. Работающие на себя люди вроде нас должны были обеспечить минимальный заработок для завершения работы. Поэтому мы открыли кампанию на Ulule и попросили людей финансировать наш проект. <ulink type=\"block\" url=\"http://www.ulule.com/debian-handbook/\" />"
 
 #. Tag: para

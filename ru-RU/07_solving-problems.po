@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-31T08:15:02\n"
+"POT-Creation-Date: 2013-12-21T13:48:53\n"
 "PO-Revision-Date: 2012-05-09T20:00:17\n"
 "Last-Translator: Mikhail Karpenko <veegboo@gmail.com>\n"
 "Language-Team: None\n"
@@ -104,8 +104,8 @@ msgid "This acronym stands for “Read the F***ing Manual”, but can also be ex
 msgstr "Данное сокращение означает “Читай эту чертову инструкцию”, но оно может быть раскрыто и в более дружественной форме: “Читайте это прекрасное руководство”. Иногда эта фраза используется для (немногословного) ответа на вопросы новичков. Она довольно резкая и выдаёт некоторое раздражение от вопроса, заданного кем-либо, кто даже не удосужился прочитать документацию. Кто-то может сказать, что подобный классический ответ лучше, чем вообще никакого ответа (поскольку он подразумевает, что документация содержит искомый ответ) или более развёрнутый и раздражённый ответ."
 
 #. Tag: para
-#, no-c-format
-msgid "In any case, if someone responds “RTFM” to you, it is often wise not to take offense. Since this answer may be perceived as vexing, you might want to try and avoid receiving it. If the information that you need is not in the manual, which can happen, you might want to say so, preferably in your initial question. You should also describe the various steps that you have personally taken to find information before you raised a question on a forum. Eric Raymond listed a few guidelines, widely accepted as common sense, for what to do before asking for help on forums. <ulink type=\"block\" url=\"http://catb.org/~esr/faqs/smart-questions.html\" />"
+#, fuzzy, no-c-format
+msgid "In any case, if someone responds “RTFM” to you, it is often wise not to take offense. Since this answer may be perceived as vexing, you might want to try and avoid receiving it. If the information that you need is not in the manual, which can happen, you might want to say so, preferably in your initial question. You should also describe the various steps that you have personally taken to find information before you raised a question on a forum. Following Eric Raymond's guidelines is a good way to avoid the most common mistakes and get useful answers. <ulink type=\"block\" url=\"http://catb.org/~esr/faqs/smart-questions.html\" />"
 msgstr "В любом случае, если кто-то отвечает вам “RTFM”, то не стоит воспринимать подобный ответ как оскорбление. Поскольку ответ может быть раздражающим, то вам захочется избежать получения подобных ответов. Если искомая информация отсутствует в руководстве, что иногда случается, то вам следует сразу сообщить об этом в вашем вопросе. Вам также следует описать те действия, что вы уже предприняли по поиску необходимой информации до размещения вопроса на форуме. Эрик Рэймонд привёл некоторые рекомендации, продиктованные здравым смыслом, по поводу того, что вам стоит сделать прежде чем просить помощи на форумах. <ulink type=\"block\" url=\"http://catb.org/~esr/faqs/smart-questions.html\" />"
 
 #. Tag: para
@@ -379,8 +379,8 @@ msgid "In other cases, you will get very general errors, such as “Permission d
 msgstr "В остальных случаях вам встретятся ошибки общего вида, как, например, “Permission denied”. В таком случае следует проверить права доступа задействованных элементов (файлов, ID пользователей, групп, и т. д.)."
 
 #. Tag: para
-#, no-c-format
-msgid "If you do not know the address for the software's website, there are various means of getting it. First, check if there is a <literal>Homepage</literal> field in the package's meta-information (<command>apt-cache show <replaceable>package</replaceable></command>). Alternately, the package description may contain a link to the program's official website. If no URL is indicated, look at <filename>/usr/share/doc/<replaceable>package</replaceable>/copyright</filename>. The Debian maintainer generally indicates in this file where they got the program's source code, and this is likely to be the website that you need to find. If at this stage your search is still unfruitful, consult a free software directory, such as Freecode.com (formerly Freshmeat.net) or Framasoft, or search directly with a search engine, such as Google or Yahoo. <ulink type=\"block\" url=\"http://freecode.com/\" /> <ulink type=\"block\" url=\"http://framasoft.org/\" />"
+#, fuzzy, no-c-format
+msgid "If you do not know the address for the software's website, there are various means of getting it. First, check if there is a <literal>Homepage</literal> field in the package's meta-information (<command>apt-cache show <replaceable>package</replaceable></command>). Alternately, the package description may contain a link to the program's official website. If no URL is indicated, look at <filename>/usr/share/doc/<replaceable>package</replaceable>/copyright</filename>. The Debian maintainer generally indicates in this file where they got the program's source code, and this is likely to be the website that you need to find. If at this stage your search is still unfruitful, consult a free software directory, such as Freecode.com (formerly Freshmeat.net), or search directly with a search engine, such as Google or Yahoo. <ulink type=\"block\" url=\"http://freecode.com/\" />"
 msgstr "Если вам не известен адрес интернет-страницы программы, то существуют несколько способов узнать его. Во-первых, проверьте поле <literal>Homepage</literal> в метаинформации пакета (<command>apt-cache show <replaceable>package</replaceable></command>). Ссылка на официальный сайт программы может содержаться также и в описании пакета. В том случае, когда URL не указан, загляните в <filename>/usr/share/doc/<replaceable>package</replaceable>/copyright</filename>. Сопровождающий пакета Debian обычно указывает в этом файле адрес источника, из которого он взял исходный код программы, и скорее всего он будет именно тем ресурсом, что вы ищете. Даже если на этом этапе ваш поиск не увенчался успехом, то вы можете проверить такие каталоги свободного программного обеспечения, как Freecode.com (в прошлом Freshmeat.net) или Framasoft, либо воспользоваться такими поисковыми системами, как Google или Yahoo. <ulink type=\"block\" url=\"http://freecode.com/\" /> <ulink type=\"block\" url=\"http://framasoft.org/\" />"
 
 #. Tag: indexterm
@@ -399,8 +399,8 @@ msgid "<primary><emphasis>wiki.debian.org</emphasis></primary>"
 msgstr "<primary><emphasis>wiki.debian.org</emphasis></primary>"
 
 #. Tag: para
-#, no-c-format
-msgid "You might also want to check the Debian wiki, a collaborative website where anybody, even simple visitors, can make suggestions directly from their browsers. It is used equally by developers who design and specify their projects and by users who share their knowledge by writing documents collaboratively. <ulink type=\"block\" url=\"http://wiki.debian.org/\" />"
+#, fuzzy, no-c-format
+msgid "You might also want to check the Debian wiki, a collaborative website where anybody, even simple visitors, can make suggestions directly from their browsers. It is used equally by developers who design and specify their projects, and by users who share their knowledge by writing documents collaboratively. <ulink type=\"block\" url=\"http://wiki.debian.org/\" />"
 msgstr "Вы также можете заглянуть в Debian wiki - ресурс, предназначенный для совместной работы и на котором любой пользователь, даже обычный посетитель, может внести предложение непосредственно из своего браузера. Этот ресурс используется в равной мере как разработчиками для проектирования и документации своих проектов, так и пользователями, которые делятся своими знаниями и совместно работают над документацией. <ulink type=\"block\" url=\"http://wiki.debian.org/\" />"
 
 #. Tag: title

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2012-10-31T14:54:18\n"
+"POT-Creation-Date: 2013-12-21T13:48:56\n"
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
 "Last-Translator: sledopit i@irush.su\n"
 "Language-Team: None\n"
@@ -63,20 +63,60 @@ msgstr "Разрешите нам представить наиболее инт
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>Ubuntu</primary>"
+msgstr "<primary>Distrowatch</primary>"
+
 #. Tag: para
-#, no-c-format
-msgid "<indexterm><primary>Ubuntu</primary></indexterm> Ubuntu made quite a splash when it came on the Free Software scene, and for good reason: Canonical Ltd., the company that created this distribution, started by hiring thirty-odd Debian developers and publicly stating the far-reaching objective of providing a distribution for the general public with a new release twice a year. They also committed to maintaining each version for a year and a half for both core and security-related components."
+#, fuzzy, no-c-format
+msgid "Ubuntu made quite a splash when it came on the Free Software scene, and for good reason: Canonical Ltd., the company that created this distribution, started by hiring thirty-odd Debian developers and publicly stating the far-reaching objective of providing a distribution for the general public with a new release twice a year. They also committed to maintaining each version for a year and a half."
 msgstr "<indexterm><primary>Ubuntu</primary></indexterm> Ubuntu ярко появился на сцене свободного программного обеспечения и этому есть причина: Canonical Ltd., компания, создавшая дистрибутив, наняла более 30 разработчиков Debian и публично заявила о своих целях выпускать релиз для общественности два раза в год. Они так же поддерживали каждую версию полтора года по общим вопросам и вопросам безопасности."
 
 #. Tag: para
-#, no-c-format
-msgid "These objectives necessarily involve a reduction in scope; Ubuntu focuses on a smaller number of packages than Debian, and relies primarily on the GNOME desktop (although an official Ubuntu derivative, called “Kubuntu”<indexterm><primary>Kubuntu</primary></indexterm>, relies on KDE). Everything is internationalized and made available in a great many languages."
+#, fuzzy, no-c-format
+msgid "These objectives necessarily involve a reduction in scope; Ubuntu focuses on a smaller number of packages than Debian, and relies primarily on the GNOME desktop (although an official Ubuntu derivative, called “Kubuntu”, relies on KDE). Everything is internationalized and made available in a great many languages."
 msgstr "Эти положения вынуждают сокращать сферу работы: Ubuntu сосредоточен вокруг меньшего числа пакетов, нежели Debian, и зависит только от окружения GNOME (однако есть производный дистрибутив от Ubuntu - “Kubuntu”<indexterm><primary>Kubuntu</primary></indexterm>, который зависит от KDE). Дистрибутив интернационализирован и доступен на многих языках."
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>Kubuntu</primary>"
+msgstr "<primary>Distrowatch</primary>"
+
+#. Tag: para
+#, fuzzy, no-c-format
+msgid "So far, Ubuntu has managed to keep this release rhythm. They also publish <emphasis>Long Term Support</emphasis> (LTS) releases, with a 5-year maintenance promise. As of November 2013, the current LTS version is version 12.04, nicknamed Precise Pangolin. The latest non-LTS version is 13.10, nicknamed Saucy Salamander. Version numbers describe the release date: 13.10, for example, was released in October 2013."
+msgstr "До сих пор Ubuntu удаётся сохранить такую периодичность релизов. Так же есть релизы <emphasis>Long Term Support</emphasis> (LTS) (релиз расширенной поддержки) с 5летним периодом поддержки. В апреле 2012 текущий LTS релиз - 12.04 с кодовым именем Precise Pangolin. Последняя не-LTS версия 11.10 с кодовым именем Oneiric Ocelot. Номера версий привязаны к дате релиза: 11.10 означает, что версия выпущена в октябре 2011."
+
+#. Tag: title
+#, no-c-format
+msgid "<emphasis>IN PRACTICE</emphasis> Ubuntu's support and maintenance promise"
+msgstr ""
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary><literal>main</literal></primary>"
+msgstr "<primary>Distrowatch</primary>"
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary><literal>restricted</literal></primary>"
+msgstr "<primary>Distrowatch</primary>"
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary><literal>universe</literal></primary>"
+msgstr "<primary>Distrowatch</primary>"
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary><literal>multiverse</literal></primary>"
+msgstr "<primary>Distrowatch</primary>"
 
 #. Tag: para
 #, no-c-format
-msgid "So far, Ubuntu has managed to keep this release rhythm. They also publish <emphasis>Long Term Support</emphasis> (LTS) releases, with a 5-year maintenance promise. As of April 2012, the current LTS version is version 12.04, nicknamed Precise Pangolin. The latest non-LTS version is 11.10, nicknamed Oneiric Ocelot. Version numbers describe the release date: 11.10, for example, was released in October 2011."
-msgstr "До сих пор Ubuntu удаётся сохранить такую периодичность релизов. Так же есть релизы <emphasis>Long Term Support</emphasis> (LTS) (релиз расширенной поддержки) с 5летним периодом поддержки. В апреле 2012 текущий LTS релиз - 12.04 с кодовым именем Precise Pangolin. Последняя не-LTS версия 11.10 с кодовым именем Oneiric Ocelot. Номера версий привязаны к дате релиза: 11.10 означает, что версия выпущена в октябре 2011."
+msgid "Canonical has adjusted multiple times the rules governing the length of the period during which a given release is maintained. Canonical, as a company, promises to provide security updates to all the software available in the <literal>main</literal> and <literal>restricted</literal> sections of the Ubuntu archive, for 5 years for LTS releases and for 9 months for non-LTS releases. Everything else (available in the <literal>universe</literal> and <literal>multiverse</literal>) is maintained on a best-effort basis by volunteers of the MOTU team (<emphasis>Masters Of The Universe</emphasis>). Be prepared to handle security support yourself if you rely on packages of the latter sections."
+msgstr ""
 
 #. Tag: para
 #, no-c-format
@@ -90,23 +130,48 @@ msgstr "Однако не всё прекрасно в датском корол
 
 #. Tag: para
 #, no-c-format
-msgid "This interaction is becoming more common over time, thanks in part to the Ubuntu community and the efforts it makes in educating its new contributors. But this policy is still not enforced by Canonical on its employees. Some kept true to their roots, and do make the required effort (Colin Watson, Martin Pitt and Matthias Klose are noteworthy in this regard), but others — often overworked — can no longer find it in them. <ulink type=\"block\" url=\"http://www.ubuntu.com/\" />"
-msgstr "Но со временем такое взаимодействие встречается всё чаще, во многом благодаря сообществу Ubuntu и их усилиям по обучению новых участников. Однако подобная политика по прежнему не применяется сотрудниками Canonical. Некоторые чтут свои корни и прилагают все необходимые усилия (особенно примечательны в этом отношении Колин Уотсон, Мартин Пит и Матиас Клозе), но другие, часто перегруженные работой, не могут уделить этому достаточно внимания. <ulink type=\"block\" url=\"http://www.ubuntu.com/\" />"
+msgid "This interaction is becoming more common over time, thanks in part to the Ubuntu community and the efforts it makes in educating its new contributors. <ulink type=\"block\" url=\"http://www.ubuntu.com/\" />"
+msgstr ""
 
 #. Tag: title
 #, no-c-format
 msgid "Knoppix"
 msgstr "Knoppix"
 
-#. Tag: para
+#. Tag: indexterm
 #, no-c-format
-msgid "<indexterm><primary><foreignphrase>LiveCD</foreignphrase></primary></indexterm> <indexterm><primary>Knoppix</primary></indexterm> <indexterm><primary>bootable CD-ROM</primary></indexterm> <indexterm><primary>CD-ROM</primary><secondary>bootable</secondary></indexterm> The Knoppix distribution barely needs an introduction. It was the first popular distribution to provide a <emphasis>LiveCD</emphasis>; in other words, a bootable CD-ROM that runs a turn-key Linux system with no requirement for a hard-disk — any system already installed on the machine will be left untouched. Automatic detection of available devices allows this distribution to work in most hardware configurations. The CD-ROM includes almost 2 GB of (compressed) software."
+msgid "<primary><foreignphrase>LiveCD</foreignphrase></primary>"
+msgstr ""
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>Knoppix</primary>"
+msgstr "<primary>Distrowatch</primary>"
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>bootable CD-ROM</primary>"
+msgstr "<primary>Distrowatch</primary>"
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>CD-ROM</primary><secondary>bootable</secondary>"
+msgstr ""
+
+#. Tag: para
+#, fuzzy, no-c-format
+msgid "The Knoppix distribution barely needs an introduction. It was the first popular distribution to provide a <emphasis>LiveCD</emphasis>; in other words, a bootable CD-ROM that runs a turn-key Linux system with no requirement for a hard-disk — any system already installed on the machine will be left untouched. Automatic detection of available devices allows this distribution to work in most hardware configurations. The CD-ROM includes almost 2 GB of (compressed) software."
 msgstr "<indexterm><primary><foreignphrase>LiveCD</foreignphrase></primary></indexterm> <indexterm><primary>Knoppix</primary></indexterm> <indexterm><primary>загрузочный CD-ROM</primary></indexterm> <indexterm><primary>CD-ROM</primary><secondary>загрузочный</secondary></indexterm>. Определённо нуждается в упоминании дистрибутив Knoppix. Это первый популярный дистрибутив <emphasis>LiveCD</emphasis>. Иными словами с загрузочного диска запускается система Linux, полностью готовая к работе и ей абсолютно не нужен жёсткий диск. Любая система уже установленная на этой машине не подвергнется изменениям. Автоматическое определение устройств позволяет дистрибутиву работать на большинстве встречаемых конфигураций оборудования. CD-ROM включает в себя около 2 GB (сжатого) программного обеспечения."
 
 #. Tag: para
-#, no-c-format
-msgid "Combining this CD-ROM and a USB stick allows carrying your files with you, and to work on any computer without leaving a trace — remember that the distribution doesn't use the hard-disk at all. Knoppix is mostly based on LXDE (a lightweight graphical desktop), but many other distributions provide other combinations of desktops and software. This is, in part, made possible thanks to the <emphasis role=\"pkg\">live-build</emphasis> Debian package that makes it relatively easy to create a LiveCD. <ulink type=\"block\" url=\"http://live.debian.net/\" />"
+#, fuzzy, no-c-format
+msgid "Combining this CD-ROM to a USB stick allows carrying your files with you, and to work on any computer without leaving a trace — remember that the distribution doesn't use the hard-disk at all. Knoppix is mostly based on LXDE (a lightweight graphical desktop), but many other distributions provide other combinations of desktops and software. This is, in part, made possible thanks to the <emphasis role=\"pkg\">live-build</emphasis> Debian package that makes it relatively easy to create a LiveCD. <ulink type=\"block\" url=\"http://live.debian.net/\" />"
 msgstr "Связка CD-ROM и USB флэш позволяет вам всегда иметь свои файлы при себе и работать на любом компьютере не оставляя следов, т.к. дистрибутив совсем не использует жёсткий диск. Knoppix базируется на LXDE (легковесное графическое окружение), однако многие другие дистрибутивы предоставляют иные комбинации рабочего окружения и программного обеспечения. Это возможно, благодаря утилите <emphasis role=\"pkg\">live-build</emphasis>, которая позволяет относительно легко создавать  LiveCD. <ulink type=\"block\" url=\"http://live.debian.net/\" />"
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary><emphasis role=\"pkg\">live-build</emphasis></primary>"
+msgstr ""
 
 #. Tag: para
 #, no-c-format
@@ -118,9 +183,14 @@ msgstr "Стоит отметить, что у Knoppix так же имеетс�
 msgid "Linux Mint"
 msgstr "Linux Mint"
 
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>Linux Mint</primary>"
+msgstr "<primary>Distrowatch</primary>"
+
 #. Tag: para
-#, no-c-format
-msgid "<indexterm><primary>Linux Mint</primary></indexterm> Linux Mint is a (partly) community-maintained distribution, supported by donations and advertisements. Their flagship product is based on Ubuntu, but they also provide a “Linux Mint Debian Edition” variant that evolves continuously (as it's based on Debian Testing). In both cases, the initial installation involves booting a LiveDVD."
+#, fuzzy, no-c-format
+msgid "Linux Mint is a (partly) community-maintained distribution, supported by donations and advertisements. Their flagship product is based on Ubuntu, but they also provide a “Linux Mint Debian Edition” variant that evolves continuously (as it's based on Debian Testing). In both cases, the initial installation involves booting a LiveDVD."
 msgstr "<indexterm><primary>Linux Mint</primary></indexterm> Linux Mint - дистрибутив, поддерживаемый сообществом, пожертвованиями и рекламой. Их продукт основан на Ubuntu, но так же предоставляет вариант “Linux Mint Debian Edition”, который постоянно развивается и основан на Debian Testing. В обоих случаях первоначальная установка производится с LiveDVD."
 
 #. Tag: para
@@ -138,9 +208,14 @@ msgstr "Linux Mint включает в себя большое количест�
 msgid "SimplyMEPIS"
 msgstr "SimplyMEPIS"
 
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>SimplyMEPIS</primary>"
+msgstr "<primary>Distrowatch</primary>"
+
 #. Tag: para
-#, no-c-format
-msgid "<indexterm><primary>SimplyMEPIS</primary></indexterm> SimplyMEPIS is a commercial distribution very similar to Knoppix. It provides a turn-key Linux system from a LiveCD, and includes a number of non-free software packages: device drivers for nVidia video cards, Flash for animations embedded in many websites, RealPlayer, Sun's Java, and so on. The goal is to provide a 100 % working system out of the box. Mepis is internationalized and handles many languages. <ulink type=\"block\" url=\"http://www.mepis.org/\" />"
+#, fuzzy, no-c-format
+msgid "SimplyMEPIS is a commercial distribution very similar to Knoppix. It provides a turn-key Linux system from a LiveCD, and includes a number of non-free software packages: device drivers for nVidia video cards, Flash for animations embedded in many websites, RealPlayer, Sun's Java, and so on. The goal is to provide a 100 % working system out of the box. Mepis is internationalized and handles many languages. <ulink type=\"block\" url=\"http://www.mepis.org/\" />"
 msgstr "<indexterm><primary>SimplyMEPIS</primary></indexterm> SimplyMEPIS - коммерческий дистрибутив, очень схожий с Knoppix. Он предоставляет систему Linux на LiveCD под ключ и включает ряд пакетов с несвободным программным обеспечением: драйвера для видеокарт nVidia, Flash для анимации, встроенной на множестве сайтов, RealPlayer, Sun's Java и так далее. Основное предназначение дистрибутива - предоставить 100% работающую систему из коробки. Mepis является международным и поддерживает множество языков. <ulink type=\"block\" url=\"http://www.mepis.org/\" />"
 
 #. Tag: para
@@ -153,20 +228,50 @@ msgstr "Этот дистрибутив изначально базировал�
 msgid "Aptosid (Formerly Sidux)"
 msgstr "Aptosid (ранее Sidux)"
 
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>Sidux</primary>"
+msgstr "<primary>Distrowatch</primary>"
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>Aptosid</primary>"
+msgstr "<primary>Distrowatch</primary>"
+
 #. Tag: para
-#, no-c-format
-msgid "<indexterm><primary>Sidux</primary></indexterm> <indexterm><primary>Aptosid</primary></indexterm> This community-based distribution tracks the changes in Debian <emphasis role=\"distribution\">Sid</emphasis> (<emphasis role=\"distribution\">Unstable</emphasis>) — hence its name — and tries to release 4 new versions each year. The modifications are limited in scope: the goal is to provide the most recent software and to update drivers for the most recent hardware, while still allowing users to switch back to the official Debian distribution at any time. <ulink type=\"block\" url=\"http://aptosid.com\" />"
+#, fuzzy, no-c-format
+msgid "This community-based distribution tracks the changes in Debian <emphasis role=\"distribution\">Sid</emphasis> (<emphasis role=\"distribution\">Unstable</emphasis>) — hence its name — and tries to release 4 new versions each year. The modifications are limited in scope: the goal is to provide the most recent software and to update drivers for the most recent hardware, while still allowing users to switch back to the official Debian distribution at any time. <ulink type=\"block\" url=\"http://aptosid.com\" />"
 msgstr "<indexterm><primary>Sidux</primary></indexterm> <indexterm><primary>Aptosid</primary></indexterm> Этот дистрибутив отслеживает изменения в Debian <emphasis role=\"distribution\">Sid</emphasis> (<emphasis role=\"distribution\">Unstable</emphasis>) - отсюда и имя - и старается выпускать 4 релиза в год. Все изменения ограничены следующими положениями: цель дистрибутива - предоставить наиболее свежие версии программного обеспечения и обновления драйверов для последних версий аппаратуры, и в тоже время позволяет пользователю в любой момент переключиться на официальный дистрибутив Debian. <ulink type=\"block\" url=\"http://aptosid.com\" />"
 
 #. Tag: title
 #, no-c-format
-msgid "Damn Small Linux"
-msgstr "Damn Small Linux"
+msgid "Grml"
+msgstr ""
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>Grml</primary>"
+msgstr "<primary>Distrowatch</primary>"
 
 #. Tag: para
 #, no-c-format
-msgid "This distribution provides a tiny LiveCD, weighing only 50 MB, so that it can fit on a CD-ROM with the shape and size of a business card. To achieve this, Damn Small Linux only includes lightweight software tools. This can be interesting to use a Debian-like system on an aging computer. <ulink type=\"block\" url=\"http://www.damnsmalllinux.org/\" />"
-msgstr "Этот дистрибутив предоставляет крошечный LiveCD размером всего 50 МБ, который может уместиться на CD-ROM с размером и формой визитной карточки. Чтобы этого добиться, в Damn Small Linux включены только легковесные программы. Это может пригодиться для использования Debian-подобной системы на старом компьютере. <ulink type=\"block\" url=\"http://www.damnsmalllinux.org/\" />"
+msgid "Grml is a LiveCD with many tools for system administrators, dealing with installation, deployment, and system rescue. The LiveCD is provided in two flavors, <literal>full</literal> and <literal>small</literal>, both available for 32-bit and 64-bit PCs. Obviously, the two flavors differ by the amount of software included and by the resulting size. <ulink type=\"block\" url=\"http://grml.org\" />"
+msgstr ""
+
+#. Tag: title
+#, no-c-format
+msgid "DoudouLinux"
+msgstr ""
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>DoudouLinux</primary>"
+msgstr "<primary>Distrowatch</primary>"
+
+#. Tag: para
+#, no-c-format
+msgid "DoudouLinux targets young children (starting from 2 years old). To achieve this goal, it provides an heavily customized graphical interface (based on LXDE) and comes with many games and educative applications. Internet access is filtered to prevent children from visiting problematic websites. Advertisements are blocked. The goal is that parents should be free to let their children use their computer once booted into DoudouLinux. And children should love using DoudouLinux, just like they enjoy their gaming console. <ulink type=\"block\" url=\"http://www.doudoulinux.org\" />"
+msgstr ""
 
 #. Tag: title
 #, no-c-format
@@ -184,6 +289,15 @@ msgid "The Distrowatch website references a huge number of Linux distributions, 
 msgstr "Сайт Distrowatch ссылается на огромное число дистрибутивов Linux, многие из которых основаны на Debian. На их сайте можно убедиться в огромном разнообразии мира свободного программного обеспечения."
 
 #. Tag: para
-#, no-c-format
-msgid "The search form can help track down a distribution based on its ancestry. In January 2012, selecting Debian led to 141 active distributions! <ulink type=\"block\" url=\"http://distrowatch.com/search.php\" />"
+#, fuzzy, no-c-format
+msgid "The search form can help track down a distribution based on its ancestry. In November 2013, selecting Debian led to 143 active distributions! <ulink type=\"block\" url=\"http://distrowatch.com/search.php\" />"
 msgstr "Поиск может помочь определить происхождение дистрибутива. В январе 2012 поиск потомков Debian показывал 141 активный дистрибутив! <ulink type=\"block\" url=\"http://distrowatch.     com/search.php\" />"
+
+#~ msgid "This interaction is becoming more common over time, thanks in part to the Ubuntu community and the efforts it makes in educating its new contributors. But this policy is still not enforced by Canonical on its employees. Some kept true to their roots, and do make the required effort (Colin Watson, Martin Pitt and Matthias Klose are noteworthy in this regard), but others — often overworked — can no longer find it in them. <ulink type=\"block\" url=\"http://www.ubuntu.com/\" />"
+#~ msgstr "Но со временем такое взаимодействие встречается всё чаще, во многом благодаря сообществу Ubuntu и их усилиям по обучению новых участников. Однако подобная политика по прежнему не применяется сотрудниками Canonical. Некоторые чтут свои корни и прилагают все необходимые усилия (особенно примечательны в этом отношении Колин Уотсон, Мартин Пит и Матиас Клозе), но другие, часто перегруженные работой, не могут уделить этому достаточно внимания. <ulink type=\"block\" url=\"http://www.ubuntu.com/\" />"
+
+#~ msgid "Damn Small Linux"
+#~ msgstr "Damn Small Linux"
+
+#~ msgid "This distribution provides a tiny LiveCD, weighing only 50 MB, so that it can fit on a CD-ROM with the shape and size of a business card. To achieve this, Damn Small Linux only includes lightweight software tools. This can be interesting to use a Debian-like system on an aging computer. <ulink type=\"block\" url=\"http://www.damnsmalllinux.org/\" />"
+#~ msgstr "Этот дистрибутив предоставляет крошечный LiveCD размером всего 50 МБ, который может уместиться на CD-ROM с размером и формой визитной карточки. Чтобы этого добиться, в Damn Small Linux включены только легковесные программы. Это может пригодиться для использования Debian-подобной системы на старом компьютере. <ulink type=\"block\" url=\"http://www.damnsmalllinux.org/\" />"

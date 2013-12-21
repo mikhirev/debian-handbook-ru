@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-10-27T16:45:03\n"
+"POT-Creation-Date: 2013-12-21T13:48:53\n"
 "PO-Revision-Date: 2012-05-09T20:00:16\n"
 "Last-Translator: Mikhail Karpenko <veegboo@gmail.com>\n"
 "Language-Team: None\n"
@@ -283,7 +283,6 @@ msgid ""
 "# Stable backports\n"
 "deb http://ftp.debian.org/debian wheezy-backports main contrib non-free\n"
 "deb-src http://ftp.debian.org/debian wheezy-backports main contrib non-free\n"
-"  "
 msgstr ""
 
 #. Tag: para
@@ -487,7 +486,6 @@ msgid ""
 "\n"
 "$ <userinput>sudo apt-get install <replaceable>package</replaceable>/wheezy-backports</userinput>\n"
 "$ <userinput>sudo apt-get install -t wheezy-backports <replaceable>package</replaceable></userinput>\n"
-"\t"
 msgstr ""
 
 #. Tag: title
@@ -1954,8 +1952,8 @@ msgid "The first of these tools is <command>apticron</command>, in the package o
 msgstr "Первым инструментом из этого набора является <command>apticron</command>, доступный в пакете под тем же именем. Его основная задача - ежедневный запуск скрипта (посредством <command>cron</command>). Скрипт обновляет список доступных пакетов и в том случае, когда некоторые установленные пакеты не соответствуют последней доступной версии, он отправляет письмо со списком таких пакетов, а также с теми изменениями, что были произведены в новых версиях. Очевидно, что этот инструмент в большей степени предназначен для пользователей Debian <emphasis role=\"distribution\">Stable</emphasis>, поскольку в случае более динамичных версий Debian эти письма могут быть довольно длинными. Если есть доступные обновления, то <command>apticron</command> автоматически загружает их. Он не устанавливает их, администратору по-прежнему необходимо это делать самостоятельно, но наличие уже загруженных и локально доступных пакетов (в кэше APT) ускоряет работу."
 
 #. Tag: para
-#, no-c-format
-msgid "Administrators in charge of several computers will no doubt appreciate being informed of pending upgrades, but the upgrades themselves are still as tedious as they used to be, which is where the <filename>/etc/cron.daily/apt</filename> script (in the <emphasis role=\"pkg\">apt</emphasis> package) comes in handy. This script is also run daily (and non-interactively) by <command>cron</command>. To control its behavior, use APT configuration variables (which are therefore stored in a file under <filename>/etc/apt/apt.conf.d/</filename>). The main three variables are:"
+#, fuzzy, no-c-format
+msgid "Administrators in charge of several computers will no doubt appreciate being informed of pending upgrades, but the upgrades themselves are still as tedious as they used to be, which is where the <filename>/etc/cron.daily/apt</filename> script (in the <emphasis role=\"pkg\">apt</emphasis> package) comes in handy. This script is also run daily (and non-interactively) by <command>cron</command>. To control its behavior, use APT configuration variables (which are therefore stored in a file under <filename>/etc/apt/apt.conf.d/</filename>). The main variables are:"
 msgstr "Администраторы, управляющие несколькими компьютерами, несомненно будут рады информации о предстоящих обновлениях, но сами обновления всё ещё остаются утомительной работой; вот здесь-то и пригодится скрипт <filename>/etc/cron.daily/apt</filename> (из пакета <emphasis role=\"pkg\">apt</emphasis>). Этот скрипт также выполняется <command>cron</command> ежедневно (и неинтерактивно). Используйте переменные в настройках APT (которые хранятся в файле, находящемся в каталоге <filename>/etc/apt/apt.conf.d/</filename>) для контроля над его поведением. Тремя основными переменными являются:"
 
 #. Tag: term
@@ -1984,8 +1982,8 @@ msgid "<literal>APT::Periodic::AutocleanInterval</literal>"
 msgstr "<literal>APT::Periodic::AutocleanInterval</literal>"
 
 #. Tag: para
-#, no-c-format
-msgid "This last option covers a feature that <command>apticron</command> doesn't have. It controls how often obsolete packages (those not referenced by any distribution anymore) are removed from the APT cache. This keeps the APT cache at a reasonable size and means that you don't need to worry about that task."
+#, fuzzy, no-c-format
+msgid "This option covers a feature that <command>apticron</command> doesn't have. It controls how often obsolete packages (those not referenced by any distribution anymore) are removed from the APT cache. This keeps the APT cache at a reasonable size and means that you don't need to worry about that task."
 msgstr "Этот последний параметр относится к настройке, которой нет в <command>apticron</command>. Он контролирует частоту удаление устаревших пакетов (те, что больше не относятся ни к одному из дистрибутивов) из кэша APT. Это позволяет поддерживать кэш APT в разумных пределах и подразумевает, что вы не должны беспокоиться об этой задаче."
 
 #. Tag: term
@@ -2019,8 +2017,8 @@ msgid "These tools work very well for servers, but desktop users generally prefe
 msgstr "Все эти инструменты хорошо работают на серверах, но пользователи домашних компьютеров предпочитают интерактивную систему. Именно по этой причине задача “Графическое окружение рабочего стола” устанавливает пакет <emphasis role=\"pkg\">gnome-packagekit</emphasis>. Он отображает иконку в области уведомления рабочих столов тогда, когда доступны обновления; щелчок мышью по этой иконке запускает <command>gpk-update-viewer</command> - упрощённый интерфейс для выполнения обновлений. Вы можете пролистать доступные обновления, прочитать описания соответствующих пакетов и их <filename>changelog</filename>, и в каждом конкретном случае решить применять ли обновления или нет."
 
 #. Tag: title
-#, no-c-format
-msgid "Upgrading with <command>update-manager</command>"
+#, fuzzy, no-c-format
+msgid "Upgrading with <command>gpk-update-viewer</command>"
 msgstr "Обновление с помощью <command>update-manager</command>"
 
 #. Tag: title

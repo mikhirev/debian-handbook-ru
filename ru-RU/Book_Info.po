@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-10-27T16:45:06\n"
+"POT-Creation-Date: 2013-12-21T13:48:56\n"
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
@@ -35,12 +35,12 @@ msgstr "Книга-справочник, повествующая о дистр�
 
 #. Tag: para
 #, fuzzy, no-c-format
-msgid "ISBN: to-be-assigned (English paperback)"
+msgid "ISBN: 979-10-91414-02-9 (English paperback)"
 msgstr "ISBN: не присвоен (бумажная версия)"
 
 #. Tag: para
 #, fuzzy, no-c-format
-msgid "ISBN: to-be-assigned (English ebook)"
+msgid "ISBN: 979-10-91414-03-6 (English ebook)"
 msgstr "ISBN: не присвоен (электронная книга)"
 
 #. Tag: para

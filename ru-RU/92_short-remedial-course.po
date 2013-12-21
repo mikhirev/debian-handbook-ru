@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-09-22T12:40:12\n"
+"POT-Creation-Date: 2013-12-21T13:48:56\n"
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
 "Last-Translator: sledopit i@irush.su\n"
 "Language-Team: None\n"
@@ -219,7 +219,7 @@ msgid "The <command>free</command> command displays information on memory; <comm
 msgstr "Команда <command>free</command> показывает информацию о памяти. Команда <command>df</command> (<emphasis>disk free</emphasis> = <emphasis>свободное пространство</emphasis>) показывает доступное место на каждом из примонтированных дисков. Его опция <literal>-h</literal> (от <emphasis>human readable</emphasis> = <emphasis>удобочитаемый</emphasis>) переводит величины в более удобные единицы измерения (обычно мебибайты или гибибайты). Точно так же команда <command>free</command> понимает опции <literal>-m</literal> и <literal>-g</literal> и показывает величины в мебибайтах и гибибайтах соответственно."
 
 #. Tag: screen
-#, no-c-format
+#, fuzzy, no-c-format
 msgid ""
 "\n"
 "<computeroutput>$ </computeroutput><userinput>free</userinput>\n"
@@ -234,8 +234,7 @@ msgid ""
 "udev                     10240       100     10140   1% /dev\n"
 "tmpfs                   514208    269136    245072  53% /dev/shm\n"
 "/dev/sda5             44552904  36315896   7784380  83% /home\n"
-"</computeroutput>\n"
-"      "
+"</computeroutput>"
 msgstr ""
 "\n"
 "<computeroutput>$ </computeroutput><userinput>free</userinput>\n"
@@ -393,12 +392,12 @@ msgstr "Некоторые программы используют целый н
 
 #. Tag: para
 #, no-c-format
-msgid "These configuration files stored directly in a user's home directory, often collectively referred to as <emphasis>dotfiles</emphasis>, have long proliferated to the point that these directories can be quite cluttered with them. Fortunately, an effort led collectively under the FreeDesktop.org umbrella has led to the “XDG Base Directory Specification”, a convention that aims at cleaning up these files and directory. This specification states that configuration files should be stored under <filename>~/.config</filename>, cache files under <filename>~/.cache</filename>, and application data files under <filename>~/.local</filename> (or subdirectories thereof). This convention is slowly gaining traction, and several applications (especially graphical ones) have started following it."
+msgid "These configuration files stored directly in a user's home directory, often collectively referred to as <emphasis>dotfiles</emphasis>, have long proliferated to the point that these directories can be quite cluttered with them. Fortunately, an effort led collectively under the FreeDesktop.org umbrella has resulted in the “XDG Base Directory Specification”, a convention that aims at cleaning up these files and directory. This specification states that configuration files should be stored under <filename>~/.config</filename>, cache files under <filename>~/.cache</filename>, and application data files under <filename>~/.local</filename> (or subdirectories thereof). This convention is slowly gaining traction, and several applications (especially graphical ones) have started following it."
 msgstr ""
 
 #. Tag: para
-#, no-c-format
-msgid "Graphical desktops usually display the contents of the <filename>~/Desktop/</filename> directory (or <filename>~/Bureau/</filename> or whatever the appropriate translation is for systems not configured in English) on the desktop (ie, what's visible on screen once all applications are closed or iconized)."
+#, fuzzy, no-c-format
+msgid "Graphical desktops usually display the contents of the <filename>~/Desktop/</filename> directory (or whatever the appropriate translation is for systems not configured in English) on the desktop (ie, what's visible on screen once all applications are closed or iconized)."
 msgstr "Графическое окружение обычно отображает на рабочем столе (то, что видно на экране когда все приложения закрыты или свёрнуты) содержимое директории <filename>~/Desktop/</filename> (или <filename>~/Bureau/</filename> или другой вариант перевода в зависимости от настроек системы)."
 
 #. Tag: para
@@ -587,7 +586,7 @@ msgid "Example of information provided by <command>lspci</command> and <command>
 msgstr "Пример информации, предоставляемой <command>lspci</command> и <command>lsusb</command>"
 
 #. Tag: screen
-#, no-c-format
+#, fuzzy, no-c-format
 msgid ""
 "\n"
 "<computeroutput>$ </computeroutput><userinput>lspci</userinput>\n"
@@ -605,8 +604,7 @@ msgid ""
 "Bus 005 Device 006: ID 046d:c03d Logitech, Inc.\n"
 "[...]\n"
 "Bus 002 Device 004: ID 413c:8103 Dell Computer Corp. Wireless 350 Bluetooth\n"
-"</computeroutput>\n"
-"      "
+"</computeroutput>"
 msgstr ""
 "\n"
 "<computeroutput>$ </computeroutput><userinput>lspci</userinput>\n"

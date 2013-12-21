@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-10-27T16:45:04\n"
+"POT-Creation-Date: 2013-12-21T13:48:54\n"
 "PO-Revision-Date: 2012-05-09T20:00:18\n"
 "Last-Translator: Mikhail Karpenko <veegboo@gmail.com>\n"
 "Language-Team: None\n"
@@ -1069,8 +1069,8 @@ msgid "<primary><literal>nameserver</literal></primary>"
 msgstr "<primary><literal>nameserver</literal></primary>"
 
 #. Tag: para
-#, no-c-format
-msgid "The DNS servers to be used are indicated in the <filename>/etc/resolv.conf</filename>, one per line, with the <literal>nameserver</literal> keyword preceding an IP address, as in the following example."
+#, fuzzy, no-c-format
+msgid "The DNS servers to be used are indicated in the <filename>/etc/resolv.conf</filename>, one per line, with the <literal>nameserver</literal> keyword preceding an IP address, as in the following example:"
 msgstr "Используемые DNS серверы определены в файле <filename>/etc/resolv.conf</filename>, в котором на каждый сервер приходится одна строка записи, в которой перед IP адресом находится ключевое слово <literal>nameserver</literal>, как в следующем примере."
 
 #. Tag: programlisting

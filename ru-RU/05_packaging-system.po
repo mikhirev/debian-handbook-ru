@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-10-27T16:45:03\n"
+"POT-Creation-Date: 2013-12-21T13:48:53\n"
 "PO-Revision-Date: 2012-05-09T20:00:15\n"
 "Last-Translator: Alexander Naumov <posix.ru@gmail.com>\n"
 "Language-Team: None\n"
@@ -1580,7 +1580,7 @@ msgid "Various queries with <command>dpkg</command>"
 msgstr "Получение информации с помощью <command>dpkg</command>"
 
 #. Tag: screen
-#, no-c-format
+#, fuzzy, no-c-format
 msgid ""
 "\n"
 "<computeroutput>$ </computeroutput><userinput>dpkg -L base-passwd</userinput>\n"
@@ -1671,7 +1671,7 @@ msgid ""
 "-rw-r--r-- root/root       690 2012-02-20 18:41 ./usr/share/doc/gnupg/README.Debian\n"
 "-rw-r--r-- root/root      1418 2012-02-20 18:41 ./usr/share/doc/gnupg/TODO.Debian\n"
 "[...]\n"
-"$ </computeroutput><userinput>dpkg -I /var/cache/apt/archives/</userinput>\n"
+"$ </computeroutput><userinput>dpkg -I /var/cache/apt/archives/gnupg_1.4.12-7_amd64.deb</userinput>\n"
 "<computeroutput> new debian package, version 2.0.\n"
 " size 1952176 bytes: control archive=3312 bytes.\n"
 "    1449 bytes,    30 lines      control              \n"
@@ -1921,13 +1921,13 @@ msgid "<command>dpkg</command>'s multi-arch support allows users to define “fo
 msgstr "Поддержка мультиархитектуры <command>dpkg</command> позволяет определять “ряд архитектур”, с которыми мы можем работать (устанавливать пакеты) в нашей системе. Добавить ту или иную архитектуру можно с помощью <command>dpkg --add-architecture</command>, как будет показанно в примере ниже. Напротив, удалить какую-либо поддерживаемую архитектуру можно с помощью <command>dpkg --remove-architecture</command>, но только в том случае, если ни один из установленных пакетов не относится к этой архитектуре."
 
 #. Tag: screen
-#, no-c-format
+#, fuzzy, no-c-format
 msgid ""
 "\n"
 "<computeroutput># </computeroutput><userinput>dpkg --print-architecture</userinput>\n"
 "<computeroutput>amd64\n"
 "# </computeroutput><userinput>dpkg --print-foreign-architectures</userinput>\n"
-"<computeroutput>#</computeroutput><userinput>dpkg -i gcc-4.7-base_4.7.2-5_armhf.deb</userinput>\n"
+"<computeroutput># </computeroutput><userinput>dpkg -i gcc-4.7-base_4.7.2-5_armhf.deb</userinput>\n"
 "<computeroutput>dpkg: error processing gcc-4.7-base_4.7.2-5_armhf.deb (--install):\n"
 " package architecture (armhf) does not match system (amd64)\n"
 "Errors were encountered while processing:\n"
