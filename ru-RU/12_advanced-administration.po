@@ -2084,7 +2084,7 @@ msgstr "Создание виртуальной машины очень похо
 #. Tag: para
 #, no-c-format
 msgid "Practically speaking, this means we will use the Debian installer, by booting the virtual machine on a virtual DVD-ROM drive that maps to a Debian DVD image stored on the host system. The VM will export its graphical console over the VNC protocol (see <xref linkend=\"sect.remote-desktops\" /> for details), which will allow us to control the installation process."
-msgstr "С практической точки зрения это значит, что мы будем использовать установщик Debian, загружая виртуальную машину с виртуального привода DVD-ROM, соответствующего образу DVD Debian, хранящемуся на хост-системе. Виртуальная машина экспортирует свой графический интерфейс по протоколу VNC (см. подробности в <xref linkend=\"sect.bureau-distant\" />), что позволит нам контролировать процесс установки."
+msgstr "С практической точки зрения это значит, что мы будем использовать установщик Debian, загружая виртуальную машину с виртуального привода DVD-ROM, соответствующего образу DVD Debian, хранящемуся на хост-системе. Виртуальная машина экспортирует свой графический интерфейс по протоколу VNC (см. подробности в <xref linkend=\"sect.remote-desktops\" />), что позволит нам контролировать процесс установки."
 
 #. Tag: para
 #, no-c-format
