@@ -9,6 +9,7 @@ COMMUNITY			СООБЩЕСТВО
 ALTERNATIVE			АЛЬТЕРНАТИВА
 HARDWARE			АППАРАТНОЕ ОБЕСПЕЧЕНИЕ
 QUICK LOOK			КРАТКИЙ ЭКСКУРС
+BEWARE				ОСТОРОЖНО
 
 directory			каталог
 log					журнал
@@ -16,3 +17,4 @@ legacy				традиционный
 patch				заплата
 distribution		сборка, дистрибутив
 script				сценарий (оболочки)
+proprietary			собственнический
