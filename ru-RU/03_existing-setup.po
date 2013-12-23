@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-31T08:15:01\n"
+"POT-Creation-Date: 2013-12-21T13:48:53\n"
 "PO-Revision-Date: 2012-05-09T20:00:15\n"
 "Last-Translator: Mikhail Karpenko veegboo@gmail.com\n"
 "Language-Team: None\n"
@@ -103,9 +103,29 @@ msgstr "<primary>Avahi</primary>"
 msgid "Mac OS machines provide, and are able to use, network services such as file servers and printer sharing. These services are published on the local network, which allows other machines to discover them and make use of them without any manual configuration, using the Bonjour implementation of the Zeroconf protocol suite. Debian includes another implementation, called Avahi, which provides the same functionality."
 msgstr "Системы Mac OS предоставляют, а также могут использовать, такие сетевые службы как файловые серверы и разделяемые принтеры. Данные службы объявляются доступными в локальной сети, а другие машины могут обнаружить и использовать их без необходимости какой-либо ручной настройки посредством протокола Zeroconf, реализация которого называется Bonjour. Debian содержит другую реализацию этого протокола, Avahi, которая обеспечивает аналогичную функциональность."
 
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>AFP</primary>"
+msgstr "<primary>Avahi</primary>"
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>AppleShare</primary>"
+msgstr "<primary>Avahi</primary>"
+
 #. Tag: para
 #, no-c-format
-msgid "Older Mac OS networks (before Mac OSX) use a different protocol called Appletalk. For environments involving machines using this protocol, Debian provides Netatalk, a program which uses the Appletalk protocol. It ensures the operation of the file server and print queues, as well as time server (clock synchronization). Its router function allows interconnection with Appletalk networks."
+msgid "In the other direction, the Netatalk daemon can be used to provide file servers to Mac OSX machines on the network. It implements the AFP (AppleShare) protocol as well as the required notifications so that the servers can be autodiscovered by the Mac OSX clients."
+msgstr ""
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>AppleTalk</primary>"
+msgstr "<primary>Avahi</primary>"
+
+#. Tag: para
+#, fuzzy, no-c-format
+msgid "Older Mac OS networks (before Mac OSX) used a different protocol called AppleTalk. For environments involving machines using this protocol, Netatalk also provides the AppleTalk protocol (in fact, it started as a reimplementation of that protocol). It ensures the operation of the file server and print queues, as well as time server (clock synchronization). Its router function allows interconnection with AppleTalk networks."
 msgstr "В сетях на основе предыдущих реализаций Mac OS (до Mac OSX) использовался другой протокол - Appletalk. Debian предоставляет Netatalk, программу на основе протокола Appletalk, для работы в окружении систем, использующих этот протокол. Она реализует функционирование как файлового сервера и очередей печати, так и сервера времени (для синхронизации часов). Функции маршрутизации этой программы обеспечивают взаимодействие с сетями Appletalk."
 
 #. Tag: title
@@ -284,8 +304,8 @@ msgid "The <filename>sources.list</filename> file is often a good indicator: the
 msgstr "Файл <filename>sources.list</filename> часто служит хорошим индикатором: большинство администраторов содержат полный список всех использованных ранее источников APT, хотя бы и в закомментированном виде. Не стоит забывать, что использованные ранее источники могли быть удалены, а некоторые пакеты могли быть загружены из сети Интернет и установлены вручную (командой <command>dpkg</command>). В этом случае система может быть ошибочно принята за “стандартную” систему Debian. Именно по этой причине вам следует обратить внимание на любые признаки, которые помогут вам определить присутствие внешних пакетов (наличие файлов <filename>deb</filename> в необычных для них каталогах; номера версий пакетов со специальными суффиксами, которые могут указывать на происхождения пакетов не из проекта Debian, а из таких проектов как <literal>ubuntu</literal> или <literal>lmde</literal>, и т. д.)"
 
 #. Tag: para
-#, no-c-format
-msgid "Likewise, it is interesting to analyze the contents of the <filename>/usr/local/</filename> directory, which intended to contain programs compiled and installed manually. Listing software installed in this manner is instructive, since this raises questions on the reasons for not using the corresponding Debian package, if such a package exists."
+#, fuzzy, no-c-format
+msgid "Likewise, it is interesting to analyze the contents of the <filename>/usr/local/</filename> directory, whose purpose is to contain programs compiled and installed manually. Listing software installed in this manner is instructive, since this raises questions on the reasons for not using the corresponding Debian package, if such a package exists."
 msgstr "По этой же причине полезно проанализировать содержимое каталога <filename>/usr/local/</filename>, который предназначен для собранных и установленных вручную программ. Список установленного таким образом программного обеспечения может быть поучительным в том плане, что вам предстоит установить причины, по которым были установлены именно эти программы, а не соответствующие пакеты Debian, если они существуют."
 
 #. Tag: title
@@ -323,40 +343,10 @@ msgstr "<primary>архитектура</primary>"
 msgid "To choose the appropriate version, we must know the computer's architecture. If it is a reasonably recent PC, it is most likely to be amd64 (older PCs were usually i386). In other cases, we can narrow down the possibilities according to the previously used system."
 msgstr "Нам потребуется установить архитектуру компьютера для выбора соответствующей версии дистрибутива. В случае достаточно нового компьютера архитектура будет amd64 (для более старых компьютеров - i386). Во всех остальных случаях выбор сведётся к той архитектуре, что использовалась на предыдущей системе."
 
-#. Tag: title
-#, no-c-format
-msgid "Installing the appropriate Debian version"
-msgstr "Установка соответствующей версии Debian"
-
 #. Tag: para
 #, no-c-format
 msgid "<xref linkend=\"tab-corresp\" xrefstyle=\"select: label nopage\" /> is not intended to be exhaustive, but may be helpful. In any case, the original documentation for the computer is the most reliable source to find this information."
 msgstr "<xref linkend=\"tab-corresp\" xrefstyle=\"select: label nopage\" /> не является исчерпывающей, но может быть полезной. В любом случае, оригинальная документация на компьютер является наиболее надёжным источником информации подобного рода."
-
-#. Tag: title
-#, no-c-format
-msgid "<emphasis>HARDWARE</emphasis> Next-generation PC"
-msgstr "<emphasis>АППАРАТНОЕ ОБЕСПЕЧЕНИЕ</emphasis> ПК следующего поколения"
-
-#. Tag: indexterm
-#, no-c-format
-msgid "<primary>Itanium</primary>"
-msgstr "<primary>Itanium</primary>"
-
-#. Tag: indexterm
-#, no-c-format
-msgid "<primary>amd64</primary>"
-msgstr "<primary>amd64</primary>"
-
-#. Tag: indexterm
-#, no-c-format
-msgid "<primary>ia64</primary>"
-msgstr "<primary>ia64</primary>"
-
-#. Tag: para
-#, no-c-format
-msgid "Most recent computers have 64 bit Intel or AMD processors, compatible with older 32 bit processors; the software compiled for “i386” architecture thus works. On the other hand, this compatibility mode does not fully exploit the capabilities of these new processors. This is why Debian provides the “amd64” architecture, which works for recent AMD chips as well as Intel “em64t” processors (including most of the Core series), which are very similar to AMD64. Debian also provides the “ia64” architecture for Intel Itanium chips."
-msgstr "Современные компьютеры оснащены 64-х разрядными процессорами Intel или AMD, которые совместимы с предыдущим поколением 32-х разрядных процессоров, поэтому на них работают программы, собранные для архитектуры “i386”. С другой стороны, все возможности этих новых процессоров используются не полностью в таком режиме совместимости. Debian предоставляет архитектуру “amd64” именно по этой причине. Данная архитектура совместима как с современными процессорами AMD, так и с процессорами Intel “em64t” (включая большинство линейки Core), которые очень похожи на AMD64. Debian также предоставляет архитектуру “ia64” для процессоров Intel Itanium."
 
 #. Tag: title
 #, no-c-format
@@ -499,6 +489,26 @@ msgid "i386, amd64"
 msgstr "i386, amd64"
 
 #. Tag: title
+#, fuzzy, no-c-format
+msgid "<emphasis>HARDWARE</emphasis> 64 bit PC vs 32 bit PC"
+msgstr "<emphasis>АППАРАТНОЕ ОБЕСПЕЧЕНИЕ</emphasis> ПК следующего поколения"
+
+#. Tag: indexterm
+#, no-c-format
+msgid "<primary>amd64</primary>"
+msgstr "<primary>amd64</primary>"
+
+#. Tag: indexterm
+#, fuzzy, no-c-format
+msgid "<primary>i386</primary>"
+msgstr "<primary>ia64</primary>"
+
+#. Tag: para
+#, fuzzy, no-c-format
+msgid "Most recent computers have 64 bit Intel or AMD processors, compatible with older 32 bit processors; the software compiled for “i386” architecture thus works. On the other hand, this compatibility mode does not fully exploit the capabilities of these new processors. This is why Debian provides the “amd64” architecture, which works for recent AMD chips as well as Intel “em64t” processors (including most of the Core series), which are very similar to AMD64."
+msgstr "Современные компьютеры оснащены 64-х разрядными процессорами Intel или AMD, которые совместимы с предыдущим поколением 32-х разрядных процессоров, поэтому на них работают программы, собранные для архитектуры “i386”. С другой стороны, все возможности этих новых процессоров используются не полностью в таком режиме совместимости. Debian предоставляет архитектуру “amd64” именно по этой причине. Данная архитектура совместима как с современными процессорами AMD, так и с процессорами Intel “em64t” (включая большинство линейки Core), которые очень похожи на AMD64. Debian также предоставляет архитектуру “ia64” для процессоров Intel Itanium."
+
+#. Tag: title
 #, no-c-format
 msgid "Installing and Configuring the Selected Services"
 msgstr "Установка и настройка выбранных служб"
@@ -517,3 +527,9 @@ msgstr "Установка выбранных служб"
 #, no-c-format
 msgid "Prior to jumping in to this exercise with both feet, it is strongly recommended that you read the remainder of this book. After that you will have a more precise understanding of how to configure the expected services."
 msgstr "Прежде чем с головой погрузиться в это занятие, мы настоятельно рекомендуем вам прочитать оставшуюся часть книги. После прочтения вы будете точно знать, как настраиваются необходимые вам службы."
+
+#~ msgid "Installing the appropriate Debian version"
+#~ msgstr "Установка соответствующей версии Debian"
+
+#~ msgid "<primary>Itanium</primary>"
+#~ msgstr "<primary>Itanium</primary>"

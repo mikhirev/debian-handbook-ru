@@ -132,16 +132,14 @@
       packages from various origins, while guaranteeing the overall
       consistency of the system.</para>
 
-      <sidebar role="important">
+      <sidebar>
         <title><emphasis>TOOL</emphasis> Creating a Debian CD-ROM</title>
         <indexterm><primary><command>debian-cd</command></primary></indexterm>
 
-	<para><command>debian-cd</command> creates ISO 
-	images of installation CD-ROMs ready for use. Raphaël Hertzog is the author of the latest
-	rewrite, but maintenance is essentially conducted by Steve
-	McIntyre. Any matter regarding this software is discussed (in
-	English) on the <email>debian-cd@lists.debian.org</email> mailing
-	list.</para>
+	<para><command>debian-cd</command> creates ISO
+	images of installation media (CD, DVD, Blu-Ray, etc.) ready for use.
+	Any matter regarding this software is discussed (in English) on
+	the <email>debian-cd@lists.debian.org</email> mailing list.</para>
       </sidebar>
 
       <sidebar>
@@ -202,17 +200,6 @@
       <para>Debian will not compromise on quality: all known critical bugs
       are resolved in any new version, even if this requires the initially
       forecast release date to be pushed back.</para>
-
-      <para>Debian does not exclude any category of users, however
-      small the minority. Its historical installation program, known
-      as <command>boot-floppies</command>, was known to be rough
-      around the edges, because it was the only one able to operate on
-      all of the architectures on which the Linux kernel runs, and the
-      project didn't want to simply replace it with a program that was
-      more user-friendly, but limited to only the PC (i386
-      architecture). Fortunately, those days are long gone, and
-      <command>debian-installer</command> is now a mature installer,
-      versatile enough for the extended needs of the project.</para>
     </section>
     <section>
       <title>The Legal Framework: A Non-Profit Organization</title>
@@ -239,47 +226,41 @@
 	Interest</emphasis> association, and SPI manages the hardware
 	and financial aspects (donations, purchase of hardware,
 	etc.). While initially created specifically for the Debian
-	project, this association now has a hand in other free
+	project, this association now hosts other free
 	software projects, especially the PostgreSQL database,
 	Freedesktop.org (project for standardization of various parts
 	of modern graphical desktop environments, such as GNOME and
-	KDE), and the Libre Office office suite. <ulink type="block"
-	url="http://www.spi-inc.org/"/></para>
+	KDE), and the Libre Office office suite.
+	<ulink type="block" url="http://www.spi-inc.org/"/></para>
 
 	<para>In addition to SPI, various local associations
 	collaborate closely with Debian in order to generate funds for
-	Debian, without centralizing everything in the U.S.A. This
+	Debian, without centralizing everything in the U.S.A: they
+	are known as “Trusted Organizations” in the Debian jargon. This
 	setup avoids prohibitive international transfer costs, and
-	fits well with the decentralized nature of the project. Such
-	associations include <emphasis>Debian France</emphasis>,
-	<emphasis>FFIS</emphasis> (in Germany), <emphasis>Associazione
-	per il Software Libero</emphasis> (in Italy),
-	<emphasis>Associação SoftwareLivre.org</emphasis> (in Brazil),
-	<emphasis>Debian-UK</emphasis>,
-	<emphasis>Debian-ES</emphasis>,
-	<emphasis>debian.ch</emphasis>, <emphasis>Linux
-	Aktivaattori</emphasis> (in Finland), and others around the
+	fits well with the decentralized nature of the project.</para>
+
+	<para>While the list of trusted organizations is rather short,
+	there are many more Debian-related associations whose goal
+	is to promote Debian: <emphasis>Debian France</emphasis>,
+	<emphasis>Debian-UK</emphasis>, <emphasis>Debian-ES</emphasis>,
+	<emphasis>debian.ch</emphasis>, and others around the
 	world. Do not hesitate to join your local association and
 	support the project!
-
-<ulink type="block" url="http://france.debian.net/"/>
-<ulink type="block" url="http://www.ffis.de/"/>
-<ulink type="block" url="http://www.softwarelibero.it/"/>
-<ulink type="block" url="http://associacao.softwarelivre.org/"/>
-<ulink type="block" url="http://wiki.earth.li/DebianUKSociety"/>
-<ulink type="block" url="http://www.debian-es.org/"/>
-<ulink type="block" url="http://debian.ch/"/>
-<ulink type="block" url="http://www.linux-aktivaattori.org/"/>
-
+	<ulink type="block" url="http://wiki.debian.org/Teams/Auditor/Organizations"/>
+	<ulink type="block" url="http://france.debian.net/"/>
+	<ulink type="block" url="http://wiki.earth.li/DebianUKSociety"/>
+	<ulink type="block" url="http://www.debian-es.org/"/>
+	<ulink type="block" url="http://debian.ch/"/>
 	</para>
       </sidebar>
     </section>
   </section>
   <section id="sect.foundation-documents">
     <title>The Foundation Documents</title>
+    <indexterm><primary>Foundation Documents</primary></indexterm>
 
-    <para><indexterm><primary>Foundation
-    Documents</primary></indexterm> A few years after its initial
+    <para>A few years after its initial
     launch, Debian formalized the principles that it should follow as
     a free software project. This deliberately activist decision
     allows orderly and peaceful growth by ensuring that all members
@@ -294,7 +275,7 @@
     guarantees for their stability: a three-quarters qualified
     majority is required to approve any amendment.</para>
 
-    <section id="sect.contrat-social">
+    <section id="sect.social-contract">
       <title>The Commitment towards Users</title>
       <indexterm><primary>social contract</primary></indexterm>
       <indexterm><primary>contract, social</primary></indexterm>
@@ -331,9 +312,8 @@
 	    has, in reality, had numerous consequences, especially
 	    with the removal of some problematic documentation.
 	    Furthermore, the increasing use of firmware in drivers
-	    poses problems: despite often being non-free, they are,
-	    nonetheless, necessary for proper operation of the
-	    corresponding hardware.</para>
+	    poses problems: many are non-free, yet they are
+	    necessary for proper operation of the corresponding hardware.</para>
           </sidebar>
         </listitem>
         <listitem>
@@ -384,8 +364,6 @@
 	  it is more difficult to implement. This means to take into
 	  account, as a priority, the interests of the users and free
 	  software.</para>
-
-          
         </listitem>
         <listitem>
 	  <para>Works that do not meet our free software standards.</para>
@@ -666,27 +644,30 @@
         <indexterm><primary><emphasis role="distribution">Lenny</emphasis></primary></indexterm>
         <indexterm><primary><emphasis role="distribution">Squeeze</emphasis></primary></indexterm>
         <indexterm><primary><emphasis role="distribution">Wheezy</emphasis></primary></indexterm>
+        <indexterm><primary><emphasis role="distribution">Jessie</emphasis></primary></indexterm>
         <indexterm><primary><emphasis role="distribution">Sid</emphasis></primary></indexterm>
         <indexterm><primary>Toy Story</primary></indexterm>
         <indexterm><primary>Pixar</primary></indexterm>
 
 	<para>Last anecdotal point, it was Bruce who was responsible for
-	inspiring the different “codenames” for Debian versions (1.1
-	— <emphasis role="distribution">Rex</emphasis>, 1.2 — <emphasis
-	role="distribution">Buzz</emphasis>, 1.3 — <emphasis
-	role="distribution">Bo</emphasis>, 2.0 — <emphasis
-	role="distribution">Hamm</emphasis>, 2.1 — <emphasis
-	role="distribution">Slink</emphasis>, 2.2 — <emphasis
-	role="distribution">Potato</emphasis>, 3.0 — <emphasis
-	role="distribution">Woody</emphasis>, 3.1 — <emphasis
-	role="distribution">Sarge</emphasis>, 4.0 — <emphasis
-	role="distribution">Etch</emphasis>, 5.0 — <emphasis
-	role="distribution">Lenny</emphasis>, 6.0 — <emphasis
-	role="distribution">Squeeze</emphasis>, 7.0 — <emphasis
-	role="distribution">Testing</emphasis> — <emphasis
-	role="distribution">Wheezy</emphasis>, <emphasis
-	role="distribution">Unstable</emphasis> — <emphasis
-	role="distribution">Sid</emphasis>). They are taken from the names
+	inspiring the different “codenames” for Debian versions
+	(1.1 — <emphasis role="distribution">Rex</emphasis>,
+	1.2 — <emphasis role="distribution">Buzz</emphasis>,
+	1.3 — <emphasis role="distribution">Bo</emphasis>,
+	2.0 — <emphasis role="distribution">Hamm</emphasis>,
+	2.1 — <emphasis role="distribution">Slink</emphasis>,
+	2.2 — <emphasis role="distribution">Potato</emphasis>,
+	3.0 — <emphasis role="distribution">Woody</emphasis>,
+	3.1 — <emphasis role="distribution">Sarge</emphasis>,
+	4.0 — <emphasis role="distribution">Etch</emphasis>,
+	5.0 — <emphasis role="distribution">Lenny</emphasis>,
+	6.0 — <emphasis role="distribution">Squeeze</emphasis>,
+	7 — <emphasis role="distribution">Wheezy</emphasis>,
+	<emphasis role="distribution">Testing</emphasis> —
+	<emphasis role="distribution">Jessie</emphasis>,
+	<emphasis role="distribution">Unstable</emphasis> —
+	<emphasis role="distribution">Sid</emphasis>).
+	They are taken from the names
 	of characters in the Toy Story movie. This animated film entirely
 	composed of computer graphics was produced by Pixar Studios, with
 	whom Bruce was employed at the time that he led the Debian
@@ -720,10 +701,10 @@
       the project takes. A Debian developer is generally responsible for at
       least one package, but according to their available time and desire,
       they are free to become involved in numerous teams, acquiring, thus,
-      more responsibilities within the project. <ulink type="block"
-      url="http://www.debian.org/devel/people"/> <ulink type="block"
-      url="http://www.debian.org/intro/organization"/> <ulink type="block"
-      url="http://wiki.debian.org/Teams"/></para>
+      more responsibilities within the project.
+      <ulink type="block" url="http://www.debian.org/devel/people"/>
+      <ulink type="block" url="http://www.debian.org/intro/organization"/>
+      <ulink type="block" url="http://wiki.debian.org/Teams"/></para>
 
       <sidebar>
         <title><emphasis>TOOL</emphasis> Developer's database</title>
@@ -735,12 +716,12 @@
 	telephone, geographical coordinates such as longitude and latitude,
 	etc.). Some of the information (first and last name, country, username
 	within the project, IRC username, GnuPG key, etc.) is public and
-	available on the Web. <ulink type="block"
-	url="http://db.debian.org/"/></para>
+	available on the Web.
+	<ulink type="block" url="http://db.debian.org/"/></para>
 
 	<para>The geographical coordinates allow the creation of a map
 	locating all of the developers around the globe. Debian is
-	truly an international project: its developers can be found an
+	truly an international project: its developers can be found on
 	all continents, although the majority are in “Western
 	countries”.</para>
 
@@ -784,10 +765,10 @@
 	“upstream” versions of the program which naturally continues to
 	develop simultaneously.  For instance, at the time of the initial packaging,
 	the program was at version 1.2.3. After some months of development,
-	the original authors release a new stable version, numbered 
+	the original authors release a new stable version, numbered
 	1.4.0. At this point, the Debian maintainer should update the
 	package, so that users can benefit from its latest stable
-	version).</para>
+	version.</para>
       </sidebar>
       <indexterm><primary>Debian Policy</primary></indexterm>
       <indexterm><primary>Debian Policy</primary></indexterm>
@@ -816,7 +797,7 @@
 	The process that then starts is documented in
 	<filename>/usr/share/doc/debian-policy/Process.html</filename>: if
 	it is acknowledged that the problem revealed must be resolved by
-	creating a new rule in the Debian Policy, a discussion 
+	creating a new rule in the Debian Policy, a discussion
 	begins on the <email>debian-policy@lists.debian.org</email> mailing
 	list until consensus is reached and a proposal issued. Someone
 	then drafts a desired amendment and submits it for approval (in
@@ -903,11 +884,13 @@
       <indexterm><primary>Hocevar, Sam</primary></indexterm>
       <indexterm><primary>McIntyre, Steve</primary></indexterm>
       <indexterm><primary>Zacchiroli, Stefano</primary></indexterm>
+      <indexterm><primary>Nussbaum, Lucas</primary></indexterm>
 
       <para>Since its inception, the project has been successively led by
       Ian Murdock, Bruce Perens, Ian Jackson, Wichert Akkerman, Ben
       Collins, Bdale Garbee, Martin Michlmayr, Branden Robinson, Anthony
-      Towns, Sam Hocevar, Steve McIntyre and Stefano Zacchiroli.</para>
+      Towns, Sam Hocevar, Steve McIntyre, Stefano Zacchiroli and Lucas
+      Nussbaum.</para>
       <indexterm><primary>technical committee</primary></indexterm>
 
       <para>The constitution also defines a “technical committee”. This
@@ -978,7 +961,7 @@
 	exercised by those with the greatest merit. For Debian, merit is a
 	measure of competence, which is, itself, assessed by observation of
 	past actions by one or more others within the project (Stefano
-	Zacchiroli, the current project leader, speaks of “do-ocracy”,
+	Zacchiroli, the previous project leader, speaks of “do-ocracy”,
 	meaning “power to those who get things done”). Their simple
 	existence proves a certain level of competence; their achievements
 	generally being free software, with available source code, which
@@ -1027,10 +1010,10 @@
     <section>
       <title>The Active Role of Users</title>
 
-      <para>One might wonder why it is relevant to mention the users
+      <para>One might wonder if it is relevant to mention the users
       among those who work within the Debian project, but the answer
       is a definite yes: they play a critical role in the project.
-      Far from being “passive”, some of our users run development
+      Far from being “passive”, some users run development
       versions of Debian and regularly file bug reports to indicate
       problems. Others go even further and submit ideas for
       improvements, by filing a bug report with a severity level of
@@ -1097,10 +1080,11 @@
       by Debian like to make a contribution of their own to the project. As
       not everyone has appropriate levels of expertise in programming, they
       may choose to assist with the translation and review of
-      documentation. There are language-specific mailing lists for various
-      languages. For French, for instance, it is
-      <email>debian-l10n-french@lists.debian.org</email>. <ulink
-      type="block" url="http://www.debian.org/intl/french/"/></para>
+      documentation. There are language-specific mailing lists to coordinate
+      this work.
+      <ulink type="block" url="https://lists.debian.org/i18n.html"/>
+      <ulink type="block" url="http://www.debian.org/international/"/>
+      </para>
 
       <sidebar>
         <title><emphasis>BACK TO BASICS</emphasis> What are i18n and l10n?</title>
@@ -1181,12 +1165,11 @@
 	server).</para>
 
 	<para>This tool first targets the development versions, which
-	is where the bugs will be fixed. A stable version of Debian
-	is almost as good as written in stone, with very few
-	exceptions for security
-	updates or other important updates (if, for example, a package is
-	not working at all). A correction of a minor bug in a Debian
-	package must, thus, wait for the next stable version.</para>
+	is where the bugs will be fixed. Effectively, changes are not
+	welcome in a stable version of Debian, with very few exceptions
+	for security updates or other important updates (if, for example,
+	a package is not working at all). A correction of a minor bug in a
+	Debian package must, thus, wait for the next stable version.</para>
       </sidebar>
 
       <para>All of these contribution mechanisms are made more
@@ -1412,7 +1395,7 @@
 	  provides a range of services that facilitate collaborative
 	  development. Each project will have a dedicated virtual
 	  space there, including a web site, several “ticketing”
-	  systems to track such tickets as bugs and patches, a survey
+	  systems to track — most commonly — bugs and patches, a survey
 	  tool, file storage, forums, version control system
 	  repositories, mailing lists and various other related
 	  services.</para>
@@ -1494,9 +1477,9 @@
         <sidebar>
           <title><emphasis>CULTURE</emphasis> Traffic on the mailing lists: some figures</title>
           <indexterm><primary>lists</primary><secondary>mailing lists</secondary></indexterm>
+	  <indexterm><primary>mailing lists</primary></indexterm>
 
-	  <para><indexterm><primary>mailing lists</primary></indexterm>The
-	  mailing lists are, without a doubt, the best testimony to
+	  <para>The mailing lists are, without a doubt, the best testimony to
 	  activity on a project, since they keep track of everything that
 	  happens. Some statistics (from 2012) regarding our mailing lists
 	  speak for themselves: Debian hosts more than 260 lists, totaling
@@ -1642,7 +1625,7 @@
   <section id="sect.follow-debian-news">
     <title>Follow Debian News</title>
 
-    <para>As arleady mentioned, the Debian project evolves in a very
+    <para>As already mentioned, the Debian project evolves in a very
     distributed, very organic way.  As a consequence, it may be
     difficult at times to stay in touch with what happens within the
     project without being overwhelmed with a never-ending flood of
@@ -1668,6 +1651,19 @@
     insight while staying rather focused on the project as a whole.
     </para>
 
+    <sidebar>
+      <title><emphasis>COMMUNITY</emphasis> The publicity and press teams</title>
+      <para>Debian's official communication channels are managed by volunteers
+      of the Debian publicicy team and of the press team. Members of the latter
+      are delegates of the Debian Project Leader and handle official press releases.
+      The publicity team is much less formal and welcomes contributions from
+      everybody, be it to write articles for “Debian Project News” or to animate
+      the <emphasis>@debian</emphasis> Identi.ca microblogging account.
+      <ulink type="block" url="http://wiki.debian.org/Teams/Press"/>
+      <ulink type="block" url="http://wiki.debian.org/Teams/Publicity"/>
+      </para>
+    </sidebar>
+
     <para>For more information about the evolution of Debian and
     what is happening at some point in time in various teams,
     there's also the
@@ -1679,7 +1675,7 @@
     <email>debian-announce</email> gives news about the user-visible
     results, <email>debian-devel-announce</email> gives news about
     how these results are produced.  As a side note, “d-d-a” (as it
-    is sometimes referred to) is one of the two mandatory lists that
+    is sometimes referred to) is the only list that
     Debian developers must be subscribed to.</para>
 
     <indexterm><primary>Planet Debian</primary></indexterm>
@@ -1693,15 +1689,23 @@
 
     <indexterm><primary>microblog</primary></indexterm>
     <indexterm><primary>Identi.ca</primary></indexterm>
-    <para>The microblogging world also carries news about Debian,
-    usually (and unsurprisingly) with a <emphasis>#debian</emphasis>
-    hashtag.  On federated microblogging servers such as Identi.ca,
-    there's also a <emphasis>!debian</emphasis> group gathering
-    members of the community.
-    <ulink type="block" url="https://identi.ca/tag/debian"/>
-    <ulink type="block" url="https://identi.ca/group/debian"/>
+    <indexterm><primary>Twitter</primary></indexterm>
+    <indexterm><primary>Facebook</primary></indexterm>
+    <indexterm><primary>Google+</primary></indexterm>
+    <indexterm><primary>social networks</primary></indexterm>
+    <indexterm><primary>network</primary><secondary>social networks</secondary></indexterm>
+    <para>The project is also well represented on social networks.
+    While Debian only has an official presence on platforms
+    built with free software (like the Identi.ca microblogging
+    platform, powered by <emphasis>pump.io</emphasis>),
+    there are many Debian contributors who are
+    animating Twitter accounts, Facebook pages, Google+ pages,
+    and more.
+    <ulink type="block" url="https://identi.ca/debian"/>
+    <ulink type="block" url="https://twitter.com/debian"/>
+    <ulink type="block" url="https://www.facebook.com/debian"/>
+    <ulink type="block" url="https://plus.google.com/111711190057359692089"/>
     </para>
-
   </section>
 
   <section id="sect.role-of-distributions">
@@ -1715,7 +1719,6 @@
     <section>
       <title>The Installer: <command>debian-installer</command></title>
 
-      
       <para>The <command>debian-installer</command>, designed to be
       extremely modular in order to be as generic as possible, targets the
       first objective. It covers a broad range of installation situations and in
@@ -2036,7 +2039,7 @@
       releases. This contributes, over all, to its reputation for quality.
       Furthermore, the majority of users are satisfied using one of the
       three distributions simultaneously available. The system
-      administrators, concerned above all about for the stability of their
+      administrators, concerned above all about the stability of their
       servers, don't need the latest and greatest version of GNOME; they can choose Debian
       <emphasis role="distribution">Stable</emphasis>, and they will be
       satisfied. End users, more interested in the latest versions of GNOME
@@ -2048,15 +2051,6 @@
       role="distribution">Unstable</emphasis> right out of the gate, at the
       risk of suffering the headaches and bugs inherent in any new version
       of a program. To each their own Debian!</para>
-
-      <figure>
-        <title>Chronological path of a program packaged by Debian</title>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="images/package-lifecycle.png" scalefit="1"/>
-          </imageobject>
-        </mediaobject>
-      </figure>
 
       <sidebar>
         <title><emphasis>CULTURE</emphasis> GNOME and KDE, graphical desktop environments</title>
@@ -2070,10 +2064,20 @@
 	program, multimedia accessories, etc. The most visible difference
 	resides in the choice of the graphical library used: GNOME has
 	chosen GTK+ (free software licensed under the LGPL), and KDE has
-	selected Qt (from the company, Trolltech, who released it under the
-	GPL license). <ulink type="block" url="http://www.gnome.org/"/>
+	selected Qt (a company-backed project, available nowadays both
+	under the GPL and a commercial license).
+	<ulink type="block" url="http://www.gnome.org/"/>
 	<ulink type="block" url="http://www.kde.org/"/></para>
       </sidebar>
+
+      <figure>
+        <title>Chronological path of a program packaged by Debian</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/package-lifecycle.png" scalefit="1"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
     </section>
   </section>
 </chapter>

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0\n"
-"POT-Creation-Date: 2013-08-31T08:15:04\n"
+"POT-Creation-Date: 2013-12-21T13:48:56\n"
 "PO-Revision-Date: 2012-05-09T20:00:22\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: None\n"
@@ -34,13 +34,13 @@ msgid "A reference book presenting the Debian distribution, from initial install
 msgstr "Книга-справочник, повествующая о дистрибутиве Debian от первичной установки до настройки сервисов."
 
 #. Tag: para
-#, no-c-format
-msgid "ISBN: to-be-assigned (paperback)"
+#, fuzzy, no-c-format
+msgid "ISBN: 979-10-91414-02-9 (English paperback)"
 msgstr "ISBN: не присвоен (бумажная версия)"
 
 #. Tag: para
-#, no-c-format
-msgid "ISBN: to-be-assigned (ebook)"
+#, fuzzy, no-c-format
+msgid "ISBN: 979-10-91414-03-6 (English ebook)"
 msgstr "ISBN: не присвоен (электронная книга)"
 
 #. Tag: para
