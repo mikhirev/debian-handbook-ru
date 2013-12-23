@@ -126,67 +126,67 @@ msgstr "С другой стороны, нам может понадобитьс
 #. Tag: para
 #, no-c-format
 msgid "Extreme though these examples may seem, they would nevertheless be an adequate response to defined risks, insofar as they are the outcome of a thought process that takes into account the goals to reach and the constraints to fulfill. When coming from a reasoned decision, no security policy is less respectable than any other."
-msgstr ""
+msgstr "Эти меры могут показаться крайностью, но, тем не менее, они обеспечивают адекватный ответ на вышеозначенные угрозы, поскольку они хорошо продуманы и принимают во внимание как поставленные задачи, так и наложенные ограничения. С учётом принятия взвешеного решения, ни одна из политик безопасности не имеет явного преимущества."
 
 #. Tag: para
 #, no-c-format
 msgid "In most cases, the information system can be segmented in consistent and mostly independent subsets. Each subsystem will have its own requirements and constraints, and so the risk assessment and the design of the security policy should be undertaken separately for each. A good principle to keep in mind is that a short and well-defined perimeter is easier to defend than a long and winding frontier. The network organization should also be designed accordingly: the sensitive services should be concentrated on a small number of machines, and these machines should only be accessible via a minimal number of check-points; securing these check-points will be easier than securing all the sensitive machines against the entirety of the outside world. It is at this point that the usefulness of network filtering (including by firewalls) becomes apparent. This filtering can be implemented with dedicated hardware, but a possibly simpler and more flexible solution is to use a software firewall such as the one integrated in the Linux kernel."
-msgstr ""
+msgstr "В большинстве случаев, информационную систему можно разделить на взаимосвязанные и по большей части независимые блоки. Каждая подсистема будет иметь собственные требования и ограничения, и поэтому производить оценку рисков и разработку политики безопасности необходимо отдельно для каждого. Стоит запомнить один хороший принуип: короткий и чётко обозначенный периметр защищать проще, чем длинную и извилистую границу. Организацию сети также следует проектировать с учётом требований безопасности: все важные службы желательно сконцентрировать на небольшом количестве машин, а эти машины дожны быть доступны через минимально возможное количество контрольных точек; организовать защиту этих точек будет проще, чем защищать машины с уязвимыми службами от всего внешнего мира. Необходимость фильтрации сетевого траффика (в том числе с помощью межсетевых экранов) становится очевидной именно в этот момент. Фильтрацию можно организовать как отдельными аппаратными средствами, так и более гибкими и простыми программными межсетевыми экранами, "
 
 #. Tag: title
 #, no-c-format
 msgid "Firewall or Packet Filtering"
-msgstr ""
+msgstr "Межсетевой экран или фильтрация пакетов"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>firewall</primary>"
-msgstr ""
+msgstr "<primary>межсетевой экран</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>packet filter</primary>"
-msgstr ""
+msgstr "<primary>фильтр пакетов</primary>"
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>BACK TO BASICS</emphasis> Firewall"
-msgstr ""
+msgstr "<emphasis>К ОСНОВАМ</emphasis> Межсетевой экран"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>packet</primary><secondary>IP</secondary>"
-msgstr ""
+msgstr "<primary>пакет</primary><secondary>IP</secondary>"
 
 #. Tag: para
 #, no-c-format
 msgid "A <emphasis>firewall</emphasis> is a piece of computer equipment with hardware and/or software that sorts the incoming or outgoing network packets (coming to or from a local network) and only lets through those matching certain predefined conditions."
-msgstr ""
+msgstr "<emphasis>Межсетевой экран</emphasis> - часть компьютерного оборудования в виде аппаратного и/или программного обеспечения, которое сортирует входящие или исходящие сетевые пакеты (отправляемые в или из локальной сети) и пропускает только те из них, что соответствуют предопределённым условиям."
 
 #. Tag: para
 #, no-c-format
 msgid "A firewall is a filtering network gateway and is only effective on packets that must go through it. Therefore, it can only be effective when going through the firewall is the only route for these packets."
-msgstr ""
+msgstr "Межсетевой экран - это фильтрующий сетевой шлюз и он работает только с теми пакетами, которые проходят через него. По этой причине он может быть эффективен только в том случае, когда межсетевой экран является единственным путём для этих пакетов."
 
 #. Tag: para
 #, no-c-format
 msgid "The lack of a standard configuration (and the “process, not product” motto) explains the lack of a turn-key solution. There are, however, tools that make it simpler to configure the <emphasis>netfilter</emphasis> firewall, with a graphical representation of the filtering rules. <command>fwbuilder</command> is undoubtedly among the best of them."
-msgstr ""
+msgstr "Отсутствие стандартной конфигурации (а также девиз “процесс, а не результат”) объясняет отсутствие решений под ключ. Однако существуют инструменты, которые упрощают настройку <emphasis>сетевого фильтра</emphasis> межсетевого экрана, с графическим представлением правил фильтрации. <command>fwbuilder</command>, несомненно, является одним из лучших."
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><emphasis>netfilter</emphasis></primary>"
-msgstr ""
+msgstr "<primary><emphasis>сетевой фильтр</emphasis></primary>"
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>SPECIFIC CASE</emphasis> Local Firewall"
-msgstr ""
+msgstr "<emphasis>ОСОБЫЙ СЛУЧАЙ</emphasis> Локальный межсетевой экран"
 
 #. Tag: para
 #, no-c-format
 msgid "A firewall can be restricted to one particular machine (as opposed to a complete network), in which case its role is to filter or limit access to some services, or possibly to prevent outgoing connections by rogue software that a user could, willingly or not, have installed."
-msgstr ""
+msgstr "Межсетевой экран может быть ограничен только одной определённой машиной (в противовес целой сети), "
 
 #. Tag: para
 #, no-c-format
