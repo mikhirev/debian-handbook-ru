@@ -46,7 +46,7 @@ msgstr "Определение политики безопасности"
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>CAUTION</emphasis> Scope of this chapter"
-msgstr "<emphasis>ОСТОРОЖНО</emphasis> Предмет данной главы"
+msgstr "<emphasis>ВНИМАНИЕ</emphasis> Предмет данной главы"
 
 #. Tag: para
 #, no-c-format
@@ -171,12 +171,12 @@ msgstr "Межсетевой экран - это фильтрующий сете
 #. Tag: para
 #, no-c-format
 msgid "The lack of a standard configuration (and the “process, not product” motto) explains the lack of a turn-key solution. There are, however, tools that make it simpler to configure the <emphasis>netfilter</emphasis> firewall, with a graphical representation of the filtering rules. <command>fwbuilder</command> is undoubtedly among the best of them."
-msgstr "Отсутствие стандартной конфигурации (а также девиз “процесс, а не результат”) объясняет отсутствие решений под ключ. Однако существуют инструменты, которые упрощают настройку <emphasis>сетевого фильтра</emphasis> межсетевого экрана, с графическим представлением правил фильтрации. <command>fwbuilder</command>, несомненно, является одним из лучших."
+msgstr "Отсутствие стандартной конфигурации (а также девиз “процесс, а не результат”) объясняет отсутствие решений под ключ. Однако существуют инструменты, которые упрощают настройку межсетевого экрана <emphasis>netfilter</emphasis>, с графическим представлением правил фильтрации. <command>fwbuilder</command>, несомненно, является одним из лучших."
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><emphasis>netfilter</emphasis></primary>"
-msgstr "<primary><emphasis>сетевой фильтр</emphasis></primary>"
+msgstr "<primary><emphasis>netfilter</emphasis></primary>"
 
 #. Tag: title
 #, no-c-format
@@ -186,252 +186,252 @@ msgstr "<emphasis>ОСОБЫЙ СЛУЧАЙ</emphasis> Локальный меж
 #. Tag: para
 #, no-c-format
 msgid "A firewall can be restricted to one particular machine (as opposed to a complete network), in which case its role is to filter or limit access to some services, or possibly to prevent outgoing connections by rogue software that a user could, willingly or not, have installed."
-msgstr "Межсетевой экран может быть ограничен только одной определённой машиной (в противовес целой сети), "
+msgstr "Межсетевой экран может быть ограничен только одной определённой машиной (в противовес целой сети), и в таком случае в его задачи входит фильтрация или ограничение доступа к некоторым службам или, возможно, предотвращение исходящих соединений от вредоносного программного обеспечения, которое пользователь мог установить по собственному желанию или непреднамеренно."
 
 #. Tag: para
 #, no-c-format
 msgid "The Linux kernel embeds the <emphasis>netfilter</emphasis> firewall. It can be controlled from user-space with the <command>iptables</command> and <command>ip6tables</command> commands. The difference between these two commands is that the former acts on the IPv4 network, whereas the latter acts on IPv6. Since both network protocol stacks will probably be around for many years, both tools will need to be used in parallel."
-msgstr ""
+msgstr "В ядро Linux встроен межсетевой экран <emphasis>netfilter</emphasis>. Им можно управлять из пространства пользователя с помощъю команд <command>iptables</command> и <command>ip6tables</command>. Различие между этими двумя командами состоит в том, что первая действует в сетях IPv4, а вторая - в сетях IPv6. Поскольку оба сетевых протокола будут сосуществовать долгое время, вам придётся использовать оба инструмента одновременно."
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>iptables</command></primary>"
-msgstr ""
+msgstr "<primary><command>iptables</command></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>ip6tables</command></primary>"
-msgstr ""
+msgstr "<primary><command>ip6tables</command></primary>"
 
 #. Tag: title
 #, no-c-format
 msgid "Netfilter Behavior"
-msgstr ""
+msgstr "Работа сетевого фильтра"
 
 #. Tag: para
 #, no-c-format
 msgid "<emphasis>netfilter</emphasis> uses four distinct tables which store rules regulating three kinds of operations on packets:"
-msgstr ""
+msgstr "<emphasis>netfilter</emphasis> использует четыре отдельных таблицы для хранения трёх видов правил обработки пакетов:"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>filter</literal> concerns filtering rules (accepting, refusing or ignoring a packet);"
-msgstr ""
+msgstr "<literal>filter</literal> относится к правилам фильтрации (принятие, отказ или игнорирование пакета);"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>nat</literal> concerns translation of source or destination addresses and ports of packages; note that this table only exists for IPv4;"
-msgstr ""
+msgstr "<literal>nat</literal> относится к преобразованию адресов и портов отправителя и получателя пакетов; отметим, что эта таблица существуеть только для IPv4;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>mangle</literal> concerns other changes to the IP packets (including the ToS — <emphasis>Type of Service</emphasis> — field and options);"
-msgstr ""
+msgstr "<literal>mangle</literal> относится к прочим изменениям IP пакетов (включая ToS(Type of Service) - <emphasis> тип сервиса</emphasis> - поле и параметры);"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>raw</literal> allows other manual modifications on packets before they reach the connection tracking system."
-msgstr ""
+msgstr "<literal>raw</literal> позволяет выполнять прочие изменения пакетов в ручном режиме до того, как они достигнут трассировщика соединений."
 
 #. Tag: para
 #, no-c-format
 msgid "Each table contains lists of rules called <emphasis>chains</emphasis>. The firewall uses standard chains to handle packets based on predefined circumstances. The administrator can create other chains, which will only be used when referred to by one of the standard chains (either directly or indirectly)."
-msgstr ""
+msgstr "Каждая таблица содержит списки правил, называемые <emphasis>цепочками</emphasis>. Межсетевой экран использует стандартные цепочки для обработки пакетов в зависимости от предопределённых условий. Администратор может создавать дополнительный цепочки, которые будут использоваться только при обращении к ним из стандартных цепочек (непосредственно или косвенно)."
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>chain</primary>"
-msgstr ""
+msgstr "<primary>цепочка</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>filtering rule</primary>"
-msgstr ""
+msgstr "<primary>правило фильтрации</primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>filter</literal> table has three standard chains:"
-msgstr ""
+msgstr "В таблицу <literal>filter</literal> входят три стандартных цепочки:"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>INPUT</literal>: concerns packets whose destination is the firewall itself;"
-msgstr ""
+msgstr "<literal>INPUT</literal>: относится к пакетам, получателем которых является сам межсетевой экран;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>OUTPUT</literal>: concerns packets emitted by the firewall;"
-msgstr ""
+msgstr "<literal>OUTPUT</literal>: относится к пакетам, отправляемым межсетевым экраном;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>FORWARD</literal>: concerns packets transiting through the firewall (which is neither their source nor their destination)."
-msgstr ""
+msgstr "<literal>FORWARD</literal>: относится к пакетам, проходящим через межсетевой экран (который не является ни отправителем, ни получателем)."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>nat</literal> table also has three standard chains:"
-msgstr ""
+msgstr "Таблица <literal>nat</literal> также содержит три стандартных цепочки:"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>PREROUTING</literal>: to modify packets as soon as they arrive;"
-msgstr ""
+msgstr "<literal>PREROUTING</literal>: служит для модификации поступающих на вход пакетов"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>POSTROUTING</literal>: to modify packets when they are ready to go on their way;"
-msgstr ""
+msgstr "<literal>POSTROUTING</literal>: служит для модификации пакетов перед отправкой их в сеть;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>OUTPUT</literal>: to modify packets generated by the firewall itself."
-msgstr ""
+msgstr "<literal>OUTPUT</literal>: служит для модификации пакетов, созданных внутри межсетевого экрана."
 
 #. Tag: title
 #, no-c-format
 msgid "How <emphasis>netfilter</emphasis> chains are called"
-msgstr ""
+msgstr "Как называются цепочки <emphasis>netfilter</emphasis>"
 
 #. Tag: para
 #, no-c-format
 msgid "Each chain is a list of rules; each rule is a set of conditions and an action to execute when the conditions are met. When processing a packet, the firewall scans the appropriate chain, one rule after another; when the conditions for one rule are met, it “jumps” (hence the <literal>-j</literal> option in the commands) to the specified action to continue processing. The most common behaviors are standardized, and dedicated actions exist for them. Taking one of these standard actions interrupts the processing of the chain, since the packet's fate is already sealed (barring an exception mentioned below):"
-msgstr ""
+msgstr "Каждая цепочка представляет собой список правил; каждое правило является набором условий и действий, выполняемых при соблюдении указанных условий. Во время обработки пакета межсетевой экран просматривает соответствующую цепочку, последовательно каждое правило; в момент соответствия условиям одного из правил он “перепрыгивает”(“jumps”) (отсюда параметр <literal>-j</literal> в командах) к указанному действию для последующей обработки. Наиболее распространённые варианты поведения стандартизированы и для них определены специальные действия. Переход к одному из стандартных действий прерывает обработку цепочки, поскольку дальнейшая судьба пакета уже определена (с учётом одного исключения, приведённого ниже):"
 
 #. Tag: title
 #, no-c-format
 msgid "<emphasis>BACK TO BASICS</emphasis> ICMP"
-msgstr ""
+msgstr "<emphasis>К ОСНОВАМ</emphasis> ICMP"
 
 #. Tag: para
 #, no-c-format
 msgid "ICMP (<emphasis>Internet Control Message </emphasis>Protocol) is the protocol used to transmit complementary information on communications. It allows testing network connectivity with the <command>ping</command> command (which sends an ICMP <emphasis>echo request</emphasis> message, which the recipient is meant to answer with an ICMP <emphasis>echo reply</emphasis> message). It signals a firewall rejecting a packet, indicates an overflow in a receive buffer, proposes a better route for the next packets in the connection, and so on. This protocol is defined by several RFC documents; the initial RFC777 and RFC792 were soon completed and extended. <ulink type=\"block\" url=\"http://www.faqs.org/rfcs/rfc777.html\" /><ulink type=\"block\" url=\"http://www.faqs.org/rfcs/rfc792.html\" />"
-msgstr ""
+msgstr "ICMP (<emphasis>Internet Control Message </emphasis>Protocol - протокол межсетевых управляющих сообщений) - это протокол, который используется для передачи дополнительной информации в процессе обмена данными. Он позволяет проводить тестирование связности сети командой <command>ping</command> (она отправляет сообщение <emphasis>эхо-запрос</emphasis>, на которое получатель должен ответить сообщением <emphasis>эхо-ответ</emphasis>). Он предупреждает о том, что пакет отклонён межсетевым экраном, указывает на переполнение приёмного буфера, предлагает лучшие пути для последующих пакетов в соединении и так далее. Данный протокол определён в нескольких документах RFC; изначальные RFC777 и RFC792 были быстро дополнены и расширены. <ulink type=\"block\" url=\"http://www.faqs.org/rfcs/rfc777.html\" /><ulink type=\"block\" url=\"http://www.faqs.org/rfcs/rfc792.html\" />"
 
 #. Tag: para
 #, no-c-format
 msgid "For reference, a receive buffer is a small memory zone storing data between the time it arrives from the network and the time the kernel handles it. If this zone is full, new data cannot be received, and ICMP signals the problem, so that the emitter can slow down its transfer rate (which should ideally reach an equilibrium after some time)."
-msgstr ""
+msgstr "Для справки: приёмный буфер представляет собой небольшой участок памяти, в котором данные хранятся с момента их поступления из сети до того момента, когда ядро обработает эти данные. Если этот участок заполнен, то новые данные не могут быть приняты, и ICMP сообщает о проблеме для того, чтоб передающая сторона могла снизить скорость передачи данных (в идеальном случает равновесие достигается по прошествии определённого времени)."
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>ICMP</primary>"
-msgstr ""
+msgstr "<primary>ICMP</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>Internet Control Message Protocol</primary>"
-msgstr ""
+msgstr "<primary>протокол межсетевых управляющих сообщений</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>receive buffer</primary>"
-msgstr ""
+msgstr "<primary>приёмный буфер</primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>buffer</primary><secondary>receive buffer</secondary>"
-msgstr ""
+msgstr "<primary>буфер</primary><secondary>приёмный буфер</secondary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>ping</command></primary>"
-msgstr ""
+msgstr "<primary><command>ping</command></primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Note that although an IPv4 network can work without ICMP, ICMPv6 is strictly required for an IPv6 network, since it combines several functions that were, in the IPv4 world, spread across ICMPv4, IGMP (<emphasis>Internet Group Membership Protocol</emphasis>) and ARP (<emphasis>Address Resolution Protocol</emphasis>). ICMPv6 is defined in RFC4443. <ulink type=\"block\" url=\"http://www.faqs.org/rfcs/rfc4443.html\" />"
-msgstr ""
+msgstr "Отметим, что сеть IPv4 может работать без ICMP, но для сетей IPv6 строго необходим ICMPv6, поскольку в него включены некоторые функции, которые, в мире IPv4, были рассредоточены по протоколам ICMPv4, IGMP (<emphasis>протокол управления группами Интернета (Internet Group Membership Protocol)</emphasis>) и ARP (<emphasis>протокол разрешения адреса (Address Resolution Protocol)</emphasis>). ICMPv6 определён в RFC4443. <ulink type=\"block\" url=\"http://www.faqs.org/rfcs/rfc4443.html\" />"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>ACCEPT</literal>: allow the packet to go on its way;"
-msgstr ""
+msgstr "<literal>ACCEPT</literal>: позволяет пакету следовать по своему пути;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>REJECT</literal>: reject the packet with an ICMP error packet (the <literal>--reject-with <replaceable>type</replaceable></literal> option to <command>iptables</command> allows selecting the type of error);"
-msgstr ""
+msgstr "<literal>REJECT</literal>: отклоняет пакет и отправляет в ответ ICMP сообщение об ошибке (параметр <literal>--reject-with <replaceable>type</replaceable></literal> для <command>iptables</command> позволяет выбрать тип сообщения об ошибке);"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>DROP</literal>: delete (ignore) the packet;"
-msgstr ""
+msgstr "<literal>DROP</literal>: удаляет (игнорирует) пакет;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>LOG</literal>: log (via <command>syslogd</command>) a message with a description of the packet; note that this action does not interrupt processing, and the execution of the chain continues at the next rule, which is why logging refused packets requires both a LOG and a REJECT/DROP rule;"
-msgstr ""
+msgstr "<literal>LOG</literal>: записать в журнал (посредством <command>syslogd</command>) сообщение с описанием пакета; отметим, что это действие не прерывает обработку пакета, и выполнение цепочки продолжается со следующего правила, поэтому для протоколирования отброшенных пакетов необходимо как правило LOG, так и правило REJECT/DROP;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>ULOG</literal>: log a message via <command>ulogd</command>, which can be better adapted and more efficient than <command>syslogd</command> for handling large numbers of messages; note that this action, like LOG, also returns processing to the next rule in the calling chain;"
-msgstr ""
+msgstr "<literal>ULOG</literal>: записать в журнал сообщение посредством <command>ulogd</command>, который может быть лучше адаптирован и более эффективен для обработки большого объёма сообщений, чем <command>syslogd</command>; отметим, что это действие, как и в случае с LOG, также продолжает обработку со следующего правила в вызывающей цепочке;"
 
 #. Tag: para
 #, no-c-format
 msgid "<replaceable>chain_name</replaceable>: jump to the given chain and evaluate its rules;"
-msgstr ""
+msgstr "<replaceable>chain_name</replaceable>: перейти к указанной цепочке и выполнить её правила;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>RETURN</literal>: interrupt processing of the current chain, and return to the calling chain; in case the current chain is a standard one, there's no calling chain, so the default action (defined with the <literal>-P</literal> option to <command>iptables</command>) is executed instead;"
-msgstr ""
+msgstr "<literal>RETURN</literal>: прервать обработку текущей цепочки и вернуться в вызывающую цепочку; в том случае, когда текущая цепочка является стандартной, вызывающая цепочка отсутствует, поэтому выполняется действие по умолчанию (которое определено параметром <literal>-P</literal> для <command>iptables</command>);"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>SNAT</literal> (only in the <literal>nat</literal> table, therefore only in IPv4 on <emphasis role=\"distribution\">Wheezy</emphasis> — NAT support for IPv6 appeared in the Linux 3.7 kernel): apply <emphasis>Source NAT</emphasis> (extra options describe the exact changes to apply);"
-msgstr ""
+msgstr "<literal>SNAT</literal> (только в таблице <literal>nat</literal>, поэтому только для IPv4 в <emphasis role=\"distribution\">Wheezy</emphasis> — поддержка NAT для IPv6 появилась в ядре Linux 3.7): применить <emphasis>Source NAT</emphasis> (точные действия определяются через дополнительные параметры);"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>DNAT</literal> (only in the <literal>nat</literal> table, therefore only in IPv4 on <emphasis role=\"distribution\">Wheezy</emphasis>): apply <emphasis>Destination NAT</emphasis> (extra options describe the exact changes to apply);"
-msgstr ""
+msgstr "<literal>DNAT</literal> (только в таблице <literal>nat</literal>, поэтому только для IPv4 в <emphasis role=\"distribution\">Wheezy</emphasis>): применить <emphasis>Destination NAT</emphasis> (точные действия определяются через дополнительные параметры);"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>MASQUERADE</literal> (only in the <literal>nat</literal> table, therefore only in IPv4 on <emphasis role=\"distribution\">Wheezy</emphasis>): apply <emphasis>masquerading</emphasis> (a special case of <emphasis>Source NAT</emphasis>);"
-msgstr ""
+msgstr "<literal>MASQUERADE</literal> (только в таблице <literal>nat</literal>, поэтому только для IPv4 в <emphasis role=\"distribution\">Wheezy</emphasis>): применить <emphasis>маскировку</emphasis> (особый случай <emphasis>Source NAT</emphasis>);"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>REDIRECT</literal> (only in the <literal>nat</literal> table, therefore only in IPv4 on <emphasis role=\"distribution\">Wheezy</emphasis>): redirect a packet to a given port of the firewall itself; this can be used to set up a transparent web proxy that works with no configuration on the client side, since the client thinks it connects to the recipient whereas the communications actually go through the proxy."
-msgstr ""
+msgstr "<literal>REDIRECT</literal> (только в таблице <literal>nat</literal>, поэтому только для IPv4 в <emphasis role=\"distribution\">Wheezy</emphasis>): перенаправить пакет в указанный порт межсетевого экрана; этот механизм можно использовать для организации прозрачного прокси-сервера, который работает без какой-либо настройки на стороне клиента, поскольку клиент считает, что он соединяется напрямую с адресатом, но на самом деле все соединения проходят через прокси."
 
 #. Tag: para
 #, no-c-format
 msgid "Other actions, particularly those concerning the <literal>mangle</literal> table, are outside the scope of this text. The <citerefentry><refentrytitle>iptables</refentrytitle> <manvolnum>8</manvolnum></citerefentry> and <citerefentry><refentrytitle>ip6tables</refentrytitle> <manvolnum>8</manvolnum></citerefentry> have a comprehensive list."
-msgstr ""
+msgstr "Прочие действия, в частности те, что относятся к таблице <literal>mangle</literal>, не входят в задачу этой книги. <citerefentry><refentrytitle>iptables</refentrytitle> <manvolnum>8</manvolnum></citerefentry> и <citerefentry><refentrytitle>ip6tables</refentrytitle> <manvolnum>8</manvolnum></citerefentry> содержат исчерпывающий список."
 
 #. Tag: title
 #, no-c-format
 msgid "Syntax of <command>iptables</command> and <command>ip6tables</command>"
-msgstr ""
+msgstr "Синтаксис <command>iptables</command> и <command>ip6tables</command>"
 
 #. Tag: para
 #, no-c-format
 msgid "The <command>iptables</command> and <command>ip6tables</command> commands allow manipulating tables, chains and rules. Their <literal>-t <replaceable>table</replaceable></literal> option indicates which table to operate on (by default, <literal>filter</literal>)."
-msgstr ""
+msgstr "Команды <command>iptables</command> и <command>ip6tables</command> позволяют управлять таблицами, цепочками и правилами. Параметр <literal>-t <replaceable>table</replaceable></literal> этих команд указывает на таблицу, с которой будут производиться действия (<literal>filter</literal> по умолчанию)."
 
 #. Tag: title
 #, no-c-format
 msgid "Commands"
-msgstr ""
+msgstr "Команды"
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>-N <replaceable>chain</replaceable></literal> option creates a new chain. The <literal>-X <replaceable>chain</replaceable></literal> deletes an empty and unused chain. The <literal>-A <replaceable>chain</replaceable> <replaceable>rule</replaceable></literal> adds a rule at the end of the given chain. The <literal>-I <replaceable>chain</replaceable> <replaceable>rule_num</replaceable> <replaceable>rule</replaceable></literal> option inserts a rule before the rule number <replaceable>rule_num</replaceable>. The <literal>-D <replaceable>chain</replaceable> <replaceable>rule_num</replaceable></literal> (or <literal>-D <replaceable>chain</replaceable> <replaceable>rule</replaceable></literal>) option deletes a rule in a chain; the first syntax identifies the rule to be deleted by its number, while the latter identifies it by its contents. The <literal>-F <replaceable>chain</replaceable></literal> option flushes a chain (deletes all its rules); if no chain is mentioned, all the rules in the table are deleted. The <literal>-L <replaceable>chain</replaceable></literal> option lists the rules in the chain. Finally, the <literal>-P <replaceable>chain</replaceable> <replaceable>action</replaceable></literal> option defines the default action, or “policy”, for a given chain; note that only standard chains can have such a policy."
-msgstr ""
+msgstr "Параметр <literal>-N <replaceable>chain</replaceable></literal> создаёт новую цепочку. <literal>-X <replaceable>chain</replaceable></literal> удаляет пустую и неиспользуемую цепочку. <literal>-A <replaceable>chain</replaceable> <replaceable>rule</replaceable></literal> добавляет правило в конец указанной цепочки. Параметр <literal>-I <replaceable>chain</replaceable> <replaceable>rule_num</replaceable> <replaceable>rule</replaceable></literal> вставляет какое-либо правило до правила номер <replaceable>rule_num</replaceable>. Параметр <literal>-D <replaceable>chain</replaceable> <replaceable>rule_num</replaceable></literal> (или <literal>-D <replaceable>chain</replaceable> <replaceable>rule</replaceable></literal>) удаляет правило из цепочки; первая форма записи определяет удаляемое правило по его номеру, а в последнем случае правило ищется по заданному шаблону. Параметр <literal>-F <replaceable>chain</replaceable></literal> очищает цепочку (удаляет все правила из цепочки); если цепочка не указана, то очищаются все правила в таблице. Параметр <literal>-L <replaceable>chain</replaceable></literal> позволяет вывести список всех правли в цепочке. Наконец, параметр <literal>-P <replaceable>chain</replaceable> <replaceable>action</replaceable></literal> определяет действие, или “политику”, по умолчанию для указанной цепочки; отметим, что подобная политика допустима только для стандартных цепочек."
 
 #. Tag: title
 #, no-c-format
 msgid "Rules"
-msgstr ""
+msgstr "Правила"
 
 #. Tag: para
 #, no-c-format
 msgid "Each rule is expressed as <literal><replaceable>conditions</replaceable> -j <replaceable>action</replaceable> <replaceable>action_options</replaceable></literal>. If several conditions are described in the same rule, then the criterion is the conjunction (logical <emphasis>and</emphasis>) of the conditions, which is at least as restrictive as each individual condition."
-msgstr ""
+msgstr "Каждое правило записывается в виде <literal><replaceable>conditions</replaceable> -j <replaceable>action</replaceable> <replaceable>action_options</replaceable></literal>. Если в правиле указаны несколько условий, то критерием соответствия считается конъюнкция (логическое <emphasis>and</emphasis>) всех условий, "
 
 #. Tag: para
 #, no-c-format
