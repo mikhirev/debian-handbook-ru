@@ -431,127 +431,127 @@ msgstr "Правила"
 #. Tag: para
 #, no-c-format
 msgid "Each rule is expressed as <literal><replaceable>conditions</replaceable> -j <replaceable>action</replaceable> <replaceable>action_options</replaceable></literal>. If several conditions are described in the same rule, then the criterion is the conjunction (logical <emphasis>and</emphasis>) of the conditions, which is at least as restrictive as each individual condition."
-msgstr "Каждое правило записывается в виде <literal><replaceable>conditions</replaceable> -j <replaceable>action</replaceable> <replaceable>action_options</replaceable></literal>. Если в правиле указаны несколько условий, то критерием соответствия считается конъюнкция (логическое <emphasis>and</emphasis>) всех условий, "
+msgstr "Каждое правило записывается в виде <literal><replaceable>conditions</replaceable> -j <replaceable>action</replaceable> <replaceable>action_options</replaceable></literal>. Если в правиле указаны несколько условий, то критерием соответствия считается конъюнкция (логическое <emphasis>and</emphasis>) всех условий, что само по себе является столь же ограничивающим, как и каждое отдельное условие."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>-p <replaceable>protocol</replaceable></literal> condition matches the protocol field of the IP packet. The most common values are <literal>tcp</literal>, <literal>udp</literal>, <literal>icmp</literal>, and <literal>icmpv6</literal>. Prefixing the condition with an exclamation mark negates the condition, which then becomes a match for “any packets with a different protocol than the specified one”. This negation mechanism is not specific to the <literal>-p</literal> option and it can be applied to all other conditions too."
-msgstr ""
+msgstr "Условие <literal>-p <replaceable>protocol</replaceable></literal> проверяется на соответствие протоколу в соответствующем поле IP пакета. Наиболее употребимыми значениями являются <literal>tcp</literal>, <literal>udp</literal>, <literal>icmp</literal>, и <literal>icmpv6</literal>. Восклицательный знак, предшествующий имени протокола, инвертирует условие, которое становится условием “пакет любого протокола, отличный от указанного”. Подобный механизм инверсии не является особенностью параметра <literal>-p</literal> и может быть применён к прочим условиям."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>-s <replaceable>address</replaceable></literal> or <literal>-s <replaceable>network/mask</replaceable></literal> condition matches the source address of the packet. Correspondingly, <literal>-d <replaceable>address</replaceable></literal> or <literal>-d <replaceable>network/mask</replaceable></literal> matches the destination address."
-msgstr ""
+msgstr "Условие <literal>-s <replaceable>address</replaceable></literal> или <literal>-s <replaceable>network/mask</replaceable></literal> проверяется на соответствие адресу передатчика пакетов. Соответственно, <literal>-d <replaceable>address</replaceable></literal> или <literal>-d <replaceable>network/mask</replaceable></literal> соответствует адресу приёмника пакетов."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>-i <replaceable>interface</replaceable></literal> condition selects packets coming from the given network interface. <literal>-o <replaceable>interface</replaceable></literal> selects packets going out on a specific interface."
-msgstr ""
+msgstr "Условие <literal>-i <replaceable>interface</replaceable></literal> позволяет выбрать пакеты, приходящие с указанного сетевого интерфейса. <literal>-o <replaceable>interface</replaceable></literal> выбирает пакеты, уходящие на определённый интерфейс."
 
 #. Tag: para
 #, no-c-format
 msgid "There are more specific conditions, depending on the generic conditions described above. For instance, the <literal>-p tcp</literal> condition can be complemented with conditions on the TCP ports, with clauses such as <literal>--source-port <replaceable>port</replaceable></literal> and <literal>--destination-port <replaceable>port</replaceable></literal>."
-msgstr ""
+msgstr "Существуют более специфические условия, основанные на указанных выше общих условиях. Например, условие <literal>-p tcp</literal> можно дополнить выбором TCP порта при помощи таких критериев как <literal>--source-port <replaceable>port</replaceable></literal> и <literal>--destination-port <replaceable>port</replaceable></literal>."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>--state <replaceable>state</replaceable></literal> condition matches the state of a packet in a connection (this requires the <command>ipt_conntrack</command> kernel module, for connection tracking). The <literal>NEW</literal> state describes a packet starting a new connection; <literal>ESTABLISHED</literal> matches packets belonging to an already existing connection, and <literal>RELATED</literal> matches packets initiating a new connection related to an existing one (which is useful for the <literal>ftp-data</literal> connections in the “active” mode of the FTP protocol)."
-msgstr ""
+msgstr "Условие <literal>--state <replaceable>state</replaceable></literal> соответствует статусу пакета в соединении (требуется модуль ядра <command>ipt_conntrack</command> для трассировки соединений). Статус <literal>NEW</literal> относится к тем пакетам, которые устанавливают новое соединение; <literal>ESTABLISHED</literal> соответствует пакетам, которые принадлежат уже установленному соединению, а <literal>RELATED</literal> относится к тем пакетам, которые устанавливают новое соединение, связанное с одним из уже существующих (что может быть полезно при соединениях <literal>ftp-data</literal> в “активном” режиме протокола FTP)."
 
 #. Tag: para
 #, no-c-format
 msgid "The previous section lists available actions, but not their respective options. The <literal>LOG</literal> action, for instance, has the following options:"
-msgstr ""
+msgstr "В предыдущем разделе перечислены возможные действия, но не приведены соответствующие им параметры. К примеру, действие <literal>LOG</literal> имеет следующие параметры:"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>--log-priority</literal>, with default value <literal>warning</literal>, indicates the <command>syslog</command> message priority;"
-msgstr ""
+msgstr "<literal>--log-priority</literal>, со значением по умолчанию <literal>warning</literal>, определяет приоритет сообщений <command>syslog</command>;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>--log-prefix</literal> allows specifying a text prefix to differentiate between logged messages;"
-msgstr ""
+msgstr "<literal>--log-prefix</literal> позволяет указать текстовый префикс для различения записей в журнале;"
 
 #. Tag: para
 #, no-c-format
 msgid "<literal>--log-tcp-sequence</literal>, <literal>--log-tcp-options</literal> and <literal>--log-ip-options</literal> indicate extra data to be integrated into the message: respectively, the TCP sequence number, TCP options, and IP options."
-msgstr ""
+msgstr "<literal>--log-tcp-sequence</literal>, <literal>--log-tcp-options</literal> и <literal>--log-ip-options</literal> указывают на необходимость включить следующие дополнительные данные в журнальные записи: номер TCP sequence пакета, сведения из заголовка TCP и сведения из заголовка IP соответственно."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>DNAT</literal> action provides the <literal>--to-destination <replaceable>address</replaceable>:<replaceable>port</replaceable></literal> option to indicate the new destination IP address and/or port. Similarly, <literal>SNAT</literal> provides <literal>--to-source <replaceable>address</replaceable>:<replaceable>port</replaceable></literal> to indicate the new source IP address and/or port."
-msgstr ""
+msgstr "Действие <literal>DNAT</literal> предоставляет параметр <literal>--to-destination <replaceable>address</replaceable>:<replaceable>port</replaceable></literal>, указывающий IP адрес и/или порт приёмника. Таким же образом, <literal>SNAT</literal> предоставляет <literal>--to-source <replaceable>address</replaceable>:<replaceable>port</replaceable></literal> для указание нового IP адреса и/или порта источника."
 
 #. Tag: para
 #, no-c-format
 msgid "The <literal>REDIRECT</literal> action (only available if NAT is available — on <emphasis role=\"distribution\">Wheezy</emphasis>, this means IPv4 only) provides the <literal>--to-ports <replaceable>port(s)</replaceable></literal> option to indicate the port, or port range, where the packets should be redirected."
-msgstr ""
+msgstr "Действие <literal>REDIRECT</literal> (только при наличии NAT - это означает, что в <emphasis role=\"distribution\">Wheezy</emphasis> только в IPv4) имеет параметр <literal>--to-ports <replaceable>port(s)</replaceable></literal>, который позволяет указать порт или диапазон портов для перенаправления пакетов."
 
 #. Tag: title
 #, no-c-format
 msgid "Creating Rules"
-msgstr ""
+msgstr "Создание правил"
 
 #. Tag: para
 #, no-c-format
 msgid "Each rule creation requires one invocation of <command>iptables</command>/<command>ip6tables</command>. Typing these commands manually can be tedious, so the calls are usually stored in a script so that the same configuration is set up automatically every time the machine boots. This script can be written by hand, but it can also be interesting to prepare it with a high-level tool such as <command>fwbuilder</command>."
-msgstr ""
+msgstr "Для создания каждого правила требуется один вызов команды <command>iptables</command>/<command>ip6tables</command>. Ручной набор этих команд может быть утомителен, поэтому их вызов обычно хранится в сценарии оболочки, и необходимые настройки выполняются автоматически при каждой загрузке машины. Данный сценарий можно написать вручную, но высокоуровневый инструмент, такой как <command>fwbuilder</command>, также может быть интересен для подготовки сценария."
 
 #. Tag: para
 #, no-c-format
 msgid "The principle is simple. In the first step, one needs to describe all the elements that will be involved in the actual rules:"
-msgstr ""
+msgstr "Принцип создания сценария прост. Во-первых, необходимо описать все элементы, которые будут использованы в действующих правилах:"
 
 #. Tag: para
 #, no-c-format
 msgid "the firewall itself, with its network interfaces;"
-msgstr ""
+msgstr "сам межсетевой экран со своими сетевыми интерфейсами;"
 
 #. Tag: para
 #, no-c-format
 msgid "the networks, with their corresponding IP ranges;"
-msgstr ""
+msgstr "сети с соответствующими даипазонами IP адресов;"
 
 #. Tag: para
 #, no-c-format
 msgid "the servers;"
-msgstr ""
+msgstr "серверы;"
 
 #. Tag: para
 #, no-c-format
 msgid "the ports belonging to the services hosted on the servers."
-msgstr ""
+msgstr "порты, используемые службами на указанных серверах."
 
 #. Tag: para
 #, no-c-format
 msgid "The rules are then created with simple drag-and-drop actions on the objects. A few contextual menus can change the condition (negating it, for instance). Then the action needs to be chosen and configured."
-msgstr ""
+msgstr "Далее правила создаются простым перетаскиванием объектов. Несколько контекстных меню позволят вам изменить условие (инвертировать его, например). Затем выбираются и настраиваются действия."
 
 #. Tag: para
 #, no-c-format
 msgid "As far as IPv6 is concerned, one can either create two distinct rulesets for IPv4 and IPv6, or create only one and let <command>fwbuilder</command> translate the rules according to the addresses assigned to the objects."
-msgstr ""
+msgstr "В случае использования IPv6 вы можете как создать два отдельных набора правил для IPv4 и IPv6, так и создать только один набор и позволить <command>fwbuilder</command> преобразовать правила в соответствии с назначенными объектам адресами."
 
 #. Tag: title
 #, no-c-format
 msgid "Fwbuilder's main window"
-msgstr ""
+msgstr "Главное окно Fwbuilder"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>fwbuilder</command></primary>"
-msgstr ""
+msgstr "<primary><command>fwbuilder</command></primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "<command>fwbuilder</command> can then generate a script configuring the firewall according to the rules that have been defined. Its modular architecture gives it the ability to generate scripts targeting different systems (<command>iptables</command> for Linux, <command>ipf</command> for FreeBSD and <command>pf</command> for OpenBSD)."
-msgstr ""
+msgstr "Затем <primary><command>fwbuilder</command></primary> может сформировать сценарий для настройки межсетевого экрана в соответствии с установленными правилами. Модульная структура этой программы позволяет формировать сценарии для разных систем (<command>iptables</command> в случае Linux, <command>ipf</command> в случае FreeBSD и <command>pf</command> в случае OpenBSD)."
 
 #. Tag: para
 #, no-c-format
 msgid "Versions of the <emphasis role=\"pkg\">fwbuilder</emphasis> package since <emphasis role=\"distribution\">Squeeze</emphasis> contain both the graphical interface and the modules for each firewall system (these were previously split over several packages, one for each target system):"
-msgstr ""
+msgstr "Версии пакета <emphasis role=\"pkg\">fwbuilder</emphasis>, начиная с <emphasis role=\"distribution\">Squeeze</emphasis>, содержат как графический интерфейс, так и модули для межсетевого экрана каждой системы (ранее они были разделены на разные пакеты, по одному для каждой целевой системы):"
 
 #. Tag: screen
 #, no-c-format
@@ -563,22 +563,22 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "Installing the Rules at Each Boot"
-msgstr ""
+msgstr "Установка правил во время загрузки"
 
 #. Tag: para
 #, no-c-format
 msgid "If the firewall is meant to protect an intermittent PPP network connection, the simplest way to deploy the script is to install it as <filename>/etc/ppp/ip-up.d/0iptables</filename> (note that only files without a dot in their name are taken into account). The firewall will thus be reloaded every time a PPP connection is established."
-msgstr ""
+msgstr "Если межсетевой экран предназначен для защиты непостоянного сетевого подключения по протоколу PPP, то самым простым способом применения сценария оболочки будет его установка в виде <filename>/etc/ppp/ip-up.d/0iptables</filename> (стоит отметить, что выполняются только файлы без точки в их имени). Таким образом, межсетевой экран будет перезагружен при каждом установлении PPP соединения."
 
 #. Tag: para
 #, no-c-format
 msgid "In other cases, the recommended way is to register the configuration script in an <literal>up</literal> directive of the <filename>/etc/network/interfaces</filename> file. In the following example, the script is stored under <filename>/usr/local/etc/arrakis.fw</filename>."
-msgstr ""
+msgstr "В прочих случаях мы рекомендуем зарегистрировать сценарий настройки в директиве <literal>up</literal> файла <filename>/etc/network/interfaces</filename>. В нижеприведённом примере сценарий хранится в файле <filename>/usr/local/etc/arrakis.fw</filename>."
 
 #. Tag: title
 #, no-c-format
 msgid "<filename>interfaces</filename> file calling firewall script"
-msgstr ""
+msgstr "файл <filename>interfaces</filename>, исполняющий сценарий оболочки межсетевого экрана"
 
 #. Tag: programlisting
 #, no-c-format
@@ -595,42 +595,42 @@ msgstr ""
 #. Tag: title
 #, no-c-format
 msgid "Supervision: Prevention, Detection, Deterrence"
-msgstr ""
+msgstr "Наблюдение: предотвращение, обнаружение, удержание"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>monitoring</primary>"
-msgstr ""
+msgstr "<primary>мониторинг</primary>"
 
 #. Tag: para
 #, no-c-format
 msgid "Monitoring is an integral part of any security policy for several reasons. Among them, that the goal of security is usually not restricted to guaranteeing data confidentiality, but it also includes ensuring availability of the services. It is therefore imperative to check that everything works as expected, and to detect in a timely manner any deviant behavior or change in quality of the service(s) rendered. Monitoring activity can help detecting intrusion attempts and enable a swift reaction before they cause grave consequences. This section reviews some tools that can be used to monitor several aspects of a Debian system. As such, it completes the section dedicated to generic system monitoring in <xref linkend=\"advanced-administration\" />."
-msgstr ""
+msgstr "Мониторинг является неотъемлемой частью любой политики безопасности по нескольким причинам. Среди прочих, обеспечение безопасности не ограничивается гарантией конфиденциальности данных, но также включает в себя обеспечение доступности предоставляемых сервисов. Поэтому проверка работоспособности в соответствии с заданными критериями является обязательной, как и своевременное обнаружение любых отклонений в поведении или изменений в качестве предоставляемой услуги (или услуг). Наблюдение за деятельностью может помочь в обнаружении попыток вторжения и позволит предпринять активные меры до того, как вторжение обернётся фатальными последствиями. В этом разделе мы рассмотрим некоторые инструменты, которые можно использовать для наблюдения за некоторыми аспектами работы системы Debian. В этом смысле он дополняет раздел, посвящённый общему мониторингу системы из <xref linkend=\"advanced-administration\" />."
 
 #. Tag: title
 #, no-c-format
 msgid "Monitoring Logs with <command>logcheck</command>"
-msgstr ""
+msgstr "мониторинг журналов с помощью <command>logcheck</command>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary><command>logcheck</command></primary>"
-msgstr ""
+msgstr "<primary><command>logcheck</command></primary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>logs</primary><secondary>monitoring</secondary>"
-msgstr ""
+msgstr "<primary>журналы</primary><secondary>мониторинг</secondary>"
 
 #. Tag: indexterm
 #, no-c-format
 msgid "<primary>monitoring</primary><secondary>log files</secondary>"
-msgstr ""
+msgstr "<primary>мониторинг</primary><secondary>файлов журналов</secondary>"
 
 #. Tag: para
 #, no-c-format
 msgid "The <command>logcheck</command> program monitors log files every hour by default. It sends unusual log messages in emails to the administrator for further analysis."
-msgstr ""
+msgstr "<command>logcheck</command>"
 
 #. Tag: para
 #, no-c-format
